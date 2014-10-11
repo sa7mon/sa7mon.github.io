@@ -36,10 +36,7 @@
 
 </head>
 
-<body id="page-top" class="index" data-spy="scroll" data-target=".bs-example-navbar-collapse-1">
-
-    
-
+<body id="page-top" class="index">
     <!-- Header -->
     <header>
         <div class="container">
@@ -52,20 +49,20 @@
                         <!-- TODO: Make each of these links. Dynamic? -->
                         <span class="skills">[student] [programmer] [music lover]</span><br />
                     </div>
-                    <div class="col-lg-8 col-lg-offset-2 text-center">
-                        <a href="#" class="btn btn-primary btn-outline">
+                    <div class="col-lg-8 col-lg-offset-2 text-center page-scroll">
+                        <a href="#blog" class="btn btn-primary btn-outline">
                             <i class="fa fa-external-link"></i> Blog
                         </a>
-                        <a href="#" class="btn btn-primary btn-outline">
+                        <a href="#about" class="btn btn-primary btn-outline">
                             <i class="fa fa-male"></i> About
                         </a>
-                        <a href="#" class="btn btn-primary btn-outline">
+                        <a href="#github" class="btn btn-primary btn-outline">
                             <i class="fa fa-code"></i> Git
                         </a>
-                        <a href="#" class="btn btn-primary btn-outline">
+                        <a href="#resume" class="btn btn-primary btn-outline">
                             <i class="fa fa-briefcase"></i> Resume
                         </a>
-                        <a href="#" class="btn btn-primary btn-outline">
+                        <a href="#contact" class="btn btn-primary btn-outline">
                             <i class="fa fa-comment"></i> Contact
                         </a>
                     </div>
@@ -91,12 +88,12 @@
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right" role="navigation">
                         <li class="hidden">
                             <a href="#page-top"></a>
                         </li>
                         <li class="page-scroll">
-                            <a href="#portfolio">Blog</a>
+                            <a href="#blog">Blog</a>
                         </li>
                         <li class="page-scroll">
                             <a href="#about">About</a>
@@ -119,7 +116,8 @@
 
 
     <!-- Portfolio Grid Section -->
-    <section id="portfolio">
+    <div id="blog">
+    <section id="blog">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -192,6 +190,7 @@
             <p>Download-style button here linking to blog.</p>
         </div>
     </section>
+    </div>
 
     <!-- About Section -->
     <section class="success" id="about">
