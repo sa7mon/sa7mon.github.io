@@ -15,15 +15,15 @@ $(function() {
     }); 
 
     // For links in the header: 
-    $('header .page-scroll a').bind('click', function(event) {
+    /*$('header .page-scroll a').bind('click', function(event) {
         var $anchor = $(this);
         //alert("Clicked!");
         $('html, body').stop().animate({
-            //scrollTop: $($anchor.attr('href')).offset().top
-            scrollTop: "700px"
+            scrollTop: $($anchor.attr('href')).offset().top
+            //scrollTop: "700px"
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
-    });
+    }); */
 });
 
 // Floating label headings for the contact form
