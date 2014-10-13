@@ -38,7 +38,7 @@
 
 <body id="page-top" class="index">
     <!-- Header -->
-    <header>
+    <header id="header">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -70,6 +70,8 @@
             </div>
         </div>
     </header>
+
+    <div class="spacer"></div>
 
     <!-- Navigation -->
 
@@ -562,6 +564,16 @@
             $('#nav').affix({
                 offset: { top: $('#nav').offset().top }
             });
+            $('#nav').on('affix.bs.affix', function () {
+                //Insert spacer above below header
+                console.log("Stuck!");
+                $( ".spacer" ).append( "<div class='spacerinner'></div>" );
+            });
+            $('#nav').on( 'affix-top.bs.affix', function () {
+                // Fires when the fixed nav bar becomes unstuck
+                console.log("Unstuck!");
+                $( '.spacerinner' ).remove();                
+            } );
         });
     });
     </script>

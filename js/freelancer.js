@@ -12,6 +12,17 @@ $(function() {
             scrollTop: $($anchor.attr('href')).offset().top
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
+    }); 
+
+    // For links in the header: 
+    $('header .page-scroll a').bind('click', function(event) {
+        var $anchor = $(this);
+        //alert("Clicked!");
+        $('html, body').stop().animate({
+            //scrollTop: $($anchor.attr('href')).offset().top
+            scrollTop: "700px"
+        }, 1500, 'easeInOutExpo');
+        event.preventDefault();
     });
 });
 
