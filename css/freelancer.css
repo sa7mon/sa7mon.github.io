@@ -106,7 +106,6 @@ hr.star-clear:after {
     font-size: 2em; 
 }
 
-
 hr.star-opaque {
     border-color: #fff;
 }
@@ -116,32 +115,10 @@ hr.star-opaque:after {
     /*background-color: #E08636;*/
 }
 
-div#blog hr.star-clear {
-    border-color: #000;
-}
-
-div#blog, section#github  hr.star-clear:after {
-    color: #000;
-    /*background-color: #fff;*/
-}
-
-section#github hr.star-clear {
-    border-color: #000;
-}
-
-hr.star-clear {
-    border-color: #000;
-}
-
-/*section#github hr.star-primary:after {
-    color: #000;
-    background-color: #fff;
-} */
-
-hr.star-primary:after {
+/*hr.star-primary:after {
     color: #fff;
-    /*background-color: #fff;*/
-}
+    background-color: #fff;
+}*/
 
 .img-centered {
     margin: 0 auto;
@@ -150,7 +127,7 @@ hr.star-primary:after {
 header {
     text-align: center;
     color: rgba(255, 243, 231, 1);
-    background: rgba(224,134,54, 0.95);
+    background: rgba(224,134,54, 1);
 }
 
 header .container {
