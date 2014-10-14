@@ -46,6 +46,15 @@ li.page-scroll a:hover {
 /*div#blog {
     padding-top: 10px;
 }*/
+
+.intro-text a{
+    color: #FFF;
+}
+
+.intro-text a:hover{
+    color: #E10000;
+    text-decoration: none;
+}
 p {
     font-size: 20px;
 }
@@ -141,7 +150,7 @@ hr.star-primary:after {
 header {
     text-align: center;
     color: rgba(255, 243, 231, 1);
-    background: rgba(224,134,54, 1);
+    background: rgba(224,134,54, 0.95);
 }
 
 header .container {
