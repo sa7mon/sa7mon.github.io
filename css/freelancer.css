@@ -4,14 +4,19 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+/* http://paletton.com/#uid=41S1i0kldl-bM9kkkaym5xmul-z */
+
+/* http://paletton.com/#uid=50w0w0kofs4PzgYS6sg6Zoi2YCG */
+
 body {
     overflow-x: hidden;
-    background: url('../img/bg.jpg') no-repeat center center fixed;
+    background: url('../img/city.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
     position: relative;
+    color: #000;
 }
 #feed {
     color: #000;
@@ -25,6 +30,19 @@ body {
     top: 0;
     width: 100%
 }
+li.page-scroll .active {
+    /* Styling for whichever entry in navbar is active. Changes with scroll*/
+    background-color: rgba(40,39,39,1);
+}
+li.page-scroll a:hover {
+    color: rgba(53,51,51,1);
+}
+.navbar-brand a:hover{
+    color: rgba(53,51,51,1);
+}
+.navbar-default .navbar-brand a:hover{
+    color: #fff;
+}
 /*div#blog {
     padding-top: 10px;
 }*/
@@ -36,14 +54,14 @@ p.small {
     font-size: 16px;
 }
 
-a,
+/*a,
 a:hover,
 a:focus,
 a:active,
 a.active {
     outline: 0;
-    color: #18bc9c;
-}
+    color: rgba(53, 51, 51, 1);
+} */
 
 h1,
 h2,
@@ -57,8 +75,8 @@ h6 {
     font-weight: 700;
 }
 
-hr.star-light,
-hr.star-primary {
+hr.star-opaque,
+hr.star-clear {
     margin: 25px auto 30px;
     padding: 0;
     max-width: 250px;
@@ -67,33 +85,53 @@ hr.star-primary {
     text-align: center;
 }
 
-hr.star-light:after,
-hr.star-primary:after {
+
+hr.star-opaque:after,
+hr.star-clear:after {
     content: "\f005";
     display: inline-block;
     position: relative;
     top: -.8em;
     padding: 0 .25em;
     font-family: FontAwesome;
-    font-size: 2em;
+    font-size: 2em; 
 }
 
-hr.star-light {
+
+hr.star-opaque {
     border-color: #fff;
 }
 
-hr.star-light:after {
+hr.star-opaque:after {
     color: #fff;
-    background-color: #18bc9c;
+    /*background-color: #E08636;*/
 }
 
-hr.star-primary {
-    border-color: #2c3e50;
+div#blog hr.star-clear {
+    border-color: #000;
 }
+
+div#blog, section#github  hr.star-clear:after {
+    color: #000;
+    /*background-color: #fff;*/
+}
+
+section#github hr.star-clear {
+    border-color: #000;
+}
+
+hr.star-clear {
+    border-color: #000;
+}
+
+/*section#github hr.star-primary:after {
+    color: #000;
+    background-color: #fff;
+} */
 
 hr.star-primary:after {
-    color: #2c3e50;
-    background-color: #fff;
+    color: #fff;
+    /*background-color: #fff;*/
 }
 
 .img-centered {
@@ -102,8 +140,8 @@ hr.star-primary:after {
 
 header {
     text-align: center;
-    color: #fff;
-    background: #18bc9c;
+    color: rgba(255, 243, 231, 1);
+    background: rgba(224,134,54, 1);
 }
 
 header .container {
@@ -175,6 +213,7 @@ header .intro-text .skills {
     font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     border-radius: 0px; /* To override the default rounded-corners in bootstrap-min.css*/
+    background-color: rgba(116, 113, 113, 1);
 }
 
 .navbar a:focus {
@@ -205,7 +244,8 @@ section h2 {
 
 section.success { 
     color: #fff;
-    background: #18bc9c;
+    background: rgb(200, 54, 54); /* Fallback for browsers that don't do opacity. TODO */
+    background: rgba(224, 134, 54, 0.8);
 }
 
 @media(max-width:767px) {
@@ -289,7 +329,7 @@ section.success {
 .btn-outline:active,
 .btn-outline.active {
     border: solid 2px #fff;
-    color: #18bc9c;
+    color: #353333;
     background: #fff;
 }
 
