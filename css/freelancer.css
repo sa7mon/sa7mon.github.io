@@ -43,9 +43,6 @@ li.page-scroll a:hover {
 .navbar-default .navbar-brand a:hover{
     color: #fff;
 }
-/*div#blog {
-    padding-top: 10px;
-}*/
 
 .intro-text a{
     color: #FFF;
@@ -55,6 +52,28 @@ li.page-scroll a:hover {
     color: #E10000;
     text-decoration: none;
 }
+
+section.clear .btn-outline {
+    /* Outline buttons in sections that are clear. */
+
+    margin-top: 15px;
+    border: solid 2px #000;
+    font-size: 20px;
+    color: #000;
+    background: 0 0;
+    transition: all .3s ease-in-out;
+}
+
+section.clear .btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active,
+.btn-outline.active {
+    /*border: solid 2px #fff;*/
+    border: solid 2px #E08636; /* So it seems like the border went away without shifting everything 2px */
+    color: #353333;
+    background: #E08636;
+}
+
 p {
     font-size: 20px;
 }
@@ -94,7 +113,6 @@ hr.star-clear {
     text-align: center;
 }
 
-
 hr.star-opaque:after,
 hr.star-clear:after {
     content: "\f005";
@@ -114,11 +132,6 @@ hr.star-opaque:after {
     color: #fff;
     /*background-color: #E08636;*/
 }
-
-/*hr.star-primary:after {
-    color: #fff;
-    background-color: #fff;
-}*/
 
 .img-centered {
     margin: 0 auto;
