@@ -9,6 +9,10 @@
 http://paletton.com/#uid=50w0w0kofs4PzgYS6sg6Zoi2YCG 
 
 https://color.adobe.com/create/color-wheel/?base=2&rule=Shades&selected=3&name=TheChurchoftheGoodThief&mode=rgb&rgbvalues=0.7068627450980393,0.6882281105996253,0.6869425003610873,0.45686274509803926,0.4448187233556524,0.4439878018977347,0.1568627450980392,0.15272745866288495,0.15244216374171146,0.20686274509803926,0.20140933611167955,0.20103310343438202,0.2,0.1947275097951783,0.19436375877068213&swatchOrder=0,1,2,3,4
+
+# = id
+. = class
+
 */
 
 body {
@@ -20,6 +24,16 @@ body {
     -o-background-size: cover;
     position: relative;
     color: #000;
+}
+section#resume .resume-header {
+    border-top-style: solid;
+}
+section#resume .resume-subheader {
+    border-top-style: solid;
+    border-bottom-style: solid;
+}
+section#resume .resume-subheader span.span-left{
+    border-right-style: solid;
 }
 #feed {
     color: #000;
