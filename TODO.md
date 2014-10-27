@@ -7,3 +7,4 @@
 * Create links to social sites
 * Fix links at end of each section
 * Disable blog section for now. Will add in again later after possible writing "Recent posts" script for Anchor
+* Change button hover colors
