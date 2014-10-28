@@ -14,7 +14,43 @@ https://color.adobe.com/create/color-wheel/?base=2&rule=Shades&selected=3&name=T
 . = class
 
 */
-
+section#resume table{ 
+    /* color: #1a242f; */
+    font-size: 20px;
+}
+section#resume tr.header {
+    border-color: white;
+    border-width: 2px;
+    border-top-style: solid;
+    
+}
+section#resume tr.header td {
+    padding-bottom: 8px;
+}
+section#resume tr.subhead {
+    border-color: white;
+    border-width: 2px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+}
+section#resume td.subheadtd1 {
+    width: 20%;
+    border: white;
+    border-width: 2px;
+    border-right-style: solid;
+    padding-left: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+section#resume td.subheadtd2 {
+    padding-left: 20px;
+}
+section#resume tr.info td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-bottom: 05px;
+}
 body {
     overflow-x: hidden;
     background: url('../img/city.jpg') no-repeat center center fixed;
@@ -24,16 +60,6 @@ body {
     -o-background-size: cover;
     position: relative;
     color: #000;
-}
-section#resume .resume-header {
-    border-top-style: solid;
-}
-section#resume .resume-subheader {
-    border-top-style: solid;
-    border-bottom-style: solid;
-}
-section#resume .resume-subheader span.span-left{
-    border-right-style: solid;
 }
 #feed {
     color: #000;
@@ -261,7 +287,7 @@ section h2 {
 section.success { 
     color: #fff;
     background: rgb(200, 54, 54); /* Fallback for browsers that don't do opacity. TODO */
-    background: rgba(224, 134, 54, 0.8);
+    background: rgba(224, 134, 54, 0.95);
 }
 
 @media(max-width:767px) {
