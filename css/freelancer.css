@@ -14,6 +14,15 @@ https://color.adobe.com/create/color-wheel/?base=2&rule=Shades&selected=3&name=T
 . = class
 
 */
+.fa-ul {
+    line-height: 120%;
+}
+footer div#right {
+    text-align: left;
+}
+ul {
+    font-size: 20px;
+}
 section#resume table{ 
     /* color: #1a242f; */
     font-size: 20px;
