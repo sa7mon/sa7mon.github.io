@@ -364,7 +364,21 @@
                     </div>
                 </div>
                 <div class="row">
-                    <p>This site is built on the Bootstrap Framework.  The theme is based on the <a href="http://startbootstrap.com/template-overviews/freelancer/">Freelancer Theme</a> from <a href="http://startbootstrap.com/">Start Bootstrap</a>.  The site focuses heavily on being fully responsive and clean-looking while demonstrating the power of HTML,CSS,JavaScript,Bootstrap,LESS, and jQuery. Optimizations have been made to "minify" the code and speed up load times.  There are no calls to any database and no PHP code used.</p>
+                    <div class="col-md-6">
+                        <p> This site is built on the Bootstrap Framework. The site focuses heavily on being fully responsive and clean-looking. All of the code used is free and open-source; the site itself is <a href="http://github.com/sa7mon/personal-site">available on GitHub</a>.
+                        </p>
+                    </div>
+                    <div class="col-md-6" id="right">
+                        <p>The following open-source projects are being utilized: 
+                            <ul class="fa-ul">
+                                <li><i class="fa-li fa fa-code"></i><a href="https://github.com/caseyscarborough/github-activity">caseysomething/github-activity</a></li>
+                                <li><i class="fa-li fa fa-code"></i><A href="http://startbootstrap.com/template-overviews/freelancer/">Freelancer Theme</a> from <a href="http://startbootstrap.com/">Start Bootstrap</a></li>
+                                <li><i class="fa-li fa fa-code"></i><a href="https://jquery.com/">jQuery</a></li>
+                                <li><i class="fa-li fa fa-code"></i><a href="http://getbootstrap.com/">Bootstrap Framework</a></li>
+                                <li><i class="fa-li fa fa-code"></i><a href="http://lesscss.org/">LESS</a></li>
+                            </ul>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
