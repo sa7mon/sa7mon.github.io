@@ -70,6 +70,9 @@ body {
 #feed {
   color: #000;
 }
+.paddedblog {
+  margin-top: 10px;
+}
 .spacerinner {
   height: 60px;
 }
@@ -208,9 +211,6 @@ header .intro-text .skills {
   header .intro-text .skills {
     font-size: 1.75em;
   }
-}
-@media (min-width: 768px) {
-  
 }
 .navbar {
   text-transform: uppercase;

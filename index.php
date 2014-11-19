@@ -79,7 +79,7 @@
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header page-scroll">
-                    <button type="button" class="navbar-toggle" //toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -117,8 +117,7 @@
         </nav>
 
 
-    <!-- Portfolio Grid Section -->
-    <div id="blog">
+    <!-- Blog Section -->
     <section id="blog" class="clear">
         <div class="container">
             <div class="row">
@@ -139,7 +138,6 @@
             </div>
         </div>
     </section>
-    </div>
 
     <!-- About Section -->
     <section class="success" id="about">
@@ -372,9 +370,31 @@
             selector: "#feed",
             limit: 10 // optional
         });
+
+        // New sticky navbar function
+        var menu = $('.navbar');
+        var origOffsetY = menu.offset().top;
+
+        function scroll() {
+            if ($(window).scrollTop() >= origOffsetY) {
+                $('.navbar').addClass('navbar-fixed-top');
+                $('#blog').addClass('paddedblog');
+            } else {
+                $('.navbar').removeClass('navbar-fixed-top');
+                $('#blog').removeClass('paddedblog');
+            }
+
+
+        }
+
+        document.onscroll = scroll;
+
+
+
+
         $(function() {
             //$('#nav-wrapper').height($("#nav").height());
-            
+            /*
             $('#nav').affix({
                 offset: { top: $('#nav').offset().top }
             });
@@ -387,7 +407,7 @@
                 // Fires when the fixed nav bar becomes unstuck
                 //console.log("Unstuck!");
                 $( '.spacerinner' ).remove();                
-            } );
+            } ); */
         });
     });
     </script>

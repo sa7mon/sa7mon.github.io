@@ -13,21 +13,10 @@ $(function() {
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     }); 
-
-    // For links in the header: 
-    /*$('header .page-scroll a').bind('click', function(event) {
-        var $anchor = $(this);
-        //alert("Clicked!");
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-            //scrollTop: "700px"
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
-    }); */
 });
 
 // Floating label headings for the contact form
-$(function() {
+/*$(function() {
     $("body").on("input propertychange", ".floating-label-form-group", function(e) {
         $(this).toggleClass("floating-label-form-group-with-value", !! $(e.target).val());
     }).on("focus", ".floating-label-form-group", function() {
@@ -35,7 +24,7 @@ $(function() {
     }).on("blur", ".floating-label-form-group", function() {
         $(this).removeClass("floating-label-form-group-with-focus");
     });
-});
+});*/
 
 // Highlight the top nav as scrolling occurs
 $('body').scrollspy({
