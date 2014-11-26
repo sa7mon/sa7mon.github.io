@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
-
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -70,6 +68,9 @@
                             <a href="#contact" class="btn btn-primary btn-outline">
                                 <i class="fa fa-comment"></i> Contact
                             </a>
+                            <a href="#site" class="btn btn-primary btn-outline">
+                                <i class="fa fa-comment"></i> Site
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -113,6 +114,9 @@
                             </li>
                             <li class="page-scroll">
                                 <a href="#contact">Contact</a>
+                            </li>
+                            <li class="page-scroll">
+                                <a href="#site">Site</a>
                             </li>
                         </ul>
                     </div>
@@ -300,7 +304,7 @@
         </section>
 
         <!-- Footer -->
-        <footer class="text-center">
+        <footer class="text-center" id="site">
             <div class="footer-above">
                 <div class="container">
                     <div class="row">
@@ -352,7 +356,7 @@
         <script src="js/bootstrap.min.js"></script> <!-- Bootstrap Core JavaScript -->
         <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script><!-- Plugin JavaScript for jQuery Easing -->
         <!--script src="js/classie.js"></script-->
-        <script src="js/cbpAnimatedHeader.js"></script>
+        <!--script src="js/cbpAnimatedHeader.js"></script-->
         <script src="js/freelancer.js"></script>  <!-- Custom Theme JavaScript -->
 
         <!--GitHub-activity -->
@@ -385,7 +389,5 @@
             document.onscroll = scroll;
         });
         </script>
-
     </body>
-
 </html>

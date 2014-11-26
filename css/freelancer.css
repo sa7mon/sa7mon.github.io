@@ -199,19 +199,33 @@ header .intro-text .skills {
   font-size: 1.25em;
   font-weight: 300;
 }
+header .intro-text .name {
+  font-size: 4.75em;
+}
 @media (min-width: 768px) {
   header .container {
-    /*padding-top: 200px;*/
-  
     padding-bottom: 100px;
   }
-  header .intro-text .name {
-    font-size: 4.75em;
-  }
+  /* header .intro-text .name {
+          font-size: 4.75em;
+      } */
   header .intro-text .skills {
     font-size: 1.75em;
   }
 }
+/* @media(min-width:768px) {
+    header .container {
+        padding-bottom: 100px;
+    }
+
+    header .intro-text .name {
+        font-size: 4.75em;
+    }
+
+    header .intro-text .skills {
+        font-size: 1.75em;
+    } 
+} */
 .navbar {
   text-transform: uppercase;
   /* font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif; */
@@ -235,7 +249,8 @@ header .intro-text .skills {
 .navbar-fixed-top ul.nav {
   /* Applies to the UL with links only when the navbar is fixed to the top. */
 
-  padding-right: 15px;
+  /* padding-right: 15px; */
+
 }
 .navbar-default,
 .navbar-inverse {
