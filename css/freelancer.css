@@ -13,6 +13,7 @@ https://color.adobe.com/create/color-wheel/?base=2&rule=Shades&selected=3&name=T
 . = class
 
 */
+/* Calculations */
 .fa-ul {
   line-height: 120%;
 }
@@ -56,6 +57,11 @@ section#resume td.subheadtd1 {
 }
 section#resume td.subheadtd2 {
   padding-left: 20px;
+}
+section#blog div.blog-entry a {
+  /* color: rgba(224, 134, 54, 1); */
+
+  color: #2c3e50;
 }
 body {
   overflow-x: hidden;
@@ -177,6 +183,7 @@ header {
   text-align: center;
   color: #fff3e7;
   background: #e08636;
+  height: 100%;
 }
 header .container {
   padding-top: 20px;
@@ -202,6 +209,9 @@ header .intro-text .skills {
 header .intro-text .name {
   font-size: 4.75em;
 }
+header .intro-text .skills {
+  font-size: 1.75em;
+}
 @media (min-width: 768px) {
   header .container {
     padding-bottom: 100px;
@@ -209,9 +219,6 @@ header .intro-text .name {
   /* header .intro-text .name {
           font-size: 4.75em;
       } */
-  header .intro-text .skills {
-    font-size: 1.75em;
-  }
 }
 /* @media(min-width:768px) {
     header .container {
@@ -249,8 +256,7 @@ header .intro-text .name {
 .navbar-fixed-top ul.nav {
   /* Applies to the UL with links only when the navbar is fixed to the top. */
 
-  /* padding-right: 15px; */
-
+  padding-right: 15px;
 }
 .navbar-default,
 .navbar-inverse {
