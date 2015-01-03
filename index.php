@@ -48,11 +48,11 @@
                             <span class="skills">
                                 [<a href="http://southcentral.edu" target="_blank">student</a>] 
                                 [<a href="http://github.com/sa7mon" target="_blank">programmer</a>] 
-                                [<a href="http://themanchesterorchestra.com/" target="_blank">music lover</a>]
+                                [<a href="http://themanchesterorchestra.com/" target="_blank">music&nbsp;lover</a>]
                             </span>
                             <br />
                         </div>
-                        <div class="col-lg-8 col-lg-offset-2 text-center page-scroll">
+                        <div class="col-lg-8 col-lg-offset-2 text-center page-scroll" id="buttons">
                             <a href="#blog" class="btn btn-primary btn-outline">
                                 <i class="fa fa-external-link"></i> Blog
                             </a>
@@ -72,6 +72,7 @@
                                 <i class="fa fa-comment"></i> Site
                             </a>
                         </div>
+                        <div id="bottomspacer"></div>
                     </div>
                 </div>
             </div>
@@ -158,15 +159,15 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4 col-lg-offset-2">
-                        <p>Here I talk about myself as a person. </p>
+                    <div class="col-md-6">
+                        <p>Hello! My name is Dan. I'm a college student in Minnesota and I am currently pursing multiple degrees in Computer Science. In my free time I love to build computers, see live music, and code.  </p>
                     </div>
-                    <div class="col-lg-4">
-                        <p>And here I talk about the technologies that I'm familiar with.</p>
+                    <div class="col-md-6">
+                        <p>&nbsp;&nbsp;&nbsp;I have experience using many technologies in various areas including desktop imaging and repair, web design, web backend programming, and networking.</p>
                     </div>
                 </div>
                 <div class="col-lg-12 text-center">
-                        <a href="mailto:dan.sa7mon@gmail.com" class="btn btn-outline">
+                        <a href="mailto:dan.sa7mon(at)gmail(dot)com" class="btn btn-outline">
                             <i class="fa fa-envelope"></i> Email Me
                         </a>
                     </div>
