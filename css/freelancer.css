@@ -13,7 +13,6 @@ https://color.adobe.com/create/color-wheel/?base=2&rule=Shades&selected=3&name=T
 . = class
 
 */
-/* Calculations */
 .fa-ul {
   line-height: 120%;
 }
@@ -199,15 +198,21 @@ header .intro-text .name {
   /* font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif; */
 
   font-family: "Josefin Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 2em;
   font-weight: 700;
 }
 header .intro-text .skills {
   font-size: 1.25em;
   font-weight: 300;
 }
-header .intro-text .name {
-  font-size: 4.75em;
+@media (min-width: 522px) {
+  header .intro-text .name {
+    font-size: 4.75em;
+  }
+}
+@media (min-width: 1px) {
+  header .name {
+    font-size: 2.75em;
+  }
 }
 header .intro-text .skills {
   font-size: 1.75em;
