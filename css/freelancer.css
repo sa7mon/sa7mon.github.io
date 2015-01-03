@@ -17,6 +17,9 @@ https://color.adobe.com/create/color-wheel/?base=2&rule=Shades&selected=3&name=T
   .container {
     width: 100%;
   }
+  .gha-feed {
+    width: 585px;
+  }
 }
 .fa-ul {
   line-height: 120%;
