@@ -15,6 +15,12 @@ https://color.adobe.com/create/color-wheel/?base=2&rule=Shades&selected=3&name=T
 
 */
 
+@media (min-width: 768px) {
+    // To override the default in bootstrap.min.css
+    .container {
+        width: 100%;
+    }
+}
 
 
 .fa-ul {
@@ -342,6 +348,18 @@ section.success {
     section.first {
         padding-top: 75px;
     }
+}
+
+// Overrides the next rule if the screen size is 412px+ which is most screens.
+// Purpose of hiding the buttons is to prevent them from wrapping too far down.
+@media(min-width:412px) {
+    header div#buttons {
+        display: block !important;
+    }
+}
+// By default make the buttons invisible. This only applies to screens 0-411px wide.
+header div#buttons {
+        display: none;
 }
 
 .btn-outline {

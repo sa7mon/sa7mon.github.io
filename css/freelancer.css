@@ -13,6 +13,11 @@ https://color.adobe.com/create/color-wheel/?base=2&rule=Shades&selected=3&name=T
 . = class
 
 */
+@media (min-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
 .fa-ul {
   line-height: 120%;
 }
@@ -301,6 +306,14 @@ section.success {
   section.first {
     padding-top: 75px;
   }
+}
+@media (min-width: 412px) {
+  header div#buttons {
+    display: block !important;
+  }
+}
+header div#buttons {
+  display: none;
 }
 .btn-outline {
   margin-top: 15px;
