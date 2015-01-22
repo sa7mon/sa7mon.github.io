@@ -24,7 +24,6 @@
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
         <link rel="stylesheet" href="css/github-activity-0.1.0.min.css">
 
-
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -297,7 +296,7 @@
                             <a href="https://www.linkedin.com/profile/view?id=184402988" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
                         </li>
                         <li>
-                            <a href="mailto:dan.sa7mon@gmail.com" class="btn-social btn-outline"><i class="fa fa-fw fa-envelope-o"></i></a>
+                            <a href="mailto:dan.sa7mon(at)gmail(dot)com" class="btn-social btn-outline"><i class="fa fa-fw fa-envelope-o"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -322,7 +321,7 @@
                         <div class="col-md-6" id="right">
                             <p>The following open-source projects are being utilized: 
                                 <ul class="fa-ul">
-                                    <li><i class="fa-li fa fa-code"></i><a href="https://github.com/caseyscarborough/github-activity">caseysomething/github-activity</a></li>
+                                    <li><i class="fa-li fa fa-code"></i><a href="https://github.com/caseyscarborough/github-activity">caseyscarborough/github-activity</a></li>
                                     <li><i class="fa-li fa fa-code"></i><A href="http://startbootstrap.com/template-overviews/freelancer/">Freelancer Theme</a> from <a href="http://startbootstrap.com/">Start Bootstrap</a></li>
                                     <li><i class="fa-li fa fa-code"></i><a href="https://jquery.com/">jQuery</a></li>
                                     <li><i class="fa-li fa fa-code"></i><a href="http://getbootstrap.com/">Bootstrap Framework</a></li>
@@ -352,18 +351,23 @@
         </div>
 
         <!-- Begin Scripts -->
-        
-        <script src="js/jquery-1.11.0.js"></script> <!-- jQuery Version 1.11.0 -->
-        <script src="js/bootstrap.min.js"></script> <!-- Bootstrap Core JavaScript -->
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script><!-- Plugin JavaScript for jQuery Easing -->
+
+        <!-- jQuery Version 1.11.0 -->
+        <script src="js/jquery-1.11.0.js"></script> 
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script> 
+        <script src="js/jquery.easing.min.js"></script><!-- Plugin JavaScript for jQuery Easing -->
         <!--script src="js/classie.js"></script-->
         <!--script src="js/cbpAnimatedHeader.js"></script-->
         <script src="js/freelancer.js"></script>  <!-- Custom Theme JavaScript -->
 
         <!--GitHub-activity -->
-        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+        <script type="text/javascript" src="js/mustache_0.7.2.min.js"></script>
         <script type="text/javascript" src="js/github-activity-0.1.0.min.js"></script>
-        <!-- Custom jQuery Scripts -->
+       
+        <!-- Email masking javascript -->       
+        <script type="text/javascript" src="js/crypt.js"></script>
+
         <script>
         $( document ).ready(function() {
             // Generate GitHub activity section
