@@ -13,7 +13,7 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom CSS -->
-        <link href="https://danthesalmon.com/css/freelancer.css" rel="stylesheet">
+        <link href="css/freelancer.css" rel="stylesheet">
 
         <!-- Custom Fonts -->
         <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">

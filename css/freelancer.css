@@ -130,13 +130,11 @@ section.clear .btn-outline:hover,
 section.clear .btn-outline:focus,
 section.clear .btn-outline:active,
 section.clear .btn-outline.active {
-  /*border: solid 2px #fff;*/
-
-  border: solid 2px #E08636;
+  border: solid 2px #000000;
   /* So it seems like the border went away without shifting everything 2px */
 
-  color: #353333;
-  background: #E08636;
+  color: white;
+  background: black;
 }
 p {
   font-size: 20px;

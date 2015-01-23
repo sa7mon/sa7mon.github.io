@@ -1,7 +1,7 @@
 /* 
 * Adapted from Project Nayuki, used with permission.
 * (http://www.nayuki.io/page/caesar-cipher-javascript)
- */
+*/
 "use strict";
 /*
  * Handles the HTML input/output for Caesar cipher encryption/decryption.
