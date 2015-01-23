@@ -166,7 +166,7 @@
                     </div>
                 </div>
                 <div class="col-lg-12 text-center">
-                        <a href="mailto:dan.sa7mon(at)gmail(dot)com" class="btn btn-outline">
+                        <a href="rfnqyt:ifs.xf7rts@lrfnq.htr" id="secretEmail1" onMouseOver="doCrypt(true,'secretEmail1');" onMouseLeave="doCrypt(false,'secretEmail1');" class="btn btn-outline">
                             <i class="fa fa-envelope"></i> Email Me
                         </a>
                     </div>
@@ -296,7 +296,7 @@
                             <a href="https://www.linkedin.com/profile/view?id=184402988" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
                         </li>
                         <li>
-                            <a href="mailto:dan.sa7mon(at)gmail(dot)com" class="btn-social btn-outline"><i class="fa fa-fw fa-envelope-o"></i></a>
+                            <a href="rfnqyt:ifs.xf7rts@lrfnq.htr" id="secretEmail2" class="btn-social btn-outline"><i class="fa fa-fw fa-envelope-o"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -393,6 +393,17 @@
             }
             document.onscroll = scroll;
         });
+
+        //Because the btn-social or btn-outline class break the javascript
+        $("#secretEmail2").hover (
+            function() {
+                //On hover enter
+                doCrypt(true,'secretEmail2');
+            }, function() {
+                //ON hover leave
+                doCrypt(false,'secretEmail2');
+            }
+        );
         </script>
     </body>
 </html>

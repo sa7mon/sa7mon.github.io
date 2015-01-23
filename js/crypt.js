@@ -7,9 +7,9 @@
  * Handles the HTML input/output for Caesar cipher encryption/decryption.
  * This is the one and only entry point function called from the HTML code.
  */
-function doCrypt(isDecrypt) {
+function doCrypt(isDecrypt,elementID) {
 	//5 iterations because why not?
-	console.log("doCrypt: Executing...")
+	//console.log("doCrypt: Executing...")
 	var shiftText = 5;
 
 	if (!/^-?\d+$/.test(shiftText)) {
@@ -25,8 +25,8 @@ function doCrypt(isDecrypt) {
 
 	if (isDecrypt)
 		key = (26 - key) % 26;
-	var preCrypt = document.getElementById("secretEmail").href;
-	document.getElementById("secretEmail").href = crypt(preCrypt, key);
+	var preCrypt = document.getElementById(elementID).href;
+	document.getElementById(elementID).href = crypt(preCrypt, key);
 }
 
 /*
