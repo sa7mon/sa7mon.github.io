@@ -13,7 +13,7 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom CSS -->
-        <link href="css/freelancer.css" rel="stylesheet">
+        <link href="https://danthesalmon.com/css/freelancer.css" rel="stylesheet">
 
         <!-- Custom Fonts -->
         <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -43,7 +43,6 @@
                         <div class="intro-text">
                             <span class="name">Dan Salmon</span>
                             <hr class="star-opaque">
-                            <!-- TODO: Make each of these links. Dynamic? -->
                             <span class="skills">
                                 [<a href="http://southcentral.edu" target="_blank">student</a>] 
                                 [<a href="http://github.com/sa7mon" target="_blank">programmer</a>] 
@@ -186,7 +185,7 @@
                 <div id="feed" class="col-lg-12">
                 </div>
                 <div class="col-lg-12 text-center">
-                    <a href="http://github.com/sa7mon" target="_blank" class="btn btn-outline text-center">
+                    <a href="https://github.com/sa7mon" target="_blank" class="btn btn-outline text-center">
                         <i class="fa fa-github"></i> View on GitHub
                     </a>
                 </div>
@@ -290,7 +289,7 @@
                 <div class="row text-center">
                     <ul class="list-inline">
                         <li>
-                            <a href="http://github.com/sa7mon" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
+                            <a href="https://github.com/sa7mon" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
                         </li>
                         <li>
                             <a href="https://www.linkedin.com/profile/view?id=184402988" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
@@ -336,7 +335,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-                            Copyright &copy; Dan Salmon 2014
+                            Copyright &copy; Dan Salmon&nbsp;<?php echo date("Y") ?>
                         </div>
                     </div>
                 </div>
