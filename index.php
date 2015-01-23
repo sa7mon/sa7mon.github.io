@@ -124,7 +124,6 @@
                 <!-- /.container-fluid -->
             </nav>
 
-
         <!-- Blog Section -->
         <section id="blog" class="clear">
             <div class="container">
@@ -158,10 +157,12 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <p>Hello! My name is Dan. I'm a college student in Minnesota and I am currently pursing multiple degrees in Computer Science. In my free time I love to build computers, see live music, and code.  </p>
+                        <!-- PESONAL -->
+                        <p>&nbsp;&nbsp;&nbsp;Hello! My name is Dan. I'm a college student in Minnesota and I am currently pursing multiple degrees in Computer Science. In my free time I love to build computers, see live music, and code. I also collect vinyl, watch tons of movies, and eat lots of Chinese food. In the future, I hope to be able to travel the world more.</p>
                     </div>
+                    <!-- TECHNICAL -->
                     <div class="col-md-6">
-                        <p>&nbsp;&nbsp;&nbsp;I have experience using many technologies in various areas including desktop imaging and repair, web design, web backend programming, and networking.</p>
+                        <p>&nbsp;&nbsp;&nbsp;I have experience using many technologies in various areas including desktop imaging and repair, web design, web backend programming, and networking. I love learning new things and discovering better ways to do things. I have experience programming in HTML5, CSS3, PHP, JS, VB.NET, and Java. I also utilize many frameworks and tools such as Bootstrap, jQuery, and LESS.</p>
                     </div>
                 </div>
                 <div class="col-lg-12 text-center">
@@ -217,9 +218,7 @@
                                 </td>
                             </tr>
                             <tr class="info">
-                                <td colspan="2"> At CTS, I perform bench work including virus removal, OS re-installation, 
-                                    HP Warranty work, and Apple repairs. I also go onsite to customers and provide a variety 
-                                    of solutions including system maintenance</td>
+                                <td colspan="2"> At CTS, I perform bench work including virus removal, OS re-installation, HP Warranty work, and Apple repairs. I also go onsite to customers and provide a variety of solutions including network troubleshooting, system installation, and sales discovery.</td>
                             </tr>
                             <tr class="subhead">
                                 <td class="subheadtd1"><strong>2013 - 2014</strong></td>
@@ -229,7 +228,7 @@
                                 <td colspan="2">Working for SCC, I was the assistant to the head web developer for the school's website.  I was in charge of creating and editing content with Joomla!. I was also tasked with creating standalone PHP/MySQL apps for internal employee use and various forms for the school.  In addition, I was on the team assigned to the complete re-design of the school's site. For this project, I wrote custom PHP, JavaScript, and CSS code. </td>
                             </tr>
 
-                            <!--Education-->
+                            <!----------Education---------->
                             <tr class="header">
                                 <td colspan="2"><h3><i class="fa fa-graduation-cap"></i> Education</h3></td>
                             </tr>

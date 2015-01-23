@@ -34,10 +34,10 @@ section#resume table {
   font-size: 20px;
 }
 section#resume tr.info td {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 20px;
-  padding-bottom: 05px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 section#resume tr.header {
   border-color: white;
