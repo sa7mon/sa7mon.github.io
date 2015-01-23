@@ -139,7 +139,7 @@
                 ?>    
                 </div>
                 <div class="col-lg-12 text-center">
-                    <a href="#" target="_blank" class="btn btn-outline">
+                    <a href="./blog/" target="_blank" class="btn btn-outline">
                         <i class="fa fa-coffee"></i> Visit Blog
                     </a>
                 </div>
@@ -173,7 +173,6 @@
                         </a>
                     </div>
             </div>
-            
         </section>
 
         <!--GitHub Section-->
