@@ -298,7 +298,7 @@ section.success {
   background: #c83636;
   /* Fallback for browsers that don't do opacity. TODO */
 
-  background: rgba(224, 134, 54, 0.95);
+  background: #e08636;
 }
 @media (max-width: 767px) {
   section {
