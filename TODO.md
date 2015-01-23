@@ -5,3 +5,4 @@
 * Make opaque sections truly opaque
 * Change title to name
 * Change avatar
+* Consolidate custom js and move to seperate file

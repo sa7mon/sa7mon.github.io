@@ -165,7 +165,7 @@
                     </div>
                 </div>
                 <div class="col-lg-12 text-center">
-                        <a href="rfnqyt:ifs.xf7rts@lrfnq.htr" id="secretEmail1" onMouseOver="doCrypt(true,'secretEmail1');" onMouseLeave="doCrypt(false,'secretEmail1');" class="btn btn-outline">
+                        <a href="rfnqyt:ifs.xf7rts@lrfnq.htr" id="secretEmail1" class="btn btn-outline">
                             <i class="fa fa-envelope"></i> Email Me
                         </a>
                     </div>
@@ -314,7 +314,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <p> This site is built on the Bootstrap Framework. The site focuses heavily on being fully responsive and clean-looking. All of the code used is free and open-source; the site itself is <a href="http://github.com/sa7mon/personal-site">available on GitHub</a>.
+                            <p> This site is built on the Bootstrap Framework. The site focuses heavily on being fully responsive and clean-looking. All of the code used is free and open-source; the site itself is <a href="https://github.com/sa7mon/personal-site">available on GitHub</a>.
                             </p>
                         </div>
                         <div class="col-md-6" id="right">
@@ -392,8 +392,16 @@
             }
             document.onscroll = scroll;
         });
-
-        //Because the btn-social or btn-outline class break the javascript
+        //Because the btn-social or btn-outline class breaks the javascript
+        $("#secretEmail1").hover (
+            function() {
+                //On hover enter
+                doCrypt(true,'secretEmail1');
+            }, function() {
+                //ON hover leave
+                doCrypt(false,'secretEmail1');
+            }
+        );
         $("#secretEmail2").hover (
             function() {
                 //On hover enter
