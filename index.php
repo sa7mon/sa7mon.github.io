@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Dan Is Cool.</title>
+        <title>Dan Salmon</title>
 
         <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
