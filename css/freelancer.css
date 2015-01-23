@@ -34,6 +34,7 @@ section#resume table {
   font-size: 20px;
 }
 section#resume tr.info td {
+  text-indent: 2em;
   padding-top: 25px;
   padding-bottom: 25px;
   padding-left: 70px;
@@ -69,6 +70,9 @@ section#blog div.blog-entry a {
   /* color: rgba(224, 134, 54, 1); */
 
   color: #2c3e50;
+}
+section#about p {
+  text-indent: 1em;
 }
 body {
   overflow-x: hidden;
