@@ -362,7 +362,7 @@
 
         <!--GitHub-activity -->
         <script type="text/javascript" src="js/mustache_0.7.2.min.js"></script>
-        <script type="text/javascript" src="js/github-activity-0.1.0.min.js"></script>
+        <script type="text/javascript" src="js/github-activity-0.1.1.min.js"></script>
        
         <!-- Email masking javascript -->       
         <script type="text/javascript" src="js/crypt.js"></script>
