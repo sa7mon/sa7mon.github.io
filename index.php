@@ -353,9 +353,11 @@
 
         <!-- jQuery Version 1.11.0 -->
         <script src="js/jquery-1.11.0.js"></script> 
+
         <!-- Bootstrap Core JavaScript -->
-        <script src="js/bootstrap.min.js"></script> 
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
         <script src="js/jquery.easing.min.js"></script><!-- Plugin JavaScript for jQuery Easing -->
+
         <!--script src="js/classie.js"></script-->
         <!--script src="js/cbpAnimatedHeader.js"></script-->
         <script src="js/freelancer.js"></script>  <!-- Custom Theme JavaScript -->
