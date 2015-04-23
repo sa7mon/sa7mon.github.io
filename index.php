@@ -356,14 +356,15 @@
 
         <!-- Bootstrap Core JavaScript -->
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
-        <script src="js/jquery.easing.min.js"></script><!-- Plugin JavaScript for jQuery Easing -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script><!-- Plugin JavaScript for jQuery Easing -->
 
         <!--script src="js/classie.js"></script-->
         <!--script src="js/cbpAnimatedHeader.js"></script-->
+
         <script src="js/freelancer.js"></script>  <!-- Custom Theme JavaScript -->
 
         <!--GitHub-activity -->
-        <script type="text/javascript" src="js/mustache_0.7.2.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
         <script type="text/javascript" src="js/github-activity-0.1.1.min.js"></script>
        
         <!-- Email masking javascript -->       
