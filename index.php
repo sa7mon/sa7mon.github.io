@@ -352,7 +352,7 @@
         <!-- Begin Scripts -->
 
         <!-- jQuery Version 1.11.0 -->
-        <script src="js/jquery-1.11.0.js"></script> 
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
 
         <!-- Bootstrap Core JavaScript -->
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
