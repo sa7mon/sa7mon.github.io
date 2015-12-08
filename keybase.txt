@@ -1,0 +1,77 @@
+==================================================================
+https://keybase.io/salmon
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://danthesalmon.com
+  * I am salmon (https://keybase.io/salmon) on keybase.
+  * I have a public key with fingerprint E2DF 793D DF65 BC81 81B9  E63B 3592 D28F 6373 DA51
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.8.22"
+        },
+        "key": {
+            "eldest_kid": "010197d54e1a4d08cfa2adf44b2e2640b4875763ecc75383fdcf7be2eaffe58f86710a",
+            "fingerprint": "e2df793ddf65bc8181b9e63b3592d28f6373da51",
+            "host": "keybase.io",
+            "key_id": "3592d28f6373da51",
+            "kid": "010197d54e1a4d08cfa2adf44b2e2640b4875763ecc75383fdcf7be2eaffe58f86710a",
+            "uid": "aeaa2cec33e27d65690e726e1710d319",
+            "username": "salmon"
+        },
+        "service": {
+            "hostname": "danthesalmon.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1444413866,
+    "expire_in": 157680000,
+    "prev": "27163f47725dd21ecf1f2f3343da31c29b7f1607a2ac7a694bb243751d315af1",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Comment: GPGTools - https://gpgtools.org
+
+owGtkmtMVEcYhhfa2mUrFCgWYyHCaTQQyHZnznUxYhEkERACLBiosD2XOewpy97O
+2RWC1JbSRNK0ELRFCMZoTbCtpSTitZHWQEpXalGobhFvMXihoiFptQqF7TkUfzTp
+z86vyXzP9837vjOt4c/pDCFk22gLL18pDBme4nSlK0PO1WOcU6jD0uox3i4hh6Lt
+HGwNwtKwalTHsTIySs4Eh1NAxnfkhCUmFfMhjyw5HSplMjJGCLGGVI3XupFdQLJi
+rZYErQpMwEwLJIEASwgmhhdZyAoiQXAQQYowcQRDkzSFI56nSZzBRYEXaQ5BxIoi
+IhmRoWhgYtULRclRhTwuj6RJxBAURNqMC4JIkRzPAAZwZkThHE6aoQAZkcJpXGBJ
+oDbanLLyLzPYolLrorz/4P9n3d7FcSxiWcgjHscRpAWKpMwmREMKAZUScGDWQBl5
+loKXWXuNmq0aqXrmk3ikxar5WKoLrEOxoX8oI++sUbtdHqfi5J12tWpTFJecpnUr
+dS4N344469IgKyc5BDVJ7QU7nz0hUFFekbTRgFAXwBmKSsVQrUvyIKukEapVxqQu
+7SLkU2dCGlC4SNA0JAUBAsSLQIQijhNqjDjgoZmjRUCZaDU1nmYpM8FxkMBpEqhu
+SVbUgpaR2+HE0ghVJ1uluZaqHKzi9SCsoTk07nldiEG37IVQ7Y/qDGGRzz6uvPBy
+UPnlr4LZqA1JroKWk/eCpfrDlbmXpqbnjANDowcU7lDo8NXrbS15mLt3e8PEesdr
+SmaS95RckvwqNPR/mhXpzVLiYhgQW708M4fOmHrQ9SSqcFt9ZE5SuetHX19c6MLH
+7++NGpnPWHk6+0rXG9Ty7/ft8JbV3tTD5N0pQz91+cP+OBrzSZv/qr0xsWt8x5m0
+jU3x+pE9X+bbHir9Zw7Oh48vPJrLbf0urkBOaDz+QVXrVz1gvLd10+ydrC0PLL9P
+mHcVT/oHv2G9zOST9r3smorptX9+ndiZPN9/0PrR2lsvfvZth+eebSj955SoiY0/
+BOuFO+7602EpgQEXboi4ObMT39xWu6zMnCzJ5XNFYP7uwpFAzTW9HJ7VseFC1q0K
+GG6IWLHl8v2i9gM6d1jqeGCu11NkIDJiBtY3vZn5NHM8b9PsVuqt+/7rbWWV3Y9K
+eh83vHs7uvB4SXfx6A0qEDG06sTrx36d1Ce32HyNNuZc14WGspme3Rf7bkfNvG3p
+DITGx+/54mx+y4ertg4z1NGONemf381/BTTnxpbZmm+ctbi3PfUUEnnNL/l3pitu
+i3/u4oivP7u46bJ982/BCm8QBLLfi03sPH+tcjA4teJ8bnnfYOu+XWj/auzhGBo6
+9fhkbFXi/vYTSeuix6aP5NkyVjfrIkuHI9Zdko6NRVt0Rbk5Pd1/Aw==
+=waeM
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/salmon
+
+==================================================================
