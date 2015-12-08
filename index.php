@@ -234,11 +234,18 @@
                                 <td colspan="2"><h3><i class="fa fa-graduation-cap"></i> Education</h3></td>
                             </tr>
                             <tr class="subhead">
-                                <td class="subheadtd1">2014 - Present</td>
-                                <td class="subheadtd2">South Central College - A.A. Degree</td>
+                                <td class="subheadtd1">2015 - Current</td>
+                                <td class="subheadtd2">Minnesota State University - Computer Information Technology B.S. Degree</td>
                             </tr>
                             <tr class="info">
-                                <td colspan="2">Currently, I'm pursuing my A.A. Degree. I'm planning on transferring it to MSU and getting my B.S. degree in Computer Information Technology.</td>
+                                <td colspan="2"> I am currently working on completing my Bachelor of Science degree from Minnesota State University.</td>
+                            </tr>
+                            <tr class="subhead">
+                                <td class="subheadtd1">2014 - 2015</td>
+                                <td class="subheadtd2">South Central College - Information Systems A.A.S. Degree</td>
+                            </tr>
+                            <tr class="info">
+                                <td colspan="2">This degree fulfilled training that prepared me to do the following tasks: design and code software applications using a variety of programming languages, utilize and maintain relational databases, use web application development tools, and apply current web server technologies. </td>
                             </tr>
                             <tr class="subhead">
                                 <td class="subheadtd1">2012 - 2014</td>
