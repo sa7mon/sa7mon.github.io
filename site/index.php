@@ -238,7 +238,7 @@
                                 <td class="subheadtd2">Minnesota State University - Computer Information Technology B.S. Degree</td>
                             </tr>
                             <tr class="info">
-                                <td colspan="2"> I am currently working on completing my Bachelor of Science degree from Minnesota State University.</td>
+                                <td colspan="2">Currently, I am attending Minnesota State University, Mankato to get my Bachelor of Science in Computer Information Technology.</td>
                             </tr>
                             <tr class="subhead">
                                 <td class="subheadtd1">2014 - 2015</td>
@@ -272,6 +272,23 @@
                             </tr>
                             <tr class="info">
                                 <td colspan="2">The WatchGuard Certified System Professional (WCSP) program certifies that individuals who pass the test are competent in the installation, configuration, management, and monitoring of a WatchGuard Firebox with WFS appliance software.  The courseware and exam reference WatchGuard System Manager management software.</td>
+                            </tr>
+
+                            <!-- Volunteer -->
+                            <tr class="header">
+                                <td colspan="2">
+                                    <h3><i class="fa fa-users"></i> Volunteer</h3>
+                                </td>
+                            </tr>
+                            <tr class="subhead">
+                                <td class="subheadtd1">2015 - Current</td>
+                                <td class="subheadtd2">PCs For People</td>
+                            </tr>
+                            <tr class="info">
+                                <td colspan="2">
+                                    PCs for People is a 501(c)(3) nonprofit striving to bridge the digital divide by providing the necessary tools to put a functional computer into the hands of low-income individuals and get them online. <br />
+                                    <p>At PCs I help refurbish donated systems and fix trouble systems for a low cost. </p>
+                                </td>
                             </tr>
                         </table>
                     </div>
