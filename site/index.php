@@ -296,14 +296,17 @@
                 <div class="row text-center">
                     <ul class="list-inline">
                         <li>
-                            <a href="https://github.com/sa7mon" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
+                            <a title="GitHub" href="https://github.com/sa7mon" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/profile/view?id=184402988" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            <a title="LinkedIn" href="https://www.linkedin.com/profile/view?id=184402988" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
                         </li>
                         <li>
-                            <a href="rfnqyt:ifs.xf7rts@lrfnq.htr" id="secretEmail2" class="btn-social btn-outline"><i class="fa fa-fw fa-envelope-o"></i></a>
+                            <a title="Email" href="rfnqyt:ifs.xf7rts@lrfnq.htr" id="secretEmail2" class="btn-social btn-outline"><i class="fa fa-fw fa-envelope-o"></i></a>
                         </li>
+                        <li>
+                            <a title="KeyBase" href="https://keybase.io/salmon" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-key"></i></a>
+                        </li>   
                     </ul>
                 </div>
             </div>
