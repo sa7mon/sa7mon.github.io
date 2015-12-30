@@ -437,9 +437,6 @@ ESd7DE39UMSm5f52s2Zm
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script><!-- Plugin JavaScript for jQuery Easing -->
 
-        <!--script src="js/classie.js"></script-->
-        <!--script src="js/cbpAnimatedHeader.js"></script-->
-
         <script src="js/freelancer.js"></script>  <!-- Custom Theme JavaScript -->
 
         <!--GitHub-activity -->
@@ -475,24 +472,6 @@ ESd7DE39UMSm5f52s2Zm
             document.onscroll = scroll;
         });
         //Because the btn-social or btn-outline class breaks the javascript
-        $("#secretEmail1").hover (
-            function() {
-                //On hover enter
-                doCrypt(true,'secretEmail1');
-            }, function() {
-                //ON hover leave
-                doCrypt(false,'secretEmail1');
-            }
-        );
-        $("#secretEmail2").hover (
-            function() {
-                //On hover enter
-                doCrypt(true,'secretEmail2');
-            }, function() {
-                //ON hover leave
-                doCrypt(false,'secretEmail2');
-            }
-        );
         </script>
     </body>
 </html>
