@@ -168,7 +168,7 @@
                     </div>
                 </div>
                 <div class="col-lg-12 text-center">
-                        <a href="rfnqyt:ifs.xf7rts@lrfnq.htr" id="secretEmail1" class="btn btn-outline">
+                        <a href="#" data-toggle="modal" data-target=".contact-modal-lg" class="btn btn-outline">
                             <i class="fa fa-envelope"></i> Email Me
                         </a>
                     </div>
@@ -318,13 +318,65 @@
                         <li>
                             <a title="LinkedIn" href="https://www.linkedin.com/profile/view?id=184402988" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
                         </li>
-                        <li>
-                            <a title="Email" href="rfnqyt:ifs.xf7rts@lrfnq.htr" id="secretEmail2" class="btn-social btn-outline"><i class="fa fa-fw fa-envelope-o"></i></a>
+                        <li>                      
+                            <a title="Email" href="#" data-toggle="modal" data-target=".contact-modal-lg" class="btn-social btn-outline">
+                                <i class="fa fa-fw fa-envelope-o"></i>
+                            </a>
                         </li>
                         <li>
                             <a title="KeyBase" href="https://keybase.io/salmon" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-key"></i></a>
                         </li>   
                     </ul>
+                </div>
+            </div>
+            <div class="modal fade contact-modal-lg" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button style="color: black;" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title">Contact</h4>
+                        </div>
+                        <div class="modal-body">
+                            <pre>
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Information is current as of 12/30/15
+
+Email
+=====
+salmon@protonmail.ch | salmon@protonmail.com (Best way to contact. Encrypted preferred)
+dan.sa7mon@gmail.com (For unencrypted unimportant messages)
+
+PGP
+=====
+Fingerprint: E2DF 793D DF65 BC81 81B9 E63B 3592 D28F 6373 AD51
+Full key: https://keybase.io/salmon/key.asc
+-----BEGIN PGP SIGNATURE-----
+Version: Keybase OpenPGP v2.0.49
+Comment: https://keybase.io/crypto
+
+wsFcBAABCgAGBQJWhAqlAAoJEDWS0o9jc9pR3CwQAJlqICaUxGP3jGXdcxqJefao
+3Ki2/04Cd0Js+Lfv1w2m/6VYry2oWPZHTWhLaXVTwXBT65l+n6qZlo/I/M11Ky2g
+g3qqOvbAjRUAMnrhl7Axc+8I6of/TWm5kmEguJLgdbgJdhG2RJ/X14/Ut8E4i0nq
+U5eUlcT3Om/fNumXlQ8qkWSc/cRe4wnh35A0uFVkUAD6CN9Z5aHG1GncL7JeLhQd
+7avmTqQZ496bPWraC7KNO1ezj9O6MvucIMSOhjo3ALKg8jQsfmf6VZ/T8pR1qaWi
+gNnxFcXzw3Smr9O2qQ9hSg/YcQ5dh/rTEGYEIdAzBigYuo7AlJ5IC4iAR2Fk7bIn
+b7E3giVKvHFUY23gD+/SxaEuznlDiT69mBfi0pCIWXLHB/FnvcqS0UR4uItPaBoB
+K+KWd9MwFkfodPpCJpNIqr2EB3NNtJGvgNIZ8EqVMF3YKvUyxRwBWnzCXswzRcbo
+xQOUPSoVj2qfDntJrhNlWKydVOBt01v565PzxCqg5Y0bPSC6WAWk7cw76Qq12g62
+luKoFHLs0fzSZ8EJuJU65BMH2fXH985RN7D1gPLPjMNhD1j+1h/v1tH+3s2cerK4
+rUM2/M3/B8Z77grpJ0eRGomyAqiBtgD3VxuK7vewqiJAwIaXVXhXsj1/xJdvZQPY
+ESd7DE39UMSm5f52s2Zm
+=1rjC
+-----END PGP SIGNATURE-----
+
+                            </pre>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
