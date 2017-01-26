@@ -210,9 +210,38 @@
                                     <h3><i class="fa fa-briefcase"></i> Work Experience<h3>
                                 </td>
                             </tr>
+
                             <tr class="subhead">
                                 <td class="subheadtd1">
-                                    <strong>2014 - Present</strong>
+                                    <strong>2016 - Current</strong>
+                                </td>
+                                <td class="subheadtd2">
+                                    <strong>FPX - Software QA Intern</strong>
+                                </td>
+                            </tr>
+                            <tr class="info">
+                                <td colspan="2">
+                                    As a QA intern, my team and I write tests in Java to test our flagship product, CPQ. After our automated tests find bugs, I manually verify them and write bug reports for the developers. 
+                                </td>
+                            </tr>
+
+                            <tr class="subhead">
+                                <td class="subheadtd1">
+                                    <strong>2015 - 2016</strong>
+                                </td>
+                                <td class="subheadtd2">
+                                    <strong>MSU - UX Lab Developer Intern</strong>
+                                </td>
+                            </tr>
+                            <tr class="info">
+                                <td colspan="2">
+                                    For MSU, I helped develop Windows Phone app (MavCLASS) to be used campus-wide by students. I also assisted classes running usability and user experience tests with state-of-the-art testing technologies.
+                                </td>
+                            </tr>
+
+                            <tr class="subhead">
+                                <td class="subheadtd1">
+                                    <strong>2014 - 2015</strong>
                                 </td>
                                 <td class="subheadtd2">
                                     <strong>Computer Technology Solutions - Service Technician</strong>
