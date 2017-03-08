@@ -345,6 +345,9 @@
                             <a title="GitHub" href="https://github.com/sa7mon" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
                         </li>
                         <li>
+                            <a title="Twitter" href="https://twitter.com/salmon" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                        </li>
+                        <li>
                             <a title="LinkedIn" href="https://www.linkedin.com/profile/view?id=184402988" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
                         </li>
                         <li>                      
