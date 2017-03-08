@@ -44,7 +44,7 @@
                             <span class="name">Dan Salmon</span>
                             <hr class="star-opaque">
                             <span class="skills">
-                                [<a href="http://southcentral.edu" target="_blank">student</a>] 
+                                [<a href="http://www.mnsu.edu" target="_blank">student</a>] 
                                 [<a href="http://github.com/sa7mon" target="_blank">programmer</a>] 
                                 [<a href="http://themanchesterorchestra.com/" target="_blank">music&nbsp;lover</a>]
                             </span>
