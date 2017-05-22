@@ -203,6 +203,11 @@
                         <hr class="star-opaque">
                     </div>
                     <div class="col-lg-10 col-lg-offset-1">
+
+                        
+
+
+
                         <table>
                             <!--Work Experience-->
                             <tr>
@@ -322,7 +327,7 @@
                         </table>
                     </div>
                     <div class="col-lg-12 text-center">
-                        <a href="https://www.linkedin.com/profile/view?id=184402988" target="_blank" class="btn btn-outline btn">
+                        <a href="https://www.linkedin.com/in/dan-salmon-83890a51" target="_blank" class="btn btn-outline btn">
                             <i class="fa fa-linkedin-square"></i> Connect on LinkedIn
                         </a>
                     </div>
@@ -348,7 +353,7 @@
                             <a title="Twitter" href="https://twitter.com/salmon" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
                         </li>
                         <li>
-                            <a title="LinkedIn" href="https://www.linkedin.com/profile/view?id=184402988" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            <a title="LinkedIn" href="https://www.linkedin.com/in/dan-salmon-83890a51" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
                         </li>
                         <li>                      
                             <a title="Email" href="#" data-toggle="modal" data-target=".contact-modal-lg" class="btn-social btn-outline">
