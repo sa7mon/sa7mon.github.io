@@ -1,0 +1,24 @@
+baseURL = "https://sa7mon.github.io/personal-site-hugo"
+languageCode = "en-us"
+title = "Dan [the] Salmon"
+theme = "pixyll"
+
+contentdir = "content"
+publishdir = "public"
+
+
+builddrafts = false
+canonifyurls = true
+author = "admin"
+
+
+[indexes]
+  category = "categories"
+  tag = "tags"
+
+[params]
+  search_engine = true
+  google_analytics_id = "XX-XXXXXXXX-X"
+  twitter_username = "username"
+  disqus_shortname = "sitename"
+  paginate = true

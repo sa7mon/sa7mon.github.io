@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows on Dan [the] Salmon</title>
+    <link>https://sa7mon.github.io/personal-site-hugo/tags/windows/</link>
+    <description>Recent content in Windows on Dan [the] Salmon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 26 Aug 2017 21:08:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sa7mon.github.io/personal-site-hugo/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fix “Some settings are managed by your system administrator” in Windows 7</title>
+      <link>https://sa7mon.github.io/personal-site-hugo/fix-some-settings-are-managed-by-your-system-administrator-in-windows-7/</link>
+      <pubDate>Sat, 26 Aug 2017 21:08:00 +0000</pubDate>
+      
+      <guid>https://sa7mon.github.io/personal-site-hugo/fix-some-settings-are-managed-by-your-system-administrator-in-windows-7/</guid>
+      <description>Background A few months back, I was doing cleanup on a system that I had cleaned of malware. Whatever junk was on there had configured a local proxy server to run, but Malwarebytes had ripped it out. The system unfortunately still thought it was supposed to use the proxy server that doesn’t exist; consequently, I had no internet access. That’s an easy enough fix, right? I open Internet Options and change the LAN settings to not use a proxy and close it.</description>
+    </item>
+    
+    <item>
+      <title>Change Network Location in Windows 8.1/2012 R2 from Powershell</title>
+      <link>https://sa7mon.github.io/personal-site-hugo/change-network-location-in-windows-8-1-2012-r2-from-powershell/</link>
+      <pubDate>Sat, 26 Aug 2017 20:46:25 +0000</pubDate>
+      
+      <guid>https://sa7mon.github.io/personal-site-hugo/change-network-location-in-windows-8-1-2012-r2-from-powershell/</guid>
+      <description>Step 1 From an elevated PowerShell window issue the following command to gather some information about our current network profile:
+&#34; Get-NetConnectionProfile Name : Unidentified Network InterfaceAlias : Ethernet InterfaceIndex : 10 NetworkCategory : Public IPv4Connectivity : LocalNetwork IPv6Connectivity : LocalNetwork  The only information we really need from this output is the “InterfaceIndex”
+Step 2 After getting the InterfaceIndex, we run the following command:
+&amp;rdquo;&amp;gt; Set-NetConnectionProfile -InterfaceIndex 10 -NetworkCategory Private  The last argument is what category you want to switch it to.</description>
+    </item>
+    
+  </channel>
+</rss>

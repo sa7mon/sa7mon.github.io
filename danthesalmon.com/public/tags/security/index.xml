@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Security on Dan [the] Salmon</title>
+    <link>https://sa7mon.github.io/personal-site-hugo/tags/security/</link>
+    <description>Recent content in Security on Dan [the] Salmon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Oct 2017 16:38:19 +0000</lastBuildDate>
+    
+	<atom:link href="https://sa7mon.github.io/personal-site-hugo/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>WiFi Security Testing Cheatsheet</title>
+      <link>https://sa7mon.github.io/personal-site-hugo/wifi-security-testing-cheatsheet/</link>
+      <pubDate>Tue, 10 Oct 2017 16:38:19 +0000</pubDate>
+      
+      <guid>https://sa7mon.github.io/personal-site-hugo/wifi-security-testing-cheatsheet/</guid>
+      <description>Prepare Wireless Card  View Network Cards: iwconfig Kill Wireless Processes: airmon-ng check kill  View Networks airodump-ng wlan0
+Capture traffic airodump-ng &amp;ndash;bssid 04:A1:51:9F:98:BB &amp;ndash;wps &amp;ndash;write ISSO-WPA2 &amp;ndash;channel 6 wlan0
+where: * &amp;ndash;bssid - MAC of router * &amp;ndash;wps - Output WPS information, may be able to try Reaver * &amp;ndash;write - File name to write to. No extension * &amp;ndash;channel - Statically set a channel. Don&amp;rsquo;t need to unless de-authing * wlan0 - Wireless interface</description>
+    </item>
+    
+    <item>
+      <title>Why I switched from Android to iOS</title>
+      <link>https://sa7mon.github.io/personal-site-hugo/why-i-switched-from-android-to-ios/</link>
+      <pubDate>Fri, 01 Sep 2017 01:12:00 +0000</pubDate>
+      
+      <guid>https://sa7mon.github.io/personal-site-hugo/why-i-switched-from-android-to-ios/</guid>
+      <description>Note: This article is not just a stringent comparison of Apple vs Android, but a look at the whole picture that I took while deciding which phone to switch to.
+A few months ago, my beloved Verizon HTC One M8 began to lose it’s charge at an alarming rate. It would be at 40% battery by lunch time after a day of very moderate use. Luckily, I was due for an upgrade from Verizon.</description>
+    </item>
+    
+  </channel>
+</rss>

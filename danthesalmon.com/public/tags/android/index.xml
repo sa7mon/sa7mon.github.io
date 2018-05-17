@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android on Dan [the] Salmon</title>
+    <link>https://sa7mon.github.io/personal-site-hugo/tags/android/</link>
+    <description>Recent content in Android on Dan [the] Salmon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 Sep 2017 01:12:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sa7mon.github.io/personal-site-hugo/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Why I switched from Android to iOS</title>
+      <link>https://sa7mon.github.io/personal-site-hugo/why-i-switched-from-android-to-ios/</link>
+      <pubDate>Fri, 01 Sep 2017 01:12:00 +0000</pubDate>
+      
+      <guid>https://sa7mon.github.io/personal-site-hugo/why-i-switched-from-android-to-ios/</guid>
+      <description>Note: This article is not just a stringent comparison of Apple vs Android, but a look at the whole picture that I took while deciding which phone to switch to.
+A few months ago, my beloved Verizon HTC One M8 began to lose it’s charge at an alarming rate. It would be at 40% battery by lunch time after a day of very moderate use. Luckily, I was due for an upgrade from Verizon.</description>
+    </item>
+    
+    <item>
+      <title>Fix HAXM Emulation Error in Android Studio</title>
+      <link>https://sa7mon.github.io/personal-site-hugo/fix-haxm-emulation-error-in-android-studio/</link>
+      <pubDate>Sat, 26 Aug 2017 04:57:15 +0000</pubDate>
+      
+      <guid>https://sa7mon.github.io/personal-site-hugo/fix-haxm-emulation-error-in-android-studio/</guid>
+      <description>Requirement Note: Android Studio requires an Intel processor with VT-X support for it’s built-in emulators to work. If you want to do Android development with emulators on an AMD processor, I would highly suggest using Genymotion. If you’re not sure if your Intel processor supports VT-X, Intel has an article here.
+This error is occurring because Android Studio requires Intel Hardware Accelerated Execution Manager (Intel HAXM) to run it’s emulators.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>View/Reset SickRage Web Password - Dan [the] Salmon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <link rel="canonical" href="https://sa7mon.github.io/personal-site-hugo/view-reset-sickrage-web-password/">
+
+  
+  
+
+  
+  
+
+  
+  
+
+  <link rel="stylesheet" type="text/css" href="https://sa7mon.github.io/personal-site-hugo/css/combined-min.css">
+
+</head>
+<body class="">
+
+<div class="site-wrap">
+  <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="https://sa7mon.github.io/personal-site-hugo" class="site-title">Dan [the] Salmon</a>
+      <nav class="site-nav right">
+      <a href="https://sa7mon.github.io/personal-site-hugo/about/">About</a>
+<a href="https://sa7mon.github.io/personal-site-hugo/tags/">Tags</a>
+<a href="https://sa7mon.github.io/personal-site-hugo/contact/">Contact</a>
+<form class="navbar-search" action="https://sa7mon.github.io/personal-site-hugo/search/index.html"
+    onsubmit="return validateForm(this.elements['q'].value);">
+    <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input">
+
+</form>
+
+      </nav>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</header>
+
+  <div class="post p2 p-responsive wrap" role="main">
+    <div class="measure">
+      <div class="post-header mb2">
+        <h1 class="py2">View/Reset SickRage Web Password</h1>
+      </div>
+
+      <article class="post-content">
+      
+
+<h1 id="background">Background</h1>
+
+<p>I recently forgot my password for SickRage and was surprised by the little documentation online.  I have it installed in a jail in FreeNAS, so that’s what I’ll be focused on here but the instructions should be exactly the same if you have it installed inside an OS.</p>
+
+<h1 id="steps">Steps</h1>
+
+<p>It’s actually really easy, assuming you have command-line access. In FreeNAS, open a shell on your SickRage jail and edit the following file:</p>
+
+<pre><code class="language-language-bash">/var/db/sickrage/config.ini
+</code></pre>
+
+<p>There should be 2 lines in that file, “web_username” and “web_password”. Just edit these with what you want them to be and save the file. I installed Nano in my environment, but vi should work just fine.</p>
+
+<p><img src="../images/editFile.png" alt="editFile" /></p>
+
+      </article>
+    </div>
+  </div>
+</div>
+    <footer class="footer">
+      <div class="p2 wrap">
+        <div class="measure mt1 center">
+      <nav class="social-icons icons">
+<a class="fa fa-rss rss" href="https://sa7mon.github.io/personal-site-hugo/index.xml"></a>
+
+<a class="fa fa-twitter twitter" href="https://twitter.com/username"></a>
+
+</nav>
+
+          <small>
+            Copyright &#169; 2017<br>
+            Powered by <a href="http://gohugo.io/" target="_blank">Hugo</a> &amp; <a href="https://github.com/azmelanar/hugo-theme-pixyll" target="_blank">Pixyll</a>
+          </small>
+        </div>
+      </div>
+    </footer>
+
+    
+    <script src="https://sa7mon.github.io/personal-site-hugo/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'XX-XXXXXXXX-X', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>
+

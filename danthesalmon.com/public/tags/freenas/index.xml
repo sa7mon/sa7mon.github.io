@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Freenas on Dan [the] Salmon</title>
+    <link>https://sa7mon.github.io/personal-site-hugo/tags/freenas/</link>
+    <description>Recent content in Freenas on Dan [the] Salmon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 Nov 2017 03:07:25 +0000</lastBuildDate>
+    
+	<atom:link href="https://sa7mon.github.io/personal-site-hugo/tags/freenas/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Moving ZFS datasets between volumes</title>
+      <link>https://sa7mon.github.io/personal-site-hugo/moving-zfs-datasets-between-volumes/</link>
+      <pubDate>Wed, 29 Nov 2017 03:07:25 +0000</pubDate>
+      
+      <guid>https://sa7mon.github.io/personal-site-hugo/moving-zfs-datasets-between-volumes/</guid>
+      <description>If you run ZFS like I do (and I think you should) there will probably come at time when you need to migrate a dataset from one volume to another. This was done in FreeNAS (FreeBSD), but the steps should apply to any *nix system with ZFS
+The great thing about ZFS is that we can do most of this migration with our services and everything still running.
+We&amp;rsquo;ll start by taking a snapshot of the dataset we want to move.</description>
+    </item>
+    
+    <item>
+      <title>View/Reset SickRage Web Password</title>
+      <link>https://sa7mon.github.io/personal-site-hugo/view-reset-sickrage-web-password/</link>
+      <pubDate>Fri, 18 Aug 2017 03:56:32 +0000</pubDate>
+      
+      <guid>https://sa7mon.github.io/personal-site-hugo/view-reset-sickrage-web-password/</guid>
+      <description>Background I recently forgot my password for SickRage and was surprised by the little documentation online. I have it installed in a jail in FreeNAS, so that’s what I’ll be focused on here but the instructions should be exactly the same if you have it installed inside an OS.
+Steps It’s actually really easy, assuming you have command-line access. In FreeNAS, open a shell on your SickRage jail and edit the following file:</description>
+    </item>
+    
+    <item>
+      <title>Create a Seedbox Jail in FreeNAS with rTorrent / ruTorrent / lighttpd</title>
+      <link>https://sa7mon.github.io/personal-site-hugo/create-seedbox-jail-freenas/</link>
+      <pubDate>Wed, 16 Aug 2017 04:33:52 +0000</pubDate>
+      
+      <guid>https://sa7mon.github.io/personal-site-hugo/create-seedbox-jail-freenas/</guid>
+      <description>Intro / Credits After much work and starting from scratch a few times, I finally got a working jail put together that uses ruTorrent, rTorrent, and Lighttpd to create a very nice personal seedbox in FreeNAS. I should give a lot of credit to FlyingPersian and his thread on the FreeNAS forum for the great information. I’m going to shamelessly steal a lot of his guide but correct some things and add improvements that I found.</description>
+    </item>
+    
+  </channel>
+</rss>

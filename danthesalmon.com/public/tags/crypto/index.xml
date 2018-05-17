@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Crypto on Dan [the] Salmon</title>
+    <link>https://sa7mon.github.io/personal-site-hugo/tags/crypto/</link>
+    <description>Recent content in Crypto on Dan [the] Salmon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 16 Jan 2018 00:40:32 +0000</lastBuildDate>
+    
+	<atom:link href="https://sa7mon.github.io/personal-site-hugo/tags/crypto/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Electroneum - First Impressions</title>
+      <link>https://sa7mon.github.io/personal-site-hugo/first-impressions-of-electroneum/</link>
+      <pubDate>Tue, 16 Jan 2018 00:40:32 +0000</pubDate>
+      
+      <guid>https://sa7mon.github.io/personal-site-hugo/first-impressions-of-electroneum/</guid>
+      <description>A coworker recently sent me a link to Yet Another Cryptocurrency. Like most people, I&amp;rsquo;m pretty burnt out with all these new coins and ICO&amp;rsquo;s popping up each week. In fact, I get about 5-10 ICO spam emails in my Junk mail folder.
+This one looked to be just a little different, though. He was excited because this one allows you to use your phone to mine. I talked to him about how it&amp;rsquo;s a neat idea, but ultimately probably won&amp;rsquo;t be profitable, especially compare to a multi-GPU setup.</description>
+    </item>
+    
+  </channel>
+</rss>

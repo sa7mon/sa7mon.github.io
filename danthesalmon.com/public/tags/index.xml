@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Dan [the] Salmon</title>
+    <link>https://sa7mon.github.io/personal-site-hugo/tags/</link>
+    <description>Recent content in Tags on Dan [the] Salmon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 Sep 2017 01:12:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sa7mon.github.io/personal-site-hugo/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android</title>
+      <link>https://sa7mon.github.io/personal-site-hugo/tags/android/</link>
+      <pubDate>Fri, 01 Sep 2017 01:12:00 +0000</pubDate>
+      
+      <guid>https://sa7mon.github.io/personal-site-hugo/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Crypto</title>
+      <link>https://sa7mon.github.io/personal-site-hugo/tags/crypto/</link>
+      <pubDate>Tue, 16 Jan 2018 00:40:32 +0000</pubDate>
+      
+      <guid>https://sa7mon.github.io/personal-site-hugo/tags/crypto/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Freenas</title>
+      <link>https://sa7mon.github.io/personal-site-hugo/tags/freenas/</link>
+      <pubDate>Wed, 29 Nov 2017 03:07:25 +0000</pubDate>
+      
+      <guid>https://sa7mon.github.io/personal-site-hugo/tags/freenas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Homelab</title>
+      <link>https://sa7mon.github.io/personal-site-hugo/tags/homelab/</link>
+      <pubDate>Wed, 29 Nov 2017 03:07:25 +0000</pubDate>
+      
+      <guid>https://sa7mon.github.io/personal-site-hugo/tags/homelab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Networking</title>
+      <link>https://sa7mon.github.io/personal-site-hugo/tags/networking/</link>
+      <pubDate>Sat, 26 Aug 2017 21:44:08 +0000</pubDate>
+      
+      <guid>https://sa7mon.github.io/personal-site-hugo/tags/networking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Security</title>
+      <link>https://sa7mon.github.io/personal-site-hugo/tags/security/</link>
+      <pubDate>Tue, 10 Oct 2017 16:38:19 +0000</pubDate>
+      
+      <guid>https://sa7mon.github.io/personal-site-hugo/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows</title>
+      <link>https://sa7mon.github.io/personal-site-hugo/tags/windows/</link>
+      <pubDate>Sat, 26 Aug 2017 21:08:00 +0000</pubDate>
+      
+      <guid>https://sa7mon.github.io/personal-site-hugo/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
