@@ -1,4 +1,4 @@
-baseURL = "https://sa7mon.github.io/personal-site-hugo"
+baseURL = "https://aws.danthesalmon.com/blog"
 languageCode = "en-us"
 title = "Dan [the] Salmon"
 theme = "pixyll"
