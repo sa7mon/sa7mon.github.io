@@ -1,4 +1,4 @@
-baseURL = "https://aws.danthesalmon.com/blog"
+baseURL = "https://aws.danthesalmon.com"
 languageCode = "en-us"
 title = "Dan [the] Salmon"
 theme = "pixyll"

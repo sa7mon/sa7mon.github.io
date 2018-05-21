@@ -2,75 +2,75 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Dan [the] Salmon</title>
-    <link>https://aws.danthesalmon.com/blog/tags/</link>
+    <link>https://aws.danthesalmon.com/tags/</link>
     <description>Recent content in Tags on Dan [the] Salmon</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 01 Sep 2017 01:12:00 +0000</lastBuildDate>
     
-	<atom:link href="https://aws.danthesalmon.com/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://aws.danthesalmon.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Android</title>
-      <link>https://aws.danthesalmon.com/blog/tags/android/</link>
+      <link>https://aws.danthesalmon.com/tags/android/</link>
       <pubDate>Fri, 01 Sep 2017 01:12:00 +0000</pubDate>
       
-      <guid>https://aws.danthesalmon.com/blog/tags/android/</guid>
+      <guid>https://aws.danthesalmon.com/tags/android/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Crypto</title>
-      <link>https://aws.danthesalmon.com/blog/tags/crypto/</link>
+      <link>https://aws.danthesalmon.com/tags/crypto/</link>
       <pubDate>Tue, 16 Jan 2018 00:40:32 +0000</pubDate>
       
-      <guid>https://aws.danthesalmon.com/blog/tags/crypto/</guid>
+      <guid>https://aws.danthesalmon.com/tags/crypto/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Freenas</title>
-      <link>https://aws.danthesalmon.com/blog/tags/freenas/</link>
+      <link>https://aws.danthesalmon.com/tags/freenas/</link>
       <pubDate>Wed, 29 Nov 2017 03:07:25 +0000</pubDate>
       
-      <guid>https://aws.danthesalmon.com/blog/tags/freenas/</guid>
+      <guid>https://aws.danthesalmon.com/tags/freenas/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Homelab</title>
-      <link>https://aws.danthesalmon.com/blog/tags/homelab/</link>
+      <link>https://aws.danthesalmon.com/tags/homelab/</link>
       <pubDate>Wed, 29 Nov 2017 03:07:25 +0000</pubDate>
       
-      <guid>https://aws.danthesalmon.com/blog/tags/homelab/</guid>
+      <guid>https://aws.danthesalmon.com/tags/homelab/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Networking</title>
-      <link>https://aws.danthesalmon.com/blog/tags/networking/</link>
+      <link>https://aws.danthesalmon.com/tags/networking/</link>
       <pubDate>Sat, 26 Aug 2017 21:44:08 +0000</pubDate>
       
-      <guid>https://aws.danthesalmon.com/blog/tags/networking/</guid>
+      <guid>https://aws.danthesalmon.com/tags/networking/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Security</title>
-      <link>https://aws.danthesalmon.com/blog/tags/security/</link>
+      <link>https://aws.danthesalmon.com/tags/security/</link>
       <pubDate>Tue, 10 Oct 2017 16:38:19 +0000</pubDate>
       
-      <guid>https://aws.danthesalmon.com/blog/tags/security/</guid>
+      <guid>https://aws.danthesalmon.com/tags/security/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Windows</title>
-      <link>https://aws.danthesalmon.com/blog/tags/windows/</link>
+      <link>https://aws.danthesalmon.com/tags/windows/</link>
       <pubDate>Sat, 26 Aug 2017 21:08:00 +0000</pubDate>
       
-      <guid>https://aws.danthesalmon.com/blog/tags/windows/</guid>
+      <guid>https://aws.danthesalmon.com/tags/windows/</guid>
       <description></description>
     </item>
     
