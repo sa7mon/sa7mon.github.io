@@ -19,6 +19,6 @@ author = "admin"
 [params]
  
   google_analytics_id = "XX-XXXXXXXX-X"
-  twitter_username = "username"
-  disqus_shortname = "sitename"
+  twitter_username = "bltjetpack"
+  disqus_shortname = "salmonroll"
   paginate = true
