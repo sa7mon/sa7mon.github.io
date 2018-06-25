@@ -592,3 +592,15 @@ Copyright (c) 2014 Daniel Eden
   padding: 0;
   text-align: center;
 }
+
+
+/*
+    Search page stuff
+*/
+
+.found-item {
+  margin-bottom: 12px;
+}
+
+
+

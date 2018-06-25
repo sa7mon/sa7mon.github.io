@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Security - Dan [the] Salmon</title>
+  <title>Search - Dan [the] Salmon</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="">
   <meta name="keywords" content="">
-  <link rel="canonical" href="https://danthesalmon.com/tags/security/">
+  <link rel="canonical" href="https://danthesalmon.com/search/">
 
   
   
@@ -44,14 +44,19 @@
 
   <div class="post p2 p-responsive wrap" role="main">
     <div class="measure">
-    <p>Tag: security</p>
-    <ul>
-        
-            <li><a href="https://danthesalmon.com/wifi-security-testing-cheatsheet/"> WiFi Security Testing Cheatsheet </a></li>
-        
-            <li><a href="https://danthesalmon.com/why-i-switched-from-android-to-ios/"> Why I switched from Android to iOS </a></li>
-        
-    </ul>
+      <div class="post-header mb2">
+        <h1 class="py2">Search</h1>
+      </div>
+
+      <article class="post-content">
+      <p><input id="search" name="search" type="text" placeholder="Search..." required>
+<button id="search-submit" name="search-submit" value="Search" onclick="doSearch()">Search</button></p>
+
+<div id="search-results"></div>
+
+<script type="text/javascript" src="../js/search.js"></script>
+
+      </article>
     </div>
   </div>
 </div>

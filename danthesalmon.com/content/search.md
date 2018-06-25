@@ -11,8 +11,13 @@ type = "page"
 
 +++
 
+<!-- <form> -->
+
 <input id="search" name="search" type="text" placeholder="Search..." required>
 <button id="search-submit" name="search-submit" value="Search" onclick="doSearch()">Search</button>
+<br>
+<small>Enter comma-separated search terms</small>
+<!-- </form> -->
 
 <div id="search-results"></div>
 
