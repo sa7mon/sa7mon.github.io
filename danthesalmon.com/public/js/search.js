@@ -30,6 +30,13 @@ function doSearch() {
 
     var items = xmlDoc.getElementsByTagName("item");
     var searchResults = document.getElementById('search-results');
+
+
+    // Clear any existing search results from the last search
+    while (searchResults.firstChild) {
+        searchResults.removeChild(searchResults.firstChild);
+    }   
+
     
     // console.log("Found " + items.length + " items to search");
 
@@ -49,8 +56,8 @@ function doSearch() {
         };
 
         if (itemFound) {
-            console.log("item title: " + itemTitle);
-            console.log("item description: " + itemDescription);  
+            // console.log("item title: " + itemTitle);
+            // console.log("item description: " + itemDescription);  
 
             appendSearchResult(itemTitle, itemDescription, itemUrl);
 
