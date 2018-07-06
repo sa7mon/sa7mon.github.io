@@ -7,7 +7,18 @@
     <language>en-us</language>
     
     
-    <updated>Tue, 19 Jun 2018 21:44:08 UTC</updated>
+    <updated>Thu, 05 Jul 2018 00:40:32 UTC</updated>
+    
+    <item>
+      <title>Running Oracle 12c on MacOS</title>
+      <link>https://danthesalmon.com/running-oracle-12c-on-macos/</link>
+      <pubDate>Thu, 05 Jul 2018 00:40:32 UTC</pubDate>
+      
+      <guid>https://danthesalmon.com/running-oracle-12c-on-macos/</guid>
+      <description>In this post, we will go through the steps of installing Oracle 12c in a Docker container and connect to the database using SQL Developer on a Mac. This is a much lighter way of running Oracle locally compared to running a full Windows virtual machine with VMWare or Virtualbox.
+1. Install Docker - If your Mac is newer than 2010
+You can simply install “Docker for Mac”. Download and install “Docker for Mac” from here (You’ll have to create a quick account to download it.</description>
+    </item>
     
     <item>
       <title>Search</title>
@@ -150,15 +161,6 @@ ERROR: While executing gem ... (Gem::RemoteFetcher::FetchError) SSL_connect retu
       <guid>https://danthesalmon.com/view-reset-sickrage-web-password/</guid>
       <description>Background I recently forgot my password for SickRage and was surprised by the little documentation online. I have it installed in a jail in FreeNAS, so that’s what I’ll be focused on here but the instructions should be exactly the same if you have it installed inside an OS.
 Steps It’s actually really easy, assuming you have command-line access. In FreeNAS, open a shell on your SickRage jail and edit the following file:</description>
-    </item>
-    
-    <item>
-      <title>Create a Seedbox Jail in FreeNAS with rTorrent / ruTorrent / lighttpd</title>
-      <link>https://danthesalmon.com/create-seedbox-jail-freenas/</link>
-      <pubDate>Wed, 16 Aug 2017 04:33:52 UTC</pubDate>
-      
-      <guid>https://danthesalmon.com/create-seedbox-jail-freenas/</guid>
-      <description>Intro / Credits After much work and starting from scratch a few times, I finally got a working jail put together that uses ruTorrent, rTorrent, and Lighttpd to create a very nice personal seedbox in FreeNAS. I should give a lot of credit to FlyingPersian and his thread on the FreeNAS forum for the great information. I’m going to shamelessly steal a lot of his guide but correct some things and add improvements that I found.</description>
     </item>
     
   </channel>
