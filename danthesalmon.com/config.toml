@@ -1,24 +1,17 @@
+author = "admin"
 baseURL = "https://danthesalmon.com"
-languageCode = "en-us"
-title = "Dan [the] Salmon"
-theme = "pixyll"
-
-contentdir = "content"
-publishdir = "public"
-
-
 builddrafts = false
 canonifyurls = true
-author = "admin"
-
-
+contentdir = "content"
+languageCode = "en-us"
+publishdir = "public"
+theme = "pixyll"
+title = "Dan [the] Salmon"
 [indexes]
-  category = "categories"
-  tag = "tags"
-
+category = "categories"
+tag = "tags"
 [params]
- 
-  google_analytics_id = "XX-XXXXXXXX-X"
-  twitter_username = "bltjetpack"
-  disqus_shortname = "salmonroll"
-  paginate = true
+disqus_shortname = "salmonroll"
+google_analytics_id = "XX-XXXXXXXX-X"
+paginate = true
+twitter_username = "bltjetpack"
