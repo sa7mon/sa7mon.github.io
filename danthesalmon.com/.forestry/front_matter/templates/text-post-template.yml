@@ -11,3 +11,6 @@ fields:
       format: markdown
   label: body-text
   name: body-text
+pages:
+- danthesalmon.com/content/test-page.md
+- danthesalmon.com/content/test-forestry-page.md
