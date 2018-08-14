@@ -38,7 +38,8 @@ the merch subscription series put out by the Michigan-based hardcore band La Dis
 * White tote 
 
 # June 2016
-
+[Source 1](https://www.youtube.com/watch?v=bhupz6NmkfY)
+* Post card
 * T-shirt with green graphic 
 
 # July 2016
