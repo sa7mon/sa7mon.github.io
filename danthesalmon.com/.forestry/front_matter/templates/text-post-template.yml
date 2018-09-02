@@ -1,0 +1,16 @@
+---
+label: Text post template
+hide_body: false
+is_partial: false
+fields:
+- type: textarea
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: body-text
+  name: body-text
+pages:
+- danthesalmon.com/content/test-page.md
+- danthesalmon.com/content/test-forestry-page.md
