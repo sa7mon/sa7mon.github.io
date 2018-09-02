@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homelab on Dan [the] Salmon</title>
+    <link>https://danthesalmon.com/categories/homelab/</link>
+    <description>Recent content in Homelab on Dan [the] Salmon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 Nov 2017 03:07:25 +0000</lastBuildDate>
+    
+	<atom:link href="https://danthesalmon.com/categories/homelab/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Moving ZFS datasets between volumes</title>
+      <link>https://danthesalmon.com/moving-zfs-datasets-between-volumes/</link>
+      <pubDate>Wed, 29 Nov 2017 03:07:25 +0000</pubDate>
+      
+      <guid>https://danthesalmon.com/moving-zfs-datasets-between-volumes/</guid>
+      <description>If you run ZFS like I do (and I think you should) there will probably come at time when you need to migrate a dataset from one volume to another. This was done in FreeNAS (FreeBSD), but the steps should apply to any *nix system with ZFS
+The great thing about ZFS is that we can do most of this migration with our services and everything still running.
+We&amp;rsquo;ll start by taking a snapshot of the dataset we want to move.</description>
+    </item>
+    
+    <item>
+      <title>Allow a Chromecast through a WatchGuard firewall</title>
+      <link>https://danthesalmon.com/allow-a-chromecast-through-a-watchguard-firewall/</link>
+      <pubDate>Sat, 26 Aug 2017 21:44:08 +0000</pubDate>
+      
+      <guid>https://danthesalmon.com/allow-a-chromecast-through-a-watchguard-firewall/</guid>
+      <description>Background I recently picked up a Chromecast for my TV so I could stream Netflix easier since XBMC’s addon is terrible if you don’t want to use a keyboard. It was super easy to setup, but after it updated and connected to my WiFi I couldn’t see it from my phone. I did some digging and found that my WatchGuard 25W was the culprit. After I added an any-any rule I was able to see it, but that left it wide-open on my network.</description>
+    </item>
+    
+  </channel>
+</rss>

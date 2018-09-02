@@ -11,15 +11,8 @@ title = "Dan [the] Salmon"
 category = "categories"
 tag = "tags"
 [params]
-<<<<<<< HEAD
  
-  google_analytics_id = "XX-XXXXXXXX-X"
-  twitter_username = "bltjetpack"
-  disqus_shortname = "danthesalmon"
-  paginate = true
-=======
-disqus_shortname = "salmonroll"
 google_analytics_id = "XX-XXXXXXXX-X"
-paginate = true
 twitter_username = "bltjetpack"
->>>>>>> 05ec4829b7b8e643a4c7bcd41b570276f6d3a76d
+disqus_shortname = "danthesalmon"
+paginate = true
