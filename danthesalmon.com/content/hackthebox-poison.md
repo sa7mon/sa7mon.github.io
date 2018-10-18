@@ -128,7 +128,7 @@ VmpOU00xcFhlRmRYUjFaSFdrWldhVkpZUW1GV2EyUXdDazVHU2tkalJGbExWRlZTCmMxSkdjRFpO
 Ukd4RVdub3dPVU5uUFQwSwo=
 ```
 
-We can tell it's probably Base64 encoded based on the fact that it sends with an equal sign. Since the hint tells us it's encoded 13x, just run it through a Base64 decoder 13x. After all that we get:
+We can tell it's probably Base64 encoded based on the fact that it ends with an equal sign. Since the hint tells us it's encoded 13x, just run it through a Base64 decoder 13x. After all that we get:
 
 ```markdown
 Charix!2#4%6&8(0
