@@ -1,7 +1,7 @@
 +++
 author = "Dan Salmon"
 date = 2018-10-18T04:33:52Z
-description = ""
+description = "My guide to getting user access on Poison"
 draft = false
 tags = ["hackthebox", "ctf"]
 slug = "hackthebox-poison"
