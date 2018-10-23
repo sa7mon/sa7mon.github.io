@@ -27,7 +27,7 @@ By: Ryan Aniol, State of Minnesota
 
 **Job security**
 
- InfoSec is a huge industry and is growing in both the public and private sector. Historically, the public sector has been trailing in this regard but in the past 5 years we've seen a trend in public sector positions growing. Lots of jobs now. 
+InfoSec is a huge industry and is growing in both the public and private sector. Historically, the public sector has been trailing in this regard but in the past 5 years we've seen a trend in public sector positions growing. Lots of jobs now. 
 
 * Specializations - One of the benefits of the Information Security world is that you can specify in one of many different areas. Things like Computer Forensics, Red Team, Blue Team, DevOps, and many other specializations have positions available. Additionally, many non-technical roles need filling like Risk & Compliance. There simply aren't enough people to fill all these jobs currently.
 
@@ -39,11 +39,30 @@ By: Ryan Aniol, State of Minnesota
 
 **2. Tips to Prepare Students**
 
+* School - "School is an important part of the process. You're all in school currently and that's perfect."
 
+* News - Stay up-to-date with the latest InfoSec news. "I recommend a good RSS reader with a mixture of sources."
 
+* Hands on at home - Spend time at home doing projects. GitHub is full of projects and tools to try out. Go fire up some virtual machines and try them out. 
 
+* Network - The InfoSec community is small-ish. You'll see a lot of the same people at different conferences so go talk to them and start making connections.
 
+* Stress Management - InfoSec jobs are high stress jobs. Recently, BlackHat had 4 different talks at the conference about substance abuse and depression among people with InfoSec jobs. To help aleviate some of your anxiety, remember that there will always be bad guys and you can't stop every single one of them. Remember also to rely on your team because it's not just you out there. 
 
+**3. Q&A**
+
+* "Is there an advantage to starting in the public sector and then moving to the private sector?"
+    * "I would say so. In the public sector, you're presented with more different challenges - more than just protecting IP and credit card numbers. Stuff like voter data and critical infrastructure. "
+
+* "Are there more entry level positions in the public sector or private?"
+    * "No one moreso than the other. There's so many jobs it really doesn't matter."
+
+* "Are there any certifications you'd recommend that students get?"
+    * "CISSP or CEH. Any cert in your specialization area, too."
+
+## The Most Impactful IP Theft in History -- What You Need to Know About Protecting Trade Secrets
+
+In this talk, Brian Levine from the Department of Justice talked about the investigation and prosecution of a Chinese wind turbine company named Sinovel. 
 
 
 
