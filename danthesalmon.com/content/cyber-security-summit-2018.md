@@ -18,7 +18,8 @@ I was fortunate enough to attend the 2018 Cyber Scurity Summit in Minneapolis, M
 ## Student Breakfast
 By: Ryan Aniol, State of Minnesota
 
-*Dan:* This was a super informative informal breakfast hosted by Ryan who aimed the talk at the students, like myself. It was really nice to hear information directly relevant to my situation.
+> This was a super informative informal breakfast hosted by Ryan who aimed the talk at the students like myself. It was really nice to hear information directly relevant to my situation.
+ - Dan
 
 <br />
 
@@ -62,6 +63,8 @@ InfoSec is a huge industry and is growing in both the public and private sector.
 
 ## The Most Impactful IP Theft in History -- What You Need to Know About Protecting Trade Secrets
 
+> Brian was a very good storyteller and I was so engaged in listening, I didn't take many notes. The story of this investigation is all available online. - Dan
+
 In this talk, Brian Levine from the Department of Justice talked about the investigation and prosecution of a Chinese wind turbine company named Sinovel. 
 
 https://www.justice.gov/opa/pr/sinovel-corporation-and-three-individuals-charged-wisconsin-theft-amsc-trade-secrets
@@ -71,9 +74,7 @@ Brian also wanted to raise awareness of the various resources available on [cybe
 
 ## National Policy Conversation 
 
-By: Matthew Rhoades, Cybersecurity & Technology Program at The Aspen Institute
-
-Summary:
+**By:** Matthew Rhoades - Cybersecurity & Technology Program at The Aspen Institute
 
 In this talk, Matthew talked about his work at The Aspen Institute and laid out his predictions for topics that lawmakers will likely start pushing legistlation for. These things included:
 
@@ -82,7 +83,7 @@ In this talk, Matthew talked about his work at The Aspen Institute and laid out 
 
 
 ## How you prioritize threats and intelligence 
-By: Eric Dull, Deloitte & Touche LLP
+**By:** Eric Dull - Deloitte & Touche LLP
 
 Downtime is guaranteed to be very costly for your organization. To prepare yourself for this, you should always assume you're going to be breached and that you'll need to react to it. 
 
@@ -183,18 +184,124 @@ This provides Layer 7 protection and protects against the OWASP Top 10. On AWS t
 * Run vulnerability analysis on the containers in your Continuous Integration pipeline
 * Run containers as a non-root user
 
+
 ## Detection Techniques
 
-By: Tim Crothers - Target
+By: Tim Crothers - VP of Cyber Security at Target
+Slides: [GitHub](https://github.com/Soinull/Strong_Detection)
+
+Most people would say that a "breach" occurs as soon as a phishing link is clicked. I say even if a phishing link is clicked and a RAT is installed, this is known as a "prevention failure" with the *potential* of a breach. A breach only occurs when the attackers accomplish their goals.
+
+The "dwell time", which is the time an attacker stays on a victim network, is less than a few days and with ransomware is even shorter.
+
+Most antivirus solutions are still signature-based which is a problem. Dave Kennedy's tool shows that it's trivial to bypass this. The tool generates malware, submits it to an antivirus, then keeps tweaking it and checking the detection rate until it determines exactly what in the malware is triggering the antivirus. Then the author can simply change this part and become completely undetected. 
 
 
+**Honeypot Technique**
+
+I will assert that there's no legitimate reason for a user to dump credentials from the cache of a system. Using this rule, we can use a technique to catch attackers when they touch a system. 
+
+Using a management tool such as SCCM or even PSExec on a smaller network, we are going to cache fake credentials in the registry and memory of random desktops across the network. After caching these creds, we have make those accounts actually exist in Active Directory, but make sure to make the password >50 characters long and generated randomly. This way, AD will generate a failed login attempt. 
+
+Then, we will create alerting with Windows Event Viewer to alert on any instance of Event ID: 4771 which is Kerberos Pre-Auth Failure. Another Event ID will give you the host name of the event where the attacker tried to get in.
+
+## How much?
+
+By: Ex-NSA , a self-described old graybeard
+
+The answer always is "more". 
+
+Theme is "security has become mainstream" and that's a good thing. 
+
+Risk = (vulnerability + threat + consequences) / countermeasures
+
+Lifetime of lessons learned
+
+* We aren't special and the bad guys don't do magic
+* Knowing about vulnerabilities doesn't get them fixed
+* Have to prioritize defensive choices, 80/20, most defense comes from first few choices
+* People don't make security decisions, they make business decisions
+* Cyber Security = Information Management !== threat sharing. "translate + execute" when you hear "share"
+* Cybersecurity is more like Groundhog Day thatn Independence Day. It's not nearly as exciting. 
 
 
+## Mimecast Email Talk
+
+Cybersecurity is a defense arms race
+
+Email attacks are effective. 90% of attacks start with a phish - it's the most common attack vector
+
+Originally phishing emails were just Nigerian 419 scams. Surprisingly, these still exist.
+
+You're at risk of phishing if:
+* Your domain has certain easily-mistaken letters
+* Your management team is highlighted on your website
+* You accept resumes on your website
 
 
+Even for savvy users, phishing still possible due to:
+* Unicode / Punycode
+* URL Elongation on mobile devices
+
+Ways to fight?
+* Usually sandbox, but signature-based only pick up low-hanging fruit
+* Static file analysis. Caught Petya before it was known. Takes 1-2 seconds to process
+* If attachments have scripts, strip them and convert to PDF
 
 
+Attacks don't need malware
+* Email impersontaiton. Financial ask, sense of urgency. Looks like coming from CEO
+* Supply Chain Impersonation - Find someone the target does business with
 
+
+## Bruce Schneier Talk
+
+
+Everything is a computer now. 
+
+1. Most software is poorly written. It's the old addage of good, fast, or cheap - pick any 2.
+2. The Internet wasn't designed with security in mind
+3. Extensibility of computers mean they can't be constrained
+4. Complexity of systems mean defense is harder than offense. 
+5. New vulnerabilities arise as we add more inter-connections
+6. Attacks will always get better, faster, and easier. 
+
+With automation comes new dangers. New ideas of smart cities could have much more serious real-world failures than just simple data breaches. 
+
+Consumer electronics are not easily updateable. That's how we get Mirai.
+
+We don't yet have thing->thing authentication figured out. Just person->thing.
+
+Supply chain risks - What software can you trust? Hardware implants?
+
+This is a policy issue. Law and tech can subvert teach other, but defense needs to prevail.
+
+
+What kind of regulatory structure do we need? The market can't solve this. They're going to get involved anyway. Some are already: CA - IOT bill, NY - regulating crypto, MA - consumer protections.
+
+Regulation doesn't stifle innovation, it forces manufacturers to make it cheaper while staying within the new laws. Rising tide effect when regulated somewhere (i.e. GDPR)
+
+Technologiss need to get involved in politics. Lawmakers look really bad when not technical (Facebook Senate hearing). 
+
+*Q & A*
+
+Q: Do you think standards will help drive innovation?
+A: Yes, companies won't improve their security without being forced to.
+
+Q: Do policymakers need technical knowledge?
+A: Would be great but probably never going to happen. Staff and advisors seem to work elsewhere in the world. That would be the most likely. 
+
+Q: How can we get more people in cyber?
+A: Through the normal ways: better education, better skills training. AI will be the real wildcard since we have no clue what jobs it will be replacing. 
+
+Q: How is PKI going to chnge with increased computer speed?
+A: I don't think it'll change, but I hope we have new protocols and tweaks to make it better.
+
+Q: What will happen with the advent of quantum computing?
+A: Dont worry about it. Grover's algorithm says that quantum will double the length of breakable keys. So just double the length of keys. Seriously, we also haven't built a working quantum computer. Probably in the next decade. It also took 30 years to understand von Neumann computing. It's also possible that quantum kills PKI crypto. 
+
+Q: What if the government body you're proposing fails?
+A: So what? Unrestrained companies are worse than a failed government entity. 
 
 
 
