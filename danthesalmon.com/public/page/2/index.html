@@ -69,6 +69,27 @@
                         
                         
                             <div class="post">
+  <a class="post-link" href="https://danthesalmon.com/change-network-location-in-windows-8-1-2012-r2-from-powershell/">
+  <p class="post-meta left">Aug 26, 2017</p>
+  
+ 
+  <div class="clearfix"></div>
+  <h3 class="h2 post-title">Change Network Location in Windows 8.1/2012 R2 from Powershell </h3>
+  <p class="post-summary">Step 1 From an elevated PowerShell window issue the following command to gather some information about our current network profile:
+" Get-NetConnectionProfile Name : Unidentified Network InterfaceAlias : Ethernet InterfaceIndex : 10 NetworkCategory : Public IPv4Connectivity : LocalNetwork IPv6Connectivity : LocalNetwork  The only information we really need from this output is the “InterfaceIndex”
+Step 2 After getting the InterfaceIndex, we run the following command:
+&rdquo;&gt; Set-NetConnectionProfile -InterfaceIndex 10 -NetworkCategory Private  The last argument is what category you want to switch it to.</p>
+  </a>
+  
+  <p class="post-meta">Tags:&nbsp;
+  
+      
+      <a href="https://danthesalmon.com/tags/windows">windows</a>
+  </p>
+</div>
+
+                        
+                            <div class="post">
   <a class="post-link" href="https://danthesalmon.com/fix-haxm-emulation-error-in-android-studio/">
   <p class="post-meta left">Aug 26, 2017</p>
   
