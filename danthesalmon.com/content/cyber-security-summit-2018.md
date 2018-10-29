@@ -1,9 +1,9 @@
 +++
 author = "Dan Salmon"
-date = 2018-10-23T15:39:00Z
+date = 2018-10-28T15:39:00Z
 description = "A condensed version of the 2018 Cyber Security Summit in Minneapolis."
 draft = false
-tags = ["security"]
+tags = ["security", "conferences"]
 slug = "cyber-security-summit-2018"
 title = "Cyber Security Summit 2018 Highlights"
 type = "post"
