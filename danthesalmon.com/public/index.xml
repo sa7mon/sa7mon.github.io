@@ -7,7 +7,18 @@
     <language>en-us</language>
     
     
-    <updated>Thu, 18 Oct 2018 04:33:52 UTC</updated>
+    <updated>Tue, 23 Oct 2018 15:39:00 UTC</updated>
+    
+    <item>
+      <title>Cyber Security Summit 2018 Highlights</title>
+      <link>https://danthesalmon.com/cyber-security-summit-2018/</link>
+      <pubDate>Tue, 23 Oct 2018 15:39:00 UTC</pubDate>
+      
+      <guid>https://danthesalmon.com/cyber-security-summit-2018/</guid>
+      <description>I was fortunate enough to attend the 2018 Cyber Security Summit in Minneapolis, MN. Here I&amp;rsquo;ve tried to summarize each talk I attended into a small, digestible format, mostly written in their voices.
+Student Breakfast By: Ryan Aniol - State of Minnesota
+ This was a super informative informal breakfast hosted by Ryan who aimed the talk at the students like myself. It was really nice to hear information directly relevant to my situation.</description>
+    </item>
     
     <item>
       <title>HackTheBox &#39;Poison&#39; - Own User Guide</title>
@@ -146,16 +157,6 @@ Skills  Programming/Web  Python, HTML5/CSS3, Java, JavaScript ES6, PHP, C#, Ruby
 &#34; Get-NetConnectionProfile Name : Unidentified Network InterfaceAlias : Ethernet InterfaceIndex : 10 NetworkCategory : Public IPv4Connectivity : LocalNetwork IPv6Connectivity : LocalNetwork  The only information we really need from this output is the “InterfaceIndex”
 Step 2 After getting the InterfaceIndex, we run the following command:
 &amp;rdquo;&amp;gt; Set-NetConnectionProfile -InterfaceIndex 10 -NetworkCategory Private  The last argument is what category you want to switch it to.</description>
-    </item>
-    
-    <item>
-      <title>Fix HAXM Emulation Error in Android Studio</title>
-      <link>https://danthesalmon.com/fix-haxm-emulation-error-in-android-studio/</link>
-      <pubDate>Sat, 26 Aug 2017 04:57:15 UTC</pubDate>
-      
-      <guid>https://danthesalmon.com/fix-haxm-emulation-error-in-android-studio/</guid>
-      <description>Requirement Note: Android Studio requires an Intel processor with VT-X support for it’s built-in emulators to work. If you want to do Android development with emulators on an AMD processor, I would highly suggest using Genymotion. If you’re not sure if your Intel processor supports VT-X, Intel has an article here.
-This error is occurring because Android Studio requires Intel Hardware Accelerated Execution Manager (Intel HAXM) to run it’s emulators.</description>
     </item>
     
   </channel>

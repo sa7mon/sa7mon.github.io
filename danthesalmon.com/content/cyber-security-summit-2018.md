@@ -2,25 +2,20 @@
 author = "Dan Salmon"
 date = 2018-10-23T15:39:00Z
 description = "A condensed version of the 2018 Cyber Security Summit in Minneapolis."
-draft = true
+draft = false
 tags = ["security"]
 slug = "cyber-security-summit-2018"
-title = "Cyber Security Summit 2018 Wrap-Up"
+title = "Cyber Security Summit 2018 Highlights"
 type = "post"
 +++
 
-
-I was fortunate enough to attend the 2018 Cyber Scurity Summit in Minneapolis, MN. Here I've tried to summarize each talk I attended into a small, digestable format written in their voice. 
-
-*Note:* Each section is written in the voice of the speaker except for any notes from me which will be denoted as such.
+I was fortunate enough to attend the 2018 Cyber Security Summit in Minneapolis, MN. Here I've tried to summarize each talk I attended into a small, digestible format, mostly written in their voices. 
 
 
 ## Student Breakfast
-By: Ryan Aniol, State of Minnesota
+**By:** Ryan Aniol - State of Minnesota
 
 > This was a super informative informal breakfast hosted by Ryan who aimed the talk at the students like myself. It was really nice to hear information directly relevant to my situation.
- - Dan
-
 <br />
 
 **1. Benefits of an Information Security position**
@@ -48,7 +43,7 @@ InfoSec is a huge industry and is growing in both the public and private sector.
 
 * Network - The InfoSec community is small-ish. You'll see a lot of the same people at different conferences so go talk to them and start making connections.
 
-* Stress Management - InfoSec jobs are high stress jobs. Recently, BlackHat had 4 different talks at the conference about substance abuse and depression among people with InfoSec jobs. To help aleviate some of your anxiety, remember that there will always be bad guys and you can't stop every single one of them. Remember also to rely on your team because it's not just you out there. 
+* Stress Management - InfoSec jobs are high stress jobs. Recently, BlackHat had 4 different talks at the conference about substance abuse and depression among people with InfoSec jobs. To help alleviate some of your anxiety, remember that there will always be bad guys and you can't stop every single one of them. Remember also to rely on your team because it's not just you out there. 
 
 **3. Q&A**
 
@@ -56,34 +51,42 @@ InfoSec is a huge industry and is growing in both the public and private sector.
     * "I would say so. In the public sector, you're presented with more different challenges - more than just protecting IP and credit card numbers. Stuff like voter data and critical infrastructure. "
 
 * "Are there more entry level positions in the public sector or private?"
-    * "No one moreso than the other. There's so many jobs it really doesn't matter."
+    * "No one more so than the other. There's so many jobs it really doesn't matter."
 
 * "Are there any certifications you'd recommend that students get?"
     * "CISSP or CEH. Any cert in your specialization area, too."
 
+
+
 ## The Most Impactful IP Theft in History -- What You Need to Know About Protecting Trade Secrets
 
-> Brian was a very good storyteller and I was so engaged in listening, I didn't take many notes. The story of this investigation is all available online. - Dan
+**By:** Brian Levine - US Department of Justice 
+
+> Brian was a very good storyteller and I was so engaged in listening, I didn't take many notes. The story of this investigation is all available online.
 
 In this talk, Brian Levine from the Department of Justice talked about the investigation and prosecution of a Chinese wind turbine company named Sinovel. 
 
 https://www.justice.gov/opa/pr/sinovel-corporation-and-three-individuals-charged-wisconsin-theft-amsc-trade-secrets
 
-Brian also wanted to raise awareness of the various resources available on [cybercrime.gov](cybercrime.gov). There you can find documents outling best practices for incident response as well as a framework for vulnerability disclosure programs. 
+Brian also wanted to raise awareness of the various resources available on [cybercrime.gov](cybercrime.gov). There you can find documents outlining best practices for incident response as well as a framework for vulnerability disclosure programs. 
 
 
 ## National Policy Conversation 
 
 **By:** Matthew Rhoades - Cybersecurity & Technology Program at The Aspen Institute
 
-In this talk, Matthew talked about his work at The Aspen Institute and laid out his predictions for topics that lawmakers will likely start pushing legistlation for. These things included:
+> Matthew presented a very quick talk about national policy concerning cybersecurity. Here are his predictions for the near future.
 
-* Pushing even harder for a kind of government-aiding "backdoored" encryption. This will likely be a response to the latest legal battles the government has waged against tech companies as seen in the Apple v FBI case. 
-* Voter and political platform protections in the wake of the discovery that Russian influence may have altered the course of the latest US presidential election.
+In the near future lawmakers will:
+
+* Push even harder for a kind of government-aiding "backdoored" encryption likely as a direct result of the Apple v FBI case. 
+* Require voter and political platform protections in the wake of the discovery that Russian influence may have altered the course of the latest US presidential election.
 
 
 ## How you prioritize threats and intelligence 
 **By:** Eric Dull - Deloitte & Touche LLP
+
+> Eric is a self-described stats nerd. He gave a great talk about gaining visibility into your network and how crucial it is.
 
 Downtime is guaranteed to be very costly for your organization. To prepare yourself for this, you should always assume you're going to be breached and that you'll need to react to it. 
 
@@ -125,7 +128,9 @@ Have something ready in addition to simple remediation. Network should be heavil
 
 
 ## Securing Microservices 
-By: Mike Gillespie - Amazon Web Services
+**By:** Mike Gillespie - Amazon Web Services
+
+> Mike gave a really cool technical talk for those who use AWS products. AWS has a whole slew of tools built-in to it's cloud offerings to help customers safeguard their data and protect against vulnerabilities
 
 **Monoliths** - To start splitting these apart 10 years ago we started creating XML + SOAP API's, 5 years ago we moved everything to REST, and now we have "Microservices". Anything we can do split the application into smaller, bite-sized pieces. 
 
@@ -187,8 +192,11 @@ This provides Layer 7 protection and protects against the OWASP Top 10. On AWS t
 
 ## Detection Techniques
 
-By: Tim Crothers - VP of Cyber Security at Target
+**By:** Tim Crothers - VP of Cyber Security at Target
+
 Slides: [GitHub](https://github.com/Soinull/Strong_Detection)
+
+> Tim had a very interesting and engaging presentation with a really cool honeypot-style strategy that's easy enough to employ in any AD environment.
 
 Most people would say that a "breach" occurs as soon as a phishing link is clicked. I say even if a phishing link is clicked and a RAT is installed, this is known as a "prevention failure" with the *potential* of a breach. A breach only occurs when the attackers accomplish their goals.
 
@@ -205,13 +213,13 @@ Using a management tool such as SCCM or even PSExec on a smaller network, we are
 
 Then, we will create alerting with Windows Event Viewer to alert on any instance of Event ID: 4771 which is Kerberos Pre-Auth Failure. Another Event ID will give you the host name of the event where the attacker tried to get in.
 
-## How much?
+## Cybersecurity: How Much Is Enough?
 
-By: Ex-NSA , a self-described old graybeard
+**By:** Tony Sager - The Center for Internet Security
 
-The answer always is "more". 
+> Tony is a self-described old graybeard who has been around for a while. The theme for this talk was "security has become mainstream and that's a good thing."
 
-Theme is "security has become mainstream" and that's a good thing. 
+The answer to "How Much Cybersecurity is enough?" is always "more". 
 
 Risk = (vulnerability + threat + consequences) / countermeasures
 
@@ -219,52 +227,61 @@ Lifetime of lessons learned
 
 * We aren't special and the bad guys don't do magic
 * Knowing about vulnerabilities doesn't get them fixed
-* Have to prioritize defensive choices, 80/20, most defense comes from first few choices
+* Have to prioritize defensive choices, 80/20, most defense comes from the first few choices you make
 * People don't make security decisions, they make business decisions
-* Cyber Security = Information Management !== threat sharing. "translate + execute" when you hear "share"
-* Cybersecurity is more like Groundhog Day thatn Independence Day. It's not nearly as exciting. 
+* Cyber Security = Information Management !== threat sharing. When you hear "share" you should interpret that as "translate + execute"
+* Cybersecurity is more like Groundhog Day than Independence Day. It's not nearly as exciting as fighting aliens and most of the time you're repeating the same tasks. 
 
 
 ## Mimecast Email Talk
 
-Cybersecurity is a defense arms race
+**By:** Brandon Reid - Mimecast 
 
-Email attacks are effective. 90% of attacks start with a phish - it's the most common attack vector
+> I liked this talk a lot because it was fairly technical. The conference advertised that there would be a live phishing demo which didn't happen. That was a little dissapointing, but the talk was still very good.
 
-Originally phishing emails were just Nigerian 419 scams. Surprisingly, these still exist.
+Cybersecurity is a defense arms race.
+
+Email attacks are effective. 90% of attacks start with a phish - it's the most common attack vector currently used. 
+
+Originally, phishing emails were just Nigerian 419 scams. Surprisingly, these still exist.
 
 You're at risk of phishing if:
-* Your domain has certain easily-mistaken letters
+
+* Your domain name contains certain easily-mistaken letters
 * Your management team is highlighted on your website
 * You accept resumes on your website
 
+Even for savvy users, phishing is still possible due to:
 
-Even for savvy users, phishing still possible due to:
 * Unicode / Punycode
-* URL Elongation on mobile devices
+* URL elongation on mobile devices
 
-Ways to fight?
-* Usually sandbox, but signature-based only pick up low-hanging fruit
-* Static file analysis. Caught Petya before it was known. Takes 1-2 seconds to process
+What are some ways to fight this?
+
+* Signature-based only pick up low-hanging fruit that has already been seen in the wild
+* Static File Analysis caught Petya before it was known. Takes ~1-2 seconds to process
 * If attachments have scripts, strip them and convert to PDF
 
-
 Attacks don't need malware
-* Email impersontaiton. Financial ask, sense of urgency. Looks like coming from CEO
-* Supply Chain Impersonation - Find someone the target does business with
+
+* Email Impersonation - Starts with a financial ask and has a sense of urgency. Looks like it's coming from CEO or other board member
+* Supply Chain Impersonation - Attacker will find someone the target does business with and impersonate them
 
 
-## Bruce Schneier Talk
+## Bruce Schneier: "Click Here to Kill Everybody"
 
+**By:** Bruce Schneier - Legendary Cryptographer, [Schneier on Security](https://www.schneier.com/)
+
+> This was essentially the only reason I came to the conference on the second day. Bruce is an amazing speaker and I was so happy to get to hear him speak. He was promoting his newest book "Click Here to Kill Everybody" which IBM sponsored by giving away free copies of and which Bruce signed.  
 
 Everything is a computer now. 
 
-1. Most software is poorly written. It's the old addage of good, fast, or cheap - pick any 2.
+1. Most software is poorly written. It's the old adage of good, fast, or cheap - pick any 2
 2. The Internet wasn't designed with security in mind
 3. Extensibility of computers mean they can't be constrained
-4. Complexity of systems mean defense is harder than offense. 
+4. Complexity of systems mean defense is harder than offense
 5. New vulnerabilities arise as we add more inter-connections
-6. Attacks will always get better, faster, and easier. 
+6. Attacks will always get better, faster, and easier
 
 With automation comes new dangers. New ideas of smart cities could have much more serious real-world failures than just simple data breaches. 
 
@@ -277,31 +294,26 @@ Supply chain risks - What software can you trust? Hardware implants?
 This is a policy issue. Law and tech can subvert teach other, but defense needs to prevail.
 
 
-What kind of regulatory structure do we need? The market can't solve this. They're going to get involved anyway. Some are already: CA - IOT bill, NY - regulating crypto, MA - consumer protections.
+What kind of regulatory structure do we need? The market can't solve this. They're going to get involved anyway. Some are already: California passed an IoT bill, New York is regulating crypto, Massachusetts is working on consumer protections.
 
-Regulation doesn't stifle innovation, it forces manufacturers to make it cheaper while staying within the new laws. Rising tide effect when regulated somewhere (i.e. GDPR)
+Regulation doesn't stifle innovation, it forces manufacturers to make it cheaper while staying within the new laws. Rising tide effect benefits people in other parts of the world when regulated somewhere else (i.e. GDPR).
 
-Technologiss need to get involved in politics. Lawmakers look really bad when not technical (Facebook Senate hearing). 
+Technologists need to get involved in politics. Lawmakers look really bad when they're not technical (i.e. Facebook Senate hearing). 
 
-*Q & A*
+**Q & A**
 
-Q: Do you think standards will help drive innovation?
-A: Yes, companies won't improve their security without being forced to.
-
-Q: Do policymakers need technical knowledge?
-A: Would be great but probably never going to happen. Staff and advisors seem to work elsewhere in the world. That would be the most likely. 
-
-Q: How can we get more people in cyber?
-A: Through the normal ways: better education, better skills training. AI will be the real wildcard since we have no clue what jobs it will be replacing. 
-
-Q: How is PKI going to chnge with increased computer speed?
-A: I don't think it'll change, but I hope we have new protocols and tweaks to make it better.
-
-Q: What will happen with the advent of quantum computing?
-A: Dont worry about it. Grover's algorithm says that quantum will double the length of breakable keys. So just double the length of keys. Seriously, we also haven't built a working quantum computer. Probably in the next decade. It also took 30 years to understand von Neumann computing. It's also possible that quantum kills PKI crypto. 
-
-Q: What if the government body you're proposing fails?
-A: So what? Unrestrained companies are worse than a failed government entity. 
+* Do you think standards will help drive innovation?
+    * Yes, companies won't improve their security without being forced to.
+* Do policymakers need technical knowledge?
+    * Would be great but probably never going to happen. Staff and advisors seem to work elsewhere in the world. That would be the most likely. 
+* How can we get more people in cyber?
+    * Through the normal ways: better education, better skills training. AI will be the real wildcard since we have no clue what jobs it will be replacing. 
+* How is PKI going to change with increased computer speed?
+    * I don't think it'll change, but I hope we have new protocols and tweaks to make it better.
+* What will happen with the advent of quantum computing?
+    * Don't worry about it. Grover's algorithm says that quantum will double the length of breakable keys. So just double the length of keys. Seriously, we also haven't built a working quantum computer, but we probably will in the next decade. It also took 30 years to understand von Neumann computing. It's also possible that quantum kills PKI crypto. 
+* What if the government body you're proposing fails?
+    * So what? Unrestrained companies are worse than a failed government entity. 
 
 
 
