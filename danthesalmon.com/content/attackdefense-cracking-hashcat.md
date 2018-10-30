@@ -11,7 +11,7 @@ type = "post"
 
 ![attack-defense-grey](../images/attack-defense-grey.png)
 
-AttackDefense is a new site with all sorts of awesome labs an CTFs for training. Best of all: the site is free. 
+AttackDefense is a new site with all sorts of awesome labs and CTFs for training. Best of all: the site is free. 
 
 In this guide, I'll detail how to complete the ["Cracking MD5 Hashes"](attackdefense.com/challengedetails?cid=51) lab, though this strategy should work for most labs in the "Hashcat All" section. If you are unfamiliar with Hashcat, I'd strongly recommend reading [the wiki](https://hashcat.net/wiki/) or following Youtube tutorials elsewhere before trying this challenge.
 
