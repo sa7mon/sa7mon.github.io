@@ -1,7 +1,7 @@
 +++
 author = "Dan Salmon"
 date = 2018-10-29T20:46:25Z
-description = ""
+description = "A quick guide to completing the 'Cracking Hashcat' challenge on AttackDefense.com"
 draft = false
 tags = ["ctf"]
 slug = "attackdefense-cracking-hashcat"
