@@ -8,3 +8,5 @@ After cloning the top-level project:
 1. `cd personal-site/danthesalmon.com/themes/pixyll`
 1. `git submodule init`
 1. `git submodule update`
+
+Run local server `hugo server --bind 172.31.0.5 --port 9000 --baseUrl 10.0.1.174`

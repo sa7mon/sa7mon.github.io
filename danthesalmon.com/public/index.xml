@@ -134,9 +134,8 @@ A few months ago, my beloved Verizon HTC One M8 began to lose it’s charge at a
       <pubDate>Sat, 26 Aug 2017 21:44:08 UTC</pubDate>
       
       <guid>https://danthesalmon.com/about/</guid>
-      <description>Hi, I&amp;rsquo;m Dan and I&amp;rsquo;m a grad student in the US. I&amp;rsquo;m currently pursuing a Masters degree in Computer Information Technology at Minnesota State University, Mankato. I&amp;rsquo;m interested in InfoSec and participate in bug bounty programs in my spare time.
-Projects  S3scanner - Scan for open S3 buckets and dump contents press - Multi-threaded tool for resumable Wordpress bruteforcing  
-Skills  Programming/Web  Python, HTML5/CSS3, Java, JavaScript ES6, PHP, C#, Ruby on Rails,  Frameworks/Tools  Bootstrap, jQuery, Git, Gulp  Virtualization  Hyper-V, VMWare Workstation/Fusion, VMWare ESXi  Database / RDBMS  MySQL, SQLite, Oracle, SQL Server, database design  Operating Systems  FreeBSD, Windows 7/8/10/Server, MacOS, Ubuntu    Resume</description>
+      <description>Hi, I&amp;rsquo;m Dan and I&amp;rsquo;m a masters graduate in the US. I&amp;rsquo;m interested in InfoSec and participate in bug bounty programs in my spare time.
+Projects  S3scanner - Scan for open S3 buckets and dump contents miniprint - A medium interaction printer honeypot 🍯 press - Multi-threaded tool for resumable Wordpress bruteforcing salary-viz - A data visualization sample to explore salary data using D3.js retirement-calc - A retirement calculator build with Javascript using Chart.</description>
     </item>
     
     <item>
