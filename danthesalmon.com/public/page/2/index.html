@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="generator" content="Hugo 0.49" />
+	<meta name="generator" content="Hugo 0.40.1" />
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Dan [the] Salmon - Dan [the] Salmon</title>
@@ -10,6 +10,23 @@
   <meta name="author" content="">
   <meta name="keywords" content="">
   <link rel="canonical" href="https://danthesalmon.com/">
+
+
+  
+  
+  
+  
+  
+  
+
+
+  <meta property="og:image" content="https://danthesalmon.com/../images/me.png" />
+  <meta property="og:site_name" content="danthesalmon.com" />
+  <meta property="og:type" content="object" />
+  <meta property="og:title" content="Dan [the] Salmon" />
+  <meta property="og:url" content="https://danthesalmon.com/" />
+  <meta property="og:description" content="" />
+
 
   
   
@@ -50,6 +67,46 @@
                 <div class="posts">
                     
                         
+                        
+                            <div class="post">
+  <a class="post-link" href="https://danthesalmon.com/change-network-location-in-windows-8-1-2012-r2-from-powershell/">
+  <p class="post-meta left">Aug 26, 2017</p>
+  
+ 
+  <div class="clearfix"></div>
+  <h3 class="h2 post-title">Change Network Location in Windows 8.1/2012 R2 from Powershell </h3>
+  <p class="post-summary">Step 1 From an elevated PowerShell window issue the following command to gather some information about our current network profile:
+" Get-NetConnectionProfile Name : Unidentified Network InterfaceAlias : Ethernet InterfaceIndex : 10 NetworkCategory : Public IPv4Connectivity : LocalNetwork IPv6Connectivity : LocalNetwork  The only information we really need from this output is the “InterfaceIndex”
+Step 2 After getting the InterfaceIndex, we run the following command:
+&rdquo;&gt; Set-NetConnectionProfile -InterfaceIndex 10 -NetworkCategory Private  The last argument is what category you want to switch it to.</p>
+  </a>
+  
+  <p class="post-meta">Tags:&nbsp;
+  
+      
+      <a href="https://danthesalmon.com/tags/windows">windows</a>
+  </p>
+</div>
+
+                        
+                            <div class="post">
+  <a class="post-link" href="https://danthesalmon.com/fix-haxm-emulation-error-in-android-studio/">
+  <p class="post-meta left">Aug 26, 2017</p>
+  
+ 
+  <div class="clearfix"></div>
+  <h3 class="h2 post-title">Fix HAXM Emulation Error in Android Studio </h3>
+  <p class="post-summary">Requirement Note: Android Studio requires an Intel processor with VT-X support for it’s built-in emulators to work. If you want to do Android development with emulators on an AMD processor, I would highly suggest using Genymotion. If you’re not sure if your Intel processor supports VT-X, Intel has an article here.
+This error is occurring because Android Studio requires Intel Hardware Accelerated Execution Manager (Intel HAXM) to run it’s emulators.</p>
+  </a>
+  
+  <p class="post-meta">Tags:&nbsp;
+  
+      
+      <a href="https://danthesalmon.com/tags/android">android</a>
+  </p>
+</div>
+
                         
                             <div class="post">
   <a class="post-link" href="https://danthesalmon.com/fix-ruby-certificate-issue/">

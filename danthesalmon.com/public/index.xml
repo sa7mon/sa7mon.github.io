@@ -7,7 +7,28 @@
     <language>en-us</language>
     
     
-    <updated>Thu, 18 Oct 2018 04:33:52 UTC</updated>
+    <updated>Mon, 29 Oct 2018 20:46:25 UTC</updated>
+    
+    <item>
+      <title>AttackDefense - Cracking Hashcat Guide</title>
+      <link>https://danthesalmon.com/attackdefense-cracking-hashcat/</link>
+      <pubDate>Mon, 29 Oct 2018 20:46:25 UTC</pubDate>
+      
+      <guid>https://danthesalmon.com/attackdefense-cracking-hashcat/</guid>
+      <description>AttackDefense is a new site with all sorts of awesome labs and CTFs for training. Best of all: the site is free.
+In this guide, I&amp;rsquo;ll detail how to complete the &amp;ldquo;Cracking MD5 Hashes&amp;rdquo; lab, though this strategy should work for most labs in the &amp;ldquo;Hashcat All&amp;rdquo; section. If you are unfamiliar with Hashcat, I&amp;rsquo;d strongly recommend reading the wiki or following Youtube tutorials elsewhere before trying this challenge.</description>
+    </item>
+    
+    <item>
+      <title>Cyber Security Summit 2018 Highlights</title>
+      <link>https://danthesalmon.com/cyber-security-summit-2018/</link>
+      <pubDate>Sun, 28 Oct 2018 15:39:00 UTC</pubDate>
+      
+      <guid>https://danthesalmon.com/cyber-security-summit-2018/</guid>
+      <description>I was fortunate enough to attend the 2018 Cyber Security Summit in Minneapolis, MN. Here I&amp;rsquo;ve tried to summarize each talk I attended into a small, digestible format, mostly written in their voices.
+Student Breakfast By: Ryan Aniol - State of Minnesota
+ This was a super informative informal breakfast hosted by Ryan who aimed the talk at the students like myself. It was really nice to hear information directly relevant to my situation.</description>
+    </item>
     
     <item>
       <title>HackTheBox &#39;Poison&#39; - Own User Guide</title>
@@ -93,9 +114,8 @@ We&amp;rsquo;ll start by taking a snapshot of the dataset we want to move.</desc
       <pubDate>Tue, 10 Oct 2017 16:38:19 UTC</pubDate>
       
       <guid>https://danthesalmon.com/wifi-security-testing-cheatsheet/</guid>
-      <description>Prepare Wireless Card  View Network Cards: iwconfig Kill Wireless Processes: airmon-ng check kill  View Networks airodump-ng wlan0
-Capture traffic airodump-ng &amp;ndash;bssid 04:A1:51:9F:98:BB &amp;ndash;wps &amp;ndash;write ISSO-WPA2 &amp;ndash;channel 6 wlan0
-where: * &amp;ndash;bssid - MAC of router * &amp;ndash;wps - Output WPS information, may be able to try Reaver * &amp;ndash;write - File name to write to. No extension * &amp;ndash;channel - Statically set a channel. Don&amp;rsquo;t need to unless de-authing * wlan0 - Wireless interface</description>
+      <description>Prepare Wireless Card  View Network Cards:  iwconfig  Kill Wireless Processes:  airmon-ng check kill   View Networks airodump-ng wlan0  Capture traffic airodump-ng --bssid 04:A1:51:9F:98:BB --wps --write ISSO-WPA2 --channel 6 wlan0  where:
+ --bssid - MAC of router --wps - Output WPS information, may be able to try Reaver --write - File name to write to. No extension --channel - Statically set a channel. Don&#39;t need to unless de-authing wlan0 - Wireless interface  Deauth - Do while capturing aireplay-ng --deauth 0 -a 04:A1:51:9F:11:11 -c E0:AC:CB:DA:1B:1B wlan0  where:  0 - Continuously send deauth packets -a - BSSID of router (from airodump) -c - STATION of client (From airodump.</description>
     </item>
     
     <item>
@@ -114,9 +134,8 @@ A few months ago, my beloved Verizon HTC One M8 began to lose it’s charge at a
       <pubDate>Sat, 26 Aug 2017 21:44:08 UTC</pubDate>
       
       <guid>https://danthesalmon.com/about/</guid>
-      <description>Hi, I&amp;rsquo;m Dan and I&amp;rsquo;m a grad student in the US. I&amp;rsquo;m currently pursuing a Masters degree in Computer Information Technology at Minnesota State University, Mankato. I&amp;rsquo;m interested in InfoSec and participate in bug bounty programs in my spare time.
-Projects  S3scanner - Scan for open S3 buckets and dump contents press - Multi-threaded tool for resumable Wordpress bruteforcing  
-Skills  Programming/Web  Python, HTML5/CSS3, Java, JavaScript ES6, PHP, C#, Ruby on Rails,  Frameworks/Tools  Bootstrap, jQuery, Git, Gulp  Virtualization  Hyper-V, VMWare Workstation/Fusion, VMWare ESXi  Database / RDBMS  MySQL, SQLite, Oracle, SQL Server, database design  Operating Systems  FreeBSD, Windows 7/8/10/Server, MacOS, Ubuntu    Resume</description>
+      <description>Hi, I&amp;rsquo;m Dan and I&amp;rsquo;m a masters graduate in the US. I&amp;rsquo;m interested in InfoSec and participate in bug bounty programs in my spare time.
+Projects  S3scanner - Scan for open S3 buckets and dump contents miniprint - A medium interaction printer honeypot 🍯 press - Multi-threaded tool for resumable Wordpress bruteforcing salary-viz - A data visualization sample to explore salary data using D3.js retirement-calc - A retirement calculator build with Javascript using Chart.</description>
     </item>
     
     <item>
@@ -135,28 +154,6 @@ Skills  Programming/Web  Python, HTML5/CSS3, Java, JavaScript ES6, PHP, C#, Ruby
       
       <guid>https://danthesalmon.com/fix-some-settings-are-managed-by-your-system-administrator-in-windows-7/</guid>
       <description>Background A few months back, I was doing cleanup on a system that I had cleaned of malware. Whatever junk was on there had configured a local proxy server to run, but Malwarebytes had ripped it out. The system unfortunately still thought it was supposed to use the proxy server that doesn’t exist; consequently, I had no internet access. That’s an easy enough fix, right? I open Internet Options and change the LAN settings to not use a proxy and close it.</description>
-    </item>
-    
-    <item>
-      <title>Change Network Location in Windows 8.1/2012 R2 from Powershell</title>
-      <link>https://danthesalmon.com/change-network-location-in-windows-8-1-2012-r2-from-powershell/</link>
-      <pubDate>Sat, 26 Aug 2017 20:46:25 UTC</pubDate>
-      
-      <guid>https://danthesalmon.com/change-network-location-in-windows-8-1-2012-r2-from-powershell/</guid>
-      <description>Step 1 From an elevated PowerShell window issue the following command to gather some information about our current network profile:
-&#34; Get-NetConnectionProfile Name : Unidentified Network InterfaceAlias : Ethernet InterfaceIndex : 10 NetworkCategory : Public IPv4Connectivity : LocalNetwork IPv6Connectivity : LocalNetwork  The only information we really need from this output is the “InterfaceIndex”
-Step 2 After getting the InterfaceIndex, we run the following command:
-&amp;rdquo;&amp;gt; Set-NetConnectionProfile -InterfaceIndex 10 -NetworkCategory Private  The last argument is what category you want to switch it to.</description>
-    </item>
-    
-    <item>
-      <title>Fix HAXM Emulation Error in Android Studio</title>
-      <link>https://danthesalmon.com/fix-haxm-emulation-error-in-android-studio/</link>
-      <pubDate>Sat, 26 Aug 2017 04:57:15 UTC</pubDate>
-      
-      <guid>https://danthesalmon.com/fix-haxm-emulation-error-in-android-studio/</guid>
-      <description>Requirement Note: Android Studio requires an Intel processor with VT-X support for it’s built-in emulators to work. If you want to do Android development with emulators on an AMD processor, I would highly suggest using Genymotion. If you’re not sure if your Intel processor supports VT-X, Intel has an article here.
-This error is occurring because Android Studio requires Intel Hardware Accelerated Execution Manager (Intel HAXM) to run it’s emulators.</description>
     </item>
     
   </channel>

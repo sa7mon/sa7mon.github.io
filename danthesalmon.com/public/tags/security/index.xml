@@ -6,10 +6,21 @@
     <description>Recent content in Security on Dan [the] Salmon</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Oct 2017 16:38:19 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 28 Oct 2018 15:39:00 +0000</lastBuildDate>
     
 	<atom:link href="https://danthesalmon.com/tags/security/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cyber Security Summit 2018 Highlights</title>
+      <link>https://danthesalmon.com/cyber-security-summit-2018/</link>
+      <pubDate>Sun, 28 Oct 2018 15:39:00 +0000</pubDate>
+      
+      <guid>https://danthesalmon.com/cyber-security-summit-2018/</guid>
+      <description>I was fortunate enough to attend the 2018 Cyber Security Summit in Minneapolis, MN. Here I&amp;rsquo;ve tried to summarize each talk I attended into a small, digestible format, mostly written in their voices.
+Student Breakfast By: Ryan Aniol - State of Minnesota
+ This was a super informative informal breakfast hosted by Ryan who aimed the talk at the students like myself. It was really nice to hear information directly relevant to my situation.</description>
+    </item>
     
     <item>
       <title>WiFi Security Testing Cheatsheet</title>
@@ -17,9 +28,8 @@
       <pubDate>Tue, 10 Oct 2017 16:38:19 +0000</pubDate>
       
       <guid>https://danthesalmon.com/wifi-security-testing-cheatsheet/</guid>
-      <description>Prepare Wireless Card  View Network Cards: iwconfig Kill Wireless Processes: airmon-ng check kill  View Networks airodump-ng wlan0
-Capture traffic airodump-ng &amp;ndash;bssid 04:A1:51:9F:98:BB &amp;ndash;wps &amp;ndash;write ISSO-WPA2 &amp;ndash;channel 6 wlan0
-where: * &amp;ndash;bssid - MAC of router * &amp;ndash;wps - Output WPS information, may be able to try Reaver * &amp;ndash;write - File name to write to. No extension * &amp;ndash;channel - Statically set a channel. Don&amp;rsquo;t need to unless de-authing * wlan0 - Wireless interface</description>
+      <description>Prepare Wireless Card  View Network Cards:  iwconfig  Kill Wireless Processes:  airmon-ng check kill   View Networks airodump-ng wlan0  Capture traffic airodump-ng --bssid 04:A1:51:9F:98:BB --wps --write ISSO-WPA2 --channel 6 wlan0  where:
+ --bssid - MAC of router --wps - Output WPS information, may be able to try Reaver --write - File name to write to. No extension --channel - Statically set a channel. Don&#39;t need to unless de-authing wlan0 - Wireless interface  Deauth - Do while capturing aireplay-ng --deauth 0 -a 04:A1:51:9F:11:11 -c E0:AC:CB:DA:1B:1B wlan0  where:  0 - Continuously send deauth packets -a - BSSID of router (from airodump) -c - STATION of client (From airodump.</description>
     </item>
     
     <item>

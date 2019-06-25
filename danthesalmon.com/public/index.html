@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="generator" content="Hugo 0.49" />
+	<meta name="generator" content="Hugo 0.40.1" />
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Dan [the] Salmon - Dan [the] Salmon</title>
@@ -10,6 +10,23 @@
   <meta name="author" content="">
   <meta name="keywords" content="">
   <link rel="canonical" href="https://danthesalmon.com/">
+
+
+  
+  
+  
+  
+  
+  
+
+
+  <meta property="og:image" content="https://danthesalmon.com/../images/me.png" />
+  <meta property="og:site_name" content="danthesalmon.com" />
+  <meta property="og:type" content="object" />
+  <meta property="og:title" content="Dan [the] Salmon" />
+  <meta property="og:url" content="https://danthesalmon.com/" />
+  <meta property="og:description" content="" />
+
 
   
   
@@ -50,6 +67,48 @@
                 <div class="posts">
                     
                         
+                        
+                            <div class="post">
+  <a class="post-link" href="https://danthesalmon.com/attackdefense-cracking-hashcat/">
+  <p class="post-meta left">Oct 29, 2018</p>
+  
+ 
+  <div class="clearfix"></div>
+  <h3 class="h2 post-title">AttackDefense - Cracking Hashcat Guide </h3>
+  <p class="post-summary">AttackDefense is a new site with all sorts of awesome labs and CTFs for training. Best of all: the site is free.
+In this guide, I&rsquo;ll detail how to complete the &ldquo;Cracking MD5 Hashes&rdquo; lab, though this strategy should work for most labs in the &ldquo;Hashcat All&rdquo; section. If you are unfamiliar with Hashcat, I&rsquo;d strongly recommend reading the wiki or following Youtube tutorials elsewhere before trying this challenge.</p>
+  </a>
+  
+  <p class="post-meta">Tags:&nbsp;
+  
+      
+      <a href="https://danthesalmon.com/tags/ctf">ctf</a>
+  </p>
+</div>
+
+                        
+                            <div class="post">
+  <a class="post-link" href="https://danthesalmon.com/cyber-security-summit-2018/">
+  <p class="post-meta left">Oct 28, 2018</p>
+  
+ 
+  <div class="clearfix"></div>
+  <h3 class="h2 post-title">Cyber Security Summit 2018 Highlights </h3>
+  <p class="post-summary">I was fortunate enough to attend the 2018 Cyber Security Summit in Minneapolis, MN. Here I&rsquo;ve tried to summarize each talk I attended into a small, digestible format, mostly written in their voices.
+Student Breakfast By: Ryan Aniol - State of Minnesota
+ This was a super informative informal breakfast hosted by Ryan who aimed the talk at the students like myself. It was really nice to hear information directly relevant to my situation.</p>
+  </a>
+  
+  <p class="post-meta">Tags:&nbsp;
+  
+      
+      <a href="https://danthesalmon.com/tags/security">security</a>
+  
+      ,&nbsp;
+      <a href="https://danthesalmon.com/tags/conferences">conferences</a>
+  </p>
+</div>
+
                         
                             <div class="post">
   <a class="post-link" href="https://danthesalmon.com/hackthebox-poison/">
@@ -139,9 +198,8 @@ This one looked to be just a little different, though. He was excited because th
  
   <div class="clearfix"></div>
   <h3 class="h2 post-title">WiFi Security Testing Cheatsheet </h3>
-  <p class="post-summary">Prepare Wireless Card  View Network Cards: iwconfig Kill Wireless Processes: airmon-ng check kill  View Networks airodump-ng wlan0
-Capture traffic airodump-ng &ndash;bssid 04:A1:51:9F:98:BB &ndash;wps &ndash;write ISSO-WPA2 &ndash;channel 6 wlan0
-where: * &ndash;bssid - MAC of router * &ndash;wps - Output WPS information, may be able to try Reaver * &ndash;write - File name to write to. No extension * &ndash;channel - Statically set a channel. Don&rsquo;t need to unless de-authing * wlan0 - Wireless interface</p>
+  <p class="post-summary">Prepare Wireless Card  View Network Cards:  iwconfig  Kill Wireless Processes:  airmon-ng check kill   View Networks airodump-ng wlan0  Capture traffic airodump-ng --bssid 04:A1:51:9F:98:BB --wps --write ISSO-WPA2 --channel 6 wlan0  where:
+ --bssid - MAC of router --wps - Output WPS information, may be able to try Reaver --write - File name to write to. No extension --channel - Statically set a channel. Don't need to unless de-authing wlan0 - Wireless interface  Deauth - Do while capturing aireplay-ng --deauth 0 -a 04:A1:51:9F:11:11 -c E0:AC:CB:DA:1B:1B wlan0  where:  0 - Continuously send deauth packets -a - BSSID of router (from airodump) -c - STATION of client (From airodump.</p>
   </a>
   
   <p class="post-meta">Tags:&nbsp;
@@ -209,46 +267,6 @@ A few months ago, my beloved Verizon HTC One M8 began to lose it’s charge at a
   
       
       <a href="https://danthesalmon.com/tags/windows">windows</a>
-  </p>
-</div>
-
-                        
-                            <div class="post">
-  <a class="post-link" href="https://danthesalmon.com/change-network-location-in-windows-8-1-2012-r2-from-powershell/">
-  <p class="post-meta left">Aug 26, 2017</p>
-  
- 
-  <div class="clearfix"></div>
-  <h3 class="h2 post-title">Change Network Location in Windows 8.1/2012 R2 from Powershell </h3>
-  <p class="post-summary">Step 1 From an elevated PowerShell window issue the following command to gather some information about our current network profile:
-" Get-NetConnectionProfile Name : Unidentified Network InterfaceAlias : Ethernet InterfaceIndex : 10 NetworkCategory : Public IPv4Connectivity : LocalNetwork IPv6Connectivity : LocalNetwork  The only information we really need from this output is the “InterfaceIndex”
-Step 2 After getting the InterfaceIndex, we run the following command:
-&rdquo;&gt; Set-NetConnectionProfile -InterfaceIndex 10 -NetworkCategory Private  The last argument is what category you want to switch it to.</p>
-  </a>
-  
-  <p class="post-meta">Tags:&nbsp;
-  
-      
-      <a href="https://danthesalmon.com/tags/windows">windows</a>
-  </p>
-</div>
-
-                        
-                            <div class="post">
-  <a class="post-link" href="https://danthesalmon.com/fix-haxm-emulation-error-in-android-studio/">
-  <p class="post-meta left">Aug 26, 2017</p>
-  
- 
-  <div class="clearfix"></div>
-  <h3 class="h2 post-title">Fix HAXM Emulation Error in Android Studio </h3>
-  <p class="post-summary">Requirement Note: Android Studio requires an Intel processor with VT-X support for it’s built-in emulators to work. If you want to do Android development with emulators on an AMD processor, I would highly suggest using Genymotion. If you’re not sure if your Intel processor supports VT-X, Intel has an article here.
-This error is occurring because Android Studio requires Intel Hardware Accelerated Execution Manager (Intel HAXM) to run it’s emulators.</p>
-  </a>
-  
-  <p class="post-meta">Tags:&nbsp;
-  
-      
-      <a href="https://danthesalmon.com/tags/android">android</a>
   </p>
 </div>
 
