@@ -1,7 +1,7 @@
 +++
 author = "Dan Salmon"
 date = 2017-08-16T04:33:52Z
-description = ""
+description = "Create a seedbox with rTorrent in a FreeNAS jail"
 draft = false
 tags = ["freenas"]
 slug = "create-seedbox-jail-freenas"

@@ -39,15 +39,6 @@ Student Breakfast By: Ryan Aniol - State of Minnesota
     </item>
     
     <item>
-      <title>test-forestry-page</title>
-      <link>https://danthesalmon.com/test-forestry-page/</link>
-      <pubDate>Tue, 31 Jul 2018 20:36:10 &#43;0000</pubDate>
-      
-      <guid>https://danthesalmon.com/test-forestry-page/</guid>
-      <description>And this is text on the right.</description>
-    </item>
-    
-    <item>
       <title>Running Oracle 18c on MacOS</title>
       <link>https://danthesalmon.com/running-oracle-12c-on-macos/</link>
       <pubDate>Thu, 05 Jul 2018 00:40:32 UTC</pubDate>
@@ -131,9 +122,8 @@ A few months ago, my beloved Verizon HTC One M8 began to lose it’s charge at a
       <pubDate>Sat, 26 Aug 2017 21:44:08 UTC</pubDate>
       
       <guid>https://danthesalmon.com/about/</guid>
-      <description>Hi, I&amp;rsquo;m Dan and I&amp;rsquo;m a grad student in the US. I&amp;rsquo;m currently pursuing a Masters degree in Computer Information Technology at Minnesota State University, Mankato. I&amp;rsquo;m interested in InfoSec and participate in bug bounty programs in my spare time.
-Projects  S3scanner - Scan for open S3 buckets and dump contents press - Multi-threaded tool for resumable Wordpress bruteforcing  
-Skills  Programming/Web  Python, HTML5/CSS3, Java, JavaScript ES6, PHP, C#, Ruby on Rails,  Frameworks/Tools  Bootstrap, jQuery, Git, Gulp  Virtualization  Hyper-V, VMWare Workstation/Fusion, VMWare ESXi  Database / RDBMS  MySQL, SQLite, Oracle, SQL Server, database design  Operating Systems  FreeBSD, Windows 7/8/10/Server, MacOS, Ubuntu    Resume</description>
+      <description>Hi, I&amp;rsquo;m Dan and I&amp;rsquo;m a masters graduate in the US. I&amp;rsquo;m interested in InfoSec and participate in bug bounty programs in my spare time.
+Projects  S3scanner - Scan for open S3 buckets and dump contents miniprint - A medium interaction printer honeypot 🍯 press - Multi-threaded tool for resumable Wordpress bruteforcing salary-viz - A data visualization sample to explore salary data using D3.js retirement-calc - A retirement calculator build with Javascript using Chart.</description>
     </item>
     
     <item>
@@ -152,6 +142,18 @@ Skills  Programming/Web  Python, HTML5/CSS3, Java, JavaScript ES6, PHP, C#, Ruby
       
       <guid>https://danthesalmon.com/fix-some-settings-are-managed-by-your-system-administrator-in-windows-7/</guid>
       <description>Background A few months back, I was doing cleanup on a system that I had cleaned of malware. Whatever junk was on there had configured a local proxy server to run, but Malwarebytes had ripped it out. The system unfortunately still thought it was supposed to use the proxy server that doesn’t exist; consequently, I had no internet access. That’s an easy enough fix, right? I open Internet Options and change the LAN settings to not use a proxy and close it.</description>
+    </item>
+    
+    <item>
+      <title>Change Network Location in Windows 8.1/2012 R2 from Powershell</title>
+      <link>https://danthesalmon.com/change-network-location-in-windows-8-1-2012-r2-from-powershell/</link>
+      <pubDate>Sat, 26 Aug 2017 20:46:25 UTC</pubDate>
+      
+      <guid>https://danthesalmon.com/change-network-location-in-windows-8-1-2012-r2-from-powershell/</guid>
+      <description>Step 1 From an elevated PowerShell window issue the following command to gather some information about our current network profile:
+&#34; Get-NetConnectionProfile Name : Unidentified Network InterfaceAlias : Ethernet InterfaceIndex : 10 NetworkCategory : Public IPv4Connectivity : LocalNetwork IPv6Connectivity : LocalNetwork  The only information we really need from this output is the “InterfaceIndex”
+Step 2 After getting the InterfaceIndex, we run the following command:
+&amp;rdquo;&amp;gt; Set-NetConnectionProfile -InterfaceIndex 10 -NetworkCategory Private  The last argument is what category you want to switch it to.</description>
     </item>
     
   </channel>
