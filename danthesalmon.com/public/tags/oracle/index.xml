@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Oracle on Dan [the] Salmon</title>
+    <title>oracle on Dan [the] Salmon</title>
     <link>https://danthesalmon.com/tags/oracle/</link>
-    <description>Recent content in Oracle on Dan [the] Salmon</description>
+    <description>Recent content in oracle on Dan [the] Salmon</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 05 Jul 2018 00:40:32 +0000</lastBuildDate>
@@ -12,14 +12,12 @@
     
     
     <item>
-      <title>Running Oracle 12c on MacOS</title>
+      <title>Running Oracle 18c on MacOS</title>
       <link>https://danthesalmon.com/running-oracle-12c-on-macos/</link>
       <pubDate>Thu, 05 Jul 2018 00:40:32 +0000</pubDate>
       
       <guid>https://danthesalmon.com/running-oracle-12c-on-macos/</guid>
-      <description>In this post, we will go through the steps of installing Oracle 12c in a Docker container and connect to the database using SQL Developer on a Mac. This is a much lighter way of running Oracle locally compared to running a full Windows virtual machine with VMWare or Virtualbox.
-1. Install Docker - If your Mac is newer than 2010
-You can simply install “Docker for Mac”. Download and install “Docker for Mac” from here (You’ll have to create a quick account to download it.</description>
+      <description>Update: May 14, 2019 This article originally contained instructions for running Oracle 12c. The Docker image that was being used was deleted by the author and so was not usable. I have updated the instructions to work again, though the image it uses now runs Oracle 18c. If you need to run 12c specifically, you&amp;rsquo;ll need to look for instructions elsewhere. Some screenshots may now be out of date.</description>
     </item>
     
   </channel>
