@@ -5,9 +5,11 @@ description = "Using Docker, we can run Oracle 12c on MacOS"
 draft = false
 tags = ["oracle","docker","macOS"]
 slug = "running-oracle-12c-on-macos"
-title = "Running Oracle 12c on MacOS"
+title = "Running Oracle 18c on MacOS"
 type = "post"
 +++
+
+**Update: May 14, 2019** *This article originally contained instructions for running Oracle 12c. The Docker image that was being used was deleted by the author and so was not usable. I have updated the instructions to work again, though the image it uses now runs Oracle 18c. If you need to run 12c specifically, you'll need to look for instructions elsewhere. Some screenshots may now be out of date.*
 
 In this post, we will go through the steps of installing Oracle 12c in a Docker container and connect to the database using SQL Developer on a Mac. This is a much lighter way of running Oracle locally compared to running a full Windows virtual machine with VMWare or Virtualbox. 
 
@@ -32,7 +34,7 @@ docker version
 * Pull the Oracle image by running
 
 ```bash
-docker pull sath89/oracle-12c
+docker pull hothamandcheese/oracle-18.4.0-xe
 ```
 
 <a target="_blank" rel="noopener noreferer" href="../images/version-pull.png">![version-pull](../images/version-pull.png)</a>
@@ -49,7 +51,7 @@ mkdir ~/oracle_data
 * Then we create a new container with our downloaded image
 
 ```docker
-docker run -d -p 8080:8080 -p 1521:1521 -v ~/oracle_data/:/u01/app/oracle sath89/oracle-12c
+docker run -d -p 8080:8080 -p 1521:1521 -e ORACLE_PWD='Password1' -v ~/oracle_data/:/u01/app/oracle hothamandcheese/oracle-18.4.0-xe
 ```
 
 This should return a long hash string.
@@ -62,7 +64,7 @@ Scripts are disabled!
 
 
 * Open Kitematic and find the container we just created.
-* Click the "Start" button. The first time you start the container, it will take a 5-10 minutes for the database to build. Just wait until the log reads: **Database ready to use. Enjoy! ;)**
+* Click the "Start" button. The first time you start the container, it will take a 5-10 minutes for the database to build. Just wait until the log reads: **DATABASE IS READY TO USE!**
 
 
 <a target="_blank" rel="noopener noreferer" href="../images/kitematic.png">![Kitematic](../images/kitematic.png)</a>
@@ -78,7 +80,7 @@ Scripts are disabled!
 * The default credentials to connect are as follows:
 	* **Connection Name:** Whatever you want. I suggest "Docker - Oracle System"
 	* **Username:** system
-	* **Password:** oracle
+	* **Password:** Password1
 	* **Hostname:** localhost
 	* **Port:** 1521
 	* **SID:** xe
