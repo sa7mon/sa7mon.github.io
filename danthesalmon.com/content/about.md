@@ -11,7 +11,7 @@ type = "page"
 
 +++
 
-Hi, I'm Dan and I'm a masters graduate in the US. I'm interested in InfoSec and participate in bug bounty programs in my spare time.
+Hi, I'm Dan. I'm interested in Information Security, Data Privacy, and Programming.
 
 ### Projects
 
@@ -39,5 +39,10 @@ Hi, I'm Dan and I'm a masters graduate in the US. I'm interested in InfoSec and 
 
 ### Presentations
 
-* CIACOM 2019 - *miniprint - a printer honeypot*
+* Colloquium on Information Assurance, Cybersecurity, and Management ([CIACOM](https://minneapolis.hosting.acm.org/ciacam/)) 2019, *miniprint - a printer honeypot*
+
+### Teaching
+
+* COMP2145 Web Programming (South Central College, Fall 2019)
+* COMP2300 Java (South Central College, Fall 2019)
 
