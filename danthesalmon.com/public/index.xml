@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Dan [the] Salmon on Dan [the] Salmon </title>
-      <generator uri="https://gohugo.io">Hugo</generator>
+    <title>Dan [the] Salmon</title>
     <link>https://danthesalmon.com/</link>
+    <description>Recent content on Dan [the] Salmon</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Mon, 29 Oct 2018 20:46:25 +0000</lastBuildDate>
     
+	<atom:link href="https://danthesalmon.com/index.xml" rel="self" type="application/rss+xml" />
     
-    <updated>Mon, 29 Oct 2018 20:46:25 UTC</updated>
     
     <item>
       <title>AttackDefense - Cracking Hashcat Guide</title>
       <link>https://danthesalmon.com/attackdefense-cracking-hashcat/</link>
-      <pubDate>Mon, 29 Oct 2018 20:46:25 UTC</pubDate>
+      <pubDate>Mon, 29 Oct 2018 20:46:25 +0000</pubDate>
       
       <guid>https://danthesalmon.com/attackdefense-cracking-hashcat/</guid>
       <description>AttackDefense is a new site with all sorts of awesome labs and CTFs for training. Best of all: the site is free.
@@ -22,7 +24,7 @@ In this guide, I&amp;rsquo;ll detail how to complete the &amp;ldquo;Cracking MD5
     <item>
       <title>Cyber Security Summit 2018 Highlights</title>
       <link>https://danthesalmon.com/cyber-security-summit-2018/</link>
-      <pubDate>Sun, 28 Oct 2018 15:39:00 UTC</pubDate>
+      <pubDate>Sun, 28 Oct 2018 15:39:00 +0000</pubDate>
       
       <guid>https://danthesalmon.com/cyber-security-summit-2018/</guid>
       <description>I was fortunate enough to attend the 2018 Cyber Security Summit in Minneapolis, MN. Here I&amp;rsquo;ve tried to summarize each talk I attended into a small, digestible format, mostly written in their voices.
@@ -33,25 +35,16 @@ Student Breakfast By: Ryan Aniol - State of Minnesota
     <item>
       <title>HackTheBox &#39;Poison&#39; - Own User Guide</title>
       <link>https://danthesalmon.com/hackthebox-poison/</link>
-      <pubDate>Thu, 18 Oct 2018 04:33:52 UTC</pubDate>
+      <pubDate>Thu, 18 Oct 2018 04:33:52 +0000</pubDate>
       
       <guid>https://danthesalmon.com/hackthebox-poison/</guid>
       <description>Note: If you are currently trying to get access to this box, I highly recommend you try it yourself first and only use this guide if you really are stuck. Intro Now that the Poison box is retired on hackthebox, we can talk publicly about how to gain access to this machine. While this machine was active, I only took the time to gain user access, not all the way to root.</description>
     </item>
     
     <item>
-      <title>test-forestry-page</title>
-      <link>https://danthesalmon.com/test-forestry-page/</link>
-      <pubDate>Tue, 31 Jul 2018 20:36:10 &#43;0000</pubDate>
-      
-      <guid>https://danthesalmon.com/test-forestry-page/</guid>
-      <description>And this is text on the right.</description>
-    </item>
-    
-    <item>
       <title>Running Oracle 12c on MacOS</title>
       <link>https://danthesalmon.com/running-oracle-12c-on-macos/</link>
-      <pubDate>Thu, 05 Jul 2018 00:40:32 UTC</pubDate>
+      <pubDate>Thu, 05 Jul 2018 00:40:32 +0000</pubDate>
       
       <guid>https://danthesalmon.com/running-oracle-12c-on-macos/</guid>
       <description>In this post, we will go through the steps of installing Oracle 12c in a Docker container and connect to the database using SQL Developer on a Mac. This is a much lighter way of running Oracle locally compared to running a full Windows virtual machine with VMWare or Virtualbox.
@@ -62,7 +55,7 @@ You can simply install “Docker for Mac”. Download and install “Docker for 
     <item>
       <title>Search</title>
       <link>https://danthesalmon.com/search/</link>
-      <pubDate>Tue, 19 Jun 2018 21:44:08 UTC</pubDate>
+      <pubDate>Tue, 19 Jun 2018 21:44:08 +0000</pubDate>
       
       <guid>https://danthesalmon.com/search/</guid>
       <description>-- Search Enter comma-separated search terms --
@@ -72,7 +65,7 @@ You can simply install “Docker for Mac”. Download and install “Docker for 
     <item>
       <title>Contact</title>
       <link>https://danthesalmon.com/contact/</link>
-      <pubDate>Sun, 13 May 2018 00:00:00 UTC</pubDate>
+      <pubDate>Sun, 13 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://danthesalmon.com/contact/</guid>
       <description> Twitter Github Keybase dan(dot)sa7mon(at)gmail(dot)com  </description>
@@ -81,7 +74,7 @@ You can simply install “Docker for Mac”. Download and install “Docker for 
     <item>
       <title>Electroneum - First Impressions</title>
       <link>https://danthesalmon.com/first-impressions-of-electroneum/</link>
-      <pubDate>Tue, 16 Jan 2018 00:40:32 UTC</pubDate>
+      <pubDate>Tue, 16 Jan 2018 00:40:32 +0000</pubDate>
       
       <guid>https://danthesalmon.com/first-impressions-of-electroneum/</guid>
       <description>A coworker recently sent me a link to Yet Another Cryptocurrency. Like most people, I&amp;rsquo;m pretty burnt out with all these new coins and ICO&amp;rsquo;s popping up each week. In fact, I get about 5-10 ICO spam emails in my Junk mail folder.
@@ -91,7 +84,7 @@ This one looked to be just a little different, though. He was excited because th
     <item>
       <title>Moving ZFS datasets between volumes</title>
       <link>https://danthesalmon.com/moving-zfs-datasets-between-volumes/</link>
-      <pubDate>Wed, 29 Nov 2017 03:07:25 UTC</pubDate>
+      <pubDate>Wed, 29 Nov 2017 03:07:25 +0000</pubDate>
       
       <guid>https://danthesalmon.com/moving-zfs-datasets-between-volumes/</guid>
       <description>If you run ZFS like I do (and I think you should) there will probably come at time when you need to migrate a dataset from one volume to another. This was done in FreeNAS (FreeBSD), but the steps should apply to any *nix system with ZFS
@@ -102,7 +95,7 @@ We&amp;rsquo;ll start by taking a snapshot of the dataset we want to move.</desc
     <item>
       <title>2017 Cyber Security Summit</title>
       <link>https://danthesalmon.com/2017-cyber-security-summit/</link>
-      <pubDate>Mon, 30 Oct 2017 21:57:31 UTC</pubDate>
+      <pubDate>Mon, 30 Oct 2017 21:57:31 +0000</pubDate>
       
       <guid>https://danthesalmon.com/2017-cyber-security-summit/</guid>
       <description>Student Breakfast - MN IT Services w/ Chris Buse  $400M budget for MNIT 0% unemployment rate MNIT wants to train/develop IT skills. Everyones wants skilled people but no one wants to train Lots of operational jobs Looking for interns with lots of general skills Flexible hours/locations  Q/A with Chris  &amp;ldquo;Are certifications worth it?&amp;rdquo;  &amp;ldquo;Focus on certs, even though I don&amp;rsquo;t think they&amp;rsquo;re very useful. They&amp;rsquo;re mostly just to get passed HR.</description>
@@ -111,7 +104,7 @@ We&amp;rsquo;ll start by taking a snapshot of the dataset we want to move.</desc
     <item>
       <title>WiFi Security Testing Cheatsheet</title>
       <link>https://danthesalmon.com/wifi-security-testing-cheatsheet/</link>
-      <pubDate>Tue, 10 Oct 2017 16:38:19 UTC</pubDate>
+      <pubDate>Tue, 10 Oct 2017 16:38:19 +0000</pubDate>
       
       <guid>https://danthesalmon.com/wifi-security-testing-cheatsheet/</guid>
       <description>Prepare Wireless Card  View Network Cards:  iwconfig  Kill Wireless Processes:  airmon-ng check kill   View Networks airodump-ng wlan0  Capture traffic airodump-ng --bssid 04:A1:51:9F:98:BB --wps --write ISSO-WPA2 --channel 6 wlan0  where:
@@ -121,7 +114,7 @@ We&amp;rsquo;ll start by taking a snapshot of the dataset we want to move.</desc
     <item>
       <title>Why I switched from Android to iOS</title>
       <link>https://danthesalmon.com/why-i-switched-from-android-to-ios/</link>
-      <pubDate>Fri, 01 Sep 2017 01:12:00 UTC</pubDate>
+      <pubDate>Fri, 01 Sep 2017 01:12:00 +0000</pubDate>
       
       <guid>https://danthesalmon.com/why-i-switched-from-android-to-ios/</guid>
       <description>Note: This article is not just a stringent comparison of Apple vs Android, but a look at the whole picture that I took while deciding which phone to switch to.
@@ -131,7 +124,7 @@ A few months ago, my beloved Verizon HTC One M8 began to lose it’s charge at a
     <item>
       <title>About</title>
       <link>https://danthesalmon.com/about/</link>
-      <pubDate>Sat, 26 Aug 2017 21:44:08 UTC</pubDate>
+      <pubDate>Sat, 26 Aug 2017 21:44:08 +0000</pubDate>
       
       <guid>https://danthesalmon.com/about/</guid>
       <description>Hi, I&amp;rsquo;m Dan and I&amp;rsquo;m a masters graduate in the US. I&amp;rsquo;m interested in InfoSec and participate in bug bounty programs in my spare time.
@@ -141,7 +134,7 @@ Projects  S3scanner - Scan for open S3 buckets and dump contents miniprint - A m
     <item>
       <title>Allow a Chromecast through a WatchGuard firewall</title>
       <link>https://danthesalmon.com/allow-a-chromecast-through-a-watchguard-firewall/</link>
-      <pubDate>Sat, 26 Aug 2017 21:44:08 UTC</pubDate>
+      <pubDate>Sat, 26 Aug 2017 21:44:08 +0000</pubDate>
       
       <guid>https://danthesalmon.com/allow-a-chromecast-through-a-watchguard-firewall/</guid>
       <description>Background I recently picked up a Chromecast for my TV so I could stream Netflix easier since XBMC’s addon is terrible if you don’t want to use a keyboard. It was super easy to setup, but after it updated and connected to my WiFi I couldn’t see it from my phone. I did some digging and found that my WatchGuard 25W was the culprit. After I added an any-any rule I was able to see it, but that left it wide-open on my network.</description>
@@ -150,12 +143,73 @@ Projects  S3scanner - Scan for open S3 buckets and dump contents miniprint - A m
     <item>
       <title>Fix “Some settings are managed by your system administrator” in Windows 7</title>
       <link>https://danthesalmon.com/fix-some-settings-are-managed-by-your-system-administrator-in-windows-7/</link>
-      <pubDate>Sat, 26 Aug 2017 21:08:00 UTC</pubDate>
+      <pubDate>Sat, 26 Aug 2017 21:08:00 +0000</pubDate>
       
       <guid>https://danthesalmon.com/fix-some-settings-are-managed-by-your-system-administrator-in-windows-7/</guid>
       <description>Background A few months back, I was doing cleanup on a system that I had cleaned of malware. Whatever junk was on there had configured a local proxy server to run, but Malwarebytes had ripped it out. The system unfortunately still thought it was supposed to use the proxy server that doesn’t exist; consequently, I had no internet access. That’s an easy enough fix, right? I open Internet Options and change the LAN settings to not use a proxy and close it.</description>
     </item>
     
+    <item>
+      <title>Change Network Location in Windows 8.1/2012 R2 from Powershell</title>
+      <link>https://danthesalmon.com/change-network-location-in-windows-8-1-2012-r2-from-powershell/</link>
+      <pubDate>Sat, 26 Aug 2017 20:46:25 +0000</pubDate>
+      
+      <guid>https://danthesalmon.com/change-network-location-in-windows-8-1-2012-r2-from-powershell/</guid>
+      <description>Step 1 From an elevated PowerShell window issue the following command to gather some information about our current network profile:
+&#34; Get-NetConnectionProfile Name : Unidentified Network InterfaceAlias : Ethernet InterfaceIndex : 10 NetworkCategory : Public IPv4Connectivity : LocalNetwork IPv6Connectivity : LocalNetwork  The only information we really need from this output is the “InterfaceIndex”
+Step 2 After getting the InterfaceIndex, we run the following command:
+&amp;rdquo;&amp;gt; Set-NetConnectionProfile -InterfaceIndex 10 -NetworkCategory Private  The last argument is what category you want to switch it to.</description>
+    </item>
+    
+    <item>
+      <title>Fix HAXM Emulation Error in Android Studio</title>
+      <link>https://danthesalmon.com/fix-haxm-emulation-error-in-android-studio/</link>
+      <pubDate>Sat, 26 Aug 2017 04:57:15 +0000</pubDate>
+      
+      <guid>https://danthesalmon.com/fix-haxm-emulation-error-in-android-studio/</guid>
+      <description>Requirement Note: Android Studio requires an Intel processor with VT-X support for it’s built-in emulators to work. If you want to do Android development with emulators on an AMD processor, I would highly suggest using Genymotion. If you’re not sure if your Intel processor supports VT-X, Intel has an article here.
+This error is occurring because Android Studio requires Intel Hardware Accelerated Execution Manager (Intel HAXM) to run it’s emulators.</description>
+    </item>
+    
+    <item>
+      <title>Fix Ruby on Rails Certificate Issue</title>
+      <link>https://danthesalmon.com/fix-ruby-certificate-issue/</link>
+      <pubDate>Fri, 25 Aug 2017 01:11:38 +0000</pubDate>
+      
+      <guid>https://danthesalmon.com/fix-ruby-certificate-issue/</guid>
+      <description>While attempting a “rails new” command, I was greeted with this lovely message:
+An error occurred while installing rake (10.4.2), and Bundler cannot continue.  So after doing some research, it turns out all you need to do is a Gem update:
+gem update --system  Unless of course, this results in this error like it did for me:
+ERROR: While executing gem ... (Gem::RemoteFetcher::FetchError) SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed (https://api.</description>
+    </item>
+    
+    <item>
+      <title>View/Reset SickRage Web Password</title>
+      <link>https://danthesalmon.com/view-reset-sickrage-web-password/</link>
+      <pubDate>Fri, 18 Aug 2017 03:56:32 +0000</pubDate>
+      
+      <guid>https://danthesalmon.com/view-reset-sickrage-web-password/</guid>
+      <description>Background I recently forgot my password for SickRage and was surprised by the little documentation online. I have it installed in a jail in FreeNAS, so that’s what I’ll be focused on here but the instructions should be exactly the same if you have it installed inside an OS.
+Steps It’s actually really easy, assuming you have command-line access. In FreeNAS, open a shell on your SickRage jail and edit the following file:</description>
+    </item>
+    
+    <item>
+      <title>Create a Seedbox Jail in FreeNAS with rTorrent / ruTorrent / lighttpd</title>
+      <link>https://danthesalmon.com/create-seedbox-jail-freenas/</link>
+      <pubDate>Wed, 16 Aug 2017 04:33:52 +0000</pubDate>
+      
+      <guid>https://danthesalmon.com/create-seedbox-jail-freenas/</guid>
+      <description>Intro / Credits After much work and starting from scratch a few times, I finally got a working jail put together that uses ruTorrent, rTorrent, and Lighttpd to create a very nice personal seedbox in FreeNAS. I should give a lot of credit to FlyingPersian and his thread on the FreeNAS forum for the great information. I’m going to shamelessly steal a lot of his guide but correct some things and add improvements that I found.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://danthesalmon.com/besside-ng/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danthesalmon.com/besside-ng/</guid>
+      <description> Crack multiple networks simultaneiously with besside-ng and hashcat  besside-ng wlan0 Let it run until it has many handshakes   </description>
+    </item>
+    
   </channel>
 </rss>
-
