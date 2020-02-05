@@ -11,7 +11,7 @@ type = "page"
 
 +++
 
-Hi, I'm Dan and I'm a masters graduate in the US. I'm interested in InfoSec and participate in bug bounty programs in my spare time.
+Hi, I'm Dan. I'm interested in Information Security, Data Privacy, and Programming.
 
 ### Projects
 
@@ -23,16 +23,26 @@ Hi, I'm Dan and I'm a masters graduate in the US. I'm interested in InfoSec and 
 * [watchtower](https://github.com/sa7mon/watchtower) - PoC to detect and alert when Rogue AP and Deauth attacks occur 
 * [venmo-data](https://github.com/sa7mon/venmo-data) - A dataset of 7 million transactions scraped from the Venmo public API
 
-### Skills
 
-* Programming/Web
-    * Python, HTML5/CSS3, Java, JavaScript ES6, PHP, C#, Ruby on Rails, 
-* Frameworks/Tools 
-    * Bootstrap, jQuery, Git, Gulp
-* Virtualization
-    * Hyper-V, VMWare Workstation/Fusion, VMWare ESXi
-* Database / RDBMS
-    * MySQL, SQLite, Oracle, SQL Server, database design 
-* Operating Systems
-    * FreeBSD, Windows 7/8/10/Server, MacOS, Ubuntu
+### Press
+
+* [You Should Really, Really Make All Your Venmo Transactions Private](https://nymag.com/intelligencer/2019/06/venmo-payments-should-be-private.html) <br /> Madison Malone Kircher, *New York Magazine*, 2019
+* [Millions of Venmo transactions scraped in warning over privacy settings](https://techcrunch.com/2019/06/16/millions-venmo-transactions-scraped/) <br /> Zack Whittaker, *TechCrunch*, 2019
+* [Venmo Opens Your Transaction History To Anyone Who Wants To Look. Here's How To Fix It](https://www.forbes.com/sites/kevinmurnane/2019/06/17/venmo-opens-your-transaction-history-to-anyone-who-wants-to-look-heres-how-to-fix-it/#3c4404c523c9) <br /> Kevin Murnane, *Forbes*, 2019
+* [Millions of Transactions Scraped in Latest Demonstration of Venmo's Absurd Privacy Policy](https://gizmodo.com/millions-of-transactions-scraped-in-latest-demonstratio-1835587886) <br /> Dell Cameron, *Gizmodo*, 2019
+
+
+### Writing
+
+* [I Scraped Millions of Venmo Payments. Your Data Is at Risk](https://www.wired.com/story/i-scraped-millions-of-venmo-payments-your-data-is-at-risk/) <br /> *Wired*, 2019
+
+
+### Presentations
+
+* Colloquium on Information Assurance, Cybersecurity, and Management ([CIACOM](https://minneapolis.hosting.acm.org/ciacam/)) 2019, *miniprint - a printer honeypot*
+
+### Teaching
+
+* COMP2145 Web Programming (South Central College, Fall 2019)
+* COMP2300 Java (South Central College, Fall 2019)
 
