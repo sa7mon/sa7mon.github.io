@@ -20,64 +20,70 @@ I saw this as a good chance to try out Django and learn about building a distrib
 
 # Spam Criteria
 
-The first thing I had to do was create some criteria to use for categorizing spam accounts. With a few variations, here are the distinguishing features of a spam account:
+The first thing I had to do was create some criteria to use for categorizing accounts as "spam". With a few variations, here are the distinguishing features of a spam account:
 
 * The majority of posts by the account are reblogs of posts from other spam accounts
 * The reblogged posts are either risque photos of women or ads for seedy mobile games
-* The URL or account name of the blog is either complete gibberish or the name of an account that was previously active, but got deactivated.
+* The URL or account name of the blog is either complete gibberish or the name of an account that was previously active, but got deactivated. That old account most likely had a few popular posts with lots of notes.
+* If the post was an image of a woman, the caption was usually in the format "Name (number Images)". i.e. "Natalie (30 Images)"
+* Any link in the body of the post used a URL shortening service such as bit[.]ly or j[.]mp
 
-Looking harder at the spam posts, I found that they all included links and used various link shortening services. This made finding spam posts fairly easy because regular users posting links don't use such link shortening services. This may be a generalization, but I've found that false positive rates were very good using this as a criteria.
+Here is an example of a pretty typical post:
 
-The other commonality that the spam posts have is in the posts that feature girls. In those posts, there is usually a link surrounding an `<h1>` element
+![spam-1](spam-1-moveme.PNG)
+
+I began to look just for posts that had that text format of "Name (number Images)", but it was not specific enough because the posts would sometimes use other words instead of "Images" ("selfies", "videos", etc.) or sometimes they would just have the name alone. Also, some of the posts were for seedy-looking mobile games:
+
+![spam-2](spam-2-moveme.png)
+
+I decided I would focus my criteria mainly on the shortened links because regular users posting links don't generally use link shortening services. This may be a generalization, but in practice it yielded a very low false positive rate.
+
+Utilizing the Tumblr API, I was able to get back the HTML source of any post I wanted to classify as spam or non-spam. Here are the spam conditions I settled on:
+
+* Photo caption matches the regex pattern `<a href=.+(bit\.ly|j\.mp).+><h1>.+<\/h1><\/a>`
+* Publisher field contains a URL within the j[.]mp or bit[.]ly domain
+* Source field contains a URL within the j[.]mp or bit[.]ly domain
+
+If any one of the criteria are met, the account is classified as spam. (The "publisher" and "source" fields are user-editable fields that add links to your post.)
+
+## Process
+
+To accomplish the spam-finding, I built an API and a client application in Python. The flowed looks something like this:
+
+1. The client queries our API for the name of a blog to check
+2. The client queries the Tumblr API for the latest 20 posts for this blog. Why 20 posts? Because that's the max number of posts the Tumblr API returns with one request and there's a daily limit of API requests we can make.
+3. For each blog post, compare it against our list of criteria. If we determine the post is spam:
+    * Send a request back to our API marking this blog as spam in the database
+    * Collect the names of blogs that interracted with this spam post by checking the notes (who liked it and who reblogged it)
+    * Send these blog names back to our API as TODO items
+4. Send a request back to our API marking that blog as checked, and start the process back over at Step 1.
+
+Or for those who prefer a more visual explanation:
+
+![spam-1](flowchart-moveme.png)
 
 
-## Categorizing
+## Results
 
-```python
+Time for the numbers: 
 
-h1name = r'<a href=.+(bit\.ly|j\.mp).+><h1>.+<\/h1><\/a>' # https://regexr.com/4fa6d
+* Total blogs checked: `4,647,267`
+* Non-spam blogs: `4,449,854`
+* Spam blogs: `197,413`
 
-if 'caption' in post and re.search(h1name, post['caption']):
-    return_info['spam'] = True
-    return_info['condition'] = 'photo-caption-h1name'
-elif 'publisher' in post and post['publisher'] == 'j.mp':
-    return_info['spam'] = True
-    return_info['condition'] = 'publisher-jmp'
-elif 'source_title' in post and post['source_title'] == 'j.mp':
-    return_info['spam'] = True
-    return_info['condition'] = 'sourcetitle-jmp'
-elif 'publisher' in post and post['publisher'] == 'bit.ly':
-    return_info['spam'] = True
-    return_info['condition'] = 'publisher-bitly'
-elif 'source_title' in post and post['source_title'] == 'bit.ly':
-    return_info['spam'] = True
-    return_info['condition'] = 'sourcetitle-bitly'
-else:
-    return_info['spam'] = False
-```
+And here are the criteria that were hit:
 
-**Results**
+* bitly or jmp publisher: `29,488`
+* bitly or jmp source: `118,694`
+* photo caption regex: `19,846`
+* other: `29,384`
 
-'photo-caption-h1name%' - 19,846
-'publisher-jmp%' - 18,167
-'sourcetitle-jmp%' - 49,325
-'publisher-bitly%' - 11,321
-'sourcetitle-bitly%' - 69,369
-'imported%' - 29,384
+(The "other" category is due to me not storing in the database what criteria was matched when I first started the project.)
 
-## Outline
+I was able to find nearly 200,000 spam accounts with my simple searching methods. I am certain there are far more than this if I would have kept the application running indefinitely. 
 
-* Rough results
-* Background
-	* Kept seeing so many spam accounts, decided to investigate
-	* Saw it as a good chance to learn Django and how to make a distributed application
-* Spam criteria
-	* Some SFW examples
+I should note that it would be inaccurate for someone to look at those numbers and extrapolate that about 4% of all Tumblr accounts are spam. The accounts I was looking at were not chosen at random, but rather were analyzed because they interacted with a suspected spam account. 
 
-## Data
+## Conclusion
 
-```
-select count(*) from api_blog 4,647,267
-select count(*) from api_blog where spam = true 197,413
-select count(*) from api_blog where spam = false 4,449,854
-```
+Maybe it's due to the internal turmoil that comes from being bought and sold twice in 6 years, but it really seems like Tumblr is not doing a great job at curbing the spam problem. 
