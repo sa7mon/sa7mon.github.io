@@ -18,6 +18,7 @@ While I respect the use of ad-blockers (and run them myself on all my browsers),
 * No link-shortening service will be used to obscure the final destination of a link
 * Any images used will be small and non-animated
 * Ads will appear once on the page, most likely at the top or side
+* Ads will take only a small amount of vertical space on the page
 
 If you still would prefer to block the ads, you can do so by simply targeting the following CSS selector:
 
