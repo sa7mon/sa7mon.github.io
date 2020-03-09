@@ -65,10 +65,12 @@ The flow looked something like this:
 
 Or for those who prefer a more visual explanation:
 
-![flowchart](../images/tumblr_flowchart.svg)
+<!-- ![flowchart](../images/tumblr_flowchart.svg) -->
+
+<img src="../images/tumblr_flowchart.svg" alt="Process flowchart" title="Process flowchart" style="max-width: 75%;" />
 
 
-## Results
+## Results & Conclusion
 
 Time for the numbers: 
 
@@ -76,7 +78,7 @@ Time for the numbers:
 * Non-spam blogs: `4,449,854`
 * Spam blogs: `197,413`
 
-And here are the criteria that were hit:
+and here are the criteria that were hit:
 
 * bitly or jmp publisher: `29,488`
 * bitly or jmp source: `118,694`
@@ -88,7 +90,5 @@ And here are the criteria that were hit:
 I was able to find nearly 200,000 spam accounts with my simple searching methods. I am certain there are far more than this if I would have kept the application running indefinitely. 
 
 I should note that it would be inaccurate for someone to look at those numbers and extrapolate that about 4% of all Tumblr accounts are spam. The accounts I was looking at were not chosen at random, but rather were analyzed because they interacted with a suspected spam account. 
-
-## Conclusion
 
 Maybe it's due to the internal turmoil that comes from being bought and sold twice in 6 years, but it really seems like Tumblr is not doing a great job at curbing the spam problem. 
