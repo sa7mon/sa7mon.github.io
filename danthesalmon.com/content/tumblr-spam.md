@@ -9,16 +9,14 @@ title = "Tumblr Has a Spam Problem"
 type = "post"
 +++
 
-# Background
+<!-- # Background -->
 
-I have an account on Tumblr, though I seem to be one of the few people still on the site. Over the past few years, I've noticed an uptick in the amount of spam accounts following me. A considerable increase, in fact, so I decided to try to quantify this problem.
+I have an account on Tumblr, though I seem to be one of the few people still on the site. Over the past few years, I've noticed an uptick in the amount of spam accounts following me. A considerable increase, in fact, so I decided to try to quantify how pervasive the problem was.
 
 
-# Searching for Spam
+## Searching for Spam
 
-I saw this as a good chance to try out Django and learn about building a distributed application. What I ended up building could best be described as a spider.
-
-# Spam Criteria
+<!-- # Spam Criteria -->
 
 The first thing I had to do was create some criteria to use for categorizing accounts as "spam". With a few variations, here are the distinguishing features of a spam account:
 
@@ -30,28 +28,35 @@ The first thing I had to do was create some criteria to use for categorizing acc
 
 Here is an example of a pretty typical post:
 
-![spam-1](spam-1-moveme.PNG)
+![spam-1](../images/tumblr_spam-1.png)
 
-I began to look just for posts that had that text format of "Name (number Images)", but it was not specific enough because the posts would sometimes use other words instead of "Images" ("selfies", "videos", etc.) or sometimes they would just have the name alone. Also, some of the posts were for seedy-looking mobile games:
+I began to look just for posts that had that text format of "Name (number Images)", but it didn't account for all scenarios because the posts would sometimes use other words instead of "images" such as "selfies" or "videos" or sometimes they would just have the name alone.
 
-![spam-2](spam-2-moveme.png)
+Some of the posts didn't feature women at all, but instead advertised seedy mobile games:
 
-I decided I would focus my criteria mainly on the shortened links because regular users posting links don't generally use link shortening services. This may be a generalization, but in practice it yielded a very low false positive rate.
+![spam-2](../images/tumblr_spam-2.png)
 
-Utilizing the Tumblr API, I was able to get back the HTML source of any post I wanted to classify as spam or non-spam. Here are the spam conditions I settled on:
+I decided I would focus my search on posts that contained shortened links because regular users don't generally use link shortening services. This may be a generalization, but in practice it yielded a very low false positive rate.
 
-* Photo caption matches the regex pattern `<a href=.+(bit\.ly|j\.mp).+><h1>.+<\/h1><\/a>`
-* Publisher field contains a URL within the j[.]mp or bit[.]ly domain
-* Source field contains a URL within the j[.]mp or bit[.]ly domain
+Utilizing the Tumblr API, I was able to get back the HTML source of any post I wanted to classify as spam or non-spam. If any one of the following criteria are met, the account is classified as spam:
 
-If any one of the criteria are met, the account is classified as spam. (The "publisher" and "source" fields are user-editable fields that add links to your post.)
+* Photo caption matches the regex pattern:
+    ```
+    <a href=.+(bit\.ly|j\.mp).+><h1>.+<\/h1><\/a>
+    ```
+* Publisher field contains a URL within the j.mp or bit.ly domain
+* Source field contains a URL within the j.mp or bit.ly domain
+
+The "publisher" and "source" fields are user-editable fields that add links to your post.
 
 ## Process
 
-To accomplish the spam-finding, I built an API and a client application in Python. The flowed looks something like this:
+I saw this project as a good chance to try out Django and learn about building a distributed application with an API and client application. Functionally, the two operated similar to a spider with the worker client querying the Tumblr API and sending data back to the API to store. The API in turn would then hand work to do back to the client. 
+
+The flow looked something like this:
 
 1. The client queries our API for the name of a blog to check
-2. The client queries the Tumblr API for the latest 20 posts for this blog. Why 20 posts? Because that's the max number of posts the Tumblr API returns with one request and there's a daily limit of API requests we can make.
+2. The client queries the Tumblr API for the latest 20 posts for this blog. Why 20 posts? Because that's the maximum number of posts the Tumblr API returns with one request and there's a daily limit of API requests we can make.
 3. For each blog post, compare it against our list of criteria. If we determine the post is spam:
     * Send a request back to our API marking this blog as spam in the database
     * Collect the names of blogs that interracted with this spam post by checking the notes (who liked it and who reblogged it)
@@ -60,7 +65,7 @@ To accomplish the spam-finding, I built an API and a client application in Pytho
 
 Or for those who prefer a more visual explanation:
 
-![spam-1](flowchart-moveme.png)
+![flowchart](../images/tumblr_flowchart.svg)
 
 
 ## Results
