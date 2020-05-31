@@ -1,22 +1,17 @@
 +++
 author = "Dan Salmon"
-date = 2020-02-25T04:57:15Z
-description = ""
-draft = true
+date = 2020-03-08T00:00:00Z
+description = "An attempty to quantify the Tumblr spam problem"
+draft = false
 tags = ["research", "tumblr"]
 slug = "tumblr-has-a-spam-problem"
 title = "Tumblr Has a Spam Problem"
 type = "post"
 +++
 
-<!-- # Background -->
-
 I have an account on Tumblr, though I seem to be one of the few people still on the site. Over the past few years, I've noticed an uptick in the amount of spam accounts following me. A considerable increase, in fact, so I decided to try to quantify how pervasive the problem was.
 
-
 ## Searching for Spam
-
-<!-- # Spam Criteria -->
 
 The first thing I had to do was create some criteria to use for categorizing accounts as "spam". With a few variations, here are the distinguishing features of a spam account:
 
@@ -65,10 +60,12 @@ The flow looked something like this:
 
 Or for those who prefer a more visual explanation:
 
-![flowchart](../images/tumblr_flowchart.svg)
+<!-- ![flowchart](../images/tumblr_flowchart.svg) -->
+
+<img src="../images/tumblr_flowchart.svg" alt="Process flowchart" title="Process flowchart" style="max-width: 75%;" />
 
 
-## Results
+## Results & Conclusion
 
 Time for the numbers: 
 
@@ -76,7 +73,7 @@ Time for the numbers:
 * Non-spam blogs: `4,449,854`
 * Spam blogs: `197,413`
 
-And here are the criteria that were hit:
+and here are the criteria that were hit:
 
 * bitly or jmp publisher: `29,488`
 * bitly or jmp source: `118,694`
@@ -89,6 +86,8 @@ I was able to find nearly 200,000 spam accounts with my simple searching methods
 
 I should note that it would be inaccurate for someone to look at those numbers and extrapolate that about 4% of all Tumblr accounts are spam. The accounts I was looking at were not chosen at random, but rather were analyzed because they interacted with a suspected spam account. 
 
-## Conclusion
+Maybe it's due to the internal turmoil that comes from being bought and sold twice in 6 years, but it really seems like Tumblr is not doing a great job at curbing the spam problem.
 
-Maybe it's due to the internal turmoil that comes from being bought and sold twice in 6 years, but it really seems like Tumblr is not doing a great job at curbing the spam problem. 
+#### P.S. 
+
+If you're at all interested in the data, I've put the list of identified spam accounts in a git repo here: [https://github.com/sa7mon/tumblr-spam-accounts](https://github.com/sa7mon/tumblr-spam-accounts)
