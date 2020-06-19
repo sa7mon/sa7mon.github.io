@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>windows on Dan [the] Salmon</title>
@@ -29,7 +29,7 @@
       <description>Step 1 From an elevated PowerShell window issue the following command to gather some information about our current network profile:
 &#34; Get-NetConnectionProfile Name : Unidentified Network InterfaceAlias : Ethernet InterfaceIndex : 10 NetworkCategory : Public IPv4Connectivity : LocalNetwork IPv6Connectivity : LocalNetwork  The only information we really need from this output is the “InterfaceIndex”
 Step 2 After getting the InterfaceIndex, we run the following command:
-&amp;rdquo;&amp;gt; Set-NetConnectionProfile -InterfaceIndex 10 -NetworkCategory Private  The last argument is what category you want to switch it to.</description>
+&#34; Set-NetConnectionProfile -InterfaceIndex 10 -NetworkCategory Private  The last argument is what category you want to switch it to.</description>
     </item>
     
   </channel>

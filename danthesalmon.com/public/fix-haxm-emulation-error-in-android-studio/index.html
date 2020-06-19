@@ -68,29 +68,26 @@
         
       </div>
 
+      <div id="sponsor">
+	
+	
+		<a href="https://lastpass.com/f?6951486" target="_blank" rel="noopener">🔐 Store your passwords securely with LastPass Premium and get 1 month free! 🔐</a>
+	
+	<br>
+	<span class="about"><a href="https://danthesalmon.com/sponsors">About these ads</a></span>
+</div>
+
       <article class="post-content">
-      
-
-<p><strong>Requirement Note:</strong> Android Studio requires an Intel processor with VT-X support for it’s built-in emulators to work. If you want to do Android development with emulators on an AMD processor, I would highly suggest using <a href="https://www.genymotion.com/#!/">Genymotion</a>. If you’re not sure if your Intel processor supports VT-X, Intel has <a href="http://www.intel.com/support/processors/sb/cs-030729.htm">an article here</a>.</p>
-
-<hr />
-
+      <p><strong>Requirement Note:</strong> Android Studio requires an Intel processor with VT-X support for it’s built-in emulators to work. If you want to do Android development with emulators on an AMD processor, I would highly suggest using <a href="https://www.genymotion.com/#!/">Genymotion</a>. If you’re not sure if your Intel processor supports VT-X, Intel has <a href="http://www.intel.com/support/processors/sb/cs-030729.htm">an article here</a>.</p>
+<hr>
 <p>This error is occurring because Android Studio requires Intel Hardware Accelerated Execution Manager (Intel HAXM) to run it’s emulators. All we need to do is install this tool.</p>
-
-<p><img src="../images/error.png" alt="error" /></p>
-
+<p><img src="../images/error.png" alt="error"></p>
 <h1 id="step-1">Step 1</h1>
-
 <p>After starting Android Studio, open the SDK manager and scroll to the Extras folder near the bottom. Check the Intel x86 Emulator Accelerator (HAXM installer) option and hit the Install packages button.</p>
-
-<p><img src="../images/haxm-win-img01.png" alt="haxm-win-img01" /></p>
-
+<p><img src="../images/haxm-win-img01.png" alt="haxm-win-img01"></p>
 <h1 id="step-2">Step 2</h1>
-
 <p>After it’s done installing the package, you need to run the installer. It’s located in <em>&lt;sdk&gt;/extras/intel/HardwareAcceleratedExecutionManager/IntelHAXM.exe</em>. The location of &lt;sdk&gt; is near the top of the SDK Manager window and is usually in <em>C:\Users(user)\AppData\Local\Android\sdk</em>.</p>
-
-<p><img src="../images/installer.png" alt="installer" /></p>
-
+<p><img src="../images/installer.png" alt="installer"></p>
 <p>Just accept all the defaults for the installer until it finishes. When it’s done, restart Android Studio and try to start your VM up again. This time it should start right up.</p>
 
       </article>
@@ -133,7 +130,7 @@
 </nav>
 
           <small>
-            Copyright &#169; 2018<br>
+            Copyright &#169; 2019<br>
             Powered by <a href="http://gohugo.io/" target="_blank">Hugo</a> &amp; <a href="https://github.com/azmelanar/hugo-theme-pixyll" target="_blank">Pixyll</a>
           </small>
         </div>

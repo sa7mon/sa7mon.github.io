@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ctf on Dan [the] Salmon</title>
@@ -18,7 +18,8 @@
       
       <guid>https://danthesalmon.com/attackdefense-cracking-hashcat/</guid>
       <description>AttackDefense is a new site with all sorts of awesome labs and CTFs for training. Best of all: the site is free.
-In this guide, I&amp;rsquo;ll detail how to complete the &amp;ldquo;Cracking MD5 Hashes&amp;rdquo; lab, though this strategy should work for most labs in the &amp;ldquo;Hashcat All&amp;rdquo; section. If you are unfamiliar with Hashcat, I&amp;rsquo;d strongly recommend reading the wiki or following Youtube tutorials elsewhere before trying this challenge.</description>
+In this guide, I&amp;rsquo;ll detail how to complete the &amp;ldquo;Cracking MD5 Hashes&amp;rdquo; lab, though this strategy should work for most labs in the &amp;ldquo;Hashcat All&amp;rdquo; section. If you are unfamiliar with Hashcat, I&amp;rsquo;d strongly recommend reading the wiki or following Youtube tutorials elsewhere before trying this challenge.
+Note: I would highly suggest you try to complete the lab first without help from this guide.</description>
     </item>
     
     <item>

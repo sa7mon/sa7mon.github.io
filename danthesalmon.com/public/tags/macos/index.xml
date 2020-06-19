@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>macOS on Dan [the] Salmon</title>
@@ -17,7 +17,8 @@
       <pubDate>Thu, 05 Jul 2018 00:40:32 +0000</pubDate>
       
       <guid>https://danthesalmon.com/running-oracle-12c-on-macos/</guid>
-      <description>Update: May 14, 2019 This article originally contained instructions for running Oracle 12c. The Docker image that was being used was deleted by the author and so was not usable. I have updated the instructions to work again, though the image it uses now runs Oracle 18c. If you need to run 12c specifically, you&amp;rsquo;ll need to look for instructions elsewhere. Some screenshots may now be out of date.</description>
+      <description>Update: May 14, 2019 This article originally contained instructions for running Oracle 12c. The Docker image that was being used was deleted by the author and so was not usable. I have updated the instructions to work again, though the image it uses now runs Oracle 18c. If you need to run 12c specifically, you&amp;rsquo;ll need to look for instructions elsewhere. Some screenshots may now be out of date.
+In this post, we will go through the steps of installing Oracle 12c in a Docker container and connect to the database using SQL Developer on a Mac.</description>
     </item>
     
   </channel>

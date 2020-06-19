@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>android on Dan [the] Salmon</title>
@@ -28,7 +28,7 @@ A few months ago, my beloved Verizon HTC One M8 began to lose it’s charge at a
       
       <guid>https://danthesalmon.com/fix-haxm-emulation-error-in-android-studio/</guid>
       <description>Requirement Note: Android Studio requires an Intel processor with VT-X support for it’s built-in emulators to work. If you want to do Android development with emulators on an AMD processor, I would highly suggest using Genymotion. If you’re not sure if your Intel processor supports VT-X, Intel has an article here.
-This error is occurring because Android Studio requires Intel Hardware Accelerated Execution Manager (Intel HAXM) to run it’s emulators.</description>
+ This error is occurring because Android Studio requires Intel Hardware Accelerated Execution Manager (Intel HAXM) to run it’s emulators.</description>
     </item>
     
   </channel>

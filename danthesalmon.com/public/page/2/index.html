@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="generator" content="Hugo 0.55.6" />
+	<meta name="generator" content="Hugo 0.64.0" />
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Dan [the] Salmon - Dan [the] Salmon</title>
@@ -69,6 +69,24 @@
                         
                         
                             <div class="post">
+  <a class="post-link" href="https://danthesalmon.com/fix-some-settings-are-managed-by-your-system-administrator-in-windows-7/">
+  <p class="post-meta left">Aug 26, 2017</p>
+  
+ 
+  <div class="clearfix"></div>
+  <h3 class="h2 post-title">Fix “Some settings are managed by your system administrator” in Windows 7 </h3>
+  <p class="post-summary">Background A few months back, I was doing cleanup on a system that I had cleaned of malware. Whatever junk was on there had configured a local proxy server to run, but Malwarebytes had ripped it out. The system unfortunately still thought it was supposed to use the proxy server that doesn’t exist; consequently, I had no internet access. That’s an easy enough fix, right? I open Internet Options and change the LAN settings to not use a proxy and close it.</p>
+  </a>
+  
+  <p class="post-meta">Tags:&nbsp;
+  
+      
+      <a href="https://danthesalmon.com/tags/windows">windows</a>
+  </p>
+</div>
+
+                        
+                            <div class="post">
   <a class="post-link" href="https://danthesalmon.com/change-network-location-in-windows-8-1-2012-r2-from-powershell/">
   <p class="post-meta left">Aug 26, 2017</p>
   
@@ -78,7 +96,7 @@
   <p class="post-summary">Step 1 From an elevated PowerShell window issue the following command to gather some information about our current network profile:
 " Get-NetConnectionProfile Name : Unidentified Network InterfaceAlias : Ethernet InterfaceIndex : 10 NetworkCategory : Public IPv4Connectivity : LocalNetwork IPv6Connectivity : LocalNetwork  The only information we really need from this output is the “InterfaceIndex”
 Step 2 After getting the InterfaceIndex, we run the following command:
-&rdquo;&gt; Set-NetConnectionProfile -InterfaceIndex 10 -NetworkCategory Private  The last argument is what category you want to switch it to.</p>
+" Set-NetConnectionProfile -InterfaceIndex 10 -NetworkCategory Private  The last argument is what category you want to switch it to.</p>
   </a>
   
   <p class="post-meta">Tags:&nbsp;
@@ -97,7 +115,7 @@ Step 2 After getting the InterfaceIndex, we run the following command:
   <div class="clearfix"></div>
   <h3 class="h2 post-title">Fix HAXM Emulation Error in Android Studio </h3>
   <p class="post-summary">Requirement Note: Android Studio requires an Intel processor with VT-X support for it’s built-in emulators to work. If you want to do Android development with emulators on an AMD processor, I would highly suggest using Genymotion. If you’re not sure if your Intel processor supports VT-X, Intel has an article here.
-This error is occurring because Android Studio requires Intel Hardware Accelerated Execution Manager (Intel HAXM) to run it’s emulators.</p>
+ This error is occurring because Android Studio requires Intel Hardware Accelerated Execution Manager (Intel HAXM) to run it’s emulators.</p>
   </a>
   
   <p class="post-meta">Tags:&nbsp;
@@ -116,8 +134,8 @@ This error is occurring because Android Studio requires Intel Hardware Accelerat
   <div class="clearfix"></div>
   <h3 class="h2 post-title">Fix Ruby on Rails Certificate Issue </h3>
   <p class="post-summary">While attempting a “rails new” command, I was greeted with this lovely message:
-An error occurred while installing rake (10.4.2), and Bundler cannot continue.  So after doing some research, it turns out all you need to do is a Gem update:
-gem update --system  Unless of course, this results in this error like it did for me:
+An error occurred while installing rake (10.4.2), and Bundler cannot continue. So after doing some research, it turns out all you need to do is a Gem update:
+gem update --system Unless of course, this results in this error like it did for me:
 ERROR: While executing gem ... (Gem::RemoteFetcher::FetchError) SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed (https://api.</p>
   </a>
   
@@ -200,7 +218,7 @@ Steps It’s actually really easy, assuming you have command-line access. In Fre
 </nav>
 
           <small>
-            Copyright &#169; 2018<br>
+            Copyright &#169; 2019<br>
             Powered by <a href="http://gohugo.io/" target="_blank">Hugo</a> &amp; <a href="https://github.com/azmelanar/hugo-theme-pixyll" target="_blank">Pixyll</a>
           </small>
         </div>
