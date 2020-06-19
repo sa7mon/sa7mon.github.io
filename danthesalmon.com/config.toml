@@ -10,8 +10,12 @@ title = "Dan [the] Salmon"
 [indexes]
 category = "categories"
 tag = "tags"
+
+[markup.goldmark.renderer]
+unsafe= true
+
+
 [params]
- 
 google_analytics_id = "XX-XXXXXXXX-X"
 twitter_username = "bltjetpack"
 disqus_shortname = "salmonroll"
