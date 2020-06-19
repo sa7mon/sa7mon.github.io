@@ -1,7 +1,7 @@
 +++
 author = "Dan Salmon"
 date = 2020-03-08T00:00:00Z
-description = "An attempty to quantify the Tumblr spam problem"
+description = "An attempt to quantify the Tumblr spam problem"
 draft = false
 tags = ["research", "tumblr"]
 slug = "tumblr-has-a-spam-problem"
