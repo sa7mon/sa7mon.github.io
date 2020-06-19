@@ -2,7 +2,7 @@
 author = "Dan Salmon"
 date = 2020-06-19T00:00:00Z
 description = "There are a few different ways to run Docker on Proxmox"
-draft = true
+draft = false
 tags = ["proxmox", "homelab", "docker"]
 slug = "running-docker-on-proxmox"
 title = "Running Docker on Proxmox"

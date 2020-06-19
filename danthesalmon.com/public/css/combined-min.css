@@ -47,3 +47,10 @@ Copyright (c) 2014 Daniel Eden
 #sponsor a:visited {
 	color: black;
 }
+
+code {
+	color: #e6e6e6;
+	background-color: #272822;
+	padding-left: 5px;
+	padding-right: 5px;
+}
