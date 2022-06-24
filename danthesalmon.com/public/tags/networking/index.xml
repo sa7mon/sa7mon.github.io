@@ -6,11 +6,7 @@
     <description>Recent content in networking on Dan [the] Salmon</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 26 Aug 2017 21:44:08 +0000</lastBuildDate>
-    
-	<atom:link href="https://danthesalmon.com/tags/networking/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 26 Aug 2017 21:44:08 +0000</lastBuildDate><atom:link href="https://danthesalmon.com/tags/networking/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Allow a Chromecast through a WatchGuard firewall</title>
       <link>https://danthesalmon.com/allow-a-chromecast-through-a-watchguard-firewall/</link>

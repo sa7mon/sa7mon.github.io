@@ -6,11 +6,7 @@
     <description>Recent content in conferences on Dan [the] Salmon</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Oct 2018 15:39:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://danthesalmon.com/tags/conferences/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 28 Oct 2018 15:39:00 +0000</lastBuildDate><atom:link href="https://danthesalmon.com/tags/conferences/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cyber Security Summit 2018 Highlights</title>
       <link>https://danthesalmon.com/cyber-security-summit-2018/</link>
@@ -19,7 +15,7 @@
       <guid>https://danthesalmon.com/cyber-security-summit-2018/</guid>
       <description>I was fortunate enough to attend the 2018 Cyber Security Summit in Minneapolis, MN. Here I&amp;rsquo;ve tried to summarize each talk I attended into a small, digestible format, mostly written in their voices.
 Student Breakfast By: Ryan Aniol - State of Minnesota
- This was a super informative informal breakfast hosted by Ryan who aimed the talk at the students like myself. It was really nice to hear information directly relevant to my situation.</description>
+This was a super informative informal breakfast hosted by Ryan who aimed the talk at the students like myself. It was really nice to hear information directly relevant to my situation.</description>
     </item>
     
   </channel>

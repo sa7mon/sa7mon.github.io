@@ -71,7 +71,7 @@
       <div id="sponsor">
 	
 	
-		<a href="http://join.robinhood.com/dans135" target="_blank" rel="noopener">💸 Join Robinhood today and get a free stock! 💸</a>
+		<a href="https://lastpass.com/f?6951486" target="_blank" rel="noopener">🔐 Store your passwords securely with LastPass Premium and get 1 month free! 🔐</a>
 	
 	<br>
 	<span class="about"><a href="https://danthesalmon.com/sponsors">About these ads</a></span>
@@ -79,14 +79,14 @@
 
       <article class="post-content">
       <p>While attempting a “rails new” command, I was greeted with this lovely message:</p>
-<pre><code>An error occurred while installing rake (10.4.2), and Bundler cannot continue.
+<pre tabindex="0"><code>An error occurred while installing rake (10.4.2), and Bundler cannot continue.
 </code></pre><p><img src="../images/rubyerror.png" alt="rubyerror"></p>
 <p>So after doing some research, it turns out all you need to do is a Gem update:</p>
-<pre><code class="language-language-bash" data-lang="language-bash">gem update --system
+<pre tabindex="0"><code class="language-language-bash" data-lang="language-bash">gem update --system
 </code></pre><p>Unless of course, this results in this error like it did for me:</p>
-<pre><code>ERROR: While executing gem ... (Gem::RemoteFetcher::FetchError) SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed (https://api.rubygem s.org/specs.4.8.gz)
+<pre tabindex="0"><code>ERROR: While executing gem ... (Gem::RemoteFetcher::FetchError) SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed (https://api.rubygem s.org/specs.4.8.gz)
 </code></pre><p>It turns out this SSL certificate error is pretty easy to fix. Just issue these commands in this order:</p>
-<pre><code class="language-language-bash" data-lang="language-bash">gem sources -r https://rubygems.org
+<pre tabindex="0"><code class="language-language-bash" data-lang="language-bash">gem sources -r https://rubygems.org
 gem sources -a http://rubygems.org
 gem update --system
 </code></pre><p>What this does is: removes the secure Ruby site from the list of sites to use for updating gems (-r), then adds the insecure version temporarily.The gem update should succeed this time as should another “rails new” command. If you would like to switch back to the secure site, do the first 2 commands again but switch the -r and -a flags.</p>
@@ -98,21 +98,6 @@ gem update --system
       </p>
 
       
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-  var disqus_config = function () {
-    this.page.url = "https:\/\/danthesalmon.com";
-    this.page.identifier = "\/fix-ruby-certificate-issue\/";
-  };
-
-  (function() { 
-    var d = document, s = d.createElement('script');
-    s.src = "https://salmonroll.disqus.com/embed.js";
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-  })();
-</script>
-
 
     </div>
   </div>
@@ -128,7 +113,7 @@ gem update --system
 </nav>
 
           <small>
-            Copyright &#169; 2020<br>
+            Copyright &#169; 2022<br>
             Powered by <a href="http://gohugo.io/" target="_blank">Hugo</a> &amp; <a href="https://github.com/sa7mon/hugo-theme-pixyll" target="_blank">Pixyll</a>
           </small>
         </div>

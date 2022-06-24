@@ -69,14 +69,14 @@
       <p>If you run ZFS like I do (and I think you should) there will probably come at time when you need to migrate a dataset from one volume to another. This was done in FreeNAS (FreeBSD), but the steps should apply to any *nix system with ZFS</p>
 <p>The great thing about ZFS is that we can do most of this migration with our services and everything still running.</p>
 <p>We&rsquo;ll start by taking a snapshot of the dataset we want to move.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">zfs snapshot oldpool/mydataset@snapshot1
-</code></pre></div><p>Then we&rsquo;ll copy over the dataset to the new volume. If you have a large dataset you may want to run this command in a <strong>screen</strong> or <strong>tmux</strong> session. You can still use the old dataset while this is running.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">zfs send oldpool/mydataset@snapshot1 | zfs receive newpool/mydataset
-</code></pre></div><p>After this is done, turn off all jails and file shares that access the old volume. Then we take a second snapshot</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">zfs snapshot oldpool/mydataset@snapshot2
-</code></pre></div><p>Now we can do an &ldquo;incremental&rdquo; send that will just copy over the difference between this snapshot and the first. Should be much quicker than the first send</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">zfs send -i oldpool/mydataset@snapshot1 oldpool/mydataset@snapshot2 | zfs receive newpool/mydataset
-</code></pre></div><p>After this send is done, you should be good to go. Make sure to point your file shares and jail storage sources to the new location. Because we used <strong>zfs send</strong>, all the permissions and metadata will be the exact same on the other end.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>zfs snapshot oldpool/mydataset@snapshot1
+</span></span></code></pre></div><p>Then we&rsquo;ll copy over the dataset to the new volume. If you have a large dataset you may want to run this command in a <strong>screen</strong> or <strong>tmux</strong> session. You can still use the old dataset while this is running.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>zfs send oldpool/mydataset@snapshot1 | zfs receive newpool/mydataset
+</span></span></code></pre></div><p>After this is done, turn off all jails and file shares that access the old volume. Then we take a second snapshot</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>zfs snapshot oldpool/mydataset@snapshot2
+</span></span></code></pre></div><p>Now we can do an &ldquo;incremental&rdquo; send that will just copy over the difference between this snapshot and the first. Should be much quicker than the first send</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>zfs send -i oldpool/mydataset@snapshot1 oldpool/mydataset@snapshot2 | zfs receive newpool/mydataset
+</span></span></code></pre></div><p>After this send is done, you should be good to go. Make sure to point your file shares and jail storage sources to the new location. Because we used <strong>zfs send</strong>, all the permissions and metadata will be the exact same on the other end.</p>
 
       </article>
     </div>
@@ -93,7 +93,7 @@
 </nav>
 
           <small>
-            Copyright &#169; 2020<br>
+            Copyright &#169; 2022<br>
             Powered by <a href="http://gohugo.io/" target="_blank">Hugo</a> &amp; <a href="https://github.com/sa7mon/hugo-theme-pixyll" target="_blank">Pixyll</a>
           </small>
         </div>

@@ -6,11 +6,7 @@
     <description>Recent content in windows on Dan [the] Salmon</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 26 Aug 2017 21:08:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://danthesalmon.com/tags/windows/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 26 Aug 2017 21:08:00 +0000</lastBuildDate><atom:link href="https://danthesalmon.com/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fix “Some settings are managed by your system administrator” in Windows 7</title>
       <link>https://danthesalmon.com/fix-some-settings-are-managed-by-your-system-administrator-in-windows-7/</link>
@@ -27,9 +23,9 @@
       
       <guid>https://danthesalmon.com/change-network-location-in-windows-8-1-2012-r2-from-powershell/</guid>
       <description>Step 1 From an elevated PowerShell window issue the following command to gather some information about our current network profile:
-&#34; Get-NetConnectionProfile Name : Unidentified Network InterfaceAlias : Ethernet InterfaceIndex : 10 NetworkCategory : Public IPv4Connectivity : LocalNetwork IPv6Connectivity : LocalNetwork  The only information we really need from this output is the “InterfaceIndex”
+Get-NetConnectionProfile Name : Unidentified Network InterfaceAlias : Ethernet InterfaceIndex : 10 NetworkCategory : Public IPv4Connectivity : LocalNetwork IPv6Connectivity : LocalNetwork The only information we really need from this output is the “InterfaceIndex”
 Step 2 After getting the InterfaceIndex, we run the following command:
-&#34; Set-NetConnectionProfile -InterfaceIndex 10 -NetworkCategory Private  The last argument is what category you want to switch it to.</description>
+Set-NetConnectionProfile -InterfaceIndex 10 -NetworkCategory Private The last argument is what category you want to switch it to.</description>
     </item>
     
   </channel>

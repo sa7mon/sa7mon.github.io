@@ -71,7 +71,7 @@
       <div id="sponsor">
 	
 	
-		<a href="http://join.robinhood.com/dans135" target="_blank" rel="noopener">💸 Join Robinhood today and get a free stock! 💸</a>
+		<a href="https://hetzner.cloud/?ref=V9TzL9Jf56Ge" target="_blank" rel="noopener">☁️ New Hetzner users get €20 in free cloud credits! ☁️</a>
 	
 	<br>
 	<span class="about"><a href="https://danthesalmon.com/sponsors">About these ads</a></span>
@@ -91,22 +91,22 @@ Download and install “Docker Toolbox” <a href="https://docs.docker.com/toolb
 <ul>
 <li>Open the Terminal app and run the following. If you get no errors Docker is installed correctly and running.</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker version
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker version
+</span></span></code></pre></div><ul>
 <li>Pull the Oracle image by running</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker pull hothamandcheese/oracle-18.4.0-xe
-</code></pre></div><p><a target="_blank" rel="noopener noreferer" href="../images/version-pull.png"><img src="../images/version-pull.png" alt="version-pull"></a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker pull hothamandcheese/oracle-18.4.0-xe
+</span></span></code></pre></div><p><a target="_blank" rel="noopener noreferer" href="../images/version-pull.png"><img src="../images/version-pull.png" alt="version-pull"></a></p>
 <h3 id="3-create-container">3. Create container</h3>
 <ul>
 <li>First we create a directory outside the Docker container to store the database</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">mkdir ~/oracle_data
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>mkdir ~/oracle_data
+</span></span></code></pre></div><ul>
 <li>Then we create a new container with our downloaded image</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-docker" data-lang="docker">docker run -d -p 8080:8080 -p 1521:1521 -e ORACLE_PWD<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Password1&#39;</span> -v ~/oracle_data/:/u01/app/oracle hothamandcheese/oracle-18.4.0-xe<span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>This should return a long hash string.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-docker" data-lang="docker"><span style="display:flex;"><span>docker run -d -p 8080:8080 -p 1521:1521 -e ORACLE_PWD<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Password1&#39;</span> -v ~/oracle_data/:/u01/app/oracle hothamandcheese/oracle-18.4.0-xe<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><p>This should return a long hash string.</p>
 <script src="https://asciinema.org/a/PxUXoumtc5GeGKr6UCyVVSRyj.js" id="asciicast-PxUXoumtc5GeGKr6UCyVVSRyj" async></script>
 <p><noscript><a href="https://asciinema.org/a/PxUXoumtc5GeGKr6UCyVVSRyj"><img src="https://asciinema.org/a/PxUXoumtc5GeGKr6UCyVVSRyj.png" alt="asciicast"></a></noscript>
 <noscript>
@@ -180,21 +180,6 @@ GRANT create synonym TO SALES;
       </p>
 
       
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-  var disqus_config = function () {
-    this.page.url = "https:\/\/danthesalmon.com";
-    this.page.identifier = "\/running-oracle-12c-on-macos\/";
-  };
-
-  (function() { 
-    var d = document, s = d.createElement('script');
-    s.src = "https://salmonroll.disqus.com/embed.js";
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-  })();
-</script>
-
 
     </div>
   </div>
@@ -210,7 +195,7 @@ GRANT create synonym TO SALES;
 </nav>
 
           <small>
-            Copyright &#169; 2020<br>
+            Copyright &#169; 2022<br>
             Powered by <a href="http://gohugo.io/" target="_blank">Hugo</a> &amp; <a href="https://github.com/sa7mon/hugo-theme-pixyll" target="_blank">Pixyll</a>
           </small>
         </div>

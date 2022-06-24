@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="generator" content="Hugo 0.64.0" />
+	<meta name="generator" content="Hugo 0.101.0" />
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Dan [the] Salmon - Dan [the] Salmon</title>
@@ -69,6 +69,34 @@
                         
                         
                             <div class="post">
+  <a class="post-link" href="https://danthesalmon.com/ufw-docker-tailscale/">
+  <p class="post-meta left">Jun 24, 2022</p>
+  
+ 
+  <div class="clearfix"></div>
+  <h3 class="h2 post-title">UFW, Docker, and Tailscale: Lessons Learned </h3>
+  <p class="post-summary">This is a cautionary tale about something that happened to me in the past few weeks. I&rsquo;m posting it because I believe a lot can be learned by professionals (and others such as me) posting their security fails and problem-solving processes.
+I have a server at Hetzner for a personal project. It&rsquo;s running Ubuntu with Docker and there are a few Docker containers running, Postgres and RabbitMQ among them. Last week I logged into the server to do some work and noticed it was running a bit slow.</p>
+  </a>
+  
+  <p class="post-meta">Tags:&nbsp;
+  
+      
+      <a href="https://danthesalmon.com/tags/ufw">ufw</a>
+  
+      ,&nbsp;
+      <a href="https://danthesalmon.com/tags/tailscale">tailscale</a>
+  
+      ,&nbsp;
+      <a href="https://danthesalmon.com/tags/docker">docker</a>
+  
+      ,&nbsp;
+      <a href="https://danthesalmon.com/tags/security">security</a>
+  </p>
+</div>
+
+                        
+                            <div class="post">
   <a class="post-link" href="https://danthesalmon.com/running-docker-on-proxmox/">
   <p class="post-meta left">Jun 19, 2020</p>
   
@@ -122,8 +150,7 @@ Searching for Spam The first thing I had to do was create some criteria to use f
   <div class="clearfix"></div>
   <h3 class="h2 post-title">AttackDefense - Cracking Hashcat Guide </h3>
   <p class="post-summary">AttackDefense is a new site with all sorts of awesome labs and CTFs for training. Best of all: the site is free.
-In this guide, I&rsquo;ll detail how to complete the &ldquo;Cracking MD5 Hashes&rdquo; lab, though this strategy should work for most labs in the &ldquo;Hashcat All&rdquo; section. If you are unfamiliar with Hashcat, I&rsquo;d strongly recommend reading the wiki or following Youtube tutorials elsewhere before trying this challenge.
-Note: I would highly suggest you try to complete the lab first without help from this guide.</p>
+In this guide, I&rsquo;ll detail how to complete the &ldquo;Cracking MD5 Hashes&rdquo; lab, though this strategy should work for most labs in the &ldquo;Hashcat All&rdquo; section. If you are unfamiliar with Hashcat, I&rsquo;d strongly recommend reading the wiki or following Youtube tutorials elsewhere before trying this challenge.</p>
   </a>
   
   <p class="post-meta">Tags:&nbsp;
@@ -143,7 +170,7 @@ Note: I would highly suggest you try to complete the lab first without help from
   <h3 class="h2 post-title">Cyber Security Summit 2018 Highlights </h3>
   <p class="post-summary">I was fortunate enough to attend the 2018 Cyber Security Summit in Minneapolis, MN. Here I&rsquo;ve tried to summarize each talk I attended into a small, digestible format, mostly written in their voices.
 Student Breakfast By: Ryan Aniol - State of Minnesota
- This was a super informative informal breakfast hosted by Ryan who aimed the talk at the students like myself. It was really nice to hear information directly relevant to my situation.</p>
+This was a super informative informal breakfast hosted by Ryan who aimed the talk at the students like myself. It was really nice to hear information directly relevant to my situation.</p>
   </a>
   
   <p class="post-meta">Tags:&nbsp;
@@ -229,7 +256,7 @@ This one looked to be just a little different, though. He was excited because th
  
   <div class="clearfix"></div>
   <h3 class="h2 post-title">2017 Cyber Security Summit </h3>
-  <p class="post-summary">Student Breakfast - MN IT Services w/ Chris Buse  $400M budget for MNIT 0% unemployment rate MNIT wants to train/develop IT skills. Everyones wants skilled people but no one wants to train Lots of operational jobs Looking for interns with lots of general skills Flexible hours/locations  Q/A with Chris  &ldquo;Are certifications worth it?&rdquo;  &ldquo;Focus on certs, even though I don&rsquo;t think they&rsquo;re very useful. They&rsquo;re mostly just to get passed HR.</p>
+  <p class="post-summary">Student Breakfast - MN IT Services w/ Chris Buse $400M budget for MNIT 0% unemployment rate MNIT wants to train/develop IT skills. Everyones wants skilled people but no one wants to train Lots of operational jobs Looking for interns with lots of general skills Flexible hours/locations Q/A with Chris &ldquo;Are certifications worth it?&rdquo; &ldquo;Focus on certs, even though I don&rsquo;t think they&rsquo;re very useful. They&rsquo;re mostly just to get passed HR.</p>
   </a>
   
   <p class="post-meta">Tags:&nbsp;
@@ -244,36 +271,14 @@ This one looked to be just a little different, though. He was excited because th
  
   <div class="clearfix"></div>
   <h3 class="h2 post-title">WiFi Security Testing Cheatsheet </h3>
-  <p class="post-summary">Prepare Wireless Card  View Network Cards:  iwconfig   Kill Wireless Processes:  airmon-ng check kill     View Networks airodump-ng wlan0 Capture traffic airodump-ng --bssid 04:A1:51:9F:98:BB --wps --write ISSO-WPA2 --channel 6 wlan0where:
---bssid - MAC of router--wps - Output WPS information, may be able to try Reaver--write - File name to write to. No extension--channel - Statically set a channel.</p>
+  <p class="post-summary">Prepare Wireless Card View Network Cards: iwconfig Kill Wireless Processes: airmon-ng check kill View Networks airodump-ng wlan0 Capture traffic airodump-ng --bssid 04:A1:51:9F:98:BB --wps --write ISSO-WPA2 --channel 6 wlan0 where:
+--bssid - MAC of router --wps - Output WPS information, may be able to try Reaver --write - File name to write to. No extension --channel - Statically set a channel. Don't need to unless de-authing wlan0 - Wireless interface	Deauth - Do while capturing aireplay-ng --deauth 0 -a 04:A1:51:9F:11:11 -c E0:AC:CB:DA:1B:1B wlan0 where:</p>
   </a>
   
   <p class="post-meta">Tags:&nbsp;
   
       
       <a href="https://danthesalmon.com/tags/security">security</a>
-  </p>
-</div>
-
-                        
-                            <div class="post">
-  <a class="post-link" href="https://danthesalmon.com/why-i-switched-from-android-to-ios/">
-  <p class="post-meta left">Sep 1, 2017</p>
-  
- 
-  <div class="clearfix"></div>
-  <h3 class="h2 post-title">Why I switched from Android to iOS </h3>
-  <p class="post-summary">Note: This article is not just a stringent comparison of Apple vs Android, but a look at the whole picture that I took while deciding which phone to switch to.
-A few months ago, my beloved Verizon HTC One M8 began to lose it’s charge at an alarming rate. It would be at 40% battery by lunch time after a day of very moderate use. Luckily, I was due for an upgrade from Verizon.</p>
-  </a>
-  
-  <p class="post-meta">Tags:&nbsp;
-  
-      
-      <a href="https://danthesalmon.com/tags/security">security</a>
-  
-      ,&nbsp;
-      <a href="https://danthesalmon.com/tags/android">android</a>
   </p>
 </div>
 
@@ -313,7 +318,7 @@ A few months ago, my beloved Verizon HTC One M8 began to lose it’s charge at a
 </nav>
 
           <small>
-            Copyright &#169; 2020<br>
+            Copyright &#169; 2022<br>
             Powered by <a href="http://gohugo.io/" target="_blank">Hugo</a> &amp; <a href="https://github.com/sa7mon/hugo-theme-pixyll" target="_blank">Pixyll</a>
           </small>
         </div>
