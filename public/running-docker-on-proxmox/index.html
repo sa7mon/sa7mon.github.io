@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Running Docker on Proxmox - Dan [the] Salmon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Dan Salmon">
+  <meta name="keywords" content="">
+  <link rel="canonical" href="https://danthesalmon.com/running-docker-on-proxmox/">
+
+
+  
+  
+  
+  
+  
+  
+
+
+  <meta property="og:image" content="https://danthesalmon.com/../images/me.png" />
+  <meta property="og:site_name" content="danthesalmon.com" />
+  <meta property="og:type" content="object" />
+  <meta property="og:title" content="Running Docker on Proxmox" />
+  <meta property="og:url" content="https://danthesalmon.com/running-docker-on-proxmox/" />
+  <meta property="og:description" content="There are a few different ways to run Docker on Proxmox" />
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  <link rel="stylesheet" type="text/css" href="https://danthesalmon.com/css/combined-min.css">
+
+</head>
+<body class="">
+
+<div class="site-wrap">
+  <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="https://danthesalmon.com" class="site-title">Dan [the] Salmon</a>
+      <nav class="site-nav right">
+      <a href="https://danthesalmon.com/about/">About</a>
+<a href="https://danthesalmon.com/tags/">Tags</a>
+<a href="https://danthesalmon.com/search/">Search</a>
+<a href="https://danthesalmon.com/contact/">Contact</a>
+</form>
+
+      </nav>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</header>
+
+  <div class="post p2 p-responsive wrap" role="main">
+    <div class="measure">
+      <div class="post-header mb2">
+        <h1 class="py2">Running Docker on Proxmox</h1>
+       
+        <span class="post-meta">Jun 19, 2020</span><br>
+        
+      </div>
+
+      <div id="sponsor">
+	
+	
+		<a href="https://lastpass.com/f?6951486" target="_blank" rel="noopener">🔐 Store your passwords securely with LastPass Premium and get 1 month free! 🔐</a>
+	
+	<br>
+	<span class="about"><a href="https://danthesalmon.com/sponsors">About these ads</a></span>
+</div>
+
+      <article class="post-content">
+      <style>
+.chart .legend {
+    fill: black;
+    text-anchor: start;
+}
+.chart text {
+    fill: black;
+    font: 15px sans-serif;
+}
+.chart .label {
+    fill: black;
+    font: 14px sans-serif;
+    text-anchor: end;
+}
+.bar:hover {
+    fill: brown;
+}
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+</style>
+<p>During the process of evaluating Proxmox as a Docker host, I found that there are at least 3 methods for running Docker containers in Proxmox. Here are instructions for doing those 3 methods as well as some simple disk speed benchmarks to compare.</p>
+<p>The 3 methods I will outline are:</p>
+<ul>
+<li>Docker running in an LXC container</li>
+<li>Docker running in a VM</li>
+<li>Docker running on Proxmox itself</li>
+</ul>
+<h3 id="run-docker-in-an-lxc-container">Run Docker in an LXC container</h3>
+<p><strong>Security warning:</strong> This configuration offers very little, if any security to segment the contents of the container from the Proxmox host. This method should not be used in production.</p>
+<ol>
+<li>
+<p>On the Proxmox host, edit <code>/etc/modules-load.d/modules.conf</code> to add the aufs and overlay kernel modules</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># /etc/modules: kernel modules to load at boot time.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># This file contains the names of kernel modules that should be loaded</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># at boot time, one per line. Lines beginning with &#34;#&#34; are ignored.</span>
+</span></span><span style="display:flex;"><span>aufs
+</span></span><span style="display:flex;"><span>overlay
+</span></span></code></pre></div></li>
+<li>
+<p>Restart Proxmox host</p>
+</li>
+<li>
+<p>Create an LXC container with your desired settings and OS, making sure to uncheck &ldquo;unprivileged container&rdquo;, but don&rsquo;t start it yet. I&rsquo;m using Debian 10.</p>
+</li>
+<li>
+<p>In Proxmox, edit the <code>/etc/pve/lxc/&lt;id&gt;.conf</code> file where <code>&lt;id&gt;</code> is the ID given to your container:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lxc.apparmor.profile: unconfined
+</span></span><span style="display:flex;"><span>lxc.cgroup.devices.allow: a
+</span></span><span style="display:flex;"><span>lxc.cap.drop:
+</span></span></code></pre></div></li>
+<li>
+<p>Start the container</p>
+</li>
+<li>
+<p>In the container, create <code>/etc/docker/daemon.json</code> and make the contents:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;storage-driver&#34;</span>: <span style="color:#e6db74">&#34;overlay2&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p>Install Docker. The official instructions for Debian can be found <a href="https://docs.docker.com/engine/install/debian/">here</a>. They boil down to this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt update
+</span></span><span style="display:flex;"><span>apt-get install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+</span></span><span style="display:flex;"><span>curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
+</span></span><span style="display:flex;"><span>add-apt-repository <span style="color:#e6db74">&#34;deb [arch=amd64] https://download.docker.com/linux/debian </span><span style="color:#66d9ef">$(</span>lsb_release -cs<span style="color:#66d9ef">)</span><span style="color:#e6db74"> stable&#34;</span>
+</span></span><span style="display:flex;"><span>apt-get update
+</span></span><span style="display:flex;"><span>apt-get install -y docker-ce docker-ce-cli containerd.io
+</span></span></code></pre></div></li>
+</ol>
+<h3 id="run-docker-in-a-vm">Run Docker in a VM</h3>
+<ol>
+<li>Create a VM with any operating system supported by Docker Engine. A list of officially supported distributions can be found <a href="https://docs.docker.com/engine/install/#supported-platforms">here</a></li>
+<li>Follow the official instructions for your distribution linked from the previous docs page</li>
+<li>That&rsquo;s it!</li>
+</ol>
+<h3 id="run-docker-in-proxmox">Run Docker in Proxmox</h3>
+<p>Note: <strong>This method should not be used in a production environment.</strong> Like the LXC method, there is very little segmentation between the containers and the Proxmox host. Additionally, the docker daemon runs as the Proxmox <code>root</code> user which is a universally bad idea. This method is the least secure of the 3 listed here.</p>
+<ol>
+<li>
+<p>Follow the official documentation for installing Docker Engine on Debian <a href="https://docs.docker.com/engine/install/debian/">found here</a></p>
+</li>
+<li>
+<p>You may need to restart Proxmox after installing Docker, but after that it should be good to go</p>
+</li>
+<li>
+<p><em>Optional</em>: By default, the Docker <code>data-root</code> will be on your local storage where Proxmox itself is installed. If you want Docker to store its data in another location, edit <code>/lib/systemd/system/docker.service</code> and change the <code>ExecStart=</code> line to include the <code>--data-root</code> option. For example, I made a ZFS dataset and pointed Docker to it like this:</p>
+<p><code>ExecStart=/usr/bin/dockerd --data-root /tank/docker-root -H fd:// --containerd=/run/containerd/containerd.sock</code></p>
+</li>
+</ol>
+<h3 id="testing-methodology">Testing Methodology</h3>
+<p>I first have to preface these results by saying that this test was very unscientific. This is my first time trying out Proxmox and first time getting &ldquo;under the hood&rdquo; of Docker.</p>
+<ul>
+<li>
+<p>My Docker use case is focused on disk performance. Thus, I did not test CPU performance to see what kind of a virtualization penalty would be introduced with either the LXC or VM method.</p>
+</li>
+<li>
+<p>While I tried to keep the test as fair as possible, there were certain variables I couldn&rsquo;t keep identical across the board, namely: the storage drivers and whether AppArmor was enabled. Here is a breakdown of the variables:</p>
+  <style type="text/css">
+  .tg  {border-collapse:collapse;border-spacing:0;margin-bottom:8px;}
+  .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+  .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+  .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+  .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+  .tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+  .tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+  </style>
+  <table class="tg">
+  <thead>
+  <tr>
+      <th class="tg-0pky"></th>
+      <th class="tg-7btt">CPU Cores</th>
+      <th class="tg-7btt">RAM</th>
+      <th class="tg-7btt">Storage Driver</th>
+      <th class="tg-7btt">Backing Filesystem</th>
+      <th class="tg-7btt">AppArmor</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+      <td class="tg-fymr">LXC</td>
+      <td class="tg-c3ow">2</td>
+      <td class="tg-c3ow">4GB</td>
+      <td class="tg-c3ow">overlay2</td>
+      <td class="tg-c3ow">extfs</td>
+      <td class="tg-c3ow">disabled</td>
+  </tr>
+  <tr>
+      <td class="tg-fymr">VM</td>
+      <td class="tg-c3ow">2</td>
+      <td class="tg-c3ow">4GB</td>
+      <td class="tg-c3ow">overlay2</td>
+      <td class="tg-c3ow">extfs</td>
+      <td class="tg-c3ow">enabled</td>
+  </tr>
+  <tr>
+      <td class="tg-fymr">Proxmox</td>
+      <td class="tg-c3ow">2</td>
+      <td class="tg-c3ow">4GB</td>
+      <td class="tg-c3ow">zfs</td>
+      <td class="tg-c3ow">n/a</td>
+      <td class="tg-c3ow">enabled</td>
+  </tr>
+  </tbody>
+  </table>
+</li>
+<li>
+<p>When testing on Proxmox I limited the max CPU cores and memory of the benchmark container using <code>--memory=&quot;2g&quot;</code> and <code>--cpuset-cpus=&quot;0,1&quot;</code>.</p>
+</li>
+<li>
+<p>My host consists of an HP Z620 workstation with the following hardware:</p>
+<ul>
+<li>1x Xeon E5-2620 CPU</li>
+<li>4x 4GB DDR3-1333 RAM modules, 16GB total</li>
+<li>4x 1TB WD Blue SATA SSDs configured as a 2x2 ZFS mirror</li>
+</ul>
+</li>
+<li>
+<p>Since the VM and LXC container ran on the ZFS pool, I edited the Docker config when testing on Proxmox to move the <code>data-root</code> to a dataset on the ZFS pool. This is why the ZFS storage driver is used.</p>
+</li>
+</ul>
+<h3 id="disk-speed-benchmarks">Disk Speed Benchmarks</h3>
+<figure>
+<svg xmlns="http://www.w3.org/2000/svg" class="chart" width="100%" height="630">
+        <g transform="translate(160,5)">
+            <rect fill="#1f77b4" class="bar" width="10.606689351813428" height="19"/>
+            <text x="12.606689351813428" y="10" fill="black" dy=".35em">21.3</text>
+            <text class="label" x="-15" y="30" dy=".35em">4k rand read</text>
+        </g>
+        <g transform="translate(160,25)">
+            <rect fill="#aec7e8" class="bar" width="7.0213295709187475" height="19"/>
+            <text x="9.021329570918748" y="10" fill="black" dy=".35em">14.1</text>
+            <text class="label" x="-15" y="30" dy=".35em"/>
+        </g>
+        <g transform="translate(160,45)">
+            <rect fill="#ff7f0e" class="bar" width="12.299775915013692" height="19"/>
+            <text x="14.299775915013692" y="10" fill="black" dy=".35em">24.7</text>
+            <text class="label" x="-15" y="30" dy=".35em"/>
+        </g>
+        <g transform="translate(160,75)">
+            <rect fill="#1f77b4" class="bar" width="0.9461366088472072" height="19"/>
+            <text x="2.9461366088472074" y="10" fill="black" dy=".35em">1.9</text>
+            <text class="label" x="-15" y="30" dy=".35em">4k rand write</text>
+        </g>
+        <g transform="translate(160,95)">
+            <rect fill="#aec7e8" class="bar" width="0.7469499543530583" height="19"/>
+            <text x="2.746949954353058" y="10" fill="black" dy=".35em">1.5</text>
+            <text class="label" x="-15" y="30" dy=".35em"/>
+        </g>
+        <g transform="translate(160,115)">
+            <rect fill="#ff7f0e" class="bar" width="2.5894265084239354" height="19"/>
+            <text x="4.589426508423935" y="10" fill="black" dy=".35em">5.2</text>
+            <text class="label" x="-15" y="30" dy=".35em"/>
+        </g>
+        <g transform="translate(160,145)">
+            <rect fill="#1f77b4" class="bar" width="237.72927213876667" height="19"/>
+            <text x="239.72927213876667" y="10" fill="black" dy=".35em">477.4</text>
+            <text class="label" x="-15" y="30" dy=".35em">4k seq read</text>
+        </g>
+        <g transform="translate(160,165)">
+            <rect fill="#aec7e8" class="bar" width="53.23263341356129" height="19"/>
+            <text x="55.23263341356129" y="10" fill="black" dy=".35em">106.9</text>
+            <text class="label" x="-15" y="30" dy=".35em"/>
+        </g>
+        <g transform="translate(160,185)">
+            <rect fill="#ff7f0e" class="bar" width="224.98132625114118" height="19"/>
+            <text x="226.98132625114118" y="10" fill="black" dy=".35em">451.8</text>
+            <text class="label" x="-15" y="30" dy=".35em"/>
+        </g>
+        <g transform="translate(160,215)">
+            <rect fill="#1f77b4" class="bar" width="1.2947132542119677" height="19"/>
+            <text x="3.2947132542119677" y="10" fill="black" dy=".35em">2.6</text>
+            <text class="label" x="-15" y="30" dy=".35em">4k seq write</text>
+        </g>
+        <g transform="translate(160,235)">
+            <rect fill="#aec7e8" class="bar" width="0.9959332724707444" height="19"/>
+            <text x="2.9959332724707446" y="10" fill="black" dy=".35em">2</text>
+            <text class="label" x="-15" y="30" dy=".35em"/>
+        </g>
+        <g transform="translate(160,255)">
+            <rect fill="#ff7f0e" class="bar" width="2.938003153788696" height="19"/>
+            <text x="4.938003153788696" y="10" fill="black" dy=".35em">5.9</text>
+            <text class="label" x="-15" y="30" dy=".35em"/>
+        </g>
+        <g transform="translate(160,285)">
+            <rect fill="#1f77b4" class="bar" width="148.44385426176447" height="19"/>
+            <text x="150.44385426176447" y="10" fill="black" dy=".35em">298.1</text>
+            <text class="label" x="-15" y="30" dy=".35em">1M rand read</text>
+        </g>
+        <g transform="translate(160,305)">
+            <rect fill="#aec7e8" class="bar" width="354.7016349904556" height="19"/>
+            <text x="356.7016349904556" y="10" fill="black" dy=".35em">712.3</text>
+            <text class="label" x="-15" y="30" dy=".35em"/>
+        </g>
+        <g transform="translate(160,325)">
+            <rect fill="#ff7f0e" class="bar" width="403.55216200514565" height="19"/>
+            <text x="405.55216200514565" y="10" fill="black" dy=".35em">810.4</text>
+            <text class="label" x="-15" y="30" dy=".35em"/>
+        </g>
+        <g transform="translate(160,355)">
+            <rect fill="#1f77b4" class="bar" width="36.30176778155864" height="19"/>
+            <text x="38.30176778155864" y="10" fill="black" dy=".35em">72.9</text>
+            <text class="label" x="-15" y="30" dy=".35em">1M rand write</text>
+        </g>
+        <g transform="translate(160,375)">
+            <rect fill="#aec7e8" class="bar" width="60.6025396298448" height="19"/>
+            <text x="62.6025396298448" y="10" fill="black" dy=".35em">121.7</text>
+            <text class="label" x="-15" y="30" dy=".35em"/>
+        </g>
+        <g transform="translate(160,395)">
+            <rect fill="#ff7f0e" class="bar" width="88.93684123163747" height="19"/>
+            <text x="90.93684123163747" y="10" fill="black" dy=".35em">178.6</text>
+            <text class="label" x="-15" y="30" dy=".35em"/>
+        </g>
+        <g transform="translate(160,425)">
+            <rect fill="#1f77b4" class="bar" width="282.5960660635737" height="19"/>
+            <text x="284.5960660635737" y="10" fill="black" dy=".35em">567.5</text>
+            <text class="label" x="-15" y="30" dy=".35em">1M seq read</text>
+        </g>
+        <g transform="translate(160,445)">
+            <rect fill="#aec7e8" class="bar" width="517.138351730434" height="19"/>
+            <text x="519.138351730434" y="10" fill="black" dy=".35em">1038.5</text>
+            <text class="label" x="-15" y="30" dy=".35em"/>
+        </g>
+        <g transform="translate(160,465)">
+            <rect fill="#ff7f0e" class="bar" width="600" height="19"/>
+            <text x="602" y="10" fill="black" dy=".35em">1204.9</text>
+            <text class="label" x="-15" y="30" dy=".35em"/>
+        </g>
+        <g transform="translate(160,495)">
+            <rect fill="#1f77b4" class="bar" width="32.06905137355797" height="19"/>
+            <text x="34.06905137355797" y="10" fill="black" dy=".35em">64.4</text>
+            <text class="label" x="-15" y="30" dy=".35em">1M seq write</text>
+        </g>
+        <g transform="translate(160,515)">
+            <rect fill="#aec7e8" class="bar" width="56.867789858079504" height="19"/>
+            <text x="58.867789858079504" y="10" fill="black" dy=".35em">114.2</text>
+            <text class="label" x="-15" y="30" dy=".35em"/>
+        </g>
+        <g transform="translate(160,535)">
+            <rect fill="#ff7f0e" class="bar" width="90.3311478130965" height="19"/>
+            <text x="92.3311478130965" y="10" fill="black" dy=".35em">181.4</text>
+            <text class="label" x="-15" y="30" dy=".35em"/>
+        </g>
+        <g transform="translate(160,565)">
+            <rect fill="#1f77b4" class="bar" width="93.74719893767117" height="19"/>
+            <text x="95.74719893767117" y="10" fill="black" dy=".35em">188.26</text>
+            <text class="label" x="-15" y="30" dy=".35em">Average</text>
+        </g>
+        <g transform="translate(160,585)">
+            <rect fill="#aec7e8" class="bar" width="131.41339530251472" height="19"/>
+            <text x="133.41339530251472" y="10" fill="black" dy=".35em">263.9</text>
+            <text class="label" x="-15" y="30" dy=".35em"/>
+        </g>
+        <g transform="translate(160,605)">
+            <rect fill="#ff7f0e" class="bar" width="178.2222591086397" height="19"/>
+            <text x="180.2222591086397" y="10" fill="black" dy=".35em">357.9</text>
+            <text class="label" x="-15" y="30" dy=".35em"/>
+        </g>
+        <g class="y axis" transform="translate(160, -5)">
+            <g class="tick" style="opacity: 1;" transform="translate(0,640)">
+            <line x2="0" y2="0"/>
+            <text dy=".32em" style="text-anchor: end;" x="-3" y="0"/>
+            </g>
+            <g class="tick" style="opacity: 1;" transform="translate(0,576)">
+            <line x2="0" y2="0"/>
+            <text dy=".32em" style="text-anchor: end;" x="-3" y="0"/>
+            </g>
+            <g class="tick" style="opacity: 1;" transform="translate(0,512)">
+            <line x2="0" y2="0"/>
+            <text dy=".32em" style="text-anchor: end;" x="-3" y="0"/>
+            </g>
+            <g class="tick" style="opacity: 1;" transform="translate(0,448)">
+            <line x2="0" y2="0"/>
+            <text dy=".32em" style="text-anchor: end;" x="-3" y="0"/>
+            </g>
+            <g class="tick" style="opacity: 1;" transform="translate(0,384)">
+            <line x2="0" y2="0"/>
+            <text dy=".32em" style="text-anchor: end;" x="-3" y="0"/>
+            </g>
+            <g class="tick" style="opacity: 1;" transform="translate(0,320)">
+            <line x2="0" y2="0"/>
+            <text dy=".32em" style="text-anchor: end;" x="-3" y="0"/>
+            </g>
+            <g class="tick" style="opacity: 1;" transform="translate(0,256)">
+            <line x2="0" y2="0"/>
+            <text dy=".32em" style="text-anchor: end;" x="-3" y="0"/>
+            </g>
+            <g class="tick" style="opacity: 1;" transform="translate(0,192.00000000000003)">
+            <line x2="0" y2="0"/>
+            <text dy=".32em" style="text-anchor: end;" x="-3" y="0"/>
+            </g>
+            <g class="tick" style="opacity: 1;" transform="translate(0,127.99999999999997)">
+            <line x2="0" y2="0"/>
+            <text dy=".32em" style="text-anchor: end;" x="-3" y="0"/>
+            </g>
+            <g class="tick" style="opacity: 1;" transform="translate(0,63.999999999999986)">
+            <line x2="0" y2="0"/>
+            <text dy=".32em" style="text-anchor: end;" x="-3" y="0"/>
+            </g>
+            <g class="tick" style="opacity: 1;" transform="translate(0,0)">
+            <line x2="0" y2="0"/>
+            <text dy=".32em" style="text-anchor: end;" x="-3" y="0"/>
+            </g>
+            <path class="domain" d="M0,0H0V640H0"/>
+        </g>
+        <g transform="translate(782,5)">
+            <rect width="18" height="18" style="fill: rgb(31, 119, 180); stroke: rgb(31, 119, 180);"/>
+            <text class="legend" x="22" y="14">LXC</text>
+        </g>
+        <g transform="translate(782,27)">
+            <rect width="18" height="18" style="fill: rgb(174, 199, 232); stroke: rgb(174, 199, 232);"/>
+            <text class="legend" x="22" y="14">VM</text>
+        </g>
+        <g transform="translate(782,49)">
+            <rect width="18" height="18" style="fill: rgb(255, 127, 14); stroke: rgb(255, 127, 14);"/>
+            <text class="legend" x="22" y="14">Proxmox</text>
+        </g>
+</svg>
+<figcaption style="text-align: center; font-size: 16px">Fig. 1 - Disk speed in MB/s</figcaption>
+</figure>
+<h3 id="conclusion">Conclusion</h3>
+<p>Looking at the results, I am not surprised at all that Docker installed directly on Proxmox is the fastest option. What is surprising is that the VM performance was better than the LXC container. I would have thought that since there&rsquo;s a very thing virtualization layer between the Proxmox host and the LXC container the LXC performance would be better than a fully virtualized VM.</p>
+<p>Of course there&rsquo;s a very good chance that there are some settings I could have changed to get better performance out of all 3 options but I wanted to just get some quick numbers for &ldquo;out of the box&rdquo; performance.</p>
+
+      </article>
+
+      <p class="post-meta">Tags:&nbsp;
+        
+            
+            <a href="https://danthesalmon.com/tags/proxmox">proxmox</a>
+        
+            ,&nbsp;
+            <a href="https://danthesalmon.com/tags/homelab">homelab</a>
+        
+            ,&nbsp;
+            <a href="https://danthesalmon.com/tags/docker">docker</a>
+        
+      </p>
+
+      
+
+    </div>
+  </div>
+</div>
+    <footer class="footer">
+      <div class="p2 wrap">
+        <div class="measure mt1 center">
+      <nav class="social-icons icons">
+<a class="fa fa-rss rss" href="https://danthesalmon.com/index.xml"></a>
+
+<a class="fa fa-twitter twitter" href="https://twitter.com/bltjetpack"></a>
+
+</nav>
+
+          <small>
+            Copyright &#169; 2022<br>
+            Powered by <a href="http://gohugo.io/" target="_blank">Hugo</a> &amp; <a href="https://github.com/sa7mon/hugo-theme-pixyll" target="_blank">Pixyll</a>
+          </small>
+        </div>
+      </div>
+    </footer>
+
+    
+    <script src="https://danthesalmon.com/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    
+
+</body>
+</html>
+
