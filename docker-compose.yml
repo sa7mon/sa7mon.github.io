@@ -1,0 +1,11 @@
+version: "3.3"
+
+services:
+  site:
+    build: .
+    container_name: personal-site
+    restart: unless-stopped
+    ports:
+      - "8081:8081"
+    volumes:
+      - $PWD:/site
