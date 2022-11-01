@@ -1,3 +1,3 @@
 [submodule "danthesalmon.com/themes/pixyll"]
-	path = danthesalmon.com/themes/pixyll
-	url = https://github.com/sa7mon/hugo-theme-pixyll.git
+       path = themes/pixyll
+       url = https://github.com/sa7mon/hugo-theme-pixyll.git
