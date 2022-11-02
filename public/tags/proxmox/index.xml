@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>proxmox on Dan [the] Salmon</title>
+    <link>https://danthesalmon.com/tags/proxmox/</link>
+    <description>Recent content in proxmox on Dan [the] Salmon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 19 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://danthesalmon.com/tags/proxmox/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Running Docker on Proxmox</title>
+      <link>https://danthesalmon.com/running-docker-on-proxmox/</link>
+      <pubDate>Fri, 19 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://danthesalmon.com/running-docker-on-proxmox/</guid>
+      <description>There are a few different ways to run Docker on Proxmox. Here are some instructions and unscientific benchmarks comparing them.</description>
+    </item>
+    
+  </channel>
+</rss>

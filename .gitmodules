@@ -1,3 +1,6 @@
 [submodule "danthesalmon.com/themes/pixyll"]
-	path = danthesalmon.com/themes/pixyll
-	url = https://github.com/sa7mon/hugo-theme-pixyll.git
+       path = new-hugo/themes/pixyll
+       url = https://github.com/sa7mon/hugo-theme-pixyll.git
+[submodule "themes/pixyll"]
+	path = themes/pixyll
+	url = git@github.com:sa7mon/hugo-theme-pixyll.git

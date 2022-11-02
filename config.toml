@@ -1,0 +1,24 @@
+author = "admin"
+baseURL = "https://danthesalmon.com"
+builddrafts = false
+canonifyurls = true
+contentdir = "content"
+languageCode = "en-us"
+publishdir = "public"
+theme = "pixyll"
+title = "Dan [the] Salmon"
+disableHugoGeneratorInject = true
+
+[indexes]
+category = "categories"
+tag = "tags"
+
+[markup.goldmark.renderer]
+unsafe= true
+
+
+[params]
+google_analytics_id = "XX-XXXXXXXX-X"
+twitter_username = "bltjetpack"
+# disqus_shortname = "salmonroll"
+paginate = true

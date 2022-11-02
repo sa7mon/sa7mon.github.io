@@ -3,3 +3,5 @@ github-activity/
 *.sublime-workspace
 .gitignore
 danthesalmon.com/public/
+*/.DS_Store
+.hugo_build.lock
