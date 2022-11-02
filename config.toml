@@ -1,5 +1,5 @@
-author = "admin"
-baseURL = "https://sa7mon.github.io"
+author = "Dan Salmon"
+baseURL = "https://pages.danthesalmon.com/"
 builddrafts = false
 canonifyurls = true
 contentdir = "content"
