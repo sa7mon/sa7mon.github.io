@@ -1,5 +1,5 @@
 author = "admin"
-baseURL = "https://danthesalmon.com"
+baseURL = "https://sa7mon.github.io"
 builddrafts = false
 canonifyurls = true
 contentdir = "content"
@@ -15,7 +15,6 @@ tag = "tags"
 
 [markup.goldmark.renderer]
 unsafe= true
-
 
 [params]
 google_analytics_id = "XX-XXXXXXXX-X"
