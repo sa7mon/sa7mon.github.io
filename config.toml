@@ -1,5 +1,5 @@
 author = "Dan Salmon"
-baseURL = "https://pages.danthesalmon.com/"
+baseURL = "https://danthesalmon.com/"
 builddrafts = false
 canonifyurls = true
 contentdir = "content"
