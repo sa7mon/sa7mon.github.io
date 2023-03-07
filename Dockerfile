@@ -1,6 +1,7 @@
 FROM alpine:latest
 
 ENV HUGO_VERSION=0.105.0
+ENV BUILD_DRAFTS=true
 
 RUN apk update && \
     apk add curl git && \
@@ -9,4 +10,5 @@ RUN apk update && \
 WORKDIR '/site'
 # Site files should be mounted to /site
 
-ENTRYPOINT /hugo serve --port 8081 --bind 0.0.0.0
+#ENTRYPOINT /hugo serve --buildDrafts --port 8081 --bind 0.0.0.0
+CMD /bin/sh
