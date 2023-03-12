@@ -10,7 +10,7 @@ summary = "How fast can we validate a large text file of JSON?"
 type = "post"
 +++
 
-# Validating JSON Quickly with Golang
+<!-- # Validating JSON Quickly with Golang -->
 
 Recently, I was working on a project that involved a large amount of data. Like a lot. I had a dataset of approximately __800 million__ records that I wanted to do some analytics on. The dataset was in the form of a single file consisting of JSON objects, one per line. 
 

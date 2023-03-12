@@ -9,7 +9,7 @@ title = "State of the Homelab: 2023"
 type = "post"
 +++
 
-# State of the Homelab: 2023
+<!-- # State of the Homelab: 2023 -->
 
 I've run a homelab for a number of years. In the beginning, it was to learn more about Linux and running servers 
 
