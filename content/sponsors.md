@@ -1,14 +1,14 @@
-+++
-author = "Dan Salmon"
-categories = []
-date = 2020-02-07T21:44:08Z
-description = ""
-draft = false
-slug = "sponsors"
-tags = []
-title = "Sponsors"
-type = "page"
-+++
+---
+author: "Dan Salmon"
+categories: []
+date: 2020-02-07T21:44:08Z
+description: ""
+draft: false
+slug: "sponsors"
+tags: []
+title: "Sponsors"
+type: "page"
+---
 
 In order to support this site, some ads may be posted from time to time. These ads will take the form of simple referral links to services I use.
 
