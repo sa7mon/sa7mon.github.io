@@ -8,7 +8,6 @@ slug: "running-docker-on-proxmox"
 title: "Running Docker on Proxmox"
 summary: "There are a few different ways to run Docker on Proxmox. Here are some instructions and unscientific benchmarks comparing them."
 type: "post"
-toc: true
 ---
 
 <style>

@@ -31,7 +31,7 @@ params:
   description: Hugo Theme SK3 Demo Site
   enableOpenGraph: true
   enableTwitterCard: true
-Params:
+  related: false
   card:
     date: true
     summary: true
