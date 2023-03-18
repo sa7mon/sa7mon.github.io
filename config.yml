@@ -54,10 +54,10 @@ menu:
       name: Tags
       url: /tags/
       weight: 60
-    - identifier: search
-      name: Search
-      url: /search/
-      weight: 70
+    # - identifier: search
+    #   name: Search
+    #   url: /search/
+    #   weight: 70
     - identifier: contact
       name: Contact
       url: /contact/
