@@ -37,6 +37,7 @@ params:
     date: true
     summary: false
     width: "100%"
+    infowidth: "32%"
   sociallink:
     rss: true
     twitter: bltjetpack
