@@ -32,12 +32,17 @@ params:
   enableOpenGraph: true
   enableTwitterCard: true
   related: false
+  enableSidebar: false
   card:
     date: true
-    summary: true
+    summary: false
+    width: "100%"
   sociallink:
     rss: true
     twitter: bltjetpack
+  socialshare:
+    reddit: true
+    twitter: true
 menu:
   main:
     - identifier: about
