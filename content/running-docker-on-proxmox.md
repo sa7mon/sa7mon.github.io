@@ -1,14 +1,15 @@
-+++
-author = "Dan Salmon"
-date = 2020-06-19T00:00:00Z
-description = "There are a few different ways to run Docker on Proxmox"
-draft = false
-tags = ["proxmox", "homelab", "docker"]
-slug = "running-docker-on-proxmox"
-title = "Running Docker on Proxmox"
-summary = "There are a few different ways to run Docker on Proxmox. Here are some instructions and unscientific benchmarks comparing them."
-type = "post"
-+++
+---
+author: "Dan Salmon"
+date: 2020-06-19T00:00:00Z
+description: "There are a few different ways to run Docker on Proxmox"
+draft: false
+tags: ["proxmox", "homelab", "docker"]
+slug: "running-docker-on-proxmox"
+title: "Running Docker on Proxmox"
+summary: "There are a few different ways to run Docker on Proxmox. Here are some instructions and unscientific benchmarks comparing them."
+type: "post"
+---
+
 <style>
 .chart .legend {
     fill: black;
@@ -167,7 +168,7 @@ I first have to preface these results by saying that this test was very unscient
 
 ### Disk Speed Benchmarks
 
-<figure>
+<figure class="bg-light">
 <svg xmlns="http://www.w3.org/2000/svg" class="chart" width="100%" height="630">
         <g transform="translate(160,5)">
             <rect fill="#1f77b4" class="bar" width="10.606689351813428" height="19"/>
@@ -364,7 +365,7 @@ I first have to preface these results by saying that this test was very unscient
             <text class="legend" x="22" y="14">Proxmox</text>
         </g>
 </svg>
-<figcaption style="text-align: center; font-size: 16px">Fig. 1 - Disk speed in MB/s</figcaption>
+<figcaption style="text-align: center; font-size: 16px; color: black;">Fig. 1 - Disk speed in MB/s</figcaption>
 </figure>
 
 ### Conclusion

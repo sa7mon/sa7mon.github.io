@@ -1,0 +1,64 @@
+author: Dan Salmon
+baseURL: https://danthesalmon.com/
+builddrafts: false
+canonifyurls: true
+contentdir: content
+languageCode: en-us
+publishdir: public
+theme: sk3
+title: Dan [the] Salmon
+disableHugoGeneratorInject: true
+enableInfoBox: true
+indexes:
+  category: categories
+  tag: tags
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+permalinks:
+  posts: /:title/
+params:
+  enableInfoBox: true
+  enableListLastModify: true
+  enableOpenToc: true
+  enableUserCanonical: false
+  favicon: /favicon.ico
+  mainSections:
+    - post
+  pagewidth: 1200px
+  startdate: 2012-12-02
+  description: Hugo Theme SK3 Demo Site
+  enableOpenGraph: true
+  enableTwitterCard: true
+  related: false
+  enableSidebar: false
+  card:
+    date: true
+    summary: false
+    width: "100%"
+    infowidth: "32%"
+  sociallink:
+    rss: true
+    twitter: bltjetpack
+  socialshare:
+    reddit: true
+    twitter: true
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 50
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 60
+    # - identifier: search
+    #   name: Search
+    #   url: /search/
+    #   weight: 70
+    - identifier: contact
+      name: Contact
+      url: /contact/
+      weight: 80

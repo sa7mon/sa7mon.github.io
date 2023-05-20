@@ -1,13 +1,13 @@
-+++
-author = "Dan Salmon"
-date = 2022-06-24T00:00:00Z
-description = "Learning new tech is hard."
-draft = false
-tags = ["ufw", "tailscale", "docker", "security"]
-slug = "ufw-docker-tailscale"
-title = "UFW, Docker, and Tailscale: Lessons Learned"
-type = "post"
-+++
+---
+author: "Dan Salmon"
+date: "2022-06-24T00:00:00Z"
+summary: "Learning new tech is hard."
+draft: false
+tags: ["ufw", "tailscale", "docker", "security"]
+slug: "ufw-docker-tailscale"
+title: "UFW, Docker, and Tailscale: Lessons Learned"
+type: "post"
+---
 
 This is a cautionary tale about something that happened to me in the past few weeks. I'm posting it because I believe a lot can be learned by professionals (and others such as me) posting their security fails and problem-solving processes.
 

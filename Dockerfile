@@ -9,4 +9,4 @@ RUN apk update && \
 WORKDIR '/site'
 # Site files should be mounted to /site
 
-ENTRYPOINT /hugo serve --port 8081 --bind 0.0.0.0
+ENTRYPOINT /hugo serve --port 8081 --bind 0.0.0.0 --disableFastRender --buildDrafts
