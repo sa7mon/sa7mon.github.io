@@ -1,8 +1,8 @@
 ---
 author: "Dan Salmon"
-date: 2023-03-09T00:00:00Z
-description: ""
-draft: true
+date: 2023-05-19T00:00:00Z
+description: "Here's what I'm running in my homelab right now"
+draft: false
 tags: ["homelab", "docker"]
 slug: "state-of-homelab-2023"
 title: "State of the Homelab: 2023"
