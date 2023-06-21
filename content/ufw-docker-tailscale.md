@@ -1,6 +1,7 @@
 ---
 author: "Dan Salmon"
 date: "2022-06-24T00:00:00Z"
+lastmod: "2023-06-21"
 summary: "Learning new tech is hard."
 draft: false
 tags: ["ufw", "tailscale", "docker", "security"]
@@ -8,6 +9,18 @@ slug: "ufw-docker-tailscale"
 title: "UFW, Docker, and Tailscale: Lessons Learned"
 type: "post"
 ---
+
+> **Update 2023-06-21**
+> 
+> This post originally contained some information I now know to be untrue. I got an email yesterday from [Brad Fitzpatrick](https://twitter.com/bradfitz) asking me to take a look at the claims I made about Tailscale.
+>
+> In my original post, I asserted that any Tailscale user could connect to any other users' machines. I believed this after `nmap`ing a range of CGNAT addresses and seeing up hosts with open ports. In hindsight, I now believe that my ISP at the time (I have since moved) was probably using some of those addresses.
+>
+> I can't confirm this because I attempted to replicate my scan results today and was unable. I have updated the post accordingly, but if you wish to read the original post, it is archived [here](https://web.archive.org/web/20220624194858/https://danthesalmon.com/ufw-docker-tailscale/).
+>
+> Apologies to the Tailscale team for any grief this caused - I really do love the product!
+
+<hr>
 
 This is a cautionary tale about something that happened to me in the past few weeks. I'm posting it because I believe a lot can be learned by professionals (and others such as me) posting their security fails and problem-solving processes.
 
@@ -62,7 +75,7 @@ In the tcpdump logs, I could see a ton of SSH traffic to tons of IP addresses. M
 
 After my evidence gathering was complete, I killed the container and started looking at how the attacker may have gotten in. The Postgres container that had been compromised was part of a `docker-compose` config that brought up the service with port 5432 mapped to the host and just used the default credentials. This seemed fine because only the localhost can access Docker mapped ports.
 
-Now is probably a good time to mention that this box also has UFW and Tailscale installed. The UFW rules I had configured looked like this:
+Now is probably a good time to mention that this box also has UFW installed. The UFW rules I had configured looked like this:
 
 ```
 $ sudo ufw status verbose
@@ -73,19 +86,15 @@ New profiles: skip
 
 To                         Action      From
 --                         ------      ----
-Anywhere on tailscale0     ALLOW IN    Anywhere
-41641/udp                  ALLOW IN    Anywhere
-22/tcp                     ALLOW IN    Anywhere
+Anywhere on tailscale0      ALLOW IN    Anywhere
+41641/udp                   ALLOW IN    Anywhere
+22/tcp                      ALLOW IN    Anywhere
 Anywhere (v6) on tailscale0 ALLOW IN    Anywhere (v6)
-41641/udp (v6)             ALLOW IN    Anywhere (v6)
-22/tcp (v6)                ALLOW IN    Anywhere (v6)
+41641/udp (v6)              ALLOW IN    Anywhere (v6)
+22/tcp (v6)                 ALLOW IN    Anywhere (v6)
 ```
 
-I had followed Tailscale's [guide](https://tailscale.com/kb/1077/secure-server-ubuntu-18-04/) on setting up proper UFW rules. It seemed like my rules were good so how did the bad actor access my Postgres port? I started thinking about the firewall rules - specifically the `on tailscale0` bit. I guess it was just an assumption on my part that if I allowed traffic to that interface, Tailscale would block traffic from devices that aren't part of my account. Being a person of science (allegedly, according to my degree), I know assumptions are **not** scientific so I needed to test that theory. I `nmap`'d the `100.97.0.0/16` range which is a CG-NAT subnet Tailscale uses. Sure enough, I was able to see hosts up that didn't belong to me and I could even see open ports on some of them.
-
-*Side note*: I'm probably misunderstanding something, but this seems to directly contradict [their docs](https://tailscale.com/kb/1136/tailnet/) about how Tailnets work.
-
-Right, so contrary to what I thought, any UFW rules which allow traffic on the `tailscale0` interface will let any Tailscale user hit that port. This was easy enough to fix: I just deleted that rule and then planned on adding one in the future to only allow traffic from my laptop's Tailscale IP (which are static no matter where you are - one of the truly awesome things about the service). I brought the container back up, watched it for a few minutes to make sure no one broke in, and called it a day.
+The UFW rules seemed fine so I brought the container back up, watched it for a few minutes to make sure no one broke in, and called it a day.
 
 4-5 days later I received an email from Hetzner with the subject `Abuse Message [AbuseID:XXXXX]: NetscanOutLevel: Netscan detected from x.x.x.x` (my Hetzner public IP). In the email it said that my box was doing tons of malicious scanning of machines on port 8081 and that if I didn't knock it off, they would block network access from my server. Ugh, again?
 
@@ -118,7 +127,6 @@ After a quick `nmap` I was able to confirm the mapped ports were not accessible 
 
 **Lessons learned:**
 
-- While Tailscale does indeed work like magic, it does not automatically block traffic from other Tailscale users. Configuring traffic to only come from the `tailscale0` interface does not limit traffic to only your devices - any Tailscale user can hit it.
 - Hetzner is a great cloud provider and I'm glad they're proactive about kicking malicious users off their platform. If you want to try them out, you can use [this referral link](https://hetzner.cloud/?ref=V9TzL9Jf56Ge) for €20 in cloud credits
 - Docker and ufw do not play nice together by default
 - Even if I'm just spinning up a test container, I should probably change default creds
