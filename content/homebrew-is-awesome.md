@@ -2,7 +2,7 @@
 author: "Dan Salmon"
 date: "2023-08-07T00:00:00Z"
 summary: "Contributing to Homebrew - so easy a caveman could do it"
-draft: true
+draft: false
 tags: ["homebrew", "macos"]
 slug: "homebrew-is-awesome"
 title: "Homebrew is awesome"
