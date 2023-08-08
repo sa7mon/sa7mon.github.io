@@ -9,9 +9,6 @@ title: "Homebrew is awesome"
 type: "post"
 ---
 
-
-# Homebrew is awesome
-
 Now that the Golang rewrite of [S3Scanner](https://github.com/sa7mon/S3Scanner) is complete, I have a few TODOs to get it packaged for a few different package managers. Mostly I'm just curious what the process is to, for example, get a package into Homebrew.
 
 **I'm happy to report it is very easy and totally painless!**
