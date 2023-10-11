@@ -1,6 +1,6 @@
 ---
 author: "Dan Salmon"
-date: 2023-10-010T00:00:00Z
+date: "2023-10-10T00:00:00Z"
 description: "Here are some neat things I've found"
 draft: false
 tags: ["bookmark-batch"]
