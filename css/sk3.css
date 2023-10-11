@@ -445,3 +445,27 @@ figcaption {
 .padding-bottom-2 {
 	padding-bottom: 2rem;
 }
+
+section.rec {
+	margin-bottom: 3rem;
+}
+
+section.rec > em {
+	color: #b3b3b3;
+}
+
+section.rec span {
+	padding: 0.2rem;	
+}
+
+section.rec .tag {
+	background-color: purple;
+}
+
+section.rec .type {
+	background-color: rgb(0, 128, 26);
+}
+
+section.rec .source {
+	background-color: #fff;
+}
