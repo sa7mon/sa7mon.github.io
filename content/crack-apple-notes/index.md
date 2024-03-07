@@ -1,8 +1,8 @@
 ---
 author: "Dan Salmon"
-date: "2024-03-03T00:00:00Z"
+date: "2024-03-06T00:00:00Z"
 description: "What is a hacker to do when they've forgotten their own password"
-draft: true
+draft: false
 tags: ["cracking", "apple-notes"]
 slug: "crack-apple-notes"
 title: "Cracking a Locked Apple Note"
