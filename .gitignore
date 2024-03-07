@@ -6,3 +6,5 @@ danthesalmon.com/public/
 */.DS_Store
 .hugo_build.lock
 .vscode/
+.DS_Store
+public/
