@@ -2,7 +2,7 @@
 author: "Dan Salmon"
 date: "2024-03-15T00:00:00Z"
 description: "SMB speeds can be severely impacted when multiple interfaces can reach a network."
-draft: true
+draft: false
 tags: ["windows", "tailscale"]
 slug: "windows-smb-tailscale"
 title: "Windows Kills SMB Speeds When Using Tailscale"
