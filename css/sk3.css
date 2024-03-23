@@ -418,16 +418,22 @@ pre {
 	padding: var(--code-padding);
 	background-color: #272822;
 	white-space: pre-wrap;
+	overflow-x: scroll;
 }
 
 /**
 * sponsor section
 */
 
+#sponsor {
+	margin-top: 3rem;
+}
+
 #sponsor section div {
 	width: 100%;
 	font-weight: bold;
 	border-style: dashed;
+	padding-top: 1rem;
 }
 
 #sponsor .about {
