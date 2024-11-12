@@ -1,6 +1,6 @@
 ---
 author: "Dan Salmon"
-date: "2024-03-15T00:00:00Z"
+date: "2024-11-11T00:00:00Z"
 description: "SMB speeds can be severely impacted when multiple interfaces can reach a network."
 draft: false
 tags: ["windows", "tailscale"]
