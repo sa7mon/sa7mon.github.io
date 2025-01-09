@@ -1,4 +1,13 @@
-## 2025 Projects
+---
+author: "Dan Salmon"
+date: "2025-01-09T00:00:00Z"
+summary: "Time to put up or shut up"
+draft: true
+tags: []
+slug: "2025-projects"
+title: "2025 Projects"
+type: "post"
+---
 
 I'm not one to create New Years resolutions, but I do like the idea of settings some goals for myself for the year. In general, I'm going to try to write more about all the projects I take on whether or not they pan out.
 
@@ -36,3 +45,10 @@ As documented in my homelab post, I have a TrueNAS system that houses a lot of d
 
 The only machine in my house running Windows is my desktop and I would like to change that for a myriad of reasons. I'll document my requirements, Linux distro selection, and results.
 
+
+### Open Source Burp Alternative
+
+This is likely a longer-term project than what I could do in a few months, but I'm beginning to play around with some Go libraries that should make it easy to build desktop apps. I have little to no experience with desktop apps as most of my development is either with web APIs or command-line tools. To help with my learning experience, I will build an app for pentester to use when testing web apps. It will combine features of Burp, Caido, and include some useful features I have not seen other tools implement.
+
+
+Let's build!
