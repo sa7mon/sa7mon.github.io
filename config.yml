@@ -28,7 +28,9 @@ params:
     - post
   pagewidth: 1200px
   startdate: 2012-12-02
-  description: Hugo Theme SK3 Demo Site
+  description: Technical ramblings and miscellany
+  images:
+  - cover.png
   enableOpenGraph: true
   enableTwitterCard: true
   related: false
