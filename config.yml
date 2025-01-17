@@ -46,6 +46,11 @@ params:
   socialshare:
     reddit: true
     twitter: true
+  identities:
+    - url: https://infosec.exchange/@dan
+      name: Mastodon
+    - url: https://github.com/sa7mon
+      name: GitHub
 menu:
   main:
     - identifier: about
