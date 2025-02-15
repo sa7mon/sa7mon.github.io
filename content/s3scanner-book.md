@@ -1,6 +1,6 @@
 ---
 author: "Dan Salmon"
-date: "2024-02-15T00:00:00Z"
+date: "2025-02-15T00:00:00Z"
 summary: "S3Scanner gains a glowing recommendation"
 draft: false
 tags: ["S3Scanner"]
