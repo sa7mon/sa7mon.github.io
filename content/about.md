@@ -17,12 +17,12 @@ Hi, I'm Dan. I'm interested in Information Security, Data Privacy, and Programmi
 
 * [S3scanner](https://github.com/sa7mon/S3Scanner) - Scan for open S3 buckets and dump contents
 * [miniprint](https://github.com/sa7mon/miniprint) - A medium interaction printer honeypot 🍯
-* [press](https://github.com/sa7mon/press) - Multi-threaded tool for resumable Wordpress bruteforcing 
-* [salary-viz](https://projects.danthesalmon.com/salary-viz/) - A data visualization sample to explore salary data using D3.js 
-* [retirement-calc](https://projects.danthesalmon.com/retirement-calc/) - A retirement calculator build with Javascript using Chart.js for visualization
-* [watchtower](https://github.com/sa7mon/watchtower) - PoC to detect and alert when Rogue AP and Deauth attacks occur 
 * [venmo-data](https://github.com/sa7mon/venmo-data) - A dataset of 7 million transactions scraped from the Venmo public API
+* [watchtower](https://github.com/sa7mon/watchtower) - PoC to detect and alert when Rogue AP and Deauth attacks occur 
 
+### Vulnerabilities
+
+* [CVE-2025-27422](https://www.cve.org/CVERecord?id=CVE-2025-27422) - Authentication Bypass via User Creation (FACTION)
 
 ### Press
 
