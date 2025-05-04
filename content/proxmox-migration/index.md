@@ -1,11 +1,11 @@
 ---
 author: "Dan Salmon"
-date: "2025-05-02T00:00:00Z"
-description: ""
+date: "2025-05-04T00:00:00Z"
+description: "Let's get smaller"
 draft: true
 tags: ["proxmox", "zfs", "3d printing"]
-slug: ""
-title: "Proxmox II"
+slug: "new-proxmox-server"
+title: "A New Proxmox Server"
 type: "post"
 ---
 
