@@ -1,8 +1,8 @@
 ---
 author: "Dan Salmon"
 date: "2025-05-04T00:00:00Z"
-description: "Let's get smaller"
-draft: true
+description: "Smaller, more powerful, cooler"
+draft: false
 tags: ["proxmox", "zfs", "3d printing"]
 slug: "new-proxmox-server"
 title: "A New Proxmox Server"
