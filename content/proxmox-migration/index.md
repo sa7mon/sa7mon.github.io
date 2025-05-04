@@ -73,9 +73,9 @@ The price seemed reasonable, but
 - they asked me to "send $30 to our paypal account sales@plinkusa.net" which felt a bit scammy
 - in the time it had taken to arrive at this price, I had already designed and 3D-printed a prototype that was 85% complete and cost pennies to print
 
-{{< figure src="pci-bracket.png" caption="It's certainly not the prettiest part in the world, but it should work" width="600px" alt="">}}
+{{< figure src="bracket.png" caption="It's certainly not the prettiest part in the world, but it should work" width="600px" alt="">}}
 
-{{< figure src="IMG_1414.JPG" caption="" width="600px" alt="">}}
+{{< figure src="pci-bracket-installed.jpg" caption="" width="600px" alt="">}}
 
 The idea is to turn 6 half-height vertical slots into 3 full-height horizontal slots.
 
