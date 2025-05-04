@@ -9,12 +9,6 @@ title: "Proxmox II"
 type: "post"
 ---
 
-# TODO  
-
-- Actually resize images
-- Post SSD caddy to printables
-
-
 As I've talked about [previously](https://danthesalmon.com/state-of-homelab-2023/), all compute workloads in my homelab are run on an older HP Z620 workstation. This machine runs everything I need it to without complaint and has done so for years. Recently I started thinking more about replacing it, or at least transplanting its components into something I can rackmount. I don't like that it's the only piece of homelab gear that doesn't reside neatly in the 18U rack.
 
 {{< figure src="rack-before.jpg" caption="" width="600px" alt="18U StarTech rack with a switch, router, 2 patch panels, and a shelf installed. Next to the rack on the right side is a free-standing HP workstation.">}}
@@ -153,11 +147,11 @@ The 4x 80mm YATE LOON D80SM-12 fans were pretty scratchy sounding even with the 
 
 At this point I was ready to do the hardware transplant. I had setup another machine with Proxmox and migrated the critical services (mostly Pihole) and could now afford downtime. So on a Saturday night, I shut down the HP workstation and got the SSDs, 10GbE card, and GPU moved over to their new home.
 
-{{< figure src="assembled-1.jpg" caption="" width="750px" alt="">}}
+{{< figure src="assembled-1.jpg" caption="" width="750px" alt="Internal components of the server shown">}}
 
 After plugging in the riser cable for the GPU, I realized how comically long it was for this application. Thankfully it was flexible enough that I could still get the chassis lid closed without squishing the cable too hard. 
 
-{{< figure src="assembled-2.jpg" caption="" width="750px" alt="">}}
+{{< figure src="assembled-2.jpg" caption="" width="750px" alt="Side view of the server with the lid open. The riser cable protrudes noticeably up">}}
 
 At this point, I realized that I couldn't plug any video cables into the rear of the GPU: there was not enough clearance at the top of the bracket.
 
@@ -165,7 +159,7 @@ Back to OnShape I went to quickly delete the 3rd PCIe slot (I only needed the to
 
 Next, I installed the rails. The included instructions were really lacking, but thankfully [this serverbuilds.net post](https://web.archive.org/web/20250117083018/https://forums.serverbuilds.net/t/rack-mounting-the-rosewill-rsv-l4500/2804) did a great job showing which holes to use on the rack bracket. After unscrewing and re-mounting the rails a total of 3 times, everything fit correctly and I no longer had gaps above the server!
 
-{{< figure src="racked.jpg" caption="The shelf below the new server is one of the next projects to tackle" width="750px" alt="">}}
+{{< figure src="racked.jpg" caption="The shelf below the new server is one of the next projects to tackle" width="750px" alt="Front view of the server rack showing the same network components as before, but now with an additional 2U server at the bottom.">}}
 
 # Turning the Key
 
@@ -212,7 +206,7 @@ With my 4-disk ZFS pool added as a storage backend, I restored my main Docker VM
 
 Next I restored the Jellyfin VM and easily setup the PCI passthrough. Proxmox makes this so simple: just add the raw PCI device in the hardware tab.
 
-{{< figure src="pci.png" caption="Have I mentioned lately that I love Proxmox?" width="750px" alt="">}}
+{{< figure src="pci.png" caption="Have I mentioned lately that I love Proxmox?" width="750px" alt="Screenshot of Proxmox showing a PCI device named 'Arc A380' has been added to a virtual machine named 'jellyfin'">}}
         
 While I was working through the VM restoration, the system had a few instances where it would fall off the network. Nothing would fix it except a hard reboot. I plugged in a monitor and didn't see anything obvious in the system logs.
 
@@ -239,7 +233,7 @@ Some quick searching told me these logs were related to something called "[C-sta
 
 After trying and failing to disable C-states via `systemd-boot` config files, I eventually found there's a setting in the MSI BIOS named "Global C-state Control". After disabling this setting, the server finally survived a full 24 hours!
 
-{{< figure src="bios-cstates.jpg" caption="A week and a half of troubleshooting later, one toggle was all it took" width="750px" alt="">}}
+{{< figure src="bios-cstates.jpg" caption="A week and a half of troubleshooting later, one toggle was all it took" width="750px" alt="Screenshot of the MSI BIOS showing a menu item named 'Global C-state Control' is disabled.">}}
 
 # Wrapping Up
 
