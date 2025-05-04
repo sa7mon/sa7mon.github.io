@@ -17,7 +17,7 @@ type: "post"
 
 As I've talked about [previously](https://danthesalmon.com/state-of-homelab-2023/), all compute workloads in my homelab are run on an older HP Z620 workstation. This machine runs everything I need it to without complaint and has done so for years. Recently I started thinking more about replacing it, or at least transplanting its components into something I can rackmount. I don't like that it's the only piece of homelab gear that doesn't reside neatly in the 18U rack.
 
-{{< figure src="1618.jpg" caption="" width="500px" alt="">}}
+{{< figure src="rack-before.jpg" caption="" width="600px" alt="">}}
 
 I would like to move to something rackmount-able because:
 
@@ -64,7 +64,7 @@ Both were around the $100 range, but I ultimately decided on the Plinkusa chassi
 {{< figure src="plinkusa.jpg" width="800px" caption="Yes, these are the best quality photos they have on the <a href='https://www.plinkusa.net/web2026s.htm'>product page</a>" alt="">}}
 
 
-As luck would have it, someone was selling the exact model I was looking for on Craigslist for $70 and it came with an Inland non-modular PSU. This was incredibly fortunate since it saved me the $55(!) in shipping a brand new unit would have cost.
+As luck would have it, someone was selling the exact model I was looking for on Craigslist for $70 and it came with an Inland non-modular PSU. This was incredibly fortunate since it saved me the $55(!) shipping fee a brand new unit would have included.
 
 After getting the chassis home, I realized that whatever adapter thing this case normally comes with for full-height PCIe mounting, mine didn't come with it. I emailed the manufacturer asking how I could buy just this adapter for my specific chassis. It took a few days of back and forth, mostly just identifying which chassis I had - it seemed like this company has sold many iterations. Finally, I was quoted a price of $30 (including shipping) for a "3 slot riser card window with full set accessory box".
 
@@ -79,11 +79,11 @@ The price seemed reasonable, but
 
 The idea is to turn 6 half-height vertical slots into 3 full-height horizontal slots.
 
-Since the PCI Express standard is well defined and documented, the process was a breeze once I understood how I needed to orient things. Maybe in the future if this print fails or I decide to upgrade I'll order the official part, but for now this should be fine.
+Since the PCI Express standard is well defined and documented, the design process was a breeze once I understood how I needed to orient things. If this print eventually fails or I decide to upgrade later I'll order the official part, but for now this should be fine.
 
 ## Motherboard
 
-That week I shopped around for a cheap AM4 motherboard that had 5+ SATA 6Gbs ports. Once again I got lucky and found a deal on Craigslist: a used Gigabyte B450 AORUS Pro for $75.
+I shopped around for a cheap AM4 motherboard that had 5+ SATA 6Gbs ports and once again lucked out on Craigslist: a used Gigabyte B450 AORUS Pro for $75.
 
 I started doing some test fits, laying which components would go where when I realized that I might not have enough PCI lanes available with this motherboard if I use the LSI HBA. I summarized the situation in [a post](https://www.reddit.com/r/homelab/comments/1ilrcbo/does_my_proxmox_build_have_enough_pcie_lanes/) on /r/homelab.
 
@@ -92,7 +92,7 @@ After some very helpful replies and thinking better of some harebrained ideas, I
 1. Delete the HBA - connect the drives directly to the onboard SATA ports using some [low-profile 180-degree adapters](https://www.ebay.com/itm/126307406194)
 2. Move the SSDs to the very front of the chassis, designing and printing some kind of bracket to hold them all
 3. Plug the Mellanox 10GbE card into the second PCIe slot
-4. Run a riser cable over the Mellanox card to connect the GPU to the top [TODO: xWhat] PCIe port
+4. Run a riser cable over the Mellanox card to connect the GPU to the top PCIe 3.0 x16 slot
 
 ## SSDs
 
@@ -105,7 +105,7 @@ For my next part created from scratch, I designed and 3D printed an SSD caddy th
 
 Again, because the 2.5" drive follows a well-defined spec (_SFF-8201: 2.5 Form Factor Drive Dimensions_), the design process went very smoothly once I came up with a general design that would allow for single drive removal. 2 re-prints and a few tweaks in OnShape later, I had a part that fit all my criteria. 
 
-{{< figure src="./IMG_1460_2.JPG" caption="" width="600px" alt="">}}
+{{< figure src="IMG_1460_2.JPG" caption="" width="600px" alt="">}}
 
 I can't recommend enough a proper set of calipers for designing parts from scratch.
 
@@ -236,13 +236,15 @@ I was at my wits' end scrolling through the start of the dmesg logs when I notic
 [Tue Apr 22 14:41:43 2025] ACPI: \_PR_.C004: Found 2 idle states
 ```
 
-Some quick searching told me these logs were related to something called ["C-states"](https://en.wikipedia.org/wiki/ACPI#Processor_states). If your CPU does not understand or does not support the state that the ACPI system is requesting, it can cause system instability which results in weird, unstable behavior.
+Some quick searching told me these logs were related to something called "[C-states](https://en.wikipedia.org/wiki/ACPI#Processor_states)" which are essentially sleep states that the CPU cores can switch to in order to save power when the system is not under heavy load. If your CPU does not understand or does not support the state that the ACPI system is requesting, it can cause system instability that manifests in weird, unpredictable behavior.
 
-After fumbling though some GRUB config files and getting very confused, I eventually found there's a setting in the MSI BIOS named "Global C-state Control". After disabling this setting, the server finally survived a full 24 hours!
+After trying and failing to disable C-states via `systemd-boot` config files, I eventually found there's a setting in the MSI BIOS named "Global C-state Control". After disabling this setting, the server finally survived a full 24 hours!
+
+{{< figure src="IMG_1741.jpg" caption="A week and a half of troubleshooting later, one toggle was all it took" width="750px" alt="">}}
 
 # Wrapping Up
 
-This was a much larger project than I thought it would be. Ultimately, I was able to combine many of my hobbies which was very fun.
+Ultimately, this was a much larger project than I thought it would be, but I was able to combine many of my hobbies which was very fun.
 
 Here is the final parts list and cost breakdown
 
