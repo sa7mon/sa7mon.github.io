@@ -17,7 +17,7 @@ type: "post"
 
 As I've talked about [previously](https://danthesalmon.com/state-of-homelab-2023/), all compute workloads in my homelab are run on an older HP Z620 workstation. This machine runs everything I need it to without complaint and has done so for years. Recently I started thinking more about replacing it, or at least transplanting its components into something I can rackmount. I don't like that it's the only piece of homelab gear that doesn't reside neatly in the 18U rack.
 
-{{< figure src="rack-before.jpg" caption="" width="600px" alt="">}}
+{{< figure src="rack-before.jpg" caption="" width="600px" alt="18U StarTech rack with a switch, router, 2 patch panels, and a shelf installed. Next to the rack on the right side is a free-standing HP workstation.">}}
 
 I would like to move to something rackmount-able because:
 
@@ -61,8 +61,7 @@ Plinkusa [IPC-2026-BK](https://www.plinkusa.net/web2026s.htm) which advertises s
 
 Both were around the $100 range, but I ultimately decided on the Plinkusa chassis both because of the PCIe adapter and because it supports a full ATX motherboard while the Rosewill only supports Micro-ATX.
 
-{{< figure src="plinkusa.jpg" width="800px" caption="Yes, these are the best quality photos they have on the <a href='https://www.plinkusa.net/web2026s.htm'>product page</a>" alt="">}}
-
+{{< figure src="plinkusa.jpg" width="800px" caption="Yes, these are the best quality photos they have on the <a href='https://www.plinkusa.net/web2026s.htm'>product page</a>" alt="low-resolution photos of a 2U chassis with the lid off. The rear shows 11 half-height PCIe slots.">}}
 
 As luck would have it, someone was selling the exact model I was looking for on Craigslist for $70 and it came with an Inland non-modular PSU. This was incredibly fortunate since it saved me the $55(!) shipping fee a brand new unit would have included.
 
@@ -73,9 +72,9 @@ The price seemed reasonable, but
 - they asked me to "send $30 to our paypal account sales@plinkusa.net" which felt a bit scammy
 - in the time it had taken to arrive at this price, I had already designed and 3D-printed a prototype that was 85% complete and cost pennies to print
 
-{{< figure src="bracket.png" caption="It's certainly not the prettiest part in the world, but it should work" width="600px" alt="">}}
+{{< figure src="bracket.png" caption="It's certainly not the prettiest part in the world, but it should work" width="600px" alt="Line drawing of a PCI bracket that allows for sideways installation of a full height card into multiple half-height slots">}}
 
-{{< figure src="pci-bracket-installed.jpg" caption="" width="600px" alt="">}}
+{{< figure src="pci-bracket-installed.jpg" caption="" width="600px" alt="Photo of the printed part installed in the read of the chassis">}}
 
 The idea is to turn 6 half-height vertical slots into 3 full-height horizontal slots.
 
@@ -105,17 +104,17 @@ For my next part created from scratch, I designed and 3D printed an SSD caddy th
 
 Again, because the 2.5" drive follows a well-defined spec (_SFF-8201: 2.5 Form Factor Drive Dimensions_), the design process went very smoothly once I came up with a general design that would allow for single drive removal. 2 re-prints and a few tweaks in OnShape later, I had a part that fit all my criteria. 
 
-{{< figure src="ssd-caddy.jpg" caption="" width="600px" alt="">}}
+{{< figure src="ssd-caddy.jpg" caption="" width="600px" alt="A white 3D printed part. The left and right sides are triangles while the top and bottom are rectangles. 5 slots are visible on the inside bottom of the part. On the top are 5 countersunk holes for securing the SSDs in place with a screw.">}}
 
 I can't recommend enough a proper set of calipers for designing parts from scratch.
 
 I ordered a set of thin SATA cables that would allow for a pretty tight bend radius to connect the drives at the front of the chassis.
 
 {{< figure src="ssd-caddy-installed.jpg" caption="Test fitting with a single SSD was a success. At the bottom you can see how little space is between the north-facing SATA ports and the fan wall" width="750px" alt="">}}
-{{< figure src="ssd-caddy-installed-ssds.jpg" caption="All 5 installed and connected" width="750px" alt="">}}
+{{< figure src="ssd-caddy-installed-ssds.jpg" caption="All 5 installed and connected" width="750px" alt="top-down photo of the inside front of the server. The caddy part is installed and 1 SSD is mounted in it.">}}
 
 
-{{< figure src="sata-adapters.jpg" caption="A pair of $7 adapters saved the whole build" width="750px" alt="">}}
+{{< figure src="sata-adapters.jpg" caption="A pair of $7 adapters saved the whole build" width="750px" alt="Close-up shot showing 2 180-degree adapters plugged into a block of 4 SATA connects on the motherboard.">}}
 
 ## Booting
 
@@ -138,7 +137,7 @@ I compared a few Dynatron coolers including the [A47](https://www.dynatron.co/pr
 
 Instead, I picked up a Noctua NH-L9A-AM4 from Micro Center (which, if I'm honest, was also a major selling point). After mounting it with the included thermal paste, I booted the machine up and explored the BIOS settings. There were constant alerts about the CPU temp, but something about the data seemed fishy.
 
-{{< figure src="bios-temp.jpg" caption="Something tells me the CPU isn't actually hot enough to boil water" width="750px" alt="">}}
+{{< figure src="bios-temp.jpg" caption="Something tells me the CPU isn't actually hot enough to boil water" width="750px" alt="Screenshot of the BIOS. The CPU temperature reading is 127C">}}
 
 I checked for a BIOS update and sure enough the version after the one installed contained a relevant release note
 
