@@ -105,17 +105,17 @@ For my next part created from scratch, I designed and 3D printed an SSD caddy th
 
 Again, because the 2.5" drive follows a well-defined spec (_SFF-8201: 2.5 Form Factor Drive Dimensions_), the design process went very smoothly once I came up with a general design that would allow for single drive removal. 2 re-prints and a few tweaks in OnShape later, I had a part that fit all my criteria. 
 
-{{< figure src="IMG_1460_2.JPG" caption="" width="600px" alt="">}}
+{{< figure src="ssd-caddy.jpg" caption="" width="600px" alt="">}}
 
 I can't recommend enough a proper set of calipers for designing parts from scratch.
 
 I ordered a set of thin SATA cables that would allow for a pretty tight bend radius to connect the drives at the front of the chassis.
 
-{{< figure src="IMG_1467_2.jpg" caption="" width="750px" alt="">}}
-{{< figure src="IMG_1625.JPG" caption="" width="750px" alt="">}}
+{{< figure src="ssd-caddy-installed.jpg" caption="Test fitting with a single SSD was a success. At the bottom you can see how little space is between the north-facing SATA ports and the fan wall" width="750px" alt="">}}
+{{< figure src="ssd-caddy-installed-ssds.jpg" caption="All 5 installed and connected" width="750px" alt="">}}
 
 
-{{< figure src="IMG_1490.JPG" caption="A pair of $7 adapters saved the whole build" width="600px" alt="">}}
+{{< figure src="sata-adapters.jpg" caption="A pair of $7 adapters saved the whole build" width="750px" alt="">}}
 
 ## Booting
 
@@ -138,7 +138,7 @@ I compared a few Dynatron coolers including the [A47](https://www.dynatron.co/pr
 
 Instead, I picked up a Noctua NH-L9A-AM4 from Micro Center (which, if I'm honest, was also a major selling point). After mounting it with the included thermal paste, I booted the machine up and explored the BIOS settings. There were constant alerts about the CPU temp, but something about the data seemed fishy.
 
-{{< figure src="IMG_1596.JPG" caption="Something tells me the CPU isn't actually hot enough to boil water" width="750px" alt="">}}
+{{< figure src="bios-temp.jpg" caption="Something tells me the CPU isn't actually hot enough to boil water" width="750px" alt="">}}
 
 I checked for a BIOS update and sure enough the version after the one installed contained a relevant release note
 
@@ -154,11 +154,11 @@ The 4x 80mm YATE LOON D80SM-12 fans were pretty scratchy sounding even with the 
 
 At this point I was ready to do the hardware transplant. I had setup another machine with Proxmox and migrated the critical services (mostly Pihole) and could now afford downtime. So on a Saturday night, I shut down the HP workstation and got the SSDs, 10GbE card, and GPU moved over to their new home.
 
-{{< figure src="IMG_1627.JPG" caption="" width="750px" alt="">}}
+{{< figure src="assembled-1.jpg" caption="" width="750px" alt="">}}
 
 After plugging in the riser cable for the GPU, I realized how comically long it was for this application. Thankfully it was flexible enough that I could still get the chassis lid closed without squishing the cable too hard. 
 
-{{< figure src="IMG_1628.JPG" caption="" width="750px" alt="">}}
+{{< figure src="assembled-2.jpg" caption="" width="750px" alt="">}}
 
 At this point, I realized that I couldn't plug any video cables into the rear of the GPU: there was not enough clearance at the top of the bracket.
 
@@ -166,7 +166,7 @@ Back to OnShape I went to quickly delete the 3rd PCIe slot (I only needed the to
 
 Next, I installed the rails. The included instructions were really lacking, but thankfully [this serverbuilds.net post](https://web.archive.org/web/20250117083018/https://forums.serverbuilds.net/t/rack-mounting-the-rosewill-rsv-l4500/2804) did a great job showing which holes to use on the rack bracket. After unscrewing and re-mounting the rails a total of 3 times, everything fit correctly and I no longer had gaps above the server!
 
-{{< figure src="IMG_1698.JPG" caption="" width="750px" alt="">}}
+{{< figure src="racked.jpg" caption="The shelf below the new server is one of the next projects to tackle" width="750px" alt="">}}
 
 # Turning the Key
 
@@ -213,7 +213,7 @@ With my 4-disk ZFS pool added as a storage backend, I restored my main Docker VM
 
 Next I restored the Jellyfin VM and easily setup the PCI passthrough. Proxmox makes this so simple: just add the raw PCI device in the hardware tab.
 
-{{< figure src="pci.png" caption="" width="750px" alt="">}}
+{{< figure src="pci.png" caption="Have I mentioned lately that I love Proxmox?" width="750px" alt="">}}
         
 While I was working through the VM restoration, the system had a few instances where it would fall off the network. Nothing would fix it except a hard reboot. I plugged in a monitor and didn't see anything obvious in the system logs.
 
@@ -240,7 +240,7 @@ Some quick searching told me these logs were related to something called "[C-sta
 
 After trying and failing to disable C-states via `systemd-boot` config files, I eventually found there's a setting in the MSI BIOS named "Global C-state Control". After disabling this setting, the server finally survived a full 24 hours!
 
-{{< figure src="IMG_1741.jpg" caption="A week and a half of troubleshooting later, one toggle was all it took" width="750px" alt="">}}
+{{< figure src="bios-cstates.jpg" caption="A week and a half of troubleshooting later, one toggle was all it took" width="750px" alt="">}}
 
 # Wrapping Up
 
