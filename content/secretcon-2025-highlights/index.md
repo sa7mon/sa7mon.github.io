@@ -2,7 +2,7 @@
 author: "Dan Salmon"
 date: "2025-07-02T00:00:00Z"
 summary: "A great time was had"
-draft: true
+draft: false
 tags: ["conferences"]
 slug: "secretcon-2025-highlights"
 title: "SecretCon 2025 Highlights"
