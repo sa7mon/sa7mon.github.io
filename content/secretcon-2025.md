@@ -3,7 +3,7 @@ author: "Dan Salmon"
 date: "2025-06-17T00:00:00Z"
 summary: "Am I a cool infosec person yet"
 draft: false
-tags: ["cons"]
+tags: ["conferences"]
 slug: "i-am-speaking-at-secretcon-2025"
 title: "I Am Speaking At SecretCon 2025"
 type: "post"
