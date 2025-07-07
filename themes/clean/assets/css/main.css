@@ -26,7 +26,7 @@ a {
   --primary: #6b76f3;
   --secondary: #444;
   --heading-font-color: #222;
-  --link-color: #111;
+  
   --border-color: #bbb;
   --light-border-color: #e0e0e0;
   --background-color: white;
@@ -69,7 +69,14 @@ a {
   --dark-font-color: #777;
   --light-border-color: #e0e0e0;
   --bright-font-color: #222;
+  --primary: #6b76f3;
+  --background-color: white;
+  --link-color: #111;
   /* --font-family: "Helvetica Neue", "Roboto", Roboto, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
+}
+
+li::marker {
+  color: var(--primary);
 }
 
 header {
@@ -79,8 +86,9 @@ header {
   width: 100%;
   background: var(--navbar-color);
   border-bottom: 1px solid var(--light-border-color);
-  height: var(--header-height);
+  /* height: var(--header-height); */
   z-index: 9;
+  font-size: 0.9rem;
 
   .header-container {
     display: flex;
@@ -88,10 +96,12 @@ header {
     max-width: var(--page-width);
     margin: 0 auto;
     justify-content: space-between;
-    padding: 0.5rem;
+    padding: 0 0.5rem;
   }
   a.brand {
     display: inline;
+    font-size: 1rem;
+    font-weight: bolder;
   }
   nav {
     ul {
@@ -127,7 +137,7 @@ main {
 
     padding: 2rem 1rem;
 
-    h1 {
+    h1.title {
         text-align: center;
         margin: 0.5rem 0;
     }
@@ -143,6 +153,20 @@ main {
 
     pre:has(code) {
         overflow-x: scroll;
+    }
+
+    a:hover {
+        background: var(--primary);
+        color: var(--background-color);
+        border-top: 2px solid var(--primary);
+        border-bottom: 2px solid var(--primary);
+    }
+
+    a {
+        font-weight: 600;
+        color: var(--link-color);
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid var(--primary);
     }
 }
 
