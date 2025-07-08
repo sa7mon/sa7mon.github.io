@@ -15,6 +15,9 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+  highlight:
+    style: catppuccin-frappe
+    noClasses: false
 # permalinks:
 #   posts: /:title/
 # params:

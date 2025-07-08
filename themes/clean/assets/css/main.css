@@ -72,6 +72,7 @@ a {
   --primary: #6b76f3;
   --background-color: white;
   --link-color: #111;
+  --heading-font-color: #222;
   /* --font-family: "Helvetica Neue", "Roboto", Roboto, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
 }
 
@@ -208,4 +209,12 @@ body {
 a:link, a:visited {
   text-decoration: none;
   color: inherit;
+}
+
+figcaption {
+    text-align: center;
+    font-style: oblique;
+    p {
+        margin-top: 4px;
+    }
 }
