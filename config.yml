@@ -18,6 +18,7 @@ markup:
   highlight:
     style: catppuccin-frappe
     noClasses: false
+    guessSyntax: true
 # permalinks:
 #   posts: /:title/
 # params:

@@ -73,6 +73,9 @@ a {
   --background-color: white;
   --link-color: #111;
   --heading-font-color: #222;
+  --blockquote-background-color: rgba(0, 0, 0, 0.02);
+  --blockquote-color: #111;
+  --border-color: #bbb;
   /* --font-family: "Helvetica Neue", "Roboto", Roboto, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
 }
 
@@ -217,4 +220,17 @@ figcaption {
     p {
         margin-top: 4px;
     }
+}
+
+blockquote {
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--primary);
+    background: var(--blockquote-background-color);
+    border-radius: 8px;
+    margin: 0 0 2rem;
+    p {
+        margin: 0;
+    }
+    /* font-family: var(--post-font-family); */
 }
