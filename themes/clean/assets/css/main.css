@@ -76,6 +76,9 @@ a {
   --blockquote-background-color: rgba(0, 0, 0, 0.02);
   --blockquote-color: #111;
   --border-color: #bbb;
+  --inline-code-background-color: rgba(0, 0, 0, 0.05);
+  --inline-code-color: rgba(17, 17, 17);
+  --code-font-family: "Roboto Mono", Courier New, monospace;
   /* --font-family: "Helvetica Neue", "Roboto", Roboto, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
 }
 
@@ -171,8 +174,8 @@ main {
     a:hover {
         background: var(--primary);
         color: var(--background-color);
-        border-top: 2px solid var(--primary);
-        border-bottom: 2px solid var(--primary);
+        /* border-top: 2px solid var(--primary); */
+        /* border-bottom: 2px solid var(--primary); */
     }
 
     a {
@@ -242,4 +245,25 @@ blockquote {
         margin: 0;
     }
     /* font-family: var(--post-font-family); */
+}
+
+/** inline code **/
+
+:not(pre) > code {
+  -webkit-font-smoothing: subpixel-antialiased;
+  padding: 2px 3px;
+  background: var(--inline-code-background-color) !important;
+  font-weight: 500;
+  color: var(--inline-code-color) !important;
+  font-size: .95rem !important;
+  white-space: pre-wrap;
+  border-radius: 6px;
+  overflow-wrap: break-word;
+  font-family: var(--code-font-family);
+}
+
+pre::selection, code::selection {
+  text-shadow: none;
+  color: inherit;
+  background: #9696964d !important;
 }
