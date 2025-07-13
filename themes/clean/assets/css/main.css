@@ -79,6 +79,15 @@ a {
   /* --font-family: "Helvetica Neue", "Roboto", Roboto, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
 }
 
+/** style of highlighted text **/
+::selection {
+  background: var(--primary);
+}
+::-moz-selection {
+  background: var(--primary); /* Gecko Browsers */
+}
+
+/** bullet/number of <li> **/
 li::marker {
   color: var(--primary);
 }
