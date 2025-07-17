@@ -60,6 +60,39 @@ a {
   --code-background-color: #373c47;
 } */
 
+/* inter-regular - latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: optional;
+  src: local(''),
+    url('/fonts/inter-v11-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('/fonts/inter-v11-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* inter-600 - latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: optional;
+  src: local(''),
+    url('/fonts/inter-v11-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('/fonts/inter-v11-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-mono-regular - latin */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: optional;
+  src: local(''),
+    url('/fonts/roboto-mono-v21-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('/fonts/roboto-mono-v21-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 :root {
   --navbar-color: #f0f0f0;
   --page-width: 850px;
@@ -78,7 +111,16 @@ a {
   --border-color: #bbb;
   --inline-code-background-color: rgba(0, 0, 0, 0.05);
   --inline-code-color: rgba(17, 17, 17);
-  --code-font-family: "Roboto Mono", Courier New, monospace;
+
+    /* Font */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
+    'Roboto', Roboto, Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+    'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --code-font-family: 'Roboto Mono', Courier New, monospace;
+  --heading-font-family: var(--font-family);
+  --post-font-family: var(--font-family);
+
+  /* --code-font-family: "Roboto Mono", Courier New, monospace; */
   /* --font-family: "Helvetica Neue", "Roboto", Roboto, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
 }
 
@@ -131,13 +173,6 @@ header {
   }
 }
 
-/* @media (max-width: var(--page-width)) {
-    main img {
-        max-width: calc(var(--page-width) * 0.75);
-    }
-} */
-
-
 main {
     margin-left: auto;
     margin-right: auto;
@@ -163,7 +198,7 @@ main {
         display: block;
         /* margin: .5rem 0; */
         color: var(--dark-font-color);
-        /* font-family: var(--post-font-family); */
+        /* font-family: var(--spost-font-family); */
         font-size: .9rem;
     }
 
@@ -191,19 +226,23 @@ main {
     padding-bottom: 2rem;
 
     a {
-        /* font-weight: bold; */
+      /* font-weight: bold; */
 
-        display: inline-block;
-        vertical-align: middle;
-        line-height: normal;
-        padding: .4rem .6rem;
-        border: 1px solid var(--light-border-color);
-        color: var(--bright-font-color);
-        font-size: .9rem;
-        font-weight: 600;
-        border-radius: 8px;
-        text-transform: lowercase;
-        /* background: var(--reverse); */
+      display: inline-block;
+      vertical-align: middle;
+      line-height: normal;
+      padding: .4rem .6rem;
+      border: 1px solid var(--light-border-color);
+      color: var(--bright-font-color);
+      font-size: .9rem;
+      font-weight: 600;
+      border-radius: 8px;
+      text-transform: lowercase;
+      /* background: var(--reverse); */
+    }
+    a:hover {
+        background: none;
+        /* color: var(--background-color); */
     }
 }
 
@@ -211,14 +250,36 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	margin: 0;
-	/* font-family: var(--font-family); */
-  font-family: "Helvetica";
+	font-family: var(--font-family);
 	font-size: 1rem;
 	line-height: 1.65;
 	color: var(--font-color);
 	background: var(--background-color);
 	color-scheme: light dark;
   margin-top: var(--header-height);
+}
+
+/** All Headings **/
+main 
+{
+  h1 {
+    font-weight: 600;
+    margin-bottom: .75rem;
+    color: var(--bright-font-color);
+  }
+  h2 {
+    font-size: 2rem;
+    padding-bottom: .25rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--light-border-color);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  main h1 {
+    font-size: 2.3rem;
+    line-height: 1.2;
+  }
 }
 
 a:link, a:visited {
@@ -266,4 +327,32 @@ pre::selection, code::selection {
   text-shadow: none;
   color: inherit;
   background: #9696964d !important;
+}
+
+/* for section pages like /posts/ */ 
+main.section {
+  .post-list-post {
+    h3 {
+      color: var(--font-color);
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    
+    a:hover {
+      background-color: #f5f5f5;
+      color: var(--font-color);
+    }
+    
+    a {
+      border-bottom: none;
+      display: grid;
+      grid-template-columns: auto 100px;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    time {
+      font-weight: 400;
+      text-align: right;
+    }
+  }
 }
