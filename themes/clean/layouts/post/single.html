@@ -7,7 +7,7 @@
   <header>
     {{ partial "header.html" . }}
   </header>
-  <main>
+  <main class="{{ .Kind }}">
       {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
       {{ $dateHuman := .Date | time.Format ":date_long" }}
       <time class="pub-date" datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
