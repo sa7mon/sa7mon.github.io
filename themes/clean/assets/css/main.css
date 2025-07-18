@@ -290,6 +290,12 @@ blockquote {
 
 /* for section pages like /posts/ */ 
 main.section {
+  h1 {
+    text-align: center;
+    font-size: 2.75rem;
+    margin-top: 0;
+    line-height: 1;
+  }
   .post-list-post {
     h3 {
       color: var(--font-color);
