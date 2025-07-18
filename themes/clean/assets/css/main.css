@@ -288,14 +288,17 @@ blockquote {
   font-family: var(--code-font-family);
 }
 
-/* for section pages like /posts/ */ 
-main.section {
+main.taxonomy, main.section {
   h1 {
     text-align: center;
     font-size: 2.75rem;
     margin-top: 0;
     line-height: 1;
   }
+}
+
+/* for section pages like /posts/ */ 
+/* main.section { */
   .post-list-post {
     h3 {
       color: var(--font-color);
@@ -320,4 +323,4 @@ main.section {
       text-align: right;
     }
   }
-}
+/* } */
