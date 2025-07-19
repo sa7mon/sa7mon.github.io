@@ -324,3 +324,29 @@ main.taxonomy, main.section {
     }
   }
 /* } */
+
+a.view-all {
+  align-self: center;
+}
+
+/* re-usable classes */
+
+.fs-1 {
+  font-size: 1rem;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-inline-flex {
+  display: inline-flex;
+}
+
+.column {
+  flex: 50%;
+}

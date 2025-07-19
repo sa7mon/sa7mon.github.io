@@ -4,7 +4,12 @@
 
   {{ .Content }}
   
-  <h2>Latest Posts</h2>  
+  <h2 class="d-flex">
+    <span class="column">Latest Posts</span>
+    <div class="fs-1 d-inline-flex">
+      <a href="/posts/" class="d-block view-all">View All</a>
+    </div>
+  </h2>
 
   {{ range (where .Site.Pages "Section" "posts") }}
     
@@ -18,7 +23,12 @@
     {{ end }}
   {{ end }}
 
-  <h2>Latest Links</h2>
+  <h2 class="d-flex">
+    <span class="column">Latest Links</span>  
+    <div class="fs-1 d-inline-flex">
+      <a href="/links/" class="d-block view-all">View All</a>
+    </div>
+  </h2>
     {{ range (where .Site.Pages "Section" "links") }}
     <ul>
       {{ range .Pages.Limit 5 }}
