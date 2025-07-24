@@ -247,6 +247,19 @@ main
   }
 }
 
+main.home {
+  h1 {
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  p {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 4rem;
+  }
+}
+
 a:link, a:visited {
   text-decoration: none;
   color: inherit;
