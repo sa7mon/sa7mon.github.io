@@ -1,6 +1,6 @@
-{{ define "main" }}
-  hello from tags/term.html
+{{/* /tags/:slug/ */}}
 
+{{ define "main" }}
   <h1>Posts</h1>
   <h3 class="subtitle ta-center">tag: {{ lower .Title }}</h3>
   {{ .Content }}

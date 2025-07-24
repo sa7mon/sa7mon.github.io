@@ -1,8 +1,6 @@
 {{/* /tags/ */}}
 
 {{define "main"}}
-	hello from tag/taxonomy.html 
-	
 	{{range $term, $taxonomy := .Site.Taxonomies.tags}}
 	<div>
 		<a href={{ .Page.RelPermalink }} title="All posts with tag {{$term}}">{{$term}}</a>

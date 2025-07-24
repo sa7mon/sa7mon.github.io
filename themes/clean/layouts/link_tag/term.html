@@ -1,7 +1,8 @@
 {{/* /links/tags/:slug/ */}}
 
 {{ define "main" }}
-  <h1 class="ta-center">Links: {{ .Title }}</h1>
+  <h1>Links</h1>
+  <h3 class="subtitle ta-center">tag: {{ lower .Title}}</h3>
   {{ .Content }}
   {{ partial "post_list.html" .}}
 {{ end }}

@@ -1,6 +1,9 @@
-{{define "main"}}
-	hello from _default/taxonomy.html
+{{/*
+/links/formats/
+/links/tags/
+*/}}
 
+{{define "main"}}
 	{{range $term, $taxonomy := index .Site.Taxonomies .Page.Section}}
 	<div>
 		<a href={{ .Page.RelPermalink }} title="All links with tag {{$term}}">{{$term}}</a>
