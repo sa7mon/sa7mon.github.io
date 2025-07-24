@@ -1,6 +1,12 @@
 {{ define "main" }}
 
   {{ .Content }}
+
+  <div class="social">
+    <a href="https://github.com/sa7mon" title="github: sa7mon">{{ partial "svg" "github"}}</a>
+    <a href="https://infosec.exchange/@dan" title="@dan@infosec.exchange">{{ partial "svg" "mastodon"}}</a>
+    <a href="https://www.linkedin.com/in/danthesalmon/" title="LinkedIn: danthesalmon">{{ partial "svg" "linkedin"}}</a>
+  </div>
   
   <h2 class="d-flex">
     <span class="column">Latest Posts</span>

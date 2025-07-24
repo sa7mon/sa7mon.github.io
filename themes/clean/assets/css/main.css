@@ -256,7 +256,27 @@ main.home {
   p {
     font-size: 1.2rem;
     margin-top: 0;
-    margin-bottom: 4rem;
+  }
+  div.social {
+    margin-bottom: 5rem;
+    border-bottom: none;
+
+    a {
+      border-bottom: none;
+      background: none;
+    }
+    
+    a:hover svg {
+      fill: var(--primary);
+      opacity: 100%;
+    }
+  }
+  svg {
+    fill: var(--font-color);
+    opacity: 70%;
+    width: 35px;
+    height: 35px;
+    margin-right: 1rem;
   }
 }
 
