@@ -1,9 +1,8 @@
 {{ define "main" }}
   hello from tags/term.html
 
-  <h1>{{ .Title }}</h1>
+  <h1>Posts</h1>
+  <h3 class="subtitle ta-center">tag: {{ lower .Title }}</h3>
   {{ .Content }}
-  {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-  {{ end }}
+  {{ partial "post_list.html" .}}
 {{ end }}
