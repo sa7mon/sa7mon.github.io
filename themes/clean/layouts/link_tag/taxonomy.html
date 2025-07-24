@@ -1,15 +1,10 @@
-{{ define "main" }}
+{{/* /link/tags/ */}}
 
-hello from link_tag/taxonomy.html
-
-asdfasdfs
- 
-<p>here are all the tags used in links:</p>
-
-<ul>
-{{range $name, $taxonomy := .Site.Taxonomies.link_tags}}
-    <li>{{$name}}</li>
-{{end}}
-</ul>
-
+{{define "main"}}
+	{{range $term, $taxonomy := .Site.Taxonomies.link_tags}}
+	<div>
+		<a href={{ .Page.RelPermalink }} title="All links with tag {{$term}}">{{$term}}</a>
+		<sup>{{$taxonomy.Pages.Len}}</sup>
+	</div>
+	{{end}}
 {{ end }}
