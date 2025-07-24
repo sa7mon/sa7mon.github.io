@@ -51,15 +51,17 @@ markup:
 
 taxonomies:
   # site: sites
-  # format: formats
+  format: formats
   tag: tags
   link_tag: 'link_tags'
 
 permalinks:
   taxonomy:
     link_tags: /links/tags/
+    formats: /links/formats/
   term:
     link_tags: /links/tags/:slug/
+    formats: /links/formats/:slug/
 
 menu:
   main:

@@ -6,7 +6,7 @@ site: ['starlabs.sg']
 linkPubDate: "2025-05-14"
 link_tags: ["vuln disclosure"]
 type: "post"
-format: ['article']
+formats: ['article']
 ---
 
 https://starlabs.sg/blog/2025/05-breaking-out-of-restricted-mode-xss-to-rce-in-visual-studio-code/

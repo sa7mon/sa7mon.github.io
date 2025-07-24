@@ -1,7 +1,10 @@
-{{/* /tags/:slug/ */}}
+{{define "main"}}
+	hello from _default/taxonomy.html
 
-{{ define "main" }}
-  <h1 class="ta-center">Posts: {{ .Title }}</h1>
-  {{ .Content }}
-  {{ partial "post_list.html" .}}
+	{{range $term, $taxonomy := index .Site.Taxonomies .Page.Section}}
+	<div>
+		<a href={{ .Page.RelPermalink }} title="All links with tag {{$term}}">{{$term}}</a>
+		<sup>{{$taxonomy.Pages.Len}}</sup>
+	</div>
+	{{end}}
 {{ end }}
