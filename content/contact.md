@@ -11,7 +11,6 @@ title: "Contact"
 type: "page"
 ---
 
-* [Twitter](https://twitter.com/bltjetpack)
+* [Mastodon](https://infosec.exchange/@dan)
 * [Github](https://github.com/sa7mon)
-* [Keybase](https://keybase.io/salmon)
-* dan(at)salmon(dot)cat
+* Email: dan(at)salmon(dot)cat
