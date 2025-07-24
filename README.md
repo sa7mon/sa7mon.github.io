@@ -1,10 +1,13 @@
 You have found the source code of https://danthesalmon.com/
 
-## Hugo
+## Hugo Configuration
 
-The site has 2 [sections](https://gohugo.io/content-management/sections/):
-- posts
-- links
+The site has 2 taxonomies:
+
+- tags
+- link_tags
+
+so that we can have a separate list of tags for posts and links.
 
 
 ## Development
@@ -20,3 +23,21 @@ Run local server `hugo server --bind 172.31.0.5 --port 9000 --baseUrl 10.0.1.174
 ## Cover Image
 
 Frees, H. W., photographer. (ca. 1914) The Entanglement. , ca. 1914. June 24. [Photograph] Retrieved from the Library of Congress, https://www.loc.gov/item/2013648272/.
+
+## Licenses
+
+- [Inter](https://fonts.google.com/specimen/Inter/license) font - SIL Open Font License Version 11
+- [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono/license) font - SIL Open Font License Version 11
+
+## To DO
+
+- Add link taxonomies
+    - format (audio, video, text)
+    - site
+- decrease space after h1/2/3/4
+- code highlighting font: menlo?
+    - -webkit-font-smoothing: subpixel-antialiased;
+- lower-case tags in list: http://localhost:1313/tags/
+- images in old posts (like fix-some-settings-...) are broken with `posts/images/` moved
+- Add year count to post list
+- Search without Javascript
