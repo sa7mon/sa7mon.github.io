@@ -1,0 +1,11 @@
+{{define "main"}}
+	{{range $name, $taxonomy := .Site.Taxonomies.tags}}
+		{{ $count := .Count }}
+		{{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+			<div class="">
+				<a href={{ .RelPermalink }} title="All pages with tag {{$name}}">{{$name}}</a>
+				<sup>{{$count}}</sup>
+			</div>
+		{{end}}
+	{{end}}
+{{end}}

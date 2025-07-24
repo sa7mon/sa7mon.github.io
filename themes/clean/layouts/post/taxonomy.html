@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+<h1 class="ta-center">Posts: {{ .Title }}</h1>
+
+    hello from post/taxonomy.html
+
+  {{ .Page | jsonify }}
+</pre>
+
+  {{ .Content }}
+  {{ range .Pages.GroupByDate "2006" }}
+    <h2>{{ .Key }}</h2>
+    {{ range .Pages.ByDate.Reverse  }}
+      <div class="post-list-post">
+        <a href="{{ .RelPermalink }}">
+          <h3>{{ .LinkTitle }}</h3>
+          <time>{{ .PublishDate.Format "Jan 02" }}</time>
+        </a>
+      </div>
+    {{ end }}
+  {{ end }}
+{{ end }}
