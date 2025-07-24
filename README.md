@@ -9,6 +9,15 @@ The site has 2 taxonomies:
 
 so that we can have a separate list of tags for posts and links.
 
+## Links
+
+When posting links, follow the format:
+
+```sh
+hugo new links/2025-06-01_title-of-post.md
+```
+
+then update the site and paste the link into the new file
 
 ## Development
 

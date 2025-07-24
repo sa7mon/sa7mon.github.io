@@ -1,10 +1,10 @@
 ---
 type: "post"
-title: "{{ replaceRE `^\d{4}-\d{2}-\d{2}_` "" .Name | replace .Name "-" " " | title }}"
+title: "{{ replace (replaceRE `^\d{4}-\d{2}-\d{2}_` "" .Name 1) "-" " " | title }}"
 date: {{ .Date }}
 site: example.com
 params:
-    pub_date: {{ findRE `^\d{4}-\d{2}-\d{2}` .Name 1 }}
+    pub_date: {{ index (findRE `^\d{4}-\d{2}-\d{2}` .Name 1) 0 }}
 link_tags: []
 formats: []
 ---
