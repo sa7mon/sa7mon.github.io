@@ -13,10 +13,20 @@
       <time class="pub-date" datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
       <h1 class="title">{{ .Title }}</h1>
 
-    {{ .Store.Set "tagTerm" (cond (eq .Section "links") "link_tags" "tags") }}
-    {{ partial "tags.html" . }}
+    {{ if eq .Section "links"}}
+    {{ partial "linkterms.html" . }}
+    {{ else }}
+      {{ .Store.Set "tagTerm" (cond (eq .Section "links") "link_tags" "tags") }}
+      {{ partial "tags.html" . }}
+    {{ end }}
 
   {{ .Content }}
+
+  {{ if eq .Section "links" }}
+    {{ if ne .Params.pub_date nil }}
+      <div class="">Link content published {{ time.Format "Jan 02, 2006" .Params.pub_date }}</div>
+    {{ end }}
+  {{ end }}
   </main>
 </body>
 </html>

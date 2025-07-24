@@ -1,0 +1,12 @@
+<div class="tags">
+{{ $taxonomies := slice "formats" "link_tags"}}
+
+{{ range $taxonomies }}
+    {{- with $.GetTerms . }}
+        {{- range . }}
+            <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        {{- end }}
+    {{- end }}
+
+{{ end }}
+</div>

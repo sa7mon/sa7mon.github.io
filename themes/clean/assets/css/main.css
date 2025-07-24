@@ -100,9 +100,11 @@
 /** style of highlighted text **/
 ::selection {
   background: var(--primary);
+  color: white;
 }
 ::-moz-selection {
   background: var(--primary); /* Gecko Browsers */
+  color: white;
 }
 
 /** bullet/number of <li> **/
@@ -394,4 +396,8 @@ a.view-all {
   line-height: 1.4;
   color: var(--dark-font-color);
   font-weight: 100;
+}
+
+.link-pub-date {
+  color: var(--dark-font-color);
 }
