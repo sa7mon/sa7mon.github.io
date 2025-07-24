@@ -1,0 +1,15 @@
+{{ define "main" }}
+
+hello from link_tag/taxonomy.html
+
+asdfasdfs
+ 
+<p>here are all the tags used in links:</p>
+
+<ul>
+{{range $name, $taxonomy := .Site.Taxonomies.link_tags}}
+    <li>{{$name}}</li>
+{{end}}
+</ul>
+
+{{ end }}

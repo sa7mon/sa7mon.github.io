@@ -288,7 +288,7 @@ blockquote {
   font-family: var(--code-font-family);
 }
 
-main.taxonomy, main.section {
+main.taxonomy, main.section, main.term {
   h1 {
     text-align: center;
     font-size: 2.75rem;
@@ -349,4 +349,8 @@ a.view-all {
 
 .column {
   flex: 50%;
+}
+
+.ta-center {
+  text-align: center;
 }

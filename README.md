@@ -1,5 +1,12 @@
 You have found the source code of https://danthesalmon.com/
 
+## Hugo
+
+The site has 2 [sections](https://gohugo.io/content-management/sections/):
+- posts
+- links
+
+
 ## Development
 
 After cloning the top-level project

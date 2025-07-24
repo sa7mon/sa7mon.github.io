@@ -12,6 +12,8 @@
       {{ $dateHuman := .Date | time.Format ":date_long" }}
       <time class="pub-date" datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
       <h1 class="title">{{ .Title }}</h1>
+
+    {{ .Store.Set "tagTerm" (cond (eq .Section "links") "link_tags" "tags") }}
     {{ partial "tags.html" . }}
 
   {{ .Content }}

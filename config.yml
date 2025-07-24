@@ -48,6 +48,19 @@ markup:
 #       name: Mastodon
 #     - url: https://github.com/sa7mon
 #       name: GitHub
+
+taxonomies:
+  # site: sites
+  # format: formats
+  tag: tags
+  link_tag: 'link_tags'
+
+permalinks:
+  taxonomy:
+    link_tags: /links/tags/
+  term:
+    link_tags: /links/tags/:slug/
+
 menu:
   main:
     - identifier: about
