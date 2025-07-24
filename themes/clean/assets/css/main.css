@@ -354,3 +354,10 @@ a.view-all {
 .ta-center {
   text-align: center;
 }
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  line-height: 1.4;
+  color: var(--dark-font-color);
+}
