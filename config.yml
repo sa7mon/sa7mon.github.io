@@ -1,16 +1,12 @@
 author: Dan Salmon
 baseURL: https://danthesalmon.com/
 builddrafts: false
-# canonifyurls: true
 languageCode: en-us
 publishdir: public
 theme: clean
 title: Dan [the] Salmon
 disableHugoGeneratorInject: true
-# enableInfoBox: true
-# indexes:
-#   category: categories
-#   tag: tags
+
 markup:
   goldmark:
     renderer:
@@ -19,35 +15,6 @@ markup:
     style: catppuccin-frappe
     noClasses: false
     guessSyntax: true
-# params:
-#   favicon: /favicon.ico
-#   mainSections:
-#     - post
-#   pagewidth: 1200px
-#   startdate: 2012-12-02
-#   description: Technical ramblings and miscellany
-#   images:
-#   - cover.png
-#   enableOpenGraph: true
-#   enableTwitterCard: true
-#   related: false
-#   enableSidebar: false
-#   card:
-#     date: true
-#     summary: false
-#     width: "100%"
-#     infowidth: "32%"
-#   sociallink:
-#     rss: true
-#     twitter: bltjetpack
-#   socialshare:
-#     reddit: true
-#     twitter: true
-#   identities:
-#     - url: https://infosec.exchange/@dan
-#       name: Mastodon
-#     - url: https://github.com/sa7mon
-#       name: GitHub
 
 taxonomies:
   # site: sites
