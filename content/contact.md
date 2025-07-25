@@ -11,6 +11,8 @@ title: "Contact"
 type: "page"
 ---
 
+## Contact
+
 * [Mastodon](https://infosec.exchange/@dan)
 * [Github](https://github.com/sa7mon)
 * Email: dan(at)salmon(dot)cat
