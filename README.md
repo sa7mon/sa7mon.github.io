@@ -42,12 +42,10 @@ Frees, H. W., photographer. (ca. 1914) The Entanglement. , ca. 1914. June 24. [P
 
 - Change page title of `http://localhost:1313/links/tags/` from `Link_tags`
 - Add link taxonomies
-    - format (audio, video, text)
     - site
 - decrease space after h1/2/3/4
 - code highlighting font: menlo?
     - -webkit-font-smoothing: subpixel-antialiased;
-- lower-case tags in list: http://localhost:1313/tags/
 - images in old posts (like fix-some-settings-...) are broken with `posts/images/` moved
 - Add year count to post list
 - Search without Javascript

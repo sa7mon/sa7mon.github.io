@@ -366,6 +366,14 @@ a.view-all {
 
 /* re-usable classes */
 
+a.no-highlight {
+  border-bottom: none;
+}
+a.no-highlight:hover {
+  background: none;
+  color: inherit;
+}
+
 .fs-1 {
   font-size: 1rem;
 }
@@ -378,6 +386,10 @@ a.view-all {
   display: block;
 }
 
+.d-inline {
+  display: inline;
+}
+
 .d-inline-flex {
   display: inline-flex;
 }
@@ -388,6 +400,16 @@ a.view-all {
 
 .ta-center {
   text-align: center;
+}
+
+.icon-sm {
+  float: right;
+  .icon {
+    width: 25px;
+    vertical-align: bottom;
+    fill: var(--font-color);
+    padding-bottom: 4px;
+  }
 }
 
 .subtitle {
