@@ -1,0 +1,102 @@
+<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width"><title>Create a Seedbox Jail in FreeNAS with rTorrent / ruTorrent / lighttpd | Dan [the] Salmon</title><link rel=alternate type=application/rss+xml title="Dan [the] Salmon: Posts" href=/posts/index.xml><link rel=alternate type=application/rss+xml title="Dan [the] Salmon: Links" href=/links/index.xml><link rel=me href=https://infosec.exchange/@dan name=Mastodon><link rel=me href=https://github.com/sa7mon name=GitHub><link rel=stylesheet href=/combined.min.a5fe1913713a5e577355cad1fe1240b37249c2f949298b40b20c33e509bdae1e.css integrity="sha256-pf4ZE3E6XldzVcrR/hJAs3JJwvlJKYtAsgwz5Qm9rh4=" crossorigin=anonymous></head><body><header><div class=header-container><a class=brand href=/>Dan [the] Salmon</a><nav><ul><li><a href=/about/>About</a></li><li><a href=/posts/>Posts</a></li><li><a href=/links/>Links</a></li><li><a href=/contact/>Contact</a></li></ul></nav></div></header><main class=page><time class=pub-date datetime=2017-08-16T04:33:52+00:00>August 16, 2017</time><h1 class=title>Create a Seedbox Jail in FreeNAS with rTorrent / ruTorrent / lighttpd</h1><div class=tags><a href=/tags/freenas/>Freenas</a></div><h1 id=intro--credits>Intro / Credits</h1><p>After much work and starting from scratch a few times, I finally got a working jail put together that uses ruTorrent, rTorrent, and Lighttpd to create a very nice personal seedbox in FreeNAS. I should give a lot of credit to <a href=https://forums.freenas.org/index.php?members/flyingpersian.36669/>FlyingPersian</a> and <a href=https://forums.freenas.org/index.php?threads/how-to-install-rutorrent-with-lighttpd.28641/>his thread on the FreeNAS forum</a> for the great information. I’m going to shamelessly steal a lot of his guide but correct some things and add improvements that I found.</p><h1 id=instructions>Instructions</h1><p><strong>1. Update all the things. This may take a while, so get comfy</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>portsnap fetch
+</span></span><span class=line><span class=cl>portsnap extract
+</span></span><span class=line><span class=cl>pkg update
+</span></span><span class=line><span class=cl>pkg upgrade
+</span></span><span class=line><span class=cl>pkg install git
+</span></span><span class=line><span class=cl><span class=nb>cd</span> /usr/ports/ports-mgmt/portmaster
+</span></span><span class=line><span class=cl>make install clean
+</span></span><span class=line><span class=cl><span class=nb>echo</span> <span class=s2>&#34;WITH_PKGNG=yes&#34;</span> &gt;&gt; /etc/make.conf
+</span></span><span class=line><span class=cl>pkg2ng
+</span></span><span class=line><span class=cl>portmaster -avB
+</span></span></code></pre></div><p>Accept all the defaults</p><p><img src=../images/1-installingPortmaster.png alt=1-installingPortmaster></p><p>If you come to a screen like this, just hit enter to accept the defaults</p><p><strong>2. Install screen, lighttpd, text editor.</strong></p><p>I’m going to use ee, but you can install nano or any other text editor you like.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>pkg install lighttpd
+</span></span><span class=line><span class=cl><span class=nb>cd</span> /usr/ports/sysutils/screen
+</span></span><span class=line><span class=cl>make install clean
+</span></span></code></pre></div><p>(Accept all defaults)</p><p><strong>3. Install rTorrent</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=nb>cd</span> /usr/ports/net-p2p/rtorrent
+</span></span><span class=line><span class=cl>make install clean
+</span></span></code></pre></div><p>(Accept all defaults)</p><p><strong>4. Install PHP</strong></p><p>Make sure you do php56, not php53.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=nb>cd</span> /usr/ports/lang/php56 
+</span></span><span class=line><span class=cl>make install clean
+</span></span></code></pre></div><p>(Accept all defaults)</p><p><strong>5. Install PHP Extensions</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=nb>cd</span> /usr/ports/lang/php56-extensions
+</span></span><span class=line><span class=cl>make install clean
+</span></span></code></pre></div><p><img src=../images/2-InstallingPHP.png alt=2-InstallingPHP>
+There will be a big page of options, make sure the following are checked: (Some already will be)
+BZ2, CTYPE, CURL, DOM, FILEINFO, FILTER, GD, HASH, ICONV, JSON, MBSTRING, MCRYPT, MYSQL, MYSQLI, OPENSSL, PDO, PDO_SQLITE, POSIX, SESSION, SIMPLEXML, SOCKETS, SQLITE3, TOLKENIZER, XML, XMLREADER, XMLRPC, XMLWRITER, ZIP</p><p>After that process starts, it’s going to take a while and prompt you about 15 times. Just hit <enter>for the defaults on all of them.</p><p><strong>6. Create a user</strong></p><p>For the rest of the guide, I’m going to assume the user we’re setting this up for is named ‘admin’, but you can use whatever name you want.</p><p><strong>TIP</strong>: If you’re going to be integrating this seedbox with SickRage at all, make sure to create your seedbox user with the UID of 816. This will avoid a lot of permissions issues.</p><p><img src=../images/3-CreateUser.png alt=3-CreateUser></p><p><strong>7. Create config files</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>cp /usr/local/etc/php.ini-production /usr/local/etc/php.ini
+</span></span><span class=line><span class=cl>cp /usr/local/share/examples/rtorrent/rtorrent.rc /home/admin/.rtorrent.rc
+</span></span><span class=line><span class=cl>chown admin:admin /home/admin/.rtorrent.rc
+</span></span></code></pre></div><p><strong>8. Create rTorrent’s folders</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=nb>cd</span> /home/admin
+</span></span><span class=line><span class=cl>mkdir rtorrent
+</span></span><span class=line><span class=cl><span class=nb>cd</span> rtorrent
+</span></span><span class=line><span class=cl>mkdir .session
+</span></span><span class=line><span class=cl>mkdir downloads
+</span></span><span class=line><span class=cl>mkdir watch
+</span></span><span class=line><span class=cl>chown -R admin:admin /home/admin
+</span></span></code></pre></div><p><strong>9. Configure rTorrent</strong>
+Change the following lines in <em>/home/admin/.rtorrent.rc</em></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Default directory to save the downloaded torrents.</span>
+</span></span><span class=line><span class=cl><span class=nv>directory</span> <span class=o>=</span> /home/admin/rtorrent/downloads
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Default session directory. Make sure you don&#39;t run multiple instance</span>
+</span></span><span class=line><span class=cl><span class=c1># of rtorrent using the same session directory. Perhaps using a</span>
+</span></span><span class=line><span class=cl><span class=c1># relative path?</span>
+</span></span><span class=line><span class=cl><span class=nv>session</span> <span class=o>=</span> /home/admin/rtorrent/.session/
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Port range to use for listening.</span>
+</span></span><span class=line><span class=cl><span class=nv>port_range</span> <span class=o>=</span> 50001-50001
+</span></span></code></pre></div><p>Add the following line to the bottom of the file</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=nv>scgi_port</span> <span class=o>=</span> 127.0.0.1:5001
+</span></span></code></pre></div><p>All of the other settings can be changed later through the ruTorrent GUI.</p><p><strong>10. Download ruTorrent and plugins</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>mkdir /usr/local/www
+</span></span><span class=line><span class=cl><span class=nb>cd</span> /usr/local/www
+</span></span><span class=line><span class=cl>git clone https://github.com/Novik/ruTorrent.git
+</span></span><span class=line><span class=cl>mv ruTorrent/ rutorrent
+</span></span><span class=line><span class=cl>chown -R admin:admin rutorrent
+</span></span></code></pre></div><p>While we’re here, let’s edit <em>/usr/local/www/rutorrent/conf/config.php</em> and change the port on line 30 to:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=nv>$scgi_port</span> <span class=o>=</span> 5001<span class=p>;</span>
+</span></span></code></pre></div><p><strong>11. Edit lighttpd config</strong></p><p>I’m not going to configure SSL, since I couldn’t get it working without breaking everything. Arguably, there’s also no need for it if this jail isn’t going to be public internet-facing. Check the above referenced forum post if you want to do that.</p><p>Edit <em>/usr/local/etc/lighttpd/lighttpd.conf</em> to:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>server.document-root <span class=o>=</span> <span class=s2>&#34;/usr/local/www/rutorrent&#34;</span>
+</span></span></code></pre></div><p>Then, to password-protect the GUI add the following lines to the end of the file:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>auth.backend <span class=o>=</span> <span class=s2>&#34;htpasswd&#34;</span>
+</span></span><span class=line><span class=cl>auth.backend.htpasswd.userfile <span class=o>=</span> <span class=s2>&#34;/etc/private/.htpasswd&#34;</span>
+</span></span><span class=line><span class=cl>auth.require <span class=o>=</span> <span class=o>(</span>
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;/RPC2&#34;</span> <span class=o>=</span>&gt; <span class=o>(</span>
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;method&#34;</span> <span class=o>=</span>&gt; <span class=s2>&#34;basic&#34;</span>,
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;realm&#34;</span> <span class=o>=</span>&gt; <span class=s2>&#34;My Seedbox&#34;</span>,
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;require&#34;</span> <span class=o>=</span>&gt; <span class=s2>&#34;user=admin&#34;</span>,
+</span></span><span class=line><span class=cl>         <span class=o>)</span>,
+</span></span><span class=line><span class=cl>         <span class=s2>&#34;/&#34;</span> <span class=o>=</span>&gt; <span class=o>(</span>
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;method&#34;</span> <span class=o>=</span>&gt; <span class=s2>&#34;basic&#34;</span>,
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;realm&#34;</span> <span class=o>=</span>&gt; <span class=s2>&#34;My ruTorrent web site&#34;</span>,
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;require&#34;</span> <span class=o>=</span>&gt; <span class=s2>&#34;valid-user&#34;</span>,
+</span></span><span class=line><span class=cl>          <span class=o>)</span>
+</span></span><span class=line><span class=cl><span class=o>)</span>
+</span></span></code></pre></div><p>For “realm”, you can put whatever you want or change it later. This is the message that will show when the login box pops up.</p><p><strong>12. Create .htpasswd for authentication</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>mkdir -p /etc/private
+</span></span><span class=line><span class=cl><span class=nb>cd</span> /etc/private
+</span></span><span class=line><span class=cl>ee .htpasswd
+</span></span></code></pre></div><p>Go to this site, enter whatever password you want to use and hit generate. Your password file will contain only one line: username:htpasswd so in my example using the password “password” my file would look like this:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>admin:cGyUX9QugYMgE
+</span></span></code></pre></div><p><strong>13. Configure lighttpd with FastCGI</strong>
+Edit <em>/usr/local/etc/lighttpd/modules.conf</em> and uncomment the following lines:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>Around line 45: 
+</span></span><span class=line><span class=cl><span class=s2>&#34;mod_auth&#34;</span>, 
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Around line 132: 
+</span></span><span class=line><span class=cl>include <span class=s2>&#34;conf.d/fastcgi.conf&#34;</span>
+</span></span></code></pre></div><p>Now we need to edit <em>/usr/local/etc/lighttpd/conf.d/fastcgi.conf</em> and add the following lines to the bottom of the file:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>fastcgi.server <span class=o>=</span> <span class=o>(</span> <span class=s2>&#34;.php&#34;</span> <span class=o>=</span>&gt; <span class=o>((</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;bin-path&#34;</span> <span class=o>=</span>&gt; <span class=s2>&#34;/usr/local/bin/php-cgi&#34;</span>,
+</span></span><span class=line><span class=cl>                  <span class=s2>&#34;socket&#34;</span> <span class=o>=</span>&gt; <span class=s2>&#34;/tmp/php.socket&#34;</span>,
+</span></span><span class=line><span class=cl>                  <span class=s2>&#34;max-procs&#34;</span> <span class=o>=</span>&gt; 1,
+</span></span><span class=line><span class=cl>                  <span class=s2>&#34;bin-environment&#34;</span> <span class=o>=</span>&gt; <span class=o>(</span>
+</span></span><span class=line><span class=cl>                         <span class=s2>&#34;PHP_FCGI_CHILDREN&#34;</span> <span class=o>=</span>&gt; <span class=s2>&#34;3&#34;</span>,
+</span></span><span class=line><span class=cl>                         <span class=s2>&#34;PHP_FCGI_MAX_REQUESTS&#34;</span> <span class=o>=</span>&gt; <span class=s2>&#34;1000&#34;</span>
+</span></span><span class=line><span class=cl>                  <span class=o>)</span>,
+</span></span><span class=line><span class=cl>                  <span class=s2>&#34;bin-copy-environment&#34;</span> <span class=o>=</span>&gt; <span class=o>(</span>
+</span></span><span class=line><span class=cl>                         <span class=s2>&#34;PATH&#34;</span>, <span class=s2>&#34;SHELL&#34;</span>, <span class=s2>&#34;USER&#34;</span>
+</span></span><span class=line><span class=cl>                  <span class=o>)</span>,
+</span></span><span class=line><span class=cl>                  <span class=s2>&#34;broken-scriptfilename&#34;</span> <span class=o>=</span>&gt; <span class=s2>&#34;enable&#34;</span>
+</span></span><span class=line><span class=cl>                 <span class=o>)))</span>
+</span></span></code></pre></div><p><strong>14. Make lighttpd start on jail startup</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>sysrc <span class=nv>lighttpd_enable</span><span class=o>=</span>yes
+</span></span></code></pre></div><p><strong>15. Make rTorrent start on jail startup</strong>
+After switching to admin with “su admin”, create <em>/home/admin/rtorrent.sh</em> and give it the following contents:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=cp>#!/bin/sh
+</span></span></span><span class=line><span class=cl><span class=cp></span><span class=nv>PATH</span><span class=o>=</span>/etc:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin
+</span></span><span class=line><span class=cl><span class=nb>export</span> <span class=nv>TERM</span><span class=o>=</span>xterm
+</span></span><span class=line><span class=cl><span class=c1># Start rtorrent in detached screen</span>
+</span></span><span class=line><span class=cl>screen -dmS screen_rtorrent rtorrent
+</span></span></code></pre></div><p>Change permissions on our new file:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>chmod <span class=m>777</span> /home/admin/rtorrent.sh
+</span></span></code></pre></div><p>Then run:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>crontab -e
+</span></span></code></pre></div><p>and add the following lines:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=nv>SHELL</span><span class=o>=</span>/bin/sh
+</span></span><span class=line><span class=cl><span class=nv>PATH</span><span class=o>=</span>/etc:/bin:/sbin:/usr/bin:/usr/sbin
+</span></span><span class=line><span class=cl>@reboot /home/admin/rtorrent.sh
+</span></span></code></pre></div><p>For those unfamiliar with vi, this site may help.
+That should do it! Restart your jail through the FreeNAS GUI and log in through your web browser. If you’re not seeing a green checkmark in the bottom bar, you may need to forward a port through your firewall/router. Sometimes rTorrent will still work just fine without this, though.</p><h1 id=problemssolutions>Problems/Solutions</h1><p>Here are some problems that I ran into and the fixes I found for them.</p><p><strong>Problem:</strong> When I navigate to the jail’s IP I get this message: ERR_CONNECTION_REFUSED
+<strong>Solution:</strong> You forgot Step 14</p><p><strong>Problem:</strong> When I log into ruTorrent, I got a bunch of the following errors:</p><ul><li>Webserver user doesn’t have read/write/execute access to the torrents directory. You cannot add torrents via ruTorrent.</li><li>Webserver user doesn’t have read/write/execute access to the settings directory. ruTorrent settings cannot be saved.</li><li>rTorrent user must have read/execute access to the torrents directory. You cannot add torrents via ruTorrent.</li><li>rTorrent user must have read/write/execute access to the settings directory.</li><li>(plugin): Some functionality will be unavailable. Webserver user can’t access external program</li></ul><p><strong>Solution:</strong> You forgot to chown in Step 10</p><p><strong>Problem:</strong> ruTorrent gives me a few errors like this: (plugin): Some functionality will be unavailable. Webserver user can’t access external program</p><p><strong>Solution:</strong> If you’ve verified that your user is the owner of /usr/local/www/rutorrent AND it’s sub-folders (like in the above solution), then the plugin needs a tool that isn’t installed in your jail (rss needs curl, screenshots needs ffmpeg, etc). Do a “pkg search packagename” and install the latest. Then, restart the jail.</p></main></body></html>

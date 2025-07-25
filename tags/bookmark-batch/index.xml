@@ -1,2 +1,84 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>bookmark-batch on Dan [the] Salmon</title><link>https://danthesalmon.com/tags/bookmark-batch/</link><description>Recent content in bookmark-batch on Dan [the] Salmon</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 22 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://danthesalmon.com/tags/bookmark-batch/index.xml" rel="self" type="application/rss+xml"/><item><title>Bookmark Batch 02</title><link>https://danthesalmon.com/bookmark-batch-02/</link><pubDate>Fri, 22 Mar 2024 00:00:00 +0000</pubDate><guid>https://danthesalmon.com/bookmark-batch-02/</guid><description>#FuckStalkerware pt. 3 - ownspy got, well, owned maia.crimew.gay article stalkerware web exploit Part 3 of a series of hacktivist posts examining stalkerware apps from the inside out. The Chronicles of a New York Locksmith | Keys to the City | The New Yorker Documentary www.youtube.com video documentary locksmith DEF CON 31 - The Art of Compromising C2 Servers A Web App Vulns Perspective - Vangelis Stykas www.youtube.com video C2 web exploit defcon Vangelis does a fantastic job walking through the exploitation of a half dozen malware C2 systems.</description></item><item><title>Bookmark Batch 01</title><link>https://danthesalmon.com/bookmark-batch-01/</link><pubDate>Tue, 10 Oct 2023 00:00:00 +0000</pubDate><guid>https://danthesalmon.com/bookmark-batch-01/</guid><description>Background This is a new thing I&amp;rsquo;m trying out - a list of links to articles, videos, podcasts or anything else that I&amp;rsquo;ve come across recently that I think are very interesting. I may add some context to them, but probably most will just be the link and some tags. Let me know if you find this sort of thing useful.
-How to launder $600 million on the internet www.npr.org article finance crypto A Visual Journey Through Computer Setups Revealed by Recent Cybercrime Raids realhackhistory.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bookmark-Batch on Dan [the] Salmon</title><link>https://danthesalmon.com/tags/bookmark-batch/</link><description>Recent content in Bookmark-Batch on Dan [the] Salmon</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 22 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://danthesalmon.com/tags/bookmark-batch/index.xml" rel="self" type="application/rss+xml"/><item><title>Bookmark Batch 02</title><link>https://danthesalmon.com/posts/bookmark-batch-02/</link><pubDate>Fri, 22 Mar 2024 00:00:00 +0000</pubDate><guid>https://danthesalmon.com/posts/bookmark-batch-02/</guid><description>&lt;section class="rec">
+ &lt;h3>&lt;a href="https://maia.crimew.gay/posts/fuckstalkerware-3/">#FuckStalkerware pt. 3 - ownspy got, well, owned&lt;/a>&lt;/h3>
+ &lt;em>maia.crimew.gay&lt;/em>
+ 
+ &lt;span> 
+ &lt;span class="type">article&lt;/span>
+ &lt;span class="tag">stalkerware&lt;/span>
+ &lt;span class="tag">web exploit&lt;/span>
+ &lt;span class="tag">&lt;/span>
+ 
+ 
+ 
+ &lt;/span>
+ &lt;br>
+ &lt;p>
+ Part 3 of a series of hacktivist posts examining stalkerware apps from the inside out.
+ &lt;/p>
+&lt;/section>
+
+
+
+
+
+&lt;section class="rec">
+ &lt;h3>&lt;a href="https://www.youtube.com/watch?v=eg6o7NDIsmM">The Chronicles of a New York Locksmith | Keys to the City | The New Yorker Documentary&lt;/a>&lt;/h3>
+ &lt;em>www.youtube.com&lt;/em>
+ 
+ &lt;span> 
+ &lt;span class="type">video&lt;/span>
+ &lt;span class="tag">documentary&lt;/span>
+ &lt;span class="tag">locksmith&lt;/span>
+ 
+ 
+ 
+ &lt;/span>
+ &lt;br>
+ &lt;p>
+ 
+ &lt;/p>
+&lt;/section>
+
+
+
+
+
+&lt;section class="rec">
+ &lt;h3>&lt;a href="https://www.youtube.com/watch?v=fMxSRFYXMV0">DEF CON 31 - The Art of Compromising C2 Servers A Web App Vulns Perspective - Vangelis Stykas&lt;/a>&lt;/h3>
+ &lt;em>www.youtube.com&lt;/em>
+ 
+ &lt;span> 
+ &lt;span class="type">video&lt;/span>
+ &lt;span class="tag">C2&lt;/span>
+ &lt;span class="tag">web exploit&lt;/span>
+ &lt;span class="tag">defcon&lt;/span>
+ 
+ 
+ 
+ &lt;/span>
+ &lt;br>
+ &lt;p>
+ Vangelis does a fantastic job walking through the exploitation of a half dozen malware C2 systems.
+ &lt;/p></description></item><item><title>Bookmark Batch 01</title><link>https://danthesalmon.com/posts/bookmark-batch-01/</link><pubDate>Tue, 10 Oct 2023 00:00:00 +0000</pubDate><guid>https://danthesalmon.com/posts/bookmark-batch-01/</guid><description>&lt;h3 id="background">Background&lt;/h3>
+&lt;p>This is a new thing I&amp;rsquo;m trying out - a list of links to articles, videos, podcasts or anything else that I&amp;rsquo;ve come across recently that I think are very interesting. I may add some context to them, but probably most will just be the link and some tags. Let me know if you find this sort of thing useful.&lt;/p>
+&lt;p>&lt;br>&lt;br>&lt;/p>
+
+
+
+
+&lt;section class="rec">
+ &lt;h3>&lt;a href="https://www.npr.org/2023/09/15/1197954055/axie-infinity-north-korea-ronin">How to launder $600 million on the internet&lt;/a>&lt;/h3>
+ &lt;em>www.npr.org&lt;/em>
+ 
+ &lt;span> 
+ &lt;span class="type">article&lt;/span>
+ &lt;span class="tag">finance&lt;/span>
+ &lt;span class="tag">crypto&lt;/span>
+ 
+ 
+ 
+ &lt;/span>
+ &lt;br>
+ &lt;p>
+ 
+ &lt;/p></description></item></channel></rss>

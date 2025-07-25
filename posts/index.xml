@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Dan [the] Salmon</title><link>https://danthesalmon.com/posts/</link><description>Recent content in Posts on Dan [the] Salmon</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 02 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://danthesalmon.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>SecretCon 2025 Highlights</title><link>https://danthesalmon.com/posts/secretcon-2025-highlights/</link><pubDate>Wed, 02 Jul 2025 00:00:00 +0000</pubDate><guid>https://danthesalmon.com/posts/secretcon-2025-highlights/</guid><description>A great time was had</description></item><item><title>I Am Speaking At SecretCon 2025</title><link>https://danthesalmon.com/posts/i-am-speaking-at-secretcon-2025/</link><pubDate>Tue, 17 Jun 2025 00:00:00 +0000</pubDate><guid>https://danthesalmon.com/posts/i-am-speaking-at-secretcon-2025/</guid><description>Am I a cool infosec person yet</description></item><item><title>A New Proxmox Server</title><link>https://danthesalmon.com/posts/new-proxmox-server/</link><pubDate>Sun, 04 May 2025 00:00:00 +0000</pubDate><guid>https://danthesalmon.com/posts/new-proxmox-server/</guid><description>&lt;p>As I&amp;rsquo;ve talked about &lt;a href="https://danthesalmon.com/state-of-homelab-2023/">previously&lt;/a>, all compute workloads in my homelab are run on an older HP Z620 workstation. This machine runs everything I need it to without complaint and has done so for years. Recently I started thinking more about replacing it, or at least transplanting its components into something I can rackmount. I don&amp;rsquo;t like that it&amp;rsquo;s the only piece of homelab gear that doesn&amp;rsquo;t reside neatly in the 18U rack.&lt;/p></description></item><item><title>S3Scanner featured in Metasploit, 2nd Edition</title><link>https://danthesalmon.com/posts/s3scanner-book/</link><pubDate>Sat, 15 Feb 2025 00:00:00 +0000</pubDate><guid>https://danthesalmon.com/posts/s3scanner-book/</guid><description>S3Scanner gains a glowing recommendation</description></item><item><title>2025 Projects</title><link>https://danthesalmon.com/posts/2025-projects/</link><pubDate>Sat, 11 Jan 2025 00:00:00 +0000</pubDate><guid>https://danthesalmon.com/posts/2025-projects/</guid><description>Time to put up or shut up</description></item><item><title>Windows Kills SMB Speeds When Using Tailscale</title><link>https://danthesalmon.com/posts/windows-smb-tailscale/</link><pubDate>Mon, 11 Nov 2024 00:00:00 +0000</pubDate><guid>https://danthesalmon.com/posts/windows-smb-tailscale/</guid><description>&lt;h3 id="the-issue">The Issue&lt;/h3>
+&lt;p>Yesterday when trying to transfer an ISO file from a TrueNAS SMB share, I was getting horrible transfer speeds.&lt;/p>
+&lt;figure>&lt;img src="https://danthesalmon.com/posts/windows-smb-tailscale/slow1.png"
+ alt="Copy progress dialog window showing a speed of 355KB/s">
+&lt;/figure>
+
+&lt;p>The NAS can definitely saturate a gigabit link which is what my desktop connects to the switch over. I had seen this behavior before and had a feeling it was related to having Tailscale running - the last time it happened I quit Tailscale and my fast transfers returned.&lt;/p></description></item><item><title>Bookmark Batch 02</title><link>https://danthesalmon.com/posts/bookmark-batch-02/</link><pubDate>Fri, 22 Mar 2024 00:00:00 +0000</pubDate><guid>https://danthesalmon.com/posts/bookmark-batch-02/</guid><description>&lt;section class="rec">
+ &lt;h3>&lt;a href="https://maia.crimew.gay/posts/fuckstalkerware-3/">#FuckStalkerware pt. 3 - ownspy got, well, owned&lt;/a>&lt;/h3>
+ &lt;em>maia.crimew.gay&lt;/em>
+ 
+ &lt;span> 
+ &lt;span class="type">article&lt;/span>
+ &lt;span class="tag">stalkerware&lt;/span>
+ &lt;span class="tag">web exploit&lt;/span>
+ &lt;span class="tag">&lt;/span>
+ 
+ 
+ 
+ &lt;/span>
+ &lt;br>
+ &lt;p>
+ Part 3 of a series of hacktivist posts examining stalkerware apps from the inside out.
+ &lt;/p>
+&lt;/section>
+
+
+
+
+
+&lt;section class="rec">
+ &lt;h3>&lt;a href="https://www.youtube.com/watch?v=eg6o7NDIsmM">The Chronicles of a New York Locksmith | Keys to the City | The New Yorker Documentary&lt;/a>&lt;/h3>
+ &lt;em>www.youtube.com&lt;/em>
+ 
+ &lt;span> 
+ &lt;span class="type">video&lt;/span>
+ &lt;span class="tag">documentary&lt;/span>
+ &lt;span class="tag">locksmith&lt;/span>
+ 
+ 
+ 
+ &lt;/span>
+ &lt;br>
+ &lt;p>
+ 
+ &lt;/p>
+&lt;/section>
+
+
+
+
+
+&lt;section class="rec">
+ &lt;h3>&lt;a href="https://www.youtube.com/watch?v=fMxSRFYXMV0">DEF CON 31 - The Art of Compromising C2 Servers A Web App Vulns Perspective - Vangelis Stykas&lt;/a>&lt;/h3>
+ &lt;em>www.youtube.com&lt;/em>
+ 
+ &lt;span> 
+ &lt;span class="type">video&lt;/span>
+ &lt;span class="tag">C2&lt;/span>
+ &lt;span class="tag">web exploit&lt;/span>
+ &lt;span class="tag">defcon&lt;/span>
+ 
+ 
+ 
+ &lt;/span>
+ &lt;br>
+ &lt;p>
+ Vangelis does a fantastic job walking through the exploitation of a half dozen malware C2 systems.
+ &lt;/p></description></item><item><title>Cracking a Locked Apple Note</title><link>https://danthesalmon.com/posts/crack-apple-notes/</link><pubDate>Wed, 06 Mar 2024 00:00:00 +0000</pubDate><guid>https://danthesalmon.com/posts/crack-apple-notes/</guid><description>&lt;p>There is a note in Apple Notes on my phone that I cannot open.&lt;/p>
+&lt;p>The note is not mission critical (gift ideas for my family members), but I would like to have access to it again. I created the note September 21, 2022 and at some point thought it would be funny to put an additional password on a note that contains such trivial information. Some time in the last 6 months, something changed with the note. I used to be able to use TouchID to unlock it, but it began prompting me for a password. Having set it more than a year prior and never having entered it again (to my recollection), I could not remember what it was. I tried all the simple &amp;ldquo;dumb&amp;rdquo; passwords I use when temporarily setting up user accounts, but could not get in.&lt;/p></description></item><item><title>Bookmark Batch 01</title><link>https://danthesalmon.com/posts/bookmark-batch-01/</link><pubDate>Tue, 10 Oct 2023 00:00:00 +0000</pubDate><guid>https://danthesalmon.com/posts/bookmark-batch-01/</guid><description>&lt;h3 id="background">Background&lt;/h3>
+&lt;p>This is a new thing I&amp;rsquo;m trying out - a list of links to articles, videos, podcasts or anything else that I&amp;rsquo;ve come across recently that I think are very interesting. I may add some context to them, but probably most will just be the link and some tags. Let me know if you find this sort of thing useful.&lt;/p>
+&lt;p>&lt;br>&lt;br>&lt;/p>
+
+
+
+
+&lt;section class="rec">
+ &lt;h3>&lt;a href="https://www.npr.org/2023/09/15/1197954055/axie-infinity-north-korea-ronin">How to launder $600 million on the internet&lt;/a>&lt;/h3>
+ &lt;em>www.npr.org&lt;/em>
+ 
+ &lt;span> 
+ &lt;span class="type">article&lt;/span>
+ &lt;span class="tag">finance&lt;/span>
+ &lt;span class="tag">crypto&lt;/span>
+ 
+ 
+ 
+ &lt;/span>
+ &lt;br>
+ &lt;p>
+ 
+ &lt;/p></description></item><item><title>Homebrew is awesome</title><link>https://danthesalmon.com/posts/homebrew-is-awesome/</link><pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate><guid>https://danthesalmon.com/posts/homebrew-is-awesome/</guid><description>Contributing to Homebrew - so easy a caveman could do it</description></item><item><title>State of the Homelab: 2023</title><link>https://danthesalmon.com/posts/state-of-homelab-2023/</link><pubDate>Fri, 19 May 2023 00:00:00 +0000</pubDate><guid>https://danthesalmon.com/posts/state-of-homelab-2023/</guid><description>&lt;p>I started my homelab almost 10 years ago. At that time my goal was to learn more about Linux, FreeBSD, and virtualization tools as well as having an &amp;ldquo;always-on&amp;rdquo; machine to do long-running tasks. This post is a snapshot of what the network looks like today as well as a little history behind the different parts.&lt;/p>
+&lt;h2 id="obligatory-diagram">Obligatory Diagram&lt;/h2>
+&lt;p>Here is a mostly complete picture of the homelab as it stands today&lt;/p></description></item><item><title>UFW, Docker, and Tailscale: Lessons Learned</title><link>https://danthesalmon.com/posts/ufw-docker-tailscale/</link><pubDate>Fri, 24 Jun 2022 00:00:00 +0000</pubDate><guid>https://danthesalmon.com/posts/ufw-docker-tailscale/</guid><description>Learning new tech is hard.</description></item><item><title>Validating JSON Quickly with Go</title><link>https://danthesalmon.com/posts/validate-json-quickly-go/</link><pubDate>Mon, 19 Oct 2020 00:00:00 +0000</pubDate><guid>https://danthesalmon.com/posts/validate-json-quickly-go/</guid><description>How fast can we validate a large text file of JSON?</description></item><item><title>Running Docker on Proxmox</title><link>https://danthesalmon.com/posts/running-docker-on-proxmox/</link><pubDate>Fri, 19 Jun 2020 00:00:00 +0000</pubDate><guid>https://danthesalmon.com/posts/running-docker-on-proxmox/</guid><description>There are a few different ways to run Docker on Proxmox. Here are some instructions and unscientific benchmarks comparing them.</description></item><item><title>Tumblr Has a Spam Problem</title><link>https://danthesalmon.com/posts/tumblr-has-a-spam-problem/</link><pubDate>Sun, 08 Mar 2020 00:00:00 +0000</pubDate><guid>https://danthesalmon.com/posts/tumblr-has-a-spam-problem/</guid><description>&lt;p>I have an account on Tumblr, though I seem to be one of the few people still on the site. Over the past few years, I&amp;rsquo;ve noticed an uptick in the amount of spam accounts following me. A considerable increase, in fact, so I decided to try to quantify how pervasive the problem was.&lt;/p>
+&lt;h2 id="searching-for-spam">Searching for Spam&lt;/h2>
+&lt;p>The first thing I had to do was create some criteria to use for categorizing accounts as &amp;ldquo;spam&amp;rdquo;. With a few variations, here are the distinguishing features of a spam account:&lt;/p></description></item><item><title>AttackDefense - Cracking Hashcat Guide</title><link>https://danthesalmon.com/posts/attackdefense-cracking-hashcat/</link><pubDate>Mon, 29 Oct 2018 20:46:25 +0000</pubDate><guid>https://danthesalmon.com/posts/attackdefense-cracking-hashcat/</guid><description>&lt;p>&lt;img src="../images/attack-defense-grey.png" alt="attack-defense-grey">&lt;/p>
+&lt;p>AttackDefense is a new site with all sorts of awesome labs and CTFs for training. Best of all: the site is free.&lt;/p>
+&lt;p>In this guide, I&amp;rsquo;ll detail how to complete the &lt;a href="attackdefense.com/challengedetails?cid=51">&amp;ldquo;Cracking MD5 Hashes&amp;rdquo;&lt;/a> lab, though this strategy should work for most labs in the &amp;ldquo;Hashcat All&amp;rdquo; section. If you are unfamiliar with Hashcat, I&amp;rsquo;d strongly recommend reading &lt;a href="https://hashcat.net/wiki/">the wiki&lt;/a> or following Youtube tutorials elsewhere before trying this challenge.&lt;/p>
+&lt;br>
+&lt;p>&lt;em>Note: I would highly suggest you try to complete the lab first without help from this guide.&lt;/em>&lt;/p></description></item><item><title>Cyber Security Summit 2018 Highlights</title><link>https://danthesalmon.com/posts/cyber-security-summit-2018/</link><pubDate>Sun, 28 Oct 2018 15:39:00 +0000</pubDate><guid>https://danthesalmon.com/posts/cyber-security-summit-2018/</guid><description>&lt;p>I was fortunate enough to attend the 2018 Cyber Security Summit in Minneapolis, MN. Here I&amp;rsquo;ve tried to summarize each talk I attended into a small, digestible format, mostly written in their voices.&lt;/p>
+&lt;h2 id="student-breakfast">Student Breakfast&lt;/h2>
+&lt;p>&lt;strong>By:&lt;/strong> Ryan Aniol - State of Minnesota&lt;/p>
+&lt;blockquote>
+&lt;p>This was a super informative informal breakfast hosted by Ryan who aimed the talk at the students like myself. It was really nice to hear information directly relevant to my situation.
+&lt;br />&lt;/p></description></item><item><title>HackTheBox 'Poison' - Own User Guide</title><link>https://danthesalmon.com/posts/hackthebox-poison/</link><pubDate>Thu, 18 Oct 2018 04:33:52 +0000</pubDate><guid>https://danthesalmon.com/posts/hackthebox-poison/</guid><description>&lt;p>&lt;strong>Note:&lt;/strong> &lt;em>If you are currently trying to get access to this box, I highly recommend you try it yourself first and only use this guide if you really are stuck.&lt;/em>
+&lt;br />
+&lt;br />&lt;/p>
+&lt;h3 id="intro">Intro&lt;/h3>
+&lt;p>Now that the Poison box is retired on hackthebox, we can talk publicly about how to gain access to this machine. While this machine was active, I only took the time to gain user access, not all the way to root. There are multiple ways to get access on Poison, but I&amp;rsquo;m just showing the way I took which is one of the shortest routes to the user.&lt;/p></description></item><item><title>Running Oracle 18c on MacOS</title><link>https://danthesalmon.com/posts/running-oracle-12c-on-macos/</link><pubDate>Thu, 05 Jul 2018 00:40:32 +0000</pubDate><guid>https://danthesalmon.com/posts/running-oracle-12c-on-macos/</guid><description>&lt;p>&lt;strong>Update: May 14, 2019&lt;/strong> &lt;em>This article originally contained instructions for running Oracle 12c. The Docker image that was being used was deleted by the author and so was not usable. I have updated the instructions to work again, though the image it uses now runs Oracle 18c. If you need to run 12c specifically, you&amp;rsquo;ll need to look for instructions elsewhere. Some screenshots may now be out of date.&lt;/em>&lt;/p>
+&lt;p>In this post, we will go through the steps of installing Oracle 12c in a Docker container and connect to the database using SQL Developer on a Mac. This is a much lighter way of running Oracle locally compared to running a full Windows virtual machine with VMWare or Virtualbox.&lt;/p></description></item><item><title>Electroneum - First Impressions</title><link>https://danthesalmon.com/posts/first-impressions-of-electroneum/</link><pubDate>Tue, 16 Jan 2018 00:40:32 +0000</pubDate><guid>https://danthesalmon.com/posts/first-impressions-of-electroneum/</guid><description>&lt;p>A coworker recently sent me a link to Yet Another Cryptocurrency. Like most people, I&amp;rsquo;m pretty burnt out with all these new coins and ICO&amp;rsquo;s popping up each week. In fact, I get about 5-10 ICO spam emails in my Junk mail folder.&lt;/p>
+&lt;p>This one looked to be just a little different, though. He was excited because this one allows you to use your phone to mine. I talked to him about how it&amp;rsquo;s a neat idea, but ultimately probably won&amp;rsquo;t be profitable, especially compare to a multi-GPU setup.&lt;/p></description></item><item><title>Moving ZFS datasets between volumes</title><link>https://danthesalmon.com/posts/moving-zfs-datasets-between-volumes/</link><pubDate>Wed, 29 Nov 2017 03:07:25 +0000</pubDate><guid>https://danthesalmon.com/posts/moving-zfs-datasets-between-volumes/</guid><description>&lt;p>If you run ZFS like I do (and I think you should) there will probably come at time when you need to migrate a dataset from one volume to another. This was done in FreeNAS (FreeBSD), but the steps should apply to any *nix system with ZFS&lt;/p>
+&lt;p>The great thing about ZFS is that we can do most of this migration with our services and everything still running.&lt;/p>
+&lt;p>We&amp;rsquo;ll start by taking a snapshot of the dataset we want to move.&lt;/p></description></item><item><title>2017 Cyber Security Summit</title><link>https://danthesalmon.com/posts/2017-cyber-security-summit/</link><pubDate>Mon, 30 Oct 2017 21:57:31 +0000</pubDate><guid>https://danthesalmon.com/posts/2017-cyber-security-summit/</guid><description>&lt;h2 id="student-breakfast---mn-it-services-w-chris-buse">Student Breakfast - MN IT Services w/ Chris Buse&lt;/h2>
+&lt;ul>
+&lt;li>$400M budget for MNIT&lt;/li>
+&lt;li>0% unemployment rate&lt;/li>
+&lt;li>MNIT wants to train/develop IT skills. Everyones wants skilled people but no one wants to train&lt;/li>
+&lt;li>Lots of operational jobs&lt;/li>
+&lt;li>Looking for interns with lots of general skills&lt;/li>
+&lt;li>Flexible hours/locations&lt;/li>
+&lt;/ul>
+&lt;h4 id="qa-with-chris">Q/A with Chris&lt;/h4>
+&lt;ul>
+&lt;li>&amp;ldquo;Are certifications worth it?&amp;rdquo;
+&lt;ul>
+&lt;li>&amp;ldquo;Focus on certs, even though I don&amp;rsquo;t think they&amp;rsquo;re very useful. They&amp;rsquo;re mostly just to get passed HR. I&amp;rsquo;m more interested in people who do IT in their free time.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&amp;ldquo;Do you do malware/AV development at MNIT?&amp;rdquo;
+&lt;ul>
+&lt;li>&amp;ldquo;No, we don&amp;rsquo;t develop those. We&amp;rsquo;re just now starting to reverse engineer samples. We use MCAP(?).&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&amp;ldquo;Do you do phishing training?&amp;rdquo;
+&lt;ul>
+&lt;li>&amp;ldquo;Yes, we send out about 8,500 emails per round. We usually get about a 10% success rate.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="welcome-and-opening-remarks">Welcome and Opening Remarks&lt;/h2>
+&lt;ul>
+&lt;li>Collaboration is the key to spreading threat awareness.&lt;/li>
+&lt;li>Matt Loeb - &amp;ldquo;Performance-based assessments are usually bad&amp;rdquo;&lt;/li>
+&lt;/ul>
+&lt;h2 id="the-dark-web">The Dark Web&lt;/h2>
+&lt;ul>
+&lt;li>Pretty good demo. Mostly focused on scareing people about guns, drugs, carding.&lt;/li>
+&lt;li>(Falsely) claimed that the Vegas shooter shopped in a shop like this&lt;/li>
+&lt;li>Pointed out obviously fake/spam sites: rent-a-hacker, small drug sites, crazy expensive small gun sites&lt;/li>
+&lt;li>Said people can only define what you&amp;rsquo;re doing wrong, but people can&amp;rsquo;t define what security is&lt;/li>
+&lt;/ul>
+&lt;h2 id="cyber-byte-with-hala-furst-from-dhs">Cyber Byte with Hala Furst from DHS&lt;/h2>
+&lt;ul>
+&lt;li>Damages from attacks are increasing&lt;/li>
+&lt;li>Security has to be the top priority&lt;/li>
+&lt;li>Test response plan regularly&lt;/li>
+&lt;li>Don&amp;rsquo;t have to be the strongest, just not the weakest&lt;/li>
+&lt;li>ISAC/ISAO - Share intel&lt;/li>
+&lt;li>us-cert.gov/ccubedvp&lt;/li>
+&lt;/ul>
+&lt;h2 id="governor-dayton">Governor Dayton&lt;/h2>
+&lt;ul>
+&lt;li>&amp;ldquo;I&amp;rsquo;m old&amp;hellip;I don&amp;rsquo;t tweet&amp;rdquo; &lt;em>Thunderous applause&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;h2 id="phishing-trends">Phishing Trends&lt;/h2>
+&lt;ul>
+&lt;li>Email still very widely used&lt;/li>
+&lt;li>Phishing - similar looking domains
+&lt;ul>
+&lt;li>Still effective&lt;/li>
+&lt;li>Have to train employees&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="compliance---lifeline">Compliance - Lifeline&lt;/h2>
+&lt;ul>
+&lt;li>Was mostly just the CTO complainging about how difficult FEDRamp compliance is to get&lt;/li>
+&lt;li>CME - Similar to EMP?&lt;/li>
+&lt;li>Complicance: Point in time&lt;/li>
+&lt;li>CMP - Continuous&lt;/li>
+&lt;/ul>
+&lt;h2 id="breaches---evan-wolff">Breaches - Evan Wolff&lt;/h2>
+&lt;ul>
+&lt;li>Average breach discovery time - 300+ days&lt;/li>
+&lt;li>Have a plan for breach investigation. Be ready when you notify for the torrent of traffic&lt;/li>
+&lt;/ul>
+&lt;h2 id="cisco">Cisco&lt;/h2>
+&lt;ul>
+&lt;li>Super dope talk about Exploit Kits, how spam spreads, how to identify sources&lt;/li>
+&lt;li>Great slides with full-screen informational GIFs&lt;/li>
+&lt;/ul>
+&lt;h2 id="spies-in-your-wires">Spies in your wires&lt;/h2>
+&lt;ul>
+&lt;li>We&amp;rsquo;re (as a whole) getting better at detecting hacks&lt;/li>
+&lt;li>Detection Evasion
+&lt;ul>
+&lt;li>Hot Patching&lt;/li>
+&lt;li>Run-once malware&lt;/li>
+&lt;li>Time-based exfiltration&lt;/li>
+&lt;li>AMT SOL for OOB comms&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="common-attack-vectors">Common Attack Vectors&lt;/h2>
+&lt;ul>
+&lt;li>Lots of examples from pentests&lt;/li>
+&lt;li>Basically stories from the road&lt;/li>
+&lt;li>Tool: Hacker Arsenal&lt;/li>
+&lt;/ul>
+&lt;h2 id="blackberry">Blackberry&lt;/h2>
+&lt;ul>
+&lt;li>Mobile workers are on the rise&lt;/li>
+&lt;li>Don&amp;rsquo;t make use cases for new tech. Find new tech to satisfy your existing use case.&lt;/li>
+&lt;/ul>
+&lt;h2 id="criticial-infra">Criticial Infra&lt;/h2>
+&lt;ul>
+&lt;li>Infrastructure is critical&lt;/li>
+&lt;/ul></description></item><item><title>WiFi Security Testing Cheatsheet</title><link>https://danthesalmon.com/posts/wifi-security-testing-cheatsheet/</link><pubDate>Tue, 10 Oct 2017 16:38:19 +0000</pubDate><guid>https://danthesalmon.com/posts/wifi-security-testing-cheatsheet/</guid><description>&lt;h1 id="prepare-wireless-card">Prepare Wireless Card&lt;/h1>
+&lt;ul>
+&lt;li>&lt;strong>View Network Cards:&lt;/strong>
+&lt;ul>
+&lt;li>&lt;code>iwconfig&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Kill Wireless Processes:&lt;/strong>
+&lt;ul>
+&lt;li>&lt;code>airmon-ng check kill&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h1 id="view-networks">View Networks&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">airodump-ng wlan0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;h1 id="capture-traffic">Capture traffic&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">airodump-ng --bssid 04:A1:51:9F:98:BB --wps --write ISSO-WPA2 --channel 6 wlan0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>where:&lt;/p>
+&lt;pre>
+--bssid - MAC of router
+--wps - Output WPS information, may be able to try Reaver
+--write - File name to write to. No extension
+--channel - Statically set a channel. Don't need to unless de-authing
+wlan0 - Wireless interface	
+&lt;/pre>
+&lt;hr>
+&lt;h1 id="deauth---do-while-capturing">Deauth - Do while capturing&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">aireplay-ng --deauth 0 -a 04:A1:51:9F:11:11 -c E0:AC:CB:DA:1B:1B wlan0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>where:&lt;/p></description></item><item><title>Why I switched from Android to iOS</title><link>https://danthesalmon.com/posts/why-i-switched-from-android-to-ios/</link><pubDate>Fri, 01 Sep 2017 01:12:00 +0000</pubDate><guid>https://danthesalmon.com/posts/why-i-switched-from-android-to-ios/</guid><description>&lt;p>&lt;em>Note: This article is not just a stringent comparison of Apple vs Android, but a look at the whole picture that I took while deciding which phone to switch to.&lt;/em>&lt;/p>
+&lt;p>A few months ago, my beloved Verizon HTC One M8 began to lose it’s charge at an alarming rate. It would be at 40% battery by lunch time after a day of very moderate use. Luckily, I was due for an upgrade from Verizon. This was great, but presented an issue: I don’t keep up on the new cell phone releases. To be clear, I am aware of big releases that have new features: I knew Motorola had a new phone that had removable addons, Samsungs are all(?) waterproof, and iPhones hadn’t really added much since the fingerprint reader.&lt;/p></description></item><item><title>Allow a Chromecast through a WatchGuard firewall</title><link>https://danthesalmon.com/posts/allow-a-chromecast-through-a-watchguard-firewall/</link><pubDate>Sat, 26 Aug 2017 21:44:08 +0000</pubDate><guid>https://danthesalmon.com/posts/allow-a-chromecast-through-a-watchguard-firewall/</guid><description>&lt;h1 id="background">Background&lt;/h1>
+&lt;p>I recently picked up a Chromecast for my TV so I could stream Netflix easier since &lt;a href="http://forum.kodi.tv/showthread.php?tid=211574">XBMC’s addon&lt;/a> is terrible if you don’t want to use a keyboard. It was super easy to setup, but after it updated and connected to my WiFi I couldn’t see it from my phone. I did some digging and found that my WatchGuard 25W was the culprit. After I added an any-any rule I was able to see it, but that left it wide-open on my network. This wouldn’t do. I did some looking around on the net and found &lt;a href="https://blog.g3rt.nl/allow-google-chromecast-host-firewall-iptables.html">this great write-up&lt;/a> by Gert van Dijk detailing the rules needed when using iptables.&lt;/p></description></item><item><title>Fix “Some settings are managed by your system administrator” in Windows 7</title><link>https://danthesalmon.com/posts/fix-some-settings-are-managed-by-your-system-administrator-in-windows-7/</link><pubDate>Sat, 26 Aug 2017 21:08:00 +0000</pubDate><guid>https://danthesalmon.com/posts/fix-some-settings-are-managed-by-your-system-administrator-in-windows-7/</guid><description>&lt;h1 id="background">Background&lt;/h1>
+&lt;p>A few months back, I was doing cleanup on a system that I had cleaned of malware. Whatever junk was on there had configured a local proxy server to run, but Malwarebytes had ripped it out. The system unfortunately still thought it was supposed to use the proxy server that doesn’t exist; consequently, I had no internet access. That’s an easy enough fix, right? I open Internet Options and change the LAN settings to not use a proxy and close it. For some reason, every time I would close the window it would re-configure itself to use the proxy. “Was it still infected?” I wondered. Turns out, in the Advanced tab I get this message:&lt;/p></description></item><item><title>Change Network Location in Windows 8.1/2012 R2 from Powershell</title><link>https://danthesalmon.com/posts/change-network-location-in-windows-8-1-2012-r2-from-powershell/</link><pubDate>Sat, 26 Aug 2017 20:46:25 +0000</pubDate><guid>https://danthesalmon.com/posts/change-network-location-in-windows-8-1-2012-r2-from-powershell/</guid><description>&lt;h1 id="step-1">Step 1&lt;/h1>
+&lt;p>From an elevated PowerShell window issue the following command to gather some information about our current network profile:&lt;/p>
+&lt;pre class="command-line language-powershell" data-output="2-8" data-prompt="C:\>">
+&lt;code class="language-powershell">Get-NetConnectionProfile
+
+Name : Unidentified Network
+InterfaceAlias : Ethernet
+InterfaceIndex : 10
+NetworkCategory : Public
+IPv4Connectivity : LocalNetwork
+IPv6Connectivity : LocalNetwork&lt;/code>
+&lt;/pre>
+&lt;p>The only information we really need from this output is the “InterfaceIndex”&lt;/p>
+&lt;h1 id="step-2">Step 2&lt;/h1>
+&lt;p>After getting the InterfaceIndex, we run the following command:&lt;/p>
+&lt;pre class="command-line language-powershell" data-output="2-8" data-prompt="C:\>">
+&lt;code class="language-powershell">Set-NetConnectionProfile -InterfaceIndex 10 -NetworkCategory Private&lt;/code>
+&lt;/pre>
+&lt;p>The last argument is what category you want to switch it to. The only allowed values here are “Public” or “Private” as per the &lt;a href="https://technet.microsoft.com/en-us/library/jj899565.aspx">MSDN documentation&lt;/a>. The category can also be “DomainAuthenticated” but Windows will automatically assign this when the machine is added to a domain.&lt;/p></description></item><item><title>Fix HAXM Emulation Error in Android Studio</title><link>https://danthesalmon.com/posts/fix-haxm-emulation-error-in-android-studio/</link><pubDate>Sat, 26 Aug 2017 04:57:15 +0000</pubDate><guid>https://danthesalmon.com/posts/fix-haxm-emulation-error-in-android-studio/</guid><description>&lt;p>&lt;strong>Requirement Note:&lt;/strong> Android Studio requires an Intel processor with VT-X support for it’s built-in emulators to work. If you want to do Android development with emulators on an AMD processor, I would highly suggest using &lt;a href="https://www.genymotion.com/#!/">Genymotion&lt;/a>. If you’re not sure if your Intel processor supports VT-X, Intel has &lt;a href="http://www.intel.com/support/processors/sb/cs-030729.htm">an article here&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;p>This error is occurring because Android Studio requires Intel Hardware Accelerated Execution Manager (Intel HAXM) to run it’s emulators. All we need to do is install this tool.&lt;/p></description></item><item><title>Fix Ruby on Rails Certificate Issue</title><link>https://danthesalmon.com/posts/fix-ruby-certificate-issue/</link><pubDate>Fri, 25 Aug 2017 01:11:38 +0000</pubDate><guid>https://danthesalmon.com/posts/fix-ruby-certificate-issue/</guid><description>&lt;p>While attempting a “rails new” command, I was greeted with this lovely message:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">An error occurred while installing rake (10.4.2), and Bundler cannot continue.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="../images/rubyerror.png" alt="rubyerror">&lt;/p>
+&lt;p>So after doing some research, it turns out all you need to do is a Gem update:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">gem update --system
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Unless of course, this results in this error like it did for me:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">ERROR: While executing gem ... (Gem::RemoteFetcher::FetchError) SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed (https://api.rubygem s.org/specs.4.8.gz)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>It turns out this SSL certificate error is pretty easy to fix. Just issue these commands in this order:&lt;/p></description></item><item><title>View/Reset SickRage Web Password</title><link>https://danthesalmon.com/posts/view-reset-sickrage-web-password/</link><pubDate>Fri, 18 Aug 2017 03:56:32 +0000</pubDate><guid>https://danthesalmon.com/posts/view-reset-sickrage-web-password/</guid><description>&lt;h1 id="background">Background&lt;/h1>
+&lt;p>I recently forgot my password for SickRage and was surprised by the little documentation online. I have it installed in a jail in FreeNAS, so that’s what I’ll be focused on here but the instructions should be exactly the same if you have it installed inside an OS.&lt;/p>
+&lt;h1 id="steps">Steps&lt;/h1>
+&lt;p>It’s actually really easy, assuming you have command-line access. In FreeNAS, open a shell on your SickRage jail and edit the following file:&lt;/p></description></item><item><title>Create a Seedbox Jail in FreeNAS with rTorrent / ruTorrent / lighttpd</title><link>https://danthesalmon.com/posts/create-seedbox-jail-freenas/</link><pubDate>Wed, 16 Aug 2017 04:33:52 +0000</pubDate><guid>https://danthesalmon.com/posts/create-seedbox-jail-freenas/</guid><description>&lt;h1 id="intro--credits">Intro / Credits&lt;/h1>
+&lt;p>After much work and starting from scratch a few times, I finally got a working jail put together that uses ruTorrent, rTorrent, and Lighttpd to create a very nice personal seedbox in FreeNAS. I should give a lot of credit to &lt;a href="https://forums.freenas.org/index.php?members/flyingpersian.36669/">FlyingPersian&lt;/a> and &lt;a href="https://forums.freenas.org/index.php?threads/how-to-install-rutorrent-with-lighttpd.28641/">his thread on the FreeNAS forum&lt;/a> for the great information. I’m going to shamelessly steal a lot of his guide but correct some things and add improvements that I found.&lt;/p></description></item></channel></rss>
