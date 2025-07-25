@@ -1,0 +1,49 @@
+{{ define "main" }}
+
+  {{ .Content }}
+
+  <div class="social">
+    <a href="https://github.com/sa7mon" title="github: sa7mon">{{ partial "svg" "github"}}</a>
+    <a href="https://infosec.exchange/@dan" title="@dan@infosec.exchange">{{ partial "svg" "mastodon"}}</a>
+    <a href="https://www.linkedin.com/in/danthesalmon/" title="LinkedIn: danthesalmon">{{ partial "svg" "linkedin"}}</a>
+  </div>
+  
+  <h2 class="d-flex">
+    <span class="column">Latest Posts</span>
+    <div class="fs-1 d-inline-flex">
+      <a href="/posts/" class="d-block view-all">View All</a>
+    </div>
+  </h2>
+
+  {{ range (where .Site.Pages "Section" "posts") }}
+    
+    {{ range .Pages.Limit 5 }}
+        <div class="post-list-post">
+        <a href="{{ .RelPermalink }}">
+          <h3>{{ .LinkTitle }}</h3>
+          <time>{{ .PublishDate.Format "Jan 02" }}</time>
+        </a>
+      </div>
+    {{ end }}
+  {{ end }}
+
+  <h2 class="d-flex">
+    <span class="column">Latest Links</span>  
+    <div class="fs-1 d-inline-flex">
+      <a href="/links/" class="d-block view-all">View All</a>
+    </div>
+  </h2>
+
+    {{ range (where .Site.Pages "Section" "links") }}
+    
+    {{ range .Pages.Limit 5 }}
+        <div class="post-list-post">
+        <a href="{{ .RelPermalink }}">
+          <h3>{{ .LinkTitle }}</h3>
+          <time>{{ .PublishDate.Format "Jan 02" }}</time>
+        </a>
+      </div>
+    {{ end }}
+  {{ end }}
+
+{{ end }}

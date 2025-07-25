@@ -1,0 +1,8 @@
+{{/* /tags/:slug/ */}}
+
+{{ define "main" }}
+  <h1>Posts</h1>
+  <h3 class="subtitle ta-center">tag: {{ lower .Title }}</h3>
+  {{ .Content }}
+  {{ partial "post_list.html" .}}
+{{ end }}

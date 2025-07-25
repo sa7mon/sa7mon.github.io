@@ -1,66 +1,49 @@
 author: Dan Salmon
 baseURL: https://danthesalmon.com/
 builddrafts: false
-canonifyurls: true
-contentdir: content
 languageCode: en-us
 publishdir: public
-theme: sk3
+theme: clean
 title: Dan [the] Salmon
 disableHugoGeneratorInject: true
-enableInfoBox: true
-indexes:
-  category: categories
-  tag: tags
+
 markup:
   goldmark:
     renderer:
       unsafe: true
+  highlight:
+    style: catppuccin-frappe
+    noClasses: false
+    guessSyntax: true
+
+taxonomies:
+  # site: sites
+  format: formats
+  tag: tags
+  link_tag: 'link_tags'
+
 permalinks:
-  posts: /:title/
-params:
-  enableInfoBox: true
-  enableListLastModify: true
-  enableOpenToc: true
-  enableUserCanonical: false
-  favicon: /favicon.ico
-  mainSections:
-    - post
-  pagewidth: 1200px
-  startdate: 2012-12-02
-  description: Technical ramblings and miscellany
-  images:
-  - cover.png
-  enableOpenGraph: true
-  enableTwitterCard: true
-  related: false
-  enableSidebar: false
-  card:
-    date: true
-    summary: false
-    width: "100%"
-    infowidth: "32%"
-  sociallink:
-    rss: true
-    twitter: bltjetpack
-  socialshare:
-    reddit: true
-    twitter: true
-  identities:
-    - url: https://infosec.exchange/@dan
-      name: Mastodon
-    - url: https://github.com/sa7mon
-      name: GitHub
+  taxonomy:
+    link_tags: /links/tags/
+    formats: /links/formats/
+  term:
+    link_tags: /links/tags/:slug/
+    formats: /links/formats/:slug/
+
 menu:
   main:
     - identifier: about
       name: About
       url: /about/
       weight: 50
-    - identifier: tags
-      name: Tags
-      url: /tags/
-      weight: 60
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 52
+    - identifier: links
+      name: Links
+      url: /links/
+      weight: 55
     # - identifier: search
     #   name: Search
     #   url: /search/

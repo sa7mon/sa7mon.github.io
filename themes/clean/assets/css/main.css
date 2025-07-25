@@ -1,0 +1,425 @@
+
+/* .light {
+  --primary: #6b76f3;
+  --secondary: #444;
+  --heading-font-color: #222;
+  
+  --border-color: #bbb;
+  --light-border-color: #e0e0e0;
+  --background-color: white;
+  --sidebar-color: #f0f0f0;
+  --navbar-color: #f0f0f0;
+  --navbar-color-hover: #ddd;
+  --sidebar-color-hover: #dedede;
+  --sidebar-color-focus: white;
+  --category-background-color: #d5d5d5;
+  --category-background-color-hover: #c0c0c0;
+  --toolbar-color: #333;
+  --toolbar-background-color: #f0f0f0;
+  --font-color: #343434;
+  --dark-font-color: #777;
+  --input-background: transparent;
+  --bright-font-color: #222;
+  --blockquote-background-color: rgba(0, 0, 0, 0.02);
+  --blockquote-color: #111;
+  --inline-code-background-color: rgba(0, 0, 0, 0.05);
+  --inline-code-color: #111;
+  --icon-filter: brightness(0.8);
+  --dark-opacity: rgba(0, 0, 0, 0.03);
+  --dark-opacity-hover: rgba(0, 0, 0, 0.1);
+  --reverse: white;
+  --terminal-color: var(--bright-font-color);
+  --scrollbar: #888;
+  --scrollbar-track: #bbb;
+  --yellow: #e59e32;
+  --button-color: var(--primary);
+  --button-font-color: white;
+  --code-background-color: #373c47;
+} */
+
+/* inter-regular - latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: optional;
+  src: local(''),
+    url('/fonts/inter-v11-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('/fonts/inter-v11-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* inter-600 - latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: optional;
+  src: local(''),
+    url('/fonts/inter-v11-latin-600.woff2') format('woff2'),
+    url('/fonts/inter-v11-latin-600.woff') format('woff');
+}
+
+/* roboto-mono-regular - latin */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: optional;
+  src: local(''),
+    url('/fonts/roboto-mono-v21-latin-regular.woff2') format('woff2'),
+    url('/fonts/roboto-mono-v21-latin-regular.woff') format('woff');
+}
+
+:root {
+  --navbar-color: #f0f0f0;
+  --page-width: 850px;
+  --light-border-color: #e0e0e0;
+  --font-color: #343434;
+  --header-height: 60px;
+  --dark-font-color: #777;
+  --light-border-color: #e0e0e0;
+  --bright-font-color: #222;
+  --primary: #6b76f3;
+  --background-color: white;
+  --link-color: #111;
+  --heading-font-color: #222;
+  --blockquote-background-color: rgba(0, 0, 0, 0.02);
+  --blockquote-color: #111;
+  --border-color: #bbb;
+  --inline-code-background-color: rgba(0, 0, 0, 0.05);
+  --inline-code-color: rgba(17, 17, 17);
+  /* Fonts */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
+    'Roboto', Roboto, Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+    'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --code-font-family: 'Roboto Mono', Courier New, monospace;
+  --heading-font-family: var(--font-family);
+  --post-font-family: var(--font-family);
+}
+
+/** style of highlighted text **/
+::selection {
+  background: var(--primary);
+  color: white;
+}
+::-moz-selection {
+  background: var(--primary); /* Gecko Browsers */
+  color: white;
+}
+
+/** bullet/number of <li> **/
+li::marker {
+  color: var(--primary);
+}
+
+header {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  background: var(--navbar-color);
+  border-bottom: 1px solid var(--light-border-color);
+  /* height: var(--header-height); */
+  z-index: 9;
+  font-size: 0.9rem;
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    max-width: var(--page-width);
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+  }
+  a.brand {
+    display: inline;
+    font-size: 1rem;
+    font-weight: bolder;
+  }
+  nav {
+    ul {
+      padding-left: 0;
+      li {
+        display: inline;
+        padding: .5rem;
+      }
+      
+    }
+  }
+}
+
+time.pub-date {
+  text-align: center;
+  display: block;
+  color: var(--dark-font-color);
+  font-size: .9rem;
+}
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--page-width);
+  padding: 2rem 1rem;
+
+  h1.title {
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+
+  pre:has(code) {
+    overflow-x: scroll;
+  }
+
+  a:hover {
+    background: var(--primary);
+    color: var(--background-color);
+  }
+
+  a {
+      font-weight: 600;
+      color: var(--link-color);
+      border-top: 2px solid transparent;
+      border-bottom: 2px solid var(--primary);
+  }
+}
+
+.tags {
+  text-align: center;
+  padding-bottom: 2rem;
+
+  a {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    padding: .4rem .6rem;
+    border: 1px solid var(--light-border-color);
+    color: var(--bright-font-color);
+    font-size: .9rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-transform: lowercase;
+  }
+  a:hover {
+      background: var(--primary);
+      color: var(--background-color);
+  }
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: var(--font-family);
+	font-size: 1rem;
+	line-height: 1.65;
+	color: var(--font-color);
+	background: var(--background-color);
+	color-scheme: light dark;
+  margin-top: var(--header-height);
+}
+
+/** All Headings **/
+main 
+{
+  h1 {
+    font-weight: 600;
+    margin-bottom: .75rem;
+    color: var(--bright-font-color);
+  }
+  h2 {
+    font-size: 2rem;
+    padding-bottom: .25rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--light-border-color);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  main h1 {
+    font-size: 2.3rem;
+    line-height: 1.2;
+  }
+}
+
+main.home {
+  h1 {
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  p {
+    font-size: 1.2rem;
+    margin-top: 0;
+  }
+  div.social {
+    margin-bottom: 4rem;
+    border-bottom: none;
+
+    a {
+      border-bottom: none;
+      background: none;
+    }
+    
+    a:hover svg {
+      fill: var(--primary);
+      opacity: 100%;
+    }
+  }
+  svg {
+    fill: var(--font-color);
+    opacity: 70%;
+    width: 35px;
+    height: 35px;
+    margin-right: 1rem;
+  }
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+figcaption {
+  text-align: center;
+  font-style: oblique;
+  p {
+      margin-top: 4px;
+  }
+}
+
+blockquote {
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--primary);
+  background: var(--blockquote-background-color);
+  border-radius: 8px;
+  margin: 0 0 2rem;
+  font-family: var(--post-font-family);
+  p {
+    margin: 0;
+  }
+}
+
+/** inline code **/
+
+:not(pre) > code {
+  -webkit-font-smoothing: subpixel-antialiased;
+  padding: 2px 5px;
+  background: var(--inline-code-background-color) !important;
+  font-weight: 500;
+  color: var(--inline-code-color) !important;
+  font-size: .95rem !important;
+  white-space: pre-wrap;
+  border-radius: 6px;
+  overflow-wrap: break-word;
+  font-family: var(--code-font-family);
+}
+
+main.taxonomy, main.section, main.term {
+  h1 {
+    text-align: center;
+    font-size: 2.75rem;
+    margin-top: 0;
+    line-height: 1;
+  }
+}
+
+/* for section pages like /posts/ */ 
+/* main.section { */
+  .post-list-post {
+    h3 {
+      color: var(--font-color);
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    
+    a:hover {
+      background-color: #f5f5f5;
+      color: var(--font-color);
+    }
+    
+    a {
+      border-bottom: none;
+      display: grid;
+      grid-template-columns: auto 100px;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    time {
+      font-weight: 400;
+      text-align: right;
+    }
+  }
+/* } */
+
+a.view-all {
+  align-self: center;
+}
+
+/* re-usable classes */
+
+a.no-highlight {
+  border-bottom: none;
+}
+a.no-highlight:hover {
+  background: none;
+  color: inherit;
+}
+
+.fs-1 {
+  font-size: 1rem;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-inline {
+  display: inline;
+}
+
+.d-inline-flex {
+  display: inline-flex;
+}
+
+.column {
+  flex: 50%;
+}
+
+.ta-center {
+  text-align: center;
+}
+
+.icon-sm {
+  float: right;
+  .icon {
+    width: 25px;
+    vertical-align: bottom;
+    fill: var(--font-color);
+    padding-bottom: 4px;
+  }
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  line-height: 1.4;
+  color: var(--dark-font-color);
+  font-weight: 100;
+}
+
+.link-pub-date {
+  color: var(--dark-font-color);
+}

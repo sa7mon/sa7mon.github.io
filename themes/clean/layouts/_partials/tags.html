@@ -1,0 +1,21 @@
+{{- /*
+For a given taxonomy, renders a list of terms assigned to the page.
+
+@context {page} page The current page.
+@context {string} taxonomy The taxonomy.
+
+@example: {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+*/}}
+
+<!-- 
+For posts in "posts" section, the term for tags is 'tags'. 
+For posts in "links" section, the term for tags is 'link_tags'.
+This is set in layouts/post/single.html
+-->
+{{- with .GetTerms (.Store.Get "tagTerm") }}
+  <div class="tags">
+      {{- range . }}
+        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+      {{- end }}
+  </div>
+{{- end }}

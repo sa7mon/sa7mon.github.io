@@ -1,0 +1,21 @@
+{{ $u := .Get "url"}}
+{{ $url := urls.Parse $u}}
+{{ $tags := split (.Get "tags") "," }}
+
+<section class="rec">
+    <h3><a href="{{ $u }}">{{ .Get "title" }}</a></h3>
+    <em>{{ $url.Hostname}}</em>
+    
+    <span> 
+        <span class="type">{{ if .Get "type" }}{{ .Get "type" }}{{ else }}article{{ end }}</span>
+        {{ range $index, $element := $tags}}
+        {{- if ne $index 0 -}}{{end}}<span class="tag">{{- $element -}}</span>
+        {{end}}
+        
+        {{ if .Get "source"}}<span class="source"><a href='{{ .Get "source"}}'>source</a></span>{{end}}
+    </span>
+    <br>
+    <p>
+        {{ if .Get "desc" }}{{ .Get "desc" | markdownify }}{{ end }}
+    </p>
+</section>

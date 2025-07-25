@@ -1,0 +1,9 @@
+{{ define "main" }}
+	<h1>{{ .Title }}
+		<span class="icon-sm">
+			<a class="no-highlight" title="RSS feed: all {{ .Page.Section}}" href="index.xml">{{ partial "svg.html" "rss" }}</a>
+		</span>
+	</h1>
+	{{ .Content }}
+	{{ partial "post_list.html" .}}
+{{ end }}

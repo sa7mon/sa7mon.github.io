@@ -1,0 +1,9 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+<link rel="alternate" type="application/rss+xml" title="Dan [the] Salmon: Posts" href="/posts/index.xml"/>
+<link rel="alternate" type="application/rss+xml" title="Dan [the] Salmon: Links"  href="/links/index.xml"/>
+<link rel="me" href="https://infosec.exchange/@dan" name="Mastodon">
+<link rel="me" href="https://github.com/sa7mon" name="GitHub">
+
+{{ partialCached "head/css.html" . }}
