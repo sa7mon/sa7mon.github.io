@@ -69,10 +69,14 @@ menu:
       name: About
       url: /about/
       weight: 50
-    - identifier: tags
-      name: Tags
-      url: /tags/
-      weight: 60
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 52
+    - identifier: links
+      name: Links
+      url: /links/
+      weight: 55
     # - identifier: search
     #   name: Search
     #   url: /search/
