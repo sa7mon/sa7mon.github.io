@@ -1,8 +1,8 @@
 ---
-name: Custom Issue Template
-about: Template for submitting an issue
+name: New Link
+about: Template for submitting a new link
 title: ''
-labels: ''
+labels: 'link'
 assignees: ''
 ---
 
