@@ -16,8 +16,8 @@ jobs:
   # request. You can create multiple jobs to parse different types of requests
   # in the same workflow. Labels can be used to control which jobs run for
   # which types of requests.
-  new-repository-request:
-    name: New Repository Request
+  new-link:
+    name: New Link
     runs-on: ubuntu-latest
 
     # Assign labels for different types of requests, and use those labels to
@@ -50,7 +50,7 @@ jobs:
       - name: Post Comment on Issue
         uses: peter-evans/create-or-update-comment@71345be0265236311c031f5c7866368bd1eff043 # v4
         with:
-          issue-number: ${{ github.event.issue.id }}
+          issue-number: ${{ github.event.issue.number }}
           body: |
             This is a multi-line test comment
             - With GitHub **Markdown** :sparkles:
