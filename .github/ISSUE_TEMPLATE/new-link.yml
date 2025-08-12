@@ -1,6 +1,6 @@
 name: Link
 description: Post a new Link
-title: "[link]: "
+title: "[link] "
 labels: ["link"]
 projects: []
 body:
