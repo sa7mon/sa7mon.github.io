@@ -13,6 +13,13 @@ body:
     validations:
       required: true
   - type: input
+    id: title
+    attributes:
+      label: Title
+      description: Title of thing
+    validations:
+      required: true
+  - type: input
     id: pub_date
     attributes:
       label: Publish Date
@@ -43,11 +50,3 @@ body:
       default: 0
     validations:
       required: true
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com). 
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
