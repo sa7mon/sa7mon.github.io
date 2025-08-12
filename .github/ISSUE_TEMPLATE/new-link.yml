@@ -3,7 +3,6 @@ description: Post a new Link
 title: "[link]: "
 labels: ["link"]
 projects: []
-assignees:
 body:
   - type: input
     id: url
