@@ -23,7 +23,7 @@ body:
     id: pub_date
     attributes:
       label: Publish Date
-      description: When was the content originally published?
+      description: When was the content originally published? (ISO-8601)
       placeholder: June 19, 2024
     validations:
       required: true
