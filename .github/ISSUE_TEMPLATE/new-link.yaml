@@ -1,0 +1,54 @@
+name: Link
+description: Post a new Link
+title: "[link]: "
+labels: ["link"]
+projects: []
+assignees:
+body:
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      description: Full URL (without tracking preferrably)
+      placeholder: https://my.cool.other.blog/post/123
+    validations:
+      required: true
+  - type: input
+    id: pub_date
+    attributes:
+      label: Publish Date
+      description: When was the content originally published?
+      placeholder: June 19, 2024
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Text to add related to link
+      placeholder: This is sweet
+    validations:
+      required: false
+  - type: dropdown
+    id: format
+    attributes:
+      label: Format
+      description: What kind of thing is being linked to?
+      multiple: false
+      options:
+        - Article
+        - Document
+        - Paper
+        - Podcast
+        - Video
+      default: 0
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com). 
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
