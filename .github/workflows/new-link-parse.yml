@@ -29,7 +29,8 @@ jobs:
     # functionality.
     permissions:
       contents: read
-      issues: read
+      issues: write
+      
     steps:
       # Get the repository contents. This lets the workflow reference files in
       # the repository such as the issue form template.
