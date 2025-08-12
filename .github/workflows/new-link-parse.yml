@@ -35,10 +35,10 @@ jobs:
       # the repository such as the issue form template.
       - name: Checkout
         id: checkout
-        uses: actions/checkout@vX.X.X
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
       - name: Parse Issue
         id: parse
-        uses: issue-ops/parser@vX.X.X
+        uses: issue-ops/parser@76d5aa095754de1493cbe41934484c4287e16350 # v4.2.0
         with:
           body: ${{ github.event.issue.body }}
           issue-form-template: new-link.yml
