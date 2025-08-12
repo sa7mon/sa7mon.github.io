@@ -27,6 +27,14 @@ body:
       placeholder: "2024-06-19"
     validations:
       required: true
+  - type: input
+    id: tags
+    attributes:
+      label: Tags
+      description: Tags that describe the content, not format or venue (comma-separated)
+      placeholder: xss,elevators,ios
+    validations:
+      required: true
   - type: textarea
     id: description
     attributes:
