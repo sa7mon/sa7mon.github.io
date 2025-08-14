@@ -52,7 +52,7 @@ jobs:
         id: make-slug
         run: |
           export slug=$(echo "${{ steps.parse.outputs.parsed_title }}" | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g' | sed 's/[^a-z0-9-]//g')
-          echo "FILE_SLUG=$(date +"%Y-%m-%d")_$slug" >> "${GITHUB_OUTPUT}"
+          echo "FILE_SLUG=${{ steps.parse.outputs.parsed_pub_date }}_$slug" >> "${GITHUB_OUTPUT}"
 
       - name: Read .env
         id: hugo-version
@@ -66,16 +66,25 @@ jobs:
           hugo-version: '${{ steps.hugo-version.outputs.HUGO_VERSION }}'
           extended: true
       
-      - run: hugo new links/${{ steps.make-slug.outputs.file_slug }}.md && cat content/links/${{ steps.make-slug.outputs.file_slug }}.md
+      - name: Create File
+        run: |
+          hugo new links/${{ steps.make-slug.outputs.file_slug }}.md
+          export FILE=content/links/${{ steps.make-slug.outputs.file_slug }}.md
+          sed -i -E 's/title: ".+"$/title: "${{ steps.parse.outputs.parsed_title }}"/' $FILE
+          export SITE=$(echo ${{ steps.parse.outputs.parsed_url }}| awk -F/ '{print $3}')
+          sed -i -E 's/site: .+$/site: $SITE/'
+          sed -i -E 's/link_tags: .+$/link_tags: [${{ steps.parse.outputs.tags }}]/'
+          sed -i -E 's/formats: .+$/formats: [${{ steps.parse.outputs.format }}]/'
+          cat $FILE
         
-      - name: Post Comment on Issue
-        uses: peter-evans/create-or-update-comment@71345be0265236311c031f5c7866368bd1eff043 # v4
-        with:
-          issue-number: ${{ github.event.issue.number }}
-          body: |
-            - Title: ${{ steps.parse.outputs.parsed_title }}
-            - URL: 
-            - Date: 
-            - Tags:
-            - Format: 
-            - Description:
+      # - name: Post Comment on Issue
+      #   uses: peter-evans/create-or-update-comment@71345be0265236311c031f5c7866368bd1eff043 # v4
+      #   with:
+      #     issue-number: ${{ github.event.issue.number }}
+      #     body: |
+      #       - Title: ${{ steps.parse.outputs.parsed_title }}
+      #       - URL: 
+      #       - Date: 
+      #       - Tags:
+      #       - Format: 
+      #       - Description:
