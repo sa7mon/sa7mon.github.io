@@ -74,7 +74,7 @@ jobs:
           export SITE=$(echo ${{ steps.parse.outputs.parsed_url }}| awk -F/ '{print $3}')
           sed -i -E "s/site: .+$/site: $SITE/" $FILE
           sed -i -E "s/link_tags: .+$/link_tags: [${{ steps.parse.outputs.parsed_tags }}]/" $FILE
-          sed -i -E "s/formats: .+$/formats: [${{ steps.parse.outputs.parsed_format }}]/" $FILE
+          sed -i -E "s/formats: .+$/formats: ${{ steps.parse.outputs.parsed_format }}/" $FILE
           cat $FILE
         
       # - name: Post Comment on Issue
