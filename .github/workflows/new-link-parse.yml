@@ -52,7 +52,9 @@ jobs:
         id: make-slug
         run: |
           export slug=$(echo "${{ steps.parse.outputs.parsed_title }}" | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g' | sed 's/[^a-z0-9-]//g')
-          echo "FILE_SLUG=$(date +'%Y-%m-%d')_$slug_${{ steps.parse.outputs.parsed_pub_date }}" >> "${GITHUB_OUTPUT}"
+          export FILE_SLUG="$(date +'%Y-%m-%d')_${slug}_${{ steps.parse.outputs.parsed_pub_date }}"
+          echo $FILE_SLUG
+          echo "FILE_SLUG=$FILE_SLUG" >> "${GITHUB_OUTPUT}"
       - name: Read .env
         id: hugo-version
         run: |
