@@ -50,11 +50,11 @@ body:
       description: What kind of thing is being linked to?
       multiple: false
       options:
-        - Article
-        - Document
-        - Paper
-        - Podcast
-        - Video
+        - article
+        - document
+        - paper
+        - podcast
+        - video
       default: 0
     validations:
       required: true
