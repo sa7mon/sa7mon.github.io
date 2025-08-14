@@ -14,10 +14,11 @@ so that we can have a separate list of tags for posts and links.
 When posting links, follow the format:
 
 ```sh
-hugo new links/2025-06-01_title-of-post.md
+hugo new links/2025-06-01_title-of-post_2025-04-03.md
 ```
+where the first date is the day the link is being posted and the second is the date the link's content was originally published.
 
-then update the site and paste the link into the new file
+Then update the site and paste the link into the new file
 
 ## Development
 
