@@ -51,7 +51,7 @@ jobs:
       - name: Make slug
         id: make-slug
         run: |
-          export slug=$(echo "${{ steps.parse.outputs.parsed_title }}" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9-]//g' | sed 's/ /-/g')
+          export slug=$(echo "${{ steps.parse.outputs.parsed_title }}" | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g' | sed 's/[^a-z0-9-]//g')
           echo "FILE_SLUG=$(date +"%Y-%m-%d")_$slug" >> "${GITHUB_OUTPUT}"
 
       - name: Read .env
@@ -59,14 +59,14 @@ jobs:
         run: |
           . ./.env
           echo "HUGO_VERSION=${HUGO_VERSION}" >> "${GITHUB_OUTPUT}"
-          echo "${{ steps.make-slug.outputs.file_slug }}"
-          
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: '${{ steps.hugo-version.outputs.HUGO_VERSION }}'
           extended: true
+      
+      - run: hugo new links/${{ steps.make-slug.outputs.file_slug }}.md && echo content/links/${{ steps.make-slug.outputs.file_slug }}.md
         
       - name: Post Comment on Issue
         uses: peter-evans/create-or-update-comment@71345be0265236311c031f5c7866368bd1eff043 # v4
