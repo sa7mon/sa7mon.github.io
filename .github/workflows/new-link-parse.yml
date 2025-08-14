@@ -66,7 +66,7 @@ jobs:
           hugo-version: '${{ steps.hugo-version.outputs.HUGO_VERSION }}'
           extended: true
       
-      - run: hugo new links/${{ steps.make-slug.outputs.file_slug }}.md && echo content/links/${{ steps.make-slug.outputs.file_slug }}.md
+      - run: hugo new links/${{ steps.make-slug.outputs.file_slug }}.md && cat content/links/${{ steps.make-slug.outputs.file_slug }}.md
         
       - name: Post Comment on Issue
         uses: peter-evans/create-or-update-comment@71345be0265236311c031f5c7866368bd1eff043 # v4
