@@ -53,7 +53,6 @@ jobs:
         run: |
           export slug=$(echo "${{ steps.parse.outputs.parsed_title }}" | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g' | sed 's/[^a-z0-9-]//g')
           export FILE_SLUG="$(date +'%Y-%m-%d')_${slug}_${{ steps.parse.outputs.parsed_pub_date }}"
-          echo $FILE_SLUG
           echo "FILE_SLUG=$FILE_SLUG" >> "${GITHUB_OUTPUT}"
       - name: Read .env
         id: hugo-version
@@ -72,7 +71,7 @@ jobs:
           export FILE=content/links/${{ steps.make-slug.outputs.file_slug }}.md
           sed -i -E 's/title: ".+"$/title: "${{ steps.parse.outputs.parsed_title }}"/' $FILE
           export SITE=$(echo ${{ steps.parse.outputs.parsed_url }}| awk -F/ '{print $3}')
-          sed -i -E "s/site: .+$/site: $SITE/" $FILE
+          sed -i -E "s/site: $/site: $SITE/" $FILE
           sed -i -E "s/link_tags: .+$/link_tags: [${{ steps.parse.outputs.parsed_tags }}]/" $FILE
           sed -i -E "s/formats: .+$/formats: ${{ steps.parse.outputs.parsed_format }}/" $FILE
           cat $FILE
