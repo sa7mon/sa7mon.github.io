@@ -72,9 +72,9 @@ jobs:
           export FILE=content/links/${{ steps.make-slug.outputs.file_slug }}.md
           sed -i -E 's/title: ".+"$/title: "${{ steps.parse.outputs.parsed_title }}"/' $FILE
           export SITE=$(echo ${{ steps.parse.outputs.parsed_url }}| awk -F/ '{print $3}')
-          sed -i -E 's/site: .+$/site: $SITE/'
-          sed -i -E 's/link_tags: .+$/link_tags: [${{ steps.parse.outputs.tags }}]/'
-          sed -i -E 's/formats: .+$/formats: [${{ steps.parse.outputs.format }}]/'
+          sed -i -E 's/site: .+$/site: $SITE/' $FILE
+          sed -i -E 's/link_tags: .+$/link_tags: [${{ steps.parse.outputs.tags }}]/' $FILE
+          sed -i -E 's/formats: .+$/formats: [${{ steps.parse.outputs.format }}]/' $FILE
           cat $FILE
         
       # - name: Post Comment on Issue
