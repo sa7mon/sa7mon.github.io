@@ -90,7 +90,7 @@ jobs:
           title: '[link] ${{ steps.parse.outputs.parsed_title }}'
           commit-message: 'add link from #${{ github.event.issue.number }}'
           body: |
-            Auto-generated PR for link submitted in ${{ github.event.issue.url }}
+            Auto-generated PR via link automation. Closes #${{ github.event.issue.number }}
         
       # - name: Post Comment on Issue
       #   uses: peter-evans/create-or-update-comment@71345be0265236311c031f5c7866368bd1eff043 # v4
