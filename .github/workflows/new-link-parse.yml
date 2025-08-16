@@ -28,8 +28,13 @@ jobs:
     # contents. This will be expanded later as we build additional
     # functionality.
     permissions:
-      contents: read
+      # contents: read
       issues: write
+
+      # create-pull-request permissions
+      # TODO: move this to its own section
+      contents: write
+      pull-requests: write
       
     steps:
       # Get the repository contents. This lets the workflow reference files in
@@ -76,6 +81,15 @@ jobs:
           sed -i -E "s/formats: .+$/formats: ${{ steps.parse.outputs.parsed_format }}/" $FILE
           printf "\n${{ steps.parse.outputs.parsed_url }}" >> $FILE
           cat $FILE
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e #v7.0.8
+        with:
+          branch: link/${{ github.event.issue.number }}
+          labels: link
+          title: '[link] ${{ steps.parse.outputs.parsed_title }}'
+          body: |
+            Auto-generated PR for link submitted in ${{ github.event.issue.url }}
         
       # - name: Post Comment on Issue
       #   uses: peter-evans/create-or-update-comment@71345be0265236311c031f5c7866368bd1eff043 # v4
