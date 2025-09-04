@@ -1,6 +1,6 @@
 ---
 type: "post"
-title: "Guess Who Would Be Stupid Enough To Rob The Same Vault Twice? Pre-Auth RCE Chains in Commvault"
+title: "Pre-Auth RCE Chains in Commvault"
 date: 2025-08-26T03:19:28Z
 site: labs.watchtowr.com
 params:
