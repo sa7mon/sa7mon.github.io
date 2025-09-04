@@ -1,9 +1,23 @@
+{{/*
+	/posts/
+	/links/
+*/}}
+
 {{ define "main" }}
 	<h1>{{ .Title }}
 		<span class="icon-sm">
 			<a class="no-highlight" title="RSS feed: all {{ .Page.Section}}" href="index.xml">{{ partial "svg.html" "rss" }}</a>
 		</span>
 	</h1>
+
 	{{ .Content }}
+
+	<div class="tags" style="margin-top: 2rem;">
+		{{ $tagTerm := (cond (eq .Section "links") "link_tags" "tags") }}
+		{{ range $term, $taxonomy := index .Site.Taxonomies $tagTerm }}
+			<a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a>
+		{{ end }}
+	</div>
+
 	{{ partial "post_list.html" .}}
 {{ end }}
