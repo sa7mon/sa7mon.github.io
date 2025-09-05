@@ -11,6 +11,9 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+    parser:
+      attribute:
+        title: true
   highlight:
     style: catppuccin-frappe
     noClasses: false

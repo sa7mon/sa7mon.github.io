@@ -423,3 +423,17 @@ a.no-highlight:hover {
 .link-pub-date {
   color: var(--dark-font-color);
 }
+
+/* Heading anchors */
+
+h1, h2, h3, h4 {
+  a.anchor {
+    display: none;
+  }
+}
+
+h1:hover, h2:hover, h3:hover, h4:hover {
+  a.anchor { 
+    display: inline; 
+  }
+} 
