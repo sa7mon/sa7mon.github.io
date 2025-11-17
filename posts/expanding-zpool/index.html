@@ -1,0 +1,89 @@
+<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width"><title>Expanding a Zpool One Disk At a Time | Dan [the] Salmon</title><link rel=alternate type=application/rss+xml title="Dan [the] Salmon: Posts" href=/posts/index.xml><link rel=alternate type=application/rss+xml title="Dan [the] Salmon: Links" href=/links/index.xml><link rel=me href=https://infosec.exchange/@dan name=Mastodon><link rel=me href=https://github.com/sa7mon name=GitHub><link rel=stylesheet href=/combined.min.ee4cc4c893778ba3fd302816f523b9af2e95025ab46b5f5014501bf6e9b58b6a.css integrity="sha256-7kzEyJN3i6P9MCgW9SO5ry6VAlq0a19QFFAb9um1i2o=" crossorigin=anonymous></head><body><header><div class=header-container><a class=brand href=/>Dan [the] Salmon</a><nav><ul><li><a href=/about/>About</a></li><li><a href=/posts/>Posts</a></li><li><a href=/links/>Links</a></li><li><a href=/contact/>Contact</a></li></ul></nav></div></header><main class=page><time class=pub-date datetime=2025-11-16T18:35:51-06:00>November 16, 2025</time><h1 class=title>Expanding a Zpool One Disk At a Time</h1><div class=tags><a href=/tags/zfs/>Zfs</a>
+<a href=/tags/proxmox/>Proxmox</a></div><p>While discussing some benchmarks I ran on the zpool in my Proxmox server, it was suggested that the SSDs backing the pool were severely bottlenecking performance. The pool consisted of 4x WD Blue 1TB SATA SSDs which I chose years ago for budget reasons. After doing some research on the benefits of upgrading from consumer to enterprise SSDs - lower latency and higher endurance to name two - I started hunting on eBay for suitable drives.</p><p>I ended up choosing the 1.92TB Micron 5300 Pro. With an eBay alert and some patience I procured 4 used drives for an average price of about $124 shipped.</p><p>With the new drives in hand and no SATA ports to spare in the Proxmox server, I needed to replace the drives in the pool one at a time. It was easier than I thought it would be!</p><p>Here&rsquo;s how the pool looked at the start.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>root@proxmox:~# zfs list ssdtank
+</span></span><span class=line><span class=cl>NAME      USED  AVAIL  REFER  MOUNTPOINT
+</span></span><span class=line><span class=cl>ssdtank  1.11T   663G  16.0G  /ssdtank
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>root@proxmox:~# zpool status ssdtank
+</span></span><span class=line><span class=cl>  pool: ssdtank
+</span></span><span class=line><span class=cl> state: ONLINE
+</span></span><span class=line><span class=cl>  scan: scrub repaired 0B in 00:27:05 with 0 errors on Sun Oct 12 00:51:07 2025
+</span></span><span class=line><span class=cl>config:
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        NAME                                    STATE     READ WRITE CKSUM
+</span></span><span class=line><span class=cl>        ssdtank                                 ONLINE       0     0     0
+</span></span><span class=line><span class=cl>          mirror-0                              ONLINE       0     0     0
+</span></span><span class=line><span class=cl>            ata-WDC_WDBNCE0010PNC_19416F800207  ONLINE       0     0     0
+</span></span><span class=line><span class=cl>            ata-WDC_WDBNCE0010PNC_200559800082  ONLINE       0     0     0
+</span></span><span class=line><span class=cl>          mirror-1                              ONLINE       0     0     0
+</span></span><span class=line><span class=cl>            ata-WDC_WDBNCE0010PNC_200608800160  ONLINE       0     0     0
+</span></span><span class=line><span class=cl>            ata-WDC_WDBNCE0010PNC_200608802113  ONLINE       0     0     0
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>errors: No known data errors
+</span></span></code></pre></div><p>The first step was to enable <code>autoexpand</code> on the pool so it would automatically grow once all the drives had been replaced: <code>zpool set autoexpand=on ssdtank</code>. Another option that I did not use would have been to run <code>zpool online -e &lt;pool> &lt;device></code> on each new drive after replacement.</p><p>Starting with a random drive, I offline&rsquo;d it which immediately put the pool into a degraded state. In this state, the pool is still usable and will continue serving the filesystem but the performace will suffer until the offline drive is replaced. The pool is also in danger of data loss if you happen to lose the other drive(s) in the vdev before the drive replacement is finished.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>root@proxmox:~# zpool offline ssdtank ata-WDC_WDBNCE0010PNC_19416F800207
+</span></span><span class=line><span class=cl>root@proxmox:~# zpool status ssdtank
+</span></span><span class=line><span class=cl>  pool: ssdtank
+</span></span><span class=line><span class=cl> state: DEGRADED
+</span></span><span class=line><span class=cl>status: One or more devices has been taken offline by the administrator.
+</span></span><span class=line><span class=cl>        Sufficient replicas exist for the pool to continue functioning in a
+</span></span><span class=line><span class=cl>        degraded state.
+</span></span><span class=line><span class=cl>action: Online the device using &#39;zpool online&#39; or replace the device with
+</span></span><span class=line><span class=cl>        &#39;zpool replace&#39;.
+</span></span><span class=line><span class=cl>  scan: scrub repaired 0B in 00:27:05 with 0 errors on Sun Oct 12 00:51:07 2025
+</span></span><span class=line><span class=cl>config:
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        NAME                                    STATE     READ WRITE CKSUM
+</span></span><span class=line><span class=cl>        ssdtank                                 DEGRADED     0     0     0
+</span></span><span class=line><span class=cl>          mirror-0                              DEGRADED     0     0     0
+</span></span><span class=line><span class=cl>            ata-WDC_WDBNCE0010PNC_19416F800207  OFFLINE      0     0     0
+</span></span><span class=line><span class=cl>            ata-WDC_WDBNCE0010PNC_200559800082  ONLINE       0     0     0
+</span></span><span class=line><span class=cl>          mirror-1                              ONLINE       0     0     0
+</span></span><span class=line><span class=cl>            ata-WDC_WDBNCE0010PNC_200608800160  ONLINE       0     0     0
+</span></span><span class=line><span class=cl>            ata-WDC_WDBNCE0010PNC_200608802113  ONLINE       0     0     0
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>errors: No known data errors
+</span></span></code></pre></div><p>Since my motherboard (and I assume most other modern boards) supports hot-swapping SATA drives, I did not need to power the server down before removing the offline drive and replacing it with one of the new drives. It&rsquo;s very important at this point that the <em>correct</em> drive is removed. Lucky for me, the serial numbers of the installed drives were visible in the custom drive cage <a href=/posts/new-proxmox-server>I made</a> and the disk ID used by ZFS seemed to follow the pattern <code>ata-brand_model_serial</code>.</p><p>After removing the old drive and connecting the new one in its place, I instructed ZFS to replace the offlined drive with the new one.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>root@proxmox:~# zpool replace ssdtank ata-WDC_WDBNCE0010PNC_19416F800207 ata-Micron_5300_MTFDDAK1T9TDS_2018287ED55F
+</span></span><span class=line><span class=cl>invalid vdev specification
+</span></span><span class=line><span class=cl>use &#39;-f&#39; to override the following errors:
+</span></span><span class=line><span class=cl>/dev/disk/by-id/ata-Micron_5300_MTFDDAK1T9TDS_2018287ED55F contains a filesystem of type &#39;ddf_raid_member&#39;
+</span></span></code></pre></div><p>Oops, looks like the used drive I bought still had some filesystem remnants. <code>wipefs</code> made short work of that.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>root@proxmox:~# wipefs -a /dev/disk/by-id/ata-Micron_5300_MTFDDAK1T9TDS_2018287ED55F
+</span></span><span class=line><span class=cl>/dev/disk/by-id/ata-Micron_5300_MTFDDAK1T9TDS_2018287ED55F: 4 bytes were erased at offset 0x1bf1fc55e00 (ddf_raid_member): de 11 de 11
+</span></span><span class=line><span class=cl>root@proxmox:~# zpool replace ssdtank ata-WDC_WDBNCE0010PNC_19416F800207 ata-Micron_5300_MTFDDAK1T9TDS_2018287ED55F
+</span></span></code></pre></div><p>At this point, the pool began resilvering the drive as if I had just replaced a failed drive.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>root@proxmox:~# zpool status ssdtank
+</span></span><span class=line><span class=cl>  pool: ssdtank
+</span></span><span class=line><span class=cl> state: DEGRADED
+</span></span><span class=line><span class=cl>status: One or more devices is currently being resilvered.  The pool will
+</span></span><span class=line><span class=cl>        continue to function, possibly in a degraded state.
+</span></span><span class=line><span class=cl>action: Wait for the resilver to complete.
+</span></span><span class=line><span class=cl>  scan: resilver in progress since Fri Nov  7 19:19:09 2025
+</span></span><span class=line><span class=cl>        1.06T / 1.06T scanned, 111G / 545G issued at 378M/s
+</span></span><span class=line><span class=cl>        111G resilvered, 20.43% done, 00:19:36 to go
+</span></span><span class=line><span class=cl>config:
+</span></span><span class=line><span class=cl>        NAME                                              STATE     READ WRITE CKSUM
+</span></span><span class=line><span class=cl>        ssdtank                                           DEGRADED     0     0     0
+</span></span><span class=line><span class=cl>          mirror-0                                        DEGRADED     0     0     0
+</span></span><span class=line><span class=cl>            replacing-0                                   DEGRADED     0     0     0
+</span></span><span class=line><span class=cl>              ata-WDC_WDBNCE0010PNC_19416F800207          OFFLINE      0     0     0
+</span></span><span class=line><span class=cl>              ata-Micron_5300_MTFDDAK1T9TDS_2018287ED55F  ONLINE       0     0     0  (resilvering)
+</span></span><span class=line><span class=cl>            ata-WDC_WDBNCE0010PNC_200559800082            ONLINE       0     0     0
+</span></span><span class=line><span class=cl>          mirror-1                                        ONLINE       0     0     0
+</span></span><span class=line><span class=cl>            ata-WDC_WDBNCE0010PNC_200608800160            ONLINE       0     0     0
+</span></span><span class=line><span class=cl>            ata-WDC_WDBNCE0010PNC_200608802113            ONLINE       0     0     0
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>errors: No known data errors
+</span></span></code></pre></div><p>After about 45 minutes, the resilvering completed and the pool was once again healthy.</p><p>I repeated this &ldquo;offline, swap, replace&rdquo; process for each of the remaining drives until finally I was left with a healthy 3.48TB pool.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>root@proxmox:~# zpool status ssdtank
+</span></span><span class=line><span class=cl>  pool: ssdtank
+</span></span><span class=line><span class=cl> state: ONLINE
+</span></span><span class=line><span class=cl>  scan: resilvered 546G in 00:58:41 with 0 errors on Fri Nov  7 23:14:02 2025
+</span></span><span class=line><span class=cl>config:
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        NAME                                            STATE     READ WRITE CKSUM
+</span></span><span class=line><span class=cl>        ssdtank                                         ONLINE       0     0     0
+</span></span><span class=line><span class=cl>          mirror-0                                      ONLINE       0     0     0
+</span></span><span class=line><span class=cl>            ata-Micron_5300_MTFDDAK1T9TDS_2018287ED55F  ONLINE       0     0     0
+</span></span><span class=line><span class=cl>            ata-Micron_5300_MTFDDAK1T9TDS_220735232EF9  ONLINE       0     0     0
+</span></span><span class=line><span class=cl>          mirror-1                                      ONLINE       0     0     0
+</span></span><span class=line><span class=cl>            ata-Micron_5300_MTFDDAK1T9TDS_2018287ED7C6  ONLINE       0     0     0
+</span></span><span class=line><span class=cl>            ata-Micron_5300_MTFDDAK1T9TDS_193924CAA1C6  ONLINE       0     0     0
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>errors: No known data errors
+</span></span></code></pre></div><p>With the new disks in place, read/write speeds as well as IOPS increased by about 2.25x according to my novice level <code>fio</code> tests.</p></main></body></html>
