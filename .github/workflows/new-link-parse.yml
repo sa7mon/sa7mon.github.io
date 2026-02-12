@@ -42,6 +42,7 @@ jobs:
       - name: Checkout
         id: checkout
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+
       - name: Parse Issue
         id: parse
         uses: issue-ops/parser@76d5aa095754de1493cbe41934484c4287e16350 # v4.2.0
@@ -56,14 +57,16 @@ jobs:
       - name: Make slug
         id: make-slug
         run: |
-          export slug=$(echo "${{ steps.parse.outputs.parsed_title }}" | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g' | sed 's/[^a-z0-9-]//g')
-          export FILE_SLUG="$(date +'%Y-%m-%d')_${slug}_${{ steps.parse.outputs.parsed_pub_date }}"
+          FILE_SLUG=$(.github/scripts/make-slug.sh -t "${{ steps.parse.outputs.parsed_title }}" -d "${{ steps.parse.outputs.parsed_pub_date }}")
+          echo $FILE_SLUG
           echo "FILE_SLUG=$FILE_SLUG" >> "${GITHUB_OUTPUT}"
+
       - name: Read .env
         id: hugo-version
         run: |
           . ./.env
           echo "HUGO_VERSION=${HUGO_VERSION}" >> "${GITHUB_OUTPUT}"
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
