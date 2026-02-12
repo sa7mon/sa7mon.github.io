@@ -15,6 +15,8 @@ do
     esac
 done
 
-export slug=$(echo "$title" | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g' | sed 's/[^a-z0-9-]//g')
+# lowercase all characters, replace spaces with hyphens, remove non-alphanumeric characters except hyphens, then replace 
+# multiple hyphens with a single hyphen
+export slug=$(echo "$title" | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g' | sed 's/[^a-z0-9-]//g' | sed -E 's/\-+/\-/g')
 export FILE_SLUG="$(date +'%Y-%m-%d')_${slug}_$date"
 echo "$FILE_SLUG"
