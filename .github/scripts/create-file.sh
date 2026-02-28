@@ -26,9 +26,9 @@ done
 hugo new links/$slug.md
 export FILE="content/links/$slug.md"
 export SITE=$(echo $url | awk -F/ '{print $3}')
-gsed -i -E "s/title: .+$/title: \"$title\"/" $FILE
-gsed -i -E "s/site: $/site: $SITE/" $FILE
-gsed -i -E "s/link_tags: .+$/link_tags: $tags/" $FILE
-gsed -i -E "s/formats: .+$/formats: $format/" $FILE
+sed -i -E "s/title: .+$/title: \"$title\"/" $FILE
+sed -i -E "s/site: $/site: $SITE/" $FILE
+sed -i -E "s/link_tags: .+$/link_tags: $tags/" $FILE
+sed -i -E "s/formats: .+$/formats: $format/" $FILE
 printf "\n$url\n$desc" >> $FILE
 cat $FILE
