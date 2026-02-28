@@ -35,7 +35,7 @@ jobs:
       # TODO: move this to its own section
       contents: write
       pull-requests: write
-      
+
     steps:
       # Get the repository contents. This lets the workflow reference files in
       # the repository such as the issue form template.
@@ -53,7 +53,7 @@ jobs:
       - name: Output the Parsed Issue
         id: output
         run: echo ${{ steps.parse.outputs.json }}
-      
+
       - name: Make slug
         id: make-slug
         run: |
@@ -70,39 +70,30 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '${{ steps.hugo-version.outputs.HUGO_VERSION }}'
+          hugo-version: "${{ steps.hugo-version.outputs.HUGO_VERSION }}"
           extended: true
-      
+
       - name: Create File
-        run: |
-          hugo new links/${{ steps.make-slug.outputs.file_slug }}.md
-          export FILE=content/links/${{ steps.make-slug.outputs.file_slug }}.md
-          sed -i -E 's/title: ".+"$/title: "${{ steps.parse.outputs.parsed_title }}"/' $FILE
-          export SITE=$(echo ${{ steps.parse.outputs.parsed_url }}| awk -F/ '{print $3}')
-          sed -i -E "s/site: $/site: $SITE/" $FILE
-          sed -i -E "s/link_tags: .+$/link_tags: [${{ steps.parse.outputs.parsed_tags }}]/" $FILE
-          sed -i -E "s/formats: .+$/formats: ${{ steps.parse.outputs.parsed_format }}/" $FILE
-          printf "\n${{ steps.parse.outputs.parsed_url }}\n${{ steps.parse.outputs.parsed_description }}" >> $FILE
-          cat $FILE
+        run: .github/scripts/create-file.sh -i "${{ steps.parse.outputs.parsed_title }}" -s "${{ steps.make-slug.outputs.file_slug }}" -u "${{ steps.parse.outputs.parsed_url }}" -t "${{ steps.parse.outputs.parsed_tags }}" -d "${{ steps.parse.outputs.parsed_description }}" -f "${{ steps.parse.outputs.parsed_format }}"
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e #v7.0.8
         with:
           branch: link/${{ github.event.issue.number }}
           labels: link
-          title: '[link] ${{ steps.parse.outputs.parsed_title }}'
-          commit-message: 'add link from #${{ github.event.issue.number }}'
+          title: "[link] ${{ steps.parse.outputs.parsed_title }}"
+          commit-message: "add link from #${{ github.event.issue.number }}"
           body: |
             Auto-generated PR via link automation. Closes #${{ github.event.issue.number }}
-        
+
       # - name: Post Comment on Issue
       #   uses: peter-evans/create-or-update-comment@71345be0265236311c031f5c7866368bd1eff043 # v4
       #   with:
       #     issue-number: ${{ github.event.issue.number }}
       #     body: |
       #       - Title: ${{ steps.parse.outputs.parsed_title }}
-      #       - URL: 
-      #       - Date: 
+      #       - URL:
+      #       - Date:
       #       - Tags:
-      #       - Format: 
+      #       - Format:
       #       - Description:
