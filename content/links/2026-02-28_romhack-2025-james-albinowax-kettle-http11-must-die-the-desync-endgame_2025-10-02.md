@@ -1,6 +1,6 @@
 ---
 type: "post"
-title: "Romhack 2025 James Albinowax Kettle Http11 Must Die the Desync Endgame_2025 10 02"
+title: "RomHack 2025 - James “albinowax” Kettle - HTTP/1.1 Must Die! The Desync Endgame"
 date: 2026-02-28T06:39:14Z
 site: www.youtube.com
 params:
