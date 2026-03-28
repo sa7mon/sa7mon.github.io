@@ -9,7 +9,7 @@ title: "SecretCon 2025 Highlights"
 type: "post"
 ---
 
-As I alluded to in my [previous post](i-am-speaking-at-secretcon-2025/), I presented at SecretCon 2025 this past week. This was my first time attending after having heard about it for the first time a few months ago - I gather this is the 3rd year it has been held. Here are some highlights, in no particular order, from my day and a half there!
+As I alluded to in my [previous post](/posts/i-am-speaking-at-secretcon-2025/), I presented at SecretCon 2025 this past week. This was my first time attending after having heard about it for the first time a few months ago - I gather this is the 3rd year it has been held. Here are some highlights, in no particular order, from my day and a half there!
 
 **Badge**
 
@@ -38,7 +38,6 @@ I spent a solid hour here. They had a mannequin head set up on the table with a 
 {{< figure src="tinfoil1.png" height="600px" caption="" alt="A mannequin head with a tin foil hat covering the top of the head and ears down to the neck">}}
 {{< figure src="tinfoil2.png" height="600px" caption="Classic hats only used tin foil, 'hybrid' could use a mix of materials." alt="A tv screen lists the rankings for classic hats or hybrid hats and each contestants attenuation (dB)">}}
 
-
 **Lockpicking Village**
 
 This was a fun table to hang out at for a while. I enjoy picking locks, but I am not good at it - this became evident when I was only able to pick my way through 2 of the 6 challenge locks. I would have loved to have learned more about tubular locks, but none were available.
@@ -47,12 +46,12 @@ This was a fun table to hang out at for a while. I enjoy picking locks, but I am
 
 **Talks**
 
-The talks I attended were great - especially the Friday keynote with Gabe. I have been subscribed to his channel [saveitforparts](https://www.youtube.com/@saveitforparts) for quite a while so it was cool seeing his talk *Intercepting Satellite Data with Trash* in person. It really got me excited to explore the world of SDR more which coincidentally is how I found his channel in the first place.
+The talks I attended were great - especially the Friday keynote with Gabe. I have been subscribed to his channel [saveitforparts](https://www.youtube.com/@saveitforparts) for quite a while so it was cool seeing his talk _Intercepting Satellite Data with Trash_ in person. It really got me excited to explore the world of SDR more which coincidentally is how I found his channel in the first place.
 
-The *Securing the Skies: Safety and Security in
-Aviation and Why It Matters* talk by Lillian from the Aerospace Village was also fascinating. I learned a ton about the safety certifications of equipment that goes into planes and how *security* testing plays a major role in *safety* testing.
+The _Securing the Skies: Safety and Security in
+Aviation and Why It Matters_ talk by Lillian from the Aerospace Village was also fascinating. I learned a ton about the safety certifications of equipment that goes into planes and how _security_ testing plays a major role in _safety_ testing.
 
-The closing keynote was a super fun story that there just wasn't enough time to explore deeply: *Closing Keynote: We Infiltrated a North Korean Laptop Farm, Here's How We Did It*. DPRK remote worker schemes are endlessly fascinating to me and just this week, the DOJ [announced](https://www.bleepingcomputer.com/news/security/us-disrupts-north-korean-it-worker-laptop-farm-scheme-in-16-states/) the takedown of a major network of laptop farms in the US. I look forward to seeing if he gives this talk at another conference so I can hear the full story.
+The closing keynote was a super fun story that there just wasn't enough time to explore deeply: _Closing Keynote: We Infiltrated a North Korean Laptop Farm, Here's How We Did It_. DPRK remote worker schemes are endlessly fascinating to me and just this week, the DOJ [announced](https://www.bleepingcomputer.com/news/security/us-disrupts-north-korean-it-worker-laptop-farm-scheme-in-16-states/) the takedown of a major network of laptop farms in the US. I look forward to seeing if he gives this talk at another conference so I can hear the full story.
 
 <br />
 <br />
