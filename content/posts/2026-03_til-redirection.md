@@ -1,6 +1,6 @@
 ---
 date: "2026-04-02T00:00:00-06:00"
-draft: true
+draft: false
 title: "TIL About Redirection in Bash"
 type: "post"
 description: "Not all shells are created equal."
