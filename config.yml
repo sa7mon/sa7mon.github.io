@@ -23,7 +23,7 @@ taxonomies:
   # site: sites
   format: formats
   tag: tags
-  link_tag: 'link_tags'
+  link_tag: "link_tags"
 
 permalinks:
   taxonomy:
@@ -39,6 +39,10 @@ menu:
       name: About
       url: /about/
       weight: 50
+    - identifier: talks
+      name: Talks
+      url: /talks/
+      weight: 51
     - identifier: posts
       name: Posts
       url: /posts/
