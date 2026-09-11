@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-ENV HUGO_VERSION=0.147.9
+ENV HUGO_VERSION=0.166.0
 
 RUN apk update && \
     apk add curl git && \

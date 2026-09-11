@@ -1,7 +1,7 @@
 author: Dan Salmon
 baseURL: https://danthesalmon.com/
 builddrafts: false
-languageCode: en-us
+locale: en-us
 publishdir: public
 theme: clean
 title: Dan [the] Salmon
