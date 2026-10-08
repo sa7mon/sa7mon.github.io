@@ -5,7 +5,7 @@ date: 2026-10-08T00:00:00Z
 site: schlarp.com
 params:
     pub_date: 2026-08-23
-link_tags: hardware hacking, AI,
+link_tags: [hardware hacking, AI]
 formats: [article]
 ---
 https://schlarp.com/posts/everything-i-own-owned/
