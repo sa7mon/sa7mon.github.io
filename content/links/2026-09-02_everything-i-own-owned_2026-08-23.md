@@ -1,7 +1,7 @@
 ---
 type: "post"
 title: "Everything I own, owned"
-date: 2026-09-02T10:02:28Z
+date: 2026-10-08T00:00:00Z
 site: schlarp.com
 params:
     pub_date: 2026-08-23
