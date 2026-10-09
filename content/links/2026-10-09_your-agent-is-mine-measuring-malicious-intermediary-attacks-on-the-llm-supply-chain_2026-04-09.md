@@ -5,7 +5,7 @@ date: 2026-10-09T14:46:48Z
 site: arxiv.org
 params:
     pub_date: 2026-04-09
-link_tags: ai
+link_tags: [ai]
 formats: [paper]
 ---
 https://arxiv.org/abs/2604.08407
